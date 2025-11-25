@@ -1,6 +1,6 @@
 base_url: "https://arxiv.paperswithcode.com/api/v0/papers/"
 user_name: ""
-repo_name: "Extract_dataset"
+repo_name: "DailyPaper"
 max_results: 2
 
 
