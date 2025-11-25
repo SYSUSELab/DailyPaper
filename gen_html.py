@@ -16,7 +16,6 @@ logger = logging.getLogger(__name__)
 
 class HTMLGenerator:
     """HTML 生成器"""
-
     def __init__(self, data_path: str = "data/papers.json",
                  output_dir: str = "docs"):
         self.data_path = Path(data_path)
