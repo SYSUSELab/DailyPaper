@@ -1,7 +1,7 @@
 import argparse
 
 from search_paper import PaperSearch
-from scan_paper_list import scan_paper_jsonl
+# from scan_paper_list import scan_paper_jsonl
 from gen_html import HTMLGenerator
 from convert_pdfs_to_md import run_convert
 from new_find_benchmark_links import extract_benchmark

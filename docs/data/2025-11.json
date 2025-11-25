@@ -574,5 +574,53 @@
     "published": "2025-11-19",
     "update_time": "2025-11-19",
     "download_time": "2025-11-25 01:01:22"
+  },
+  {
+    "id": "2511.19427",
+    "title": "Prompt Less, Smile More: MTP with Semantic Engineering in Lieu of Prompt Engineering",
+    "abstract": "AI-Integrated programming is emerging as a foundational paradigm for building intelligent systems with large language models (LLMs). Recent approaches such as Meaning Typed Programming (MTP) automate prompt generation by leveraging the semantics already present in code. However, many real-world applications depend on contextual cues, developer intent, and domain-specific reasoning that extend beyond what static code semantics alone can express. To address this limitation, we introduce Semantic Engineering, a lightweight method for enriching program semantics so that LLM-based systems can more accurately reflect developer intent without requiring full manual prompt design. We present Semantic Context Annotations (SemTexts), a language-level mechanism that allows developers to embed natural-language context directly into program constructs. Integrated into the Jac programming language, Semantic Engineering extends MTP to incorporate these enriched semantics during prompt generation. We further introduce a benchmark suite designed to reflect realistic AI-Integrated application scenarios. Our evaluation shows that Semantic Engineering substantially improves prompt fidelity, achieving performance comparable to Prompt Engineering while requiring significantly less developer effort.",
+    "arxiv_url": "https://arxiv.org/abs/2511.19427",
+    "authors": [
+      "Jayanaka L. Dantanarayana",
+      "Savini Kashmira",
+      "Thakee Nathees",
+      "Zichen Zhang",
+      "Krisztian Flautner",
+      "Lingjia Tang",
+      "Jason Mars"
+    ],
+    "first_author": "Jayanaka L. Dantanarayana",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Prompting"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.19427v1",
+    "published": "2025-11-24",
+    "update_time": "2025-11-24",
+    "download_time": "2025-11-25 03:35:58"
+  },
+  {
+    "id": "2511.19132",
+    "title": "LLMs-Powered Real-Time Fault Injection: An Approach Toward Intelligent Fault Test Cases Generation",
+    "abstract": "A well-known testing method for the safety evaluation and real-time validation of automotive software systems (ASSs) is Fault Injection (FI). In accordance with the ISO 26262 standard, the faults are introduced artificially for the purpose of analyzing the safety properties and verifying the safety mechanisms during the development phase. However, the current FI method and tools have a significant limitation in that they require manual identification of FI attributes, including fault type, location and time. The more complex the system, the more expensive, time-consuming and labour-intensive the process. To address the aforementioned challenge, a novel Large Language Models (LLMs)-assisted fault test cases (TCs) generation approach for utilization during real-time FI tests is proposed in this paper. To this end, considering the representativeness and coverage criteria, the applicability of various LLMs to create fault TCs from the functional safety requirements (FSRs) has been investigated. Through the validation results of LLMs, the superiority of the proposed approach utilizing gpt-4o in comparison to other state-of-the-art models has been demonstrated. Specifically, the proposed approach exhibits high performance in terms of FSRs classification and fault TCs generation with F1-score of 88% and 97.5%, respectively. To illustrate the proposed approach, the generated fault TCs were executed in real time on a hardware-in-the-loop system, where a high-fidelity automotive system model served as a case study. This novel approach offers a means of optimizing the real-time testing process, thereby reducing costs while simultaneously enhancing the safety properties of complex safety-critical ASSs.",
+    "arxiv_url": "https://arxiv.org/abs/2511.19132",
+    "authors": [
+      "Mohammad Abboush",
+      "Ahmad Hatahet",
+      "Andreas Rausch"
+    ],
+    "first_author": "Mohammad Abboush",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.19132v1",
+    "published": "2025-11-24",
+    "update_time": "2025-11-24",
+    "download_time": "2025-11-25 03:36:28"
   }
 ]
