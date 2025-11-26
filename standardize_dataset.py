@@ -5,7 +5,7 @@ import pandas as pd
 from openai import OpenAI
 from pathlib import Path
 import time
-from typing import Set, List, Dict, Any 
+from typing import Set, List, Dict, Any
 
 # --- 1. 配置  ---
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
@@ -16,6 +16,7 @@ client = OpenAI(
     api_key=DEEPSEEK_API_KEY,
     base_url="https://api.deepseek.com"
 )
+
 
 # --- 2. 核心函数：一次性规范化一行中的多个字段 ---
 
@@ -80,23 +81,24 @@ def build_normalization_prompt(raw_data: Dict[str, Any]) -> tuple[str, str]:
       "contamination_status": "<中文枚举值>"
     }
     """
-    
+
     # 将原始数据字典转换为JSON字符串作为用户输入
     user_prompt = json.dumps(raw_data, ensure_ascii=False)
-    
+
     return system_prompt, user_prompt
+
 
 def normalize_row_fields(row: pd.Series, fields_to_normalize: list) -> Dict[str, Any]:
     """
     为DataFrame的 *每一行* 调用LLM，规范化所有指定的字段。
     """
-    
+
     # 1. 准备要发送给LLM的原始数据
     data_to_normalize = {}
     for field in fields_to_normalize:
         raw_value = row.get(field)
         if pd.isna(raw_value) or str(raw_value).strip() == "":
-            raw_value = None # 将空的/NaN值设为None
+            raw_value = None  # 将空的/NaN值设为None
         data_to_normalize[f"raw_{field}"] = raw_value
 
     # 2. 构建提示
@@ -112,12 +114,12 @@ def normalize_row_fields(row: pd.Series, fields_to_normalize: list) -> Dict[str,
             ],
             temperature=0,
             stream=False,
-            response_format={"type": "json_object"} # 使用JSON模式
+            response_format={"type": "json_object"}  # 使用JSON模式
         )
-        
+
         response_content = response.choices[0].message.content
         normalized_data = json.loads(response_content)
-        
+
         # 4. 扁平化LLM的返回结果，以便加入DataFrame
         flat_result = {}
         for main_key, value in normalized_data.items():
@@ -128,7 +130,7 @@ def normalize_row_fields(row: pd.Series, fields_to_normalize: list) -> Dict[str,
                     flat_result[f"{main_key}_{sub_key}"] = sub_value
             elif isinstance(value, list):
                 # 规范化 "language" -> "language_normalized" (保存为列表的字符串形式)
-                flat_result[f"{main_key}_normalized"] = str(value) # 保存为 '["Python", "C++"]'
+                flat_result[f"{main_key}_normalized"] = str(value)  # 保存为 '["Python", "C++"]'
             else:
                 # 规范化 "problem_difficulty" -> "problem_difficulty_normalized" (保存为 "入门级")
                 flat_result[f"{main_key}_normalized"] = value
@@ -138,6 +140,7 @@ def normalize_row_fields(row: pd.Series, fields_to_normalize: list) -> Dict[str,
     except Exception as e:
         print(f"  规范化失败 (输入: {user_prompt}): {e}")
         return {"error": str(e)}
+
 
 # --- 新增：加载现有JSON的辅助函数 ---
 def load_existing_json_db(json_path: Path) -> (List[Dict[str, Any]], Set[str]):
@@ -152,8 +155,8 @@ def load_existing_json_db(json_path: Path) -> (List[Dict[str, Any]], Set[str]):
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         if not isinstance(data, list):
-             raise json.JSONDecodeError("JSON 顶层不是一个列表", "", 0)
-        
+            raise json.JSONDecodeError("JSON 顶层不是一个列表", "", 0)
+
         # 'source_paper' 是我们用来判断是否处理过的唯一ID
         processed_paths = set(item.get('source_paper') for item in data if item.get('source_paper'))
         print(f"成功加载规范化JSON数据库，已包含 {len(data)} 条记录。")
@@ -172,14 +175,14 @@ def standardize_dataset():
         script_path = Path(__file__).resolve()
         project_root = script_path.parent
     except NameError:
-        project_root = Path.cwd() # 适应 .ipynb/.py 交互式环境
-        
+        project_root = Path.cwd()  # 适应 .ipynb/.py 交互式环境
+
     results_folder = project_root / "results"
-    
+
     # 输入文件：提取脚本的输出
-    input_csv_path = results_folder / "benchmarks_database_1113.csv"
+    input_csv_path = results_folder / "benchmarks_database_1125.csv"
     # 输出文件：本脚本的最终产物 (JSON)
-    output_json_path = results_folder / "benchmarks_database_1113_normalized.json"
+    output_json_path = results_folder / "benchmarks_database_1125_normalized.json"
 
     print(f"读取原始CSV: {input_csv_path}")
     print(f"写入/更新JSON: {output_json_path}")
@@ -194,11 +197,10 @@ def standardize_dataset():
     except Exception as e:
         print(f"读取CSV文件 {input_csv_path} 失败: {e}")
         return
-        
+
     # 将路径规范化，以便比较
     df_raw['source_paper'] = df_raw['source_paper'].apply(lambda p: Path(p).as_posix() if pd.notna(p) else None)
     print(f"成功加载原始CSV，总共 {len(df_raw)} 条记录。")
-
 
     # 2. 加载 *输出* 的最终JSON，获取已处理的列表
     existing_normalized_data, processed_paths = load_existing_json_db(output_json_path)
@@ -214,13 +216,13 @@ def standardize_dataset():
     if not rows_to_normalize:
         print("没有找到需要规范化的新记录。")
         return
-        
+
     print(f"找到 {len(rows_to_normalize)} 条新记录，准备开始规范化... (这将调用 {len(rows_to_normalize)} 次API)")
 
     # 4. 循环处理新行
     newly_normalized_list = []
     total_rows = len(rows_to_normalize)
-    
+
     # 定义我们希望LLM规范化的所有列
     fields_to_normalize = [
         'data_size', 'last_updated', 'language', 'dimension', 'task_io_type',
@@ -234,39 +236,39 @@ def standardize_dataset():
 
     for index, row in enumerate(rows_to_normalize):
         print(f"\n--- 正在规范化第 {index + 1}/{total_rows} 条 (Benchmark: {row.get('benchmark_name')}) ---")
-        
+
         # 1. 获取原始数据 (所有列)
         original_data_dict = row.to_dict()
-        
+
         # 2. 调用LLM进行规范化
         normalized_result_dict = normalize_row_fields(row, fields_to_normalize_existing)
         print(f"  规范化结果: {normalized_result_dict}")
-        
+
         # 3. 将规范化结果合并回原始数据字典
         original_data_dict.update(normalized_result_dict)
-        
+
         # 4. 添加到最终列表
         newly_normalized_list.append(original_data_dict)
-        
-        time.sleep(1) # 速率限制
+
+        time.sleep(1)  # 速率限制
 
     # --- 5. 整合数据 (追加并保存) ---
     print("\n--- 规范化完成，正在整合数据 ---")
-    
+
     # 合并旧数据和新数据
     data_combined = existing_normalized_data + newly_normalized_list
-    
+
     try:
         with open(output_json_path, 'w', encoding='utf-8') as f:
             json.dump(data_combined, f, ensure_ascii=False, indent=2)
 
         print(f"\n✅ 成功规范化 {len(newly_normalized_list)} 条新记录。")
         print(f"最终JSON数据库已更新: {output_json_path} (总计 {len(data_combined)} 条)")
-        
+
         if newly_normalized_list:
             print("\n刚刚添加的最后一条记录 (预览):")
             print(json.dumps(newly_normalized_list[-1], indent=2, ensure_ascii=False))
-            
+
     except PermissionError:
         print(f"\n❌ 保存失败：[Errno 13] Permission denied: '{output_json_path}'")
         print("  请确保你没有在其他程序中打开这个JSON文件！")

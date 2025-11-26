@@ -13,7 +13,7 @@ from typing import Set, List, Dict, Any
 # (PowerShell): $env:DEEPSEEK_API_KEY="sk-..."
 # (CMD): set DEEPSEEK_API_KEY=sk-...
 # (Linux/macOS): export DEEPSEEK_API_KEY="sk-..."
-DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 if not DEEPSEEK_API_KEY:
     raise ValueError("错误：请设置 'DEEPSEEK_API_KEY' 环境变量。")
 
@@ -23,7 +23,7 @@ client = OpenAI(
 )
 
 
-# --- 2. 新增函数 (实现请求 2：减少Token) ---
+# --- 2. 新增函数 (减少Token) ---
 def preprocess_text(full_text: str) -> str:
     """
     在将文本发送给LLM之前对其进行预处理。
@@ -65,32 +65,49 @@ def preprocess_text(full_text: str) -> str:
     return snippet
 
 
-# --- 3. 核心函数 (实现请求 1 和 3：更丰富维度 + 溯源) ---
+# --- 3. 核心函数 (更丰富维度 + 溯源) ---
 def build_benchmark_finder_prompt(text_content: str) -> tuple[str, str]:
     """
     构建一个精确的提示，指导LLM提取 *详细* 信息并 *附带原文位置*。
+    增加了针对“数据集原始论文 vs 应用论文”的辨析逻辑。
     """
     system_prompt = """
-    你是一位极其细致的科研助理，专注于从学术论文中提取LLM代码评测基准的元数据。
-    你的任务是：针对提供的论文文本，判断该论文是否提出了新的benchmark，若论文没有提出新的benchmark，将"value" 和 "source_quote" 均设为 null；
-    若论文提出新的benchmark，则找出其中描述的 *每一个* 字段，并同时提供：
+    你是一位极其细致的科研助理，专注于从学术论文中提取AI代码评测基准的元数据。
+
+    ### 🚨 核心原则：区分“数据集原生属性”与“模型实验设置” (CRITICAL)
+    你的首要任务是判断：**这篇论文是“提出/发布”了这个数据集，还是仅仅“使用”它？**
+
+    1. **如果是原始发布论文 (Original Paper)**：
+       - 提取该数据集的所有定义特征。
+
+    2. **如果是应用/评测论文 (Evaluation Paper)**：
+       - 这种情况极其容易出错！**严禁**将论文中**模型的局限性**或**特定实验的设置**误认为是数据集的属性。
+       - **错误示例**：论文说 "We evaluated our model SteloCoder on the Python subset of XLCoST"（我们在XLCoST的Python子集上测试了模型）。
+         - **错误提取**：language: "Python" (这是实验设置，不是数据集全貌)。
+         - **正确行为**：寻找文中是否有描述数据集完整情况的句子（如 "XLCoST covers 7 languages..."）。如果文中完全未提及数据集的全貌，仅提到了实验子集，请在 value 中明确备注 **"文中仅提及实验子集(Python)，未描述完整数据集"**，或者将该字段留为 null，不要编造。
+
+    你的任务是：针对提供的论文文本，找出其中描述的 *每一个* 字段，并同时提供：
     1. 提取的 **值 (value)**。
     2. 支持该值的 **原文引述 (source_quote)**，即你从文本中看到该信息的依据。
 
-    严格按照指定的嵌套JSON格式返回。如果某个字段的信息在文中 *明确* 找不到，请将对应的 "value" 和 "source_quote" 设为 null。
+    严格按照指定的嵌套JSON格式返回。如果某个字段的信息在文中 *明确* 找不到，请将 "value" 和 "source_quote" 均设为 null。
 
-    **需要提取的JSON结构 (v4 - 扩展版):**
+    **需要提取的JSON结构:**
     {
       "benchmark_name": {
         "value": "评测基准的官方名称 (例如 'HumanEval', 'MBPP')",
         "source_quote": "原文中定义或提到该名称的句子 (例如 'We introduce HumanEval, a new evaluation set...')"
+      },
+      "is_original_proposal": {
+        "value": "【布尔值或说明】这篇论文是否是该数据集的原始发布论文？(例如 'Yes' 或 'No, 本文是使用该数据集进行评测')",
+        "source_quote": "原文中表明身份的句子 (例如 'We propose a new dataset...' 或 'We evaluate on XLCoST...')"
       },
       "dataset_url": {
         "value": "官网链接或代码仓库URL (例如 'https://github.com/openai/human-eval')",
         "source_quote": "原文中提供该URL的句子 (例如 'The full dataset is available at https://github.com/...')"
       },
       "task_description": {
-        "value": "【请用中文描述】该评测基准的主要任务",
+        "value": "【请用中文描述】该评测基准旨在解决的主要任务（指数据集本身设计的用途，而非本文模型做的任务）",
         "source_quote": "原文中描述其任务的句子 (例如 '...measure functional correctness for synthesizing programs from docstrings.')"
       },
       "dimension": {
@@ -229,9 +246,18 @@ def flatten_extracted_data(nested_data: dict, source_paper: str) -> dict:
     """
     flat_data = {"source_paper": source_paper}
 
+    # 注意：LLM 返回的 true/false 在 JSON 中是布尔值
+    is_original_item = nested_data.get("is_original_proposal", {})
+    if isinstance(is_original_item, dict):
+        flat_data["is_original_proposal"] = is_original_item.get("value")
+        flat_data["is_original_proposal_quote"] = is_original_item.get("source_quote")
+    else:
+        flat_data["is_original_proposal"] = None
+        flat_data["is_original_proposal_quote"] = None
+
     # 遍历所有在prompt中定义的键
     all_fields = [
-        "benchmark_name", "dataset_url", "task_description", "dimension",
+        "benchmark_name", "is_original_proposal", "dataset_url", "task_description", "dimension",
         "evaluation_method", "context_dependency", "problem_domain",
         "problem_difficulty", "language", "data_size", "source_type",
         "last_updated", "build_type", "contamination_status",
@@ -296,7 +322,7 @@ def extract_benchmark():
     results_folder.mkdir(exist_ok=True)
 
     # 定义输出文件名
-    output_filename = results_folder / "benchmarks_database_1113.csv"
+    output_filename = results_folder / "benchmarks_database_1125.csv"
 
     df_existing, processed_paths = load_existing_csv(output_filename)
     print(f"已处理的文件: {len(processed_paths)} 个")
@@ -337,6 +363,17 @@ def extract_benchmark():
             # 使用 relative_path_str 确保路径格式一致
             flat_benchmark_info = flatten_extracted_data(nested_benchmark_info, relative_path_str)
 
+            # --- 新增过滤逻辑 ---
+            is_original = flat_benchmark_info.get("is_original_proposal")
+
+            # 严格模式：如果不确定或不是原始论文，则发出警告并不保存（或者保存但你知道它是脏数据）
+            if is_original is False:
+                print(f"⚠️ 跳过: {relative_path_str} 似乎不是数据集的原始出处 (is_original_proposal=False)。")
+                print(f"   理由: {flat_benchmark_info.get('is_original_proposal_quote')}")
+                continue  # 跳过当前循环，不添加到 new_benchmarks_flat
+
+            # --------------------
+
             print("提取结果 (扁平化):", json.dumps(flat_benchmark_info, indent=2, ensure_ascii=False))
 
             if flat_benchmark_info.get("benchmark_name"):
@@ -368,7 +405,7 @@ def extract_benchmark():
 
         # 定义基础列 (丰富了维度)
         base_columns = [
-            "benchmark_name", "dataset_url", "task_description", "dimension",
+            "benchmark_name", "is_original_proposal", "dataset_url", "task_description", "dimension",
             "evaluation_method", "context_dependency", "problem_domain",
             "problem_difficulty", "language", "data_size", "source_type",
             "last_updated", "build_type", "contamination_status",
