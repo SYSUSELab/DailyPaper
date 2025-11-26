@@ -622,5 +622,51 @@
     "published": "2025-11-24",
     "update_time": "2025-11-24",
     "download_time": "2025-11-25 03:36:28"
+  },
+  {
+    "id": "2511.19422",
+    "title": "SLMFix: Leveraging Small Language Models for Error Fixing with Reinforcement Learning",
+    "abstract": "Recent advancements in large language models (LLMs) have shown very impressive capabilities in code generation across many programming languages. However, even state-of-the-art LLMs generate programs that contains syntactic errors and fail to complete the given tasks, especially for low-resource programming languages (LRPLs). In addition, high training cost makes finetuning LLMs unaffordable with constrained computational resources, further undermining the effectiveness of LLMs for code generation. In this work, we propose SLMFix, a novel code generation pipeline that leverages a small language model (SLM) finetuned using reinforcement learning (RL) techniques to fix syntactic errors in LLM-generated programs to improve the quality of LLM-generated programs for domain-specific languages (DSLs). In specific, we applied RL on the SLM for the program repair task using a reward calculated using both a static validator and a static semantic similarity metric. Our experimental results demonstrate the effectiveness and generalizability of our approach across multiple DSLs, achieving more than 95% pass rate on the static validator. Notably, SLMFix brings substantial improvement to the base model and outperforms supervised finetuning approach even for 7B models on a LRPL, showing the potential of our approach as an alternative to traditional finetuning approaches.",
+    "arxiv_url": "https://arxiv.org/abs/2511.19422",
+    "authors": [
+      "David Jiahao Fu",
+      "Aryan Gupta",
+      "Aaron Councilman",
+      "David Grove",
+      "Yu-Xiong Wang",
+      "Vikram Adve"
+    ],
+    "first_author": "David Jiahao Fu",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Debug"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.19422v1",
+    "published": "2025-11-24",
+    "update_time": "2025-11-24",
+    "download_time": "2025-11-26 01:46:07"
+  },
+  {
+    "id": "2511.19130",
+    "title": "Can LLMs Recover Program Semantics? A Systematic Evaluation with Symbolic Execution",
+    "abstract": "Obfuscation poses a persistent challenge for software engineering tasks such as program comprehension, maintenance, testing, and vulnerability detection. While compiler optimizations and third-party code often introduce transformations that obscure program intent, existing analysis tools and large language models (LLMs) struggle to recover the original semantics. In this work, we investigate whether LLMs, when fine-tuned with symbolic execution artifacts, can effectively deobfuscate programs and restore analyzability. We construct a benchmark by applying four widely studied transformations-control-flow flattening, opaque predicates, arithmetic encoding, and branch encoding-across diverse C programs from TUM Obfuscation Benchmarks, the LLVM test suite, and algorithmic repositories. We then compare three state-of-the-art LLMs under two training configurations: baseline fine-tuning on obfuscated/original code pairs, and enhanced fine-tuning with additional KLEE artifacts such as SMT constraints, path statistics, and test cases. Our evaluation examines syntactic correctness (compilation success), semantic fidelity (behavioral equivalence under symbolic execution), and code quality (readability and structure). Results show that GPT-4.1-mini achieves the strongest deobfuscation overall, and that incorporating KLEE artifacts consistently improves semantic preservation and compilation success across models. These findings highlight deobfuscation as a broader software engineering concern, demonstrating that combining LLMs with symbolic execution can strengthen automated testing, static analysis, and program comprehension in the presence of obfuscation.",
+    "arxiv_url": "https://arxiv.org/abs/2511.19130",
+    "authors": [
+      "Rong Feng",
+      "Suman Saha"
+    ],
+    "first_author": "Rong Feng",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Translation"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.19130v1",
+    "published": "2025-11-24",
+    "update_time": "2025-11-24",
+    "download_time": "2025-11-26 01:46:33"
   }
 ]
