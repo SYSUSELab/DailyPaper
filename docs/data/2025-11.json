@@ -716,5 +716,54 @@
     "published": "2025-11-25",
     "update_time": "2025-11-25",
     "download_time": "2025-11-27 01:44:11"
+  },
+  {
+    "id": "2511.21382",
+    "title": "Large Language Models for Unit Test Generation: Achievements, Challenges, and the Road Ahead",
+    "abstract": "Unit testing is an essential yet laborious technique for verifying software and mitigating regression risks. Although classic automated methods effectively explore program structures, they often lack the semantic information required to produce realistic inputs and assertions. Large Language Models (LLMs) address this limitation by utilizing by leveraging their data-driven knowledge of code semantics and programming patterns. To analyze the state of the art in this domain, we conducted a systematic literature review of 115 publications published between May 2021 and August 2025. We propose a unified taxonomy based on the unit test generation lifecycle that treats LLMs as stochastic generators requiring systematic engineering constraints. This framework analyzes the literature regarding core generative strategies and a set of enhancement techniques ranging from pre-generation context enrichment to post-generation quality assurance. Our analysis reveals that prompt engineering has emerged as the dominant utilization strategy and accounts for 89% of the studies due to its flexibility. We find that iterative validation and repair loops have become the standard mechanism to ensure robust usability and lead to significant improvements in compilation and execution pass rates. However, critical challenges remain regarding the weak fault detection capabilities of generated tests and the lack of standardized evaluation benchmarks. We conclude with a roadmap for future research that emphasizes the progression towards autonomous testing agents and hybrid systems combining LLMs with traditional software engineering tools. This survey provides researchers and practitioners with a comprehensive perspective on converting the potential of LLMs into industrial-grade testing solutions.",
+    "arxiv_url": "https://arxiv.org/abs/2511.21382",
+    "authors": [
+      "Bei Chu",
+      "Yang Feng",
+      "Kui Liu",
+      "Zifan Nan",
+      "Zhaoqiang Guo",
+      "Baowen Xu"
+    ],
+    "first_author": "Bei Chu",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.21382v1",
+    "published": "2025-11-26",
+    "update_time": "2025-11-26",
+    "download_time": "2025-11-28 01:44:01"
+  },
+  {
+    "id": "2511.21380",
+    "title": "Multi-Agent Systems for Dataset Adaptation in Software Engineering: Capabilities, Limitations, and Future Directions",
+    "abstract": "Automating the adaptation of software engineering (SE) research artifacts across datasets is essential for scalability and reproducibility, yet it remains largely unstudied. Recent advances in large language model (LLM)-based multi-agent systems, such as GitHub Copilot's agent mode, promise to automate complex development workflows through coordinated reasoning, code generation, and tool interaction. This paper presents the first empirical study on how state-of-the-art multi-agent systems perform in dataset adaptation tasks. We evaluate Copilot, backed by GPT-4.1 and Claude Sonnet 4, on adapting SE research artifacts from benchmark repositories including ROCODE and LogHub2.0. Through a five-stage evaluation pipeline (file comprehension, code editing, command generation, validation, and final execution), we measure success rates, analyze failure patterns, and assess prompt-based interventions designed to enhance agent performance. Results show that current systems can identify key files and generate partial adaptations but rarely produce functionally correct implementations. Prompt-level interventions, especially providing execution error messages and reference code, substantially improve structural similarity to ground truth (from 7.25% to 67.14%), highlighting the importance of contextual and feedback-driven guidance. Our findings reveal both the promise and limitations of today's multi-agent LLM systems for dataset adaptation, and suggest concrete directions for building more reliable, self-correcting agents in future SE research.",
+    "arxiv_url": "https://arxiv.org/abs/2511.21380",
+    "authors": [
+      "Jingyi Chen",
+      "Xiaoyan Guo",
+      "Songqiang Chen",
+      "Shing-Chi Cheung",
+      "Jiasi Shen"
+    ],
+    "first_author": "Jingyi Chen",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Editing"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.21380v1",
+    "published": "2025-11-26",
+    "update_time": "2025-11-26",
+    "download_time": "2025-11-28 01:44:11"
   }
 ]
