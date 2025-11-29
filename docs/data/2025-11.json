@@ -765,5 +765,54 @@
     "published": "2025-11-26",
     "update_time": "2025-11-26",
     "download_time": "2025-11-28 01:44:11"
+  },
+  {
+    "id": "2511.21022",
+    "title": "Lightweight Model Editing for LLMs to Correct Deprecated API Recommendations",
+    "abstract": "Pre-trained or fine-tuned on large code corpora, Large Language Models (LLMs) have demonstrated strong performance in code completion tasks. However, their embedded knowledge is constrained by the timeliness of training data, which often includes code using deprecated APIs. Consequently, LLMs frequently generate deprecated APIs that will no longer be supported in future versions of third-party libraries. While retraining LLMs on updated codebases could refresh their API knowledge, this approach is computationally expensive. Recently, lightweight model editing methods have emerged to efficiently correct specific knowledge in LLMs. However, it remains unclear whether these methods can effectively update deprecated API knowledge and enable edited models to generate up-to-date APIs. To address this gap, we conduct the first systematic study applying 10 state-of-the-art model editing techniques to update deprecated API knowledge in three LLMs: Qwen2.5-Coder, StarCoder2, and DeepSeek-Coder. We introduce EDAPIBench, a dedicated benchmark featuring over 70 deprecated APIs from 8 popular Python libraries, with more than 3,000 editing instances. Our results show that the parameter-efficient fine-tuning method AdaLoRA achieves the best performance in enabling edited models to generate correct, up-to-date APIs, but falls short in Specificity (i.e., the editing influences untargeted knowledge). To resolve this, we propose AdaLoRA-L, which defines \"Common API Layers\" (layers within the LLMs with high importance across all APIs, storing general knowledge and excluded from editing) and restricts edits exclusively to \"Specific API Layers\" (layers with high importance only for the target API, storing the API-specific knowledge). Experimental results demonstrate that AdaLoRA-L significantly improves Specificity while maintaining comparable performance across other evaluation metrics.",
+    "arxiv_url": "https://arxiv.org/abs/2511.21022",
+    "authors": [
+      "Guancheng Lin",
+      "Xiao Yu",
+      "Jacky Keung",
+      "Xing Hu",
+      "Xin Xia",
+      "Alex X. Liu"
+    ],
+    "first_author": "Guancheng Lin",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Editing"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.21022v1",
+    "published": "2025-11-26",
+    "update_time": "2025-11-26",
+    "download_time": "2025-11-29 01:43:50"
+  },
+  {
+    "id": "2511.20933",
+    "title": "Hierarchical Evaluation of Software Design Capabilities of Large Language Models of Code",
+    "abstract": "Large language models (LLMs) are being increasingly adopted in the software engineering domain, yet the robustness of their grasp on core software design concepts remains unclear. We conduct an empirical study to systematically evaluate their understanding of cohesion (intra-module) and coupling (inter-module). We programmatically generate poorly designed code fragments and test the DeepSeek-R1 model family ($14$B, $32$B, $70$B) under varying levels of guidance, from simple \\textit{Verification} to \\textit{Guided} and \\textit{Open-ended Generation}, while varying contextual noise by injecting distractor elements. While models exhibit a solid baseline understanding of both concepts in ideal conditions, their practical knowledge is fragile and highly asymmetrical. Reasoning about coupling proves brittle; performance collapses in noisy, open-ended scenarios, with F1 scores dropping by over $50\\%$. In contrast, the models' analysis of cohesion is remarkably robust to internal noise in guided tasks, showing little performance degradation. However, this resilience also fails when all guidance is removed. Reasoning-trace analysis confirms these failure modes, revealing \\textit{cognitive shortcutting} for coupling versus a more exhaustive (yet still failing) analysis for cohesion. To summarize, while LLMs can provide reliable assistance for recognizing design flaws, their ability to reason autonomously in noisy, realistic contexts is limited, highlighting the critical need for more scalable and robust program understanding capabilities.",
+    "arxiv_url": "https://arxiv.org/abs/2511.20933",
+    "authors": [
+      "Mootez Saad",
+      "Boqi Chen",
+      "José Antonio Hernández López",
+      "Dániel Varró",
+      "Tushar Sharma"
+    ],
+    "first_author": "Mootez Saad",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Debug"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.20933v1",
+    "published": "2025-11-25",
+    "update_time": "2025-11-25",
+    "download_time": "2025-11-29 01:44:11"
   }
 ]
