@@ -866,5 +866,53 @@
     "published": "2025-11-25",
     "update_time": "2025-11-25",
     "download_time": "2025-11-30 01:58:09"
+  },
+  {
+    "id": "2511.20709",
+    "title": "DUALGUAGE: Automated Joint Security-Functionality Benchmarking for Secure Code Generation",
+    "abstract": "Large language models (LLMs) and autonomous coding agents are increasingly used to generate software across a wide range of domains. Yet a core requirement remains unmet: ensuring that generated code is secure without compromising its functional correctness. Existing benchmarks and evaluations for secure code generation fall short-many measure only vulnerability reduction, disregard correctness preservation, or evaluate security and functionality on separate datasets, violating the fundamental need for simultaneous joint evaluation. We present DUALGAUGE, the first fully automated benchmarking framework designed to rigorously evaluate the security and correctness of LLM-generated code in unison. Given the lack of datasets enabling joint evaluation of secure code generation, we also present DUALGAUGE-BENCH, a curated benchmark suite of diverse coding tasks, each paired with manually validated test suites for both security and functionality, designed for full coverage of specification requirements. At the core of DUALGAUGE is an agentic program executor, which runs a program against given tests in sandboxed environments, and an LLM-based evaluator, which assesses both correctness and vulnerability behavior against expected outcomes. We rigorously evaluated and ensured the quality of DUALGAUGE-BENCH and the accuracy of DUALGAUGE, and applied DUALGAUGE to benchmarking ten leading LLMs on DUALGAUGE-BENCH across thousands of test scenarios. Our results reveal critical gaps in correct and secure code generation by these LLMs, for which our open-source system and datasets help accelerate progress via reproducible, scalable, and rigorous evaluation.",
+    "arxiv_url": "https://arxiv.org/abs/2511.20709",
+    "authors": [
+      "Abhijeet Pathak",
+      "Suvadra Barua",
+      "Dinesh Gudimetla",
+      "Rupam Patir",
+      "Jiawei Guo",
+      "Hongxin Hu",
+      "Haipeng Cai"
+    ],
+    "first_author": "Abhijeet Pathak",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.20709v1",
+    "published": "2025-11-24",
+    "update_time": "2025-11-24",
+    "download_time": "2025-12-01 02:06:16"
+  },
+  {
+    "id": "2511.19635",
+    "title": "Agint: Agentic Graph Compilation for Software Engineering Agents",
+    "abstract": "LLM-based coding agents are increasingly common but still face challenges in context management, latency, reliability, reproducibility, and scalability. We present Agint, an agentic graph compiler, interpreter, and runtime that incrementally and hierarchically converts natural-language instructions into typed, effect-aware code DAGs. Agint introduces explicit type floors (text to data to spec to code) grounded in semantic graph transformations and a hybrid LLM and function-based JIT runtime. This enables dynamic graph refinement, reproducible and optimizable execution, speculative evaluation, and interoperability with existing developer tools. Agint's typed graph bindings improve reliability and allow concurrent composition of concurrent codebases by construction, supporting accelerated development with smaller and faster models, lower latency, efficient context utilization, and higher throughput. Hierarchical compilation allows scalable graph edits, while the graph structure supports reproducibility and efficient parallel generation. Agint provides a composable unix-style toolchain: dagify (DAG compiler), dagent (hybrid JIT runtime), schemagin (schema generator), and datagin (data transformer) for realtime, low-latency code and dataflow creation. Human developers and coding agents refine graphs through the Agint CLI, while non-technical users use Agint Flow GUI for visual editing, conversational refinement, and debugging to promote prototype agentic workflows to production code. This continuous co-creation model allows teams to prototype quickly, refine seamlessly, and deploy reliably, bridging natural language, compiler methods, and developer tooling to enable a new generation of composable, team-centric coding agents at scale.",
+    "arxiv_url": "https://arxiv.org/abs/2511.19635",
+    "authors": [
+      "Abhi Chivukula",
+      "Jay Somasundaram",
+      "Vijay Somasundaram"
+    ],
+    "first_author": "Abhi Chivukula",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Agent Systems"
+    ],
+    "benchmark": false,
+    "conference": "NeurIPS 2025",
+    "pdf_url": "https://arxiv.org/pdf/2511.19635v1",
+    "published": "2025-11-24",
+    "update_time": "2025-11-24",
+    "download_time": "2025-12-01 02:06:27"
   }
 ]
