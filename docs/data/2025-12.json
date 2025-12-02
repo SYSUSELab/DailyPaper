@@ -47,5 +47,50 @@
     "published": "2025-12-01",
     "update_time": "2025-12-01",
     "download_time": "2025-12-02 03:27:26"
+  },
+  {
+    "id": "2512.01609",
+    "title": "GPTrace: Effective Crash Deduplication Using LLM Embeddings",
+    "abstract": "Fuzzing is a highly effective method for uncovering software vulnerabilities, but analyzing the resulting data typically requires substantial manual effort. This is amplified by the fact that fuzzing campaigns often find a large number of crashing inputs, many of which share the same underlying bug. Crash deduplication is the task of finding such duplicate crashing inputs and thereby reducing the data that needs to be examined. Many existing deduplication approaches rely on comparing stack traces or other information that is collected when a program crashes. Although various metrics for measuring the similarity of such pieces of information have been proposed, many do not yield satisfactory deduplication results. In this work, we present GPTrace, a deduplication workflow that leverages a large language model to evaluate the similarity of various data sources associated with crashes by computing embedding vectors and supplying those as input to a clustering algorithm. We evaluate our approach on over 300 000 crashing inputs belonging to 50 ground truth labels from 14 different targets. The deduplication results produced by GPTrace show a noticeable improvement over hand-crafted stack trace comparison methods and even more complex state-of-the-art approaches that are less flexible.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01609",
+    "authors": [
+      "Patrick Herter",
+      "Vincent Ahlrichs",
+      "Ridvan Açilan",
+      "Julian Horsch"
+    ],
+    "first_author": "Patrick Herter",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": false,
+    "conference": "ICSE",
+    "pdf_url": "https://arxiv.org/pdf/2512.01609v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-02 03:34:20"
+  },
+  {
+    "id": "2512.01396",
+    "title": "BackportBench: A Multilingual Benchmark for Automated Backporting of Patches",
+    "abstract": "Many modern software projects evolve rapidly to incorporate new features and security patches. It is important for users to update their dependencies to safer versions, but many still use older, vulnerable package versions because upgrading can be difficult and may break their existing codebase. Software developers can mitigate this problem by backporting security patches to older releases. However, manually backporting is time-consuming and error-prone. The effectiveness of existing automated backporting techniques on general software remains unclear since they typically target only code-hunk or function-level patch porting scenarios and are evaluated with imperfect metrics.   To facilitate the development and evaluation of automated backporting techniques, we introduce BackportBench, the first comprehensive benchmark suite for patch backporting problem. BackportBench is a multilingual benchmark that contains 202 patch backporting problems from PyPI, Maven, and npm, each with executable Docker environments and relevant test cases. We evaluated existing patch porting methods and LLM-based techniques that have the potential to adapt to this task using BackportBench. The results show that the agentic method has outperformed traditional patch porting methods, especially on cases that require logical and structural changes. However, the performance varies across different programming languages. Based on the findings, we draw several implications for researchers and software practitioners in future work on automated backporting.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01396",
+    "authors": [
+      "Zhiqing Zhong",
+      "Jiaming Huang",
+      "Pinjia He"
+    ],
+    "first_author": "Zhiqing Zhong",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Editing"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01396v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-02 03:34:57"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2503.01449",
+    "title": "Benchmarking Large Language Models for Multi-Language Software Vulnerability Detection",
+    "abstract": "Recent advancements in generative AI have led to the widespread adoption of large language models (LLMs) in software engineering, addressing numerous long-standing challenges. However, a comprehensive study examining the capabilities of LLMs in software vulnerability detection (SVD), a crucial aspect of software security, is currently lacking. Existing research primarily focuses on evaluating LLMs using C/C++ datasets. It typically explores only one or two strategies among prompt engineering, instruction tuning, and sequence classification fine-tuning for open-source LLMs. Consequently, there is a significant knowledge gap regarding the effectiveness of diverse LLMs in detecting vulnerabilities across various programming languages. To address this knowledge gap, we present a comprehensive empirical study evaluating the performance of LLMs on the SVD task. We have compiled a comprehensive dataset comprising 8,260 vulnerable functions in Python, 7,505 in Java, and 28,983 in JavaScript. We assess five open-source LLMs using multiple approaches, including prompt engineering, instruction tuning, and sequence classification fine-tuning. These LLMs are benchmarked against five fine-tuned small language models and two open-source static application security testing tools. Furthermore, we explore two avenues to improve LLM performance on SVD: a) Data perspective: Retraining models using downsampled balanced datasets. b) Model perspective: Investigating ensemble learning methods that combine predictions from multiple LLMs. Our comprehensive experiments demonstrate that SVD remains a challenging task for LLMs. This study provides a thorough understanding of the role of LLMs in SVD and offers practical insights for future advancements in leveraging generative AI to enhance software security practices.",
+    "arxiv_url": "https://arxiv.org/abs/2503.01449",
+    "authors": [
+      "Ting Zhang",
+      "Chengran Yang",
+      "Yindu Su",
+      "Martin Weyssow",
+      "Hung Nguyen",
+      "Tan Bui",
+      "Hong Jin Kang",
+      "Yikun Li",
+      "Eng Lieh Ouh",
+      "Lwin Khin Shar",
+      "David Lo"
+    ],
+    "first_author": "Ting Zhang",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.01449v1",
+    "published": "2025-03-03",
+    "update_time": "2025-03-03",
+    "download_time": "2025-12-02 03:32:44"
+  }
+]
