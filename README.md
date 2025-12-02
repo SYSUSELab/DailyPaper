@@ -1,4 +1,4 @@
-# DailyLLM4SEPaper
+# LLM4SEPaper
 website: https://sysuselab.github.io/DailyLLM4SEPaper/
 
 ## Add Papers
