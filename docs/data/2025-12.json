@@ -142,5 +142,50 @@
     "published": "2025-12-01",
     "update_time": "2025-12-01",
     "download_time": "2025-12-03 01:49:24"
+  },
+  {
+    "id": "2512.02795",
+    "title": "Towards Observation Lakehouses: Living, Interactive Archives of Software Behavior",
+    "abstract": "Code-generating LLMs are trained largely on static artifacts (source, comments, specifications) and rarely on materializations of run-time behavior. As a result, they readily internalize buggy or mislabeled code. Since non-trivial semantic properties are undecidable in general, the only practical way to obtain ground-truth functionality is by dynamic observation of executions. In prior work, we addressed representation with Sequence Sheets, Stimulus-Response Matrices (SRMs), and Stimulus-Response Cubes (SRCs) to capture and compare behavior across tests, implementations, and contexts. These structures make observation data analyzable offline and reusable, but they do not by themselves provide persistence, evolution, or interactive analytics at scale. In this paper, therefore, we introduce observation lakehouses that operationalize continual SRCs: a tall, append-only observations table storing every actuation (stimulus, response, context) and SQL queries that materialize SRC slices on demand. Built on Apache Parquet + Iceberg + DuckDB, the lakehouse ingests data from controlled pipelines (LASSO) and CI pipelines (e.g., unit test executions), enabling n-version assessment, behavioral clustering, and consensus oracles without re-execution. On a 509-problem benchmark, we ingest $\\approx$8.6M observation rows ($<$51MiB) and reconstruct SRM/SRC views and clusters in $<$100ms on a laptop, demonstrating that continual behavior mining is practical without a distributed cluster of machines. This makes behavioral ground truth first-class alongside other run-time data and provides an infrastructure path toward behavior-aware evaluation and training. The Observation Lakehouse, together with the accompanying dataset, is publicly available as an open-source project on GitHub: https://github.com/SoftwareObservatorium/observation-lakehouse",
+    "arxiv_url": "https://arxiv.org/abs/2512.02795",
+    "authors": [
+      "Marcus Kessel"
+    ],
+    "first_author": "Marcus Kessel",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.02795v1",
+    "published": "2025-12-02",
+    "update_time": "2025-12-02",
+    "download_time": "2025-12-04 01:48:56"
+  },
+  {
+    "id": "2512.02750",
+    "title": "\"Can you feel the vibes?\": An exploration of novice programmer engagement with vibe coding",
+    "abstract": "Emerging alongside generative AI and the broader trend of AI-assisted coding, the term \"vibe coding\" refers to creating software via natural language prompts rather than direct code authorship. This approach promises to democratize software development, but its educational implications remain underexplored. This paper reports on a one-day educational hackathon investigating how novice programmers and mixed-experience teams engage with vibe coding. We organized an inclusive event at a Brazilian public university with 31 undergraduate participants from computing and non-computing disciplines, divided into nine teams. Through observations, an exit survey, and semi-structured interviews, we examined creative processes, tool usage patterns, collaboration dynamics, and learning outcomes. Findings reveal that vibe coding enabled rapid prototyping and cross-disciplinary collaboration, with participants developing prompt engineering skills and delivering functional demonstrations within time constraints. However, we observed premature convergence in ideation, uneven code quality requiring rework, and limited engagement with core software engineering practices. Teams adopted sophisticated workflows combining multiple AI tools in pipeline configurations, with human judgment remaining essential for critical refinement. The short format (9 hours) proved effective for confidence-building among newcomers while accommodating participants with limited availability. We conclude that vibe coding hackathons can serve as valuable low-stakes learning environments when coupled with explicit scaffolds for divergent thinking, critical evaluation of AI outputs, and realistic expectations about production quality.",
+    "arxiv_url": "https://arxiv.org/abs/2512.02750",
+    "authors": [
+      "Kiev Gama",
+      "Filipe Calegario",
+      "Victoria Jackson",
+      "Alexander Nolte",
+      "Luiz Augusto Morais",
+      "Vinicius Garcia"
+    ],
+    "first_author": "Kiev Gama",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Prompting"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.02750v1",
+    "published": "2025-12-02",
+    "update_time": "2025-12-02",
+    "download_time": "2025-12-04 01:49:05"
   }
 ]
