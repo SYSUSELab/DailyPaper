@@ -185,8 +185,8 @@ class PaperSearch:
         try:
             doc = fitz.open(pdf_path)
             all_text = []
-
-            for page_num in range(3):
+            max_page = min(3, doc.page_count)
+            for page_num in range(max_page):
                 page = doc.load_page(page_num)
                 all_text.append(page.get_text("text"))
 
