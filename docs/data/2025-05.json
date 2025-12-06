@@ -1,0 +1,27 @@
+[
+  {
+    "id": "2505.08503",
+    "title": "ICVul: A Well-labeled C/C++ Vulnerability Dataset with Comprehensive Metadata and VCCs",
+    "abstract": "Machine learning-based software vulnerability detection requires high-quality datasets, which is essential for training effective models. To address challenges related to data label quality, diversity, and comprehensiveness, we constructed ICVul, a dataset emphasizing data quality and enriched with comprehensive metadata, including Vulnerability-Contributing Commits (VCCs). We began by filtering Common Vulnerabilities and Exposures from the NVD, retaining only those linked to GitHub fix commits. Then we extracted functions and files along with relevant metadata from these commits and used the SZZ algorithm to trace VCCs. To further enhance label reliability, we developed the ESC (Eliminate Suspicious Commit) technique, ensuring credible data labels. The dataset is stored in a relational-like database for improved usability and data integrity. Both ICVul and its construction framework are publicly accessible on GitHub, supporting research in related field.",
+    "arxiv_url": "https://arxiv.org/abs/2505.08503",
+    "authors": [
+      "Chaomeng Lu",
+      "Tianyu Li",
+      "Toon Dehaene",
+      "Bert Lagaisse"
+    ],
+    "first_author": "Chaomeng Lu",
+    "category": [
+      "Benchmark / Dataset"
+    ],
+    "field": "Quality Management",
+    "tag": "Vulnerability Detection",
+    "summary": "ICVul 提供了一个面向 C/C++ 的高质量漏洞数据集，包含详细的元数据、Vulnerability-Contributing-Commits (VCCs) 追溯以及用于去除噪声提交的 ESC 筛选技术，并公开了可复现的构建框架。",
+    "quality": "High",
+    "conference": "MSR 2025",
+    "pdf_url": "https://arxiv.org/pdf/2505.08503v1",
+    "published": "2025-05-13",
+    "update_time": "2025-05-13",
+    "download_time": "2025-12-04 23:08:14"
+  }
+]

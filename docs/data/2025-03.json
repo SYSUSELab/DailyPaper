@@ -18,15 +18,18 @@
       "David Lo"
     ],
     "first_author": "Ting Zhang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Experience / Empirical",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Quality Management",
+    "tag": "Vulnerability Detection",
+    "summary": "本文构建了包含 Python、Java、JavaScript 函数级漏洞的大规模数据集，并对五个开源大模型在提示工程、指令微调和序列分类微调下进行全面基准评测，比较其与小型模型和静态扫描工具的表现，同时探索通过均衡重采样与模型集成提升检测效果。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2503.01449v1",
     "published": "2025-03-03",
     "update_time": "2025-03-03",
-    "download_time": "2025-12-02 03:32:44"
+    "download_time": "2025-12-05 10:10:55"
   }
 ]

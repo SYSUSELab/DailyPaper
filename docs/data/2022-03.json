@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2203.13474",
+    "title": "CodeGen: An Open Large Language Model for Code with Multi-Turn Program Synthesis",
+    "abstract": "Program synthesis strives to generate a computer program as a solution to a given problem specification, expressed with input-output examples or natural language descriptions. The prevalence of large language models advances the state-of-the-art for program synthesis, though limited training resources and data impede open access to such models. To democratize this, we train and release a family of large language models up to 16.1B parameters, called CODEGEN, on natural language and programming language data, and open source the training library JAXFORMER. We show the utility of the trained model by demonstrating that it is competitive with the previous state-of-the-art on zero-shot Python code generation on HumanEval. We further investigate the multi-step paradigm for program synthesis, where a single program is factorized into multiple prompts specifying subproblems. To this end, we construct an open benchmark, Multi-Turn Programming Benchmark (MTPB), consisting of 115 diverse problem sets that are factorized into multi-turn prompts. Our analysis on MTPB shows that the same intent provided to CODEGEN in multi-turn fashion significantly improves program synthesis over that provided as a single turn. We make the training library JAXFORMER and model checkpoints available as open source contribution: https://github.com/salesforce/CodeGen.",
+    "arxiv_url": "https://arxiv.org/abs/2203.13474",
+    "authors": [
+      "Erik Nijkamp",
+      "Bo Pang",
+      "Hiroaki Hayashi",
+      "Lifu Tu",
+      "Huan Wang",
+      "Yingbo Zhou",
+      "Silvio Savarese",
+      "Caiming Xiong"
+    ],
+    "first_author": "Erik Nijkamp",
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Pre-Training",
+    "summary": "该论文训练并开源了多种规模的CODEGEN代码语言模型和训练库JAXFORMER，提出并评估了多轮程序合成范式并构建了Multi-Turn Programming Benchmark以验证多轮提示能显著提升代码生成性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2203.13474v5",
+    "published": "2022-03-25",
+    "update_time": "2023-02-27",
+    "download_time": "2025-12-04 23:16:13"
+  }
+]

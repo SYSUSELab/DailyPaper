@@ -13,16 +13,18 @@
       "Zibin Zheng"
     ],
     "first_author": "Yanlin Wang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Agent Framework Engineering"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Requirements & Design",
+    "tag": "Management",
+    "summary": "本文通过对1,575个LLM代理项目及11,910条开发者讨论进行大规模挖掘与分析，提出了基于SDLC的代理开发挑战分类并比较了十个主流代理框架在学习成本、开发效率、功能抽象、性能优化与可维护性五个维度的差异与优劣。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01939v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-02 03:27:17"
+    "download_time": "2025-12-05 10:10:06"
   },
   {
     "id": "2512.01690",
@@ -37,16 +39,19 @@
       "Olsi Rrjolli"
     ],
     "first_author": "Philip Garrett",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出三种确定性方法为自动生成的REST API测试用例生成描述性名称，并通过用户调研（39名参与者）与大众汽车的工业案例比较规则与LLM方法，结果表明基于规则的方法在可读性上与先进LLM（如Gemini、GPT-4o）相当且已集成至EvoMaster作为默认策略。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01690v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-02 03:27:26"
+    "download_time": "2025-12-05 10:10:33"
   },
   {
     "id": "2512.01609",
@@ -60,16 +65,18 @@
       "Julian Horsch"
     ],
     "first_author": "Patrick Herter",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
-    "conference": "ICSE",
+    "field": "Software Testing",
+    "tag": "Testing automation",
+    "summary": "GPTrace提出一种利用大语言模型生成堆栈跟踪和ASan报告的嵌入向量并对其进行聚类的崩溃去重工作流，从而在多目标大规模模糊测试崩溃集上显著优于现有基于栈跟踪的去重方法。",
+    "quality": "High",
+    "conference": "ICSE 2026",
     "pdf_url": "https://arxiv.org/pdf/2512.01609v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-02 03:34:20"
+    "download_time": "2025-12-05 10:11:28"
   },
   {
     "id": "2512.01396",
@@ -82,16 +89,19 @@
       "Pinjia He"
     ],
     "first_author": "Zhiqing Zhong",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Editing"
+    "category": [
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "Maintenance",
+    "tag": "Patch Backporting",
+    "summary": "本文提出 BackportBench——一个包含来自 PyPI、Maven 和 npm 的 202 个多语言可执行补丁回移任务的基准，并用该基准评估现有补丁移植方法与多种 LLM 技术以分析其在不同语言与场景下的表现差异。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01396v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-02 03:34:57"
+    "download_time": "2025-12-05 10:11:49"
   },
   {
     "id": "2512.01356",
@@ -106,16 +116,19 @@
       "Hui Liu"
     ],
     "first_author": "Yuxin Zhang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Summarization"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
-    "conference": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+    "field": "Maintenance",
+    "tag": "Code Review",
+    "summary": "本文提出LAURA框架，通过上下文增强、相似评审示例检索与系统化引导对LLM进行检索增强生成代码评审，并构建了包含301,256条高质量diff‑comment序列的数据集，从而显著提升了ChatGPT-4o和DeepSeek v3的评审质量。",
+    "quality": "High",
+    "conference": "ASE 2025",
     "pdf_url": "https://arxiv.org/pdf/2512.01356v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-03 01:49:15"
+    "download_time": "2025-12-05 10:12:12"
   },
   {
     "id": "2512.01255",
@@ -132,16 +145,20 @@
       "Zifeng Kang"
     ],
     "first_author": "Qingyuan Fei",
-    "primary_category": "cs.CR",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Benchmark / Dataset",
+      "Experience / Empirical",
+      "Technical / Method"
     ],
-    "benchmark": true,
+    "field": "Quality Management",
+    "tag": "Vulnerability Detection",
+    "summary": "本文提出了面向JavaScript漏洞检测的自动基准生成框架FORGEJS，构建了系统性基准ARENAJS和自动评估框架JUDGEJS，并使用其对多款主流商用LLM进行系统评估，揭示了模型在推理能力、鲁棒性和可部署性方面的显著缺陷。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01255v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-03 01:49:24"
+    "download_time": "2025-12-05 10:12:36"
   },
   {
     "id": "2512.02795",
@@ -152,16 +169,19 @@
       "Marcus Kessel"
     ],
     "first_author": "Marcus Kessel",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Software Testing",
+    "tag": "Testing automation",
+    "summary": "本文提出 Observation Lakehouse —— 一个基于 Parquet + Iceberg + DuckDB 的可持续、可交互的观测数据湖屋，用于以细粒度调用步骤记录运行时行为并按需重构 SRM/SRC，从而实现无需重执行即可进行 n 版评估、行为聚类与共识 Oracle 并开源了相应数据集与实现。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.02795v1",
     "published": "2025-12-02",
     "update_time": "2025-12-02",
-    "download_time": "2025-12-04 01:48:56"
+    "download_time": "2025-12-05 10:13:02"
   },
   {
     "id": "2512.02750",
@@ -177,16 +197,18 @@
       "Vinicius Garcia"
     ],
     "first_author": "Kiev Gama",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Prompting"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文报道了一次在巴西公立大学举办的一日“vibe coding”教育黑客松，通过观察、问卷与访谈分析31名本科生在以自然语言提示驱动的软件开发中的协作、工具使用与学习成果，发现其有利于快速原型和跨学科合作但存在早期思路收敛、代码质量不均与对工程实践参与有限等问题，建议通过引导发散思维与批判性评估来提升教学效果。",
+    "quality": "Middle",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.02750v1",
     "published": "2025-12-02",
     "update_time": "2025-12-02",
-    "download_time": "2025-12-04 01:49:05"
+    "download_time": "2025-12-05 10:13:27"
   },
   {
     "id": "2512.03421",
@@ -202,16 +224,19 @@
       "Yong Liu"
     ],
     "first_author": "Hexiang Xu",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Experience / Empirical",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
-    "conference": "publication in The Journal of Systems & Software",
+    "field": "Quality Management",
+    "tag": "Bug Localization",
+    "summary": "本文构建了新的BugT数据集并在Codeflaws、Condefects与BugT上系统评估多种开源与闭源LLM，实证分析了它们在新手程序故障定位中的性能、难度影响、推理过度与计算成本，并通过用户研究验证了LLM解释对新手的教学价值。",
+    "quality": "High",
+    "conference": "The Journal of Systems & Software",
     "pdf_url": "https://arxiv.org/pdf/2512.03421v1",
     "published": "2025-12-03",
     "update_time": "2025-12-03",
-    "download_time": "2025-12-05 01:49:44"
+    "download_time": "2025-12-05 17:25:17"
   },
   {
     "id": "2512.03420",
@@ -227,15 +252,74 @@
       "XiaoJing Liao"
     ],
     "first_author": "Kang Yang",
-    "primary_category": "cs.CR",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出HarnessAgent，一种工具增强的agent框架，通过编译错误分流、混合检索工具池与强化验证流水线，实现对大型C/C++代码库中内部函数的自动化模糊测试驱动（harness）构建，并在243个OSS-Fuzz目标上显著提高生成成功率与模糊覆盖率。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.03420v1",
     "published": "2025-12-03",
     "update_time": "2025-12-03",
-    "download_time": "2025-12-05 01:49:53"
+    "download_time": "2025-12-05 17:25:58"
+  },
+  {
+    "id": "2512.05073",
+    "title": "David vs. Goliath: Can Small Models Win Big with Agentic AI in Hardware Design?",
+    "abstract": "Large Language Model(LLM) inference demands massive compute and energy, making domain-specific tasks expensive and unsustainable. As foundation models keep scaling, we ask: Is bigger always better for hardware design? Our work tests this by evaluating Small Language Models coupled with a curated agentic AI framework on NVIDIA's Comprehensive Verilog Design Problems(CVDP) benchmark. Results show that agentic workflows: through task decomposition, iterative feedback, and correction - not only unlock near-LLM performance at a fraction of the cost but also create learning opportunities for agents, paving the way for efficient, adaptive solutions in complex design tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05073",
+    "authors": [
+      "Shashwat Shankar",
+      "Subhranshu Pandey",
+      "Innocent Dengkhw Mochahari",
+      "Bhabesh Mali",
+      "Animesh Basak Chowdhury",
+      "Sukanta Bhattacharjee",
+      "Chandan Karfa"
+    ],
+    "first_author": "Shashwat Shankar",
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文提出了一种面向小型语言模型的SLM感知agentic AI框架，通过任务分解、专用提示工程和迭代验证，在NVIDIA的CVDP Verilog基准上实验证明SLM能以远低于大型模型的成本在硬件设计的代码生成与理解任务上达到接近或匹配的性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.05073v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-06 01:43:01"
+  },
+  {
+    "id": "2512.04680",
+    "title": "Generative AI for Self-Adaptive Systems: State of the Art and Research Roadmap",
+    "abstract": "Self-adaptive systems (SASs) are designed to handle changes and uncertainties through a feedback loop with four core functionalities: monitoring, analyzing, planning, and execution. Recently, generative artificial intelligence (GenAI), especially the area of large language models, has shown impressive performance in data comprehension and logical reasoning. These capabilities are highly aligned with the functionalities required in SASs, suggesting a strong potential to employ GenAI to enhance SASs. However, the specific benefits and challenges of employing GenAI in SASs remain unclear. Yet, providing a comprehensive understanding of these benefits and challenges is complex due to several reasons: limited publications in the SAS field, the technological and application diversity within SASs, and the rapid evolution of GenAI technologies. To that end, this paper aims to provide researchers and practitioners a comprehensive snapshot that outlines the potential benefits and challenges of employing GenAI's within SAS. Specifically, we gather, filter, and analyze literature from four distinct research fields and organize them into two main categories to potential benefits: (i) enhancements to the autonomy of SASs centered around the specific functions of the MAPE-K feedback loop, and (ii) improvements in the interaction between humans and SASs within human-on-the-loop settings. From our study, we outline a research roadmap that highlights the challenges of integrating GenAI into SASs. The roadmap starts with outlining key research challenges that need to be tackled to exploit the potential for applying GenAI in the field of SAS. The roadmap concludes with a practical reflection, elaborating on current shortcomings of GenAI and proposing possible mitigation strategies.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04680",
+    "authors": [
+      "Jialong Li",
+      "Mingyue Zhang",
+      "Nianyu Li",
+      "Danny Weyns",
+      "Zhi Jin",
+      "Kenji Tei"
+    ],
+    "first_author": "Jialong Li",
+    "category": [
+      "Survey / Review"
+    ],
+    "field": "Self-Adaptive Systems",
+    "tag": "GenAI for MAPE-K (Monitoring, Analysis, Planning, Execution) and Human-on-the-Loop interaction",
+    "summary": "本文综述了生成式人工智能（尤其是大型语言模型）在自适应系统中的应用潜力与挑战，按MAPE‑K各功能与人机在环交互整理现有工作并提出研究路线图与实际缓解策略。",
+    "quality": "High",
+    "conference": "ACM Transactions on Autonomous and Adaptive Systems",
+    "pdf_url": "https://arxiv.org/pdf/2512.04680v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-06 01:43:52"
   }
 ]

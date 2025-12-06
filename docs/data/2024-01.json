@@ -1,5 +1,40 @@
 [
   {
+    "id": "2401.14196",
+    "title": "DeepSeek-Coder: When the Large Language Model Meets Programming -- The Rise of Code Intelligence",
+    "abstract": "The rapid development of large language models has revolutionized code intelligence in software development. However, the predominance of closed-source models has restricted extensive research and development. To address this, we introduce the DeepSeek-Coder series, a range of open-source code models with sizes from 1.3B to 33B, trained from scratch on 2 trillion tokens. These models are pre-trained on a high-quality project-level code corpus and employ a fill-in-the-blank task with a 16K window to enhance code generation and infilling. Our extensive evaluations demonstrate that DeepSeek-Coder not only achieves state-of-the-art performance among open-source code models across multiple benchmarks but also surpasses existing closed-source models like Codex and GPT-3.5. Furthermore, DeepSeek-Coder models are under a permissive license that allows for both research and unrestricted commercial use.",
+    "arxiv_url": "https://arxiv.org/abs/2401.14196",
+    "authors": [
+      "Daya Guo",
+      "Qihao Zhu",
+      "Dejian Yang",
+      "Zhenda Xie",
+      "Kai Dong",
+      "Wentao Zhang",
+      "Guanting Chen",
+      "Xiao Bi",
+      "Y. Wu",
+      "Y. K. Li",
+      "Fuli Luo",
+      "Yingfei Xiong",
+      "Wenfeng Liang"
+    ],
+    "first_author": "Daya Guo",
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Pre-Training",
+    "summary": "本文提出并开源DeepSeek-Coder系列（1.3B–33B），在包含仓库级语料的2万亿tokens上从零预训练并采用Fill-In-Middle训练与16K上下文，显著提升开源代码模型性能并在多项基准上超越现有开源及部分闭源模型。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2401.14196v2",
+    "published": "2024-01-25",
+    "update_time": "2024-01-26",
+    "download_time": "2025-12-04 23:12:47"
+  },
+  {
     "id": "2401.12554",
     "title": "Can Large Language Models Write Parallel Code?",
     "abstract": "Large language models are increasingly becoming a popular tool for software development. Their ability to model and generate source code has been demonstrated in a variety of contexts, including code completion, summarization, translation, and lookup. However, they often struggle to generate code for complex programs. In this paper, we study the capabilities of state-of-the-art language models to generate parallel code. In order to evaluate language models, we create a benchmark, ParEval, consisting of prompts that represent 420 different coding tasks related to scientific and parallel computing. We use ParEval to evaluate the effectiveness of several state-of-the-art open- and closed-source language models on these tasks. We introduce novel metrics for evaluating the performance of generated code, and use them to explore how well each large language model performs for 12 different computational problem types and six different parallel programming models.",
@@ -12,16 +47,19 @@
       "Abhinav Bhatele"
     ],
     "first_author": "Daniel Nichols",
-    "primary_category": "cs.DC",
-    "tag": [
-      "Code Prompting"
+    "category": [
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
-    "conference": "The 33rd International Symposium on High-Performance Parallel and Distributed Computing (HPDC '24), June 3-7, 2024, Pisa, Italy. ACM, New York, NY, USA, 14 pages",
+    "field": "Coding Assistant",
+    "tag": "Code Completion",
+    "summary": "本文提出了用于并行/HPC代码生成与翻译的基准ParEval、以及新的性能评估指标（speedup_n@k 和 efficiency_n@k），并用该基准评估多种开源与闭源大模型，发现模型普遍难以生成高质量并行代码，尤其在MPI和稀疏/非结构化问题上表现最差。",
+    "quality": "High",
+    "conference": "HPDC 2024",
     "pdf_url": "https://arxiv.org/pdf/2401.12554v3",
     "published": "2024-01-23",
     "update_time": "2024-05-14",
-    "download_time": "2025-12-02 10:44:35"
+    "download_time": "2025-12-05 10:08:05"
   },
   {
     "id": "2401.01062",
@@ -37,15 +75,18 @@
       "Geguang Pu"
     ],
     "first_author": "Simiao Zhang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "AI-aided Software Development"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Requirements & Design",
+    "tag": "Elicitation",
+    "summary": "本文提出AISD，一个以保持用户全程参与的LLM驱动软件开发框架，并构建了用于评估自动化软件开发能力的新基准CAASD，实验证明在用例生成、设计迭代与原型测试下对比现有方法有显著提升。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2401.01062v1",
     "published": "2024-01-02",
     "update_time": "2024-01-02",
-    "download_time": "2025-12-02 10:52:03"
+    "download_time": "2025-12-05 10:08:32"
   }
 ]

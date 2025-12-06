@@ -12,16 +12,20 @@
       "Shurui Zhou"
     ],
     "first_author": "Eric L. Melin",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Quality Analysis"
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Experience"
     ],
-    "benchmark": true,
+    "field": "Technical Debt",
+    "tag": "SATD Identification and Classification (including Scientific Debt) in Scientific Software",
+    "summary": "本文构建并扩充了面向科学软件的SATD数据集、微调并比较了10种Transformer/大型语言模型用于自动识别与分类包括新定义的“Scientific Debt”在内的自认技术债务，并发现科学软件中的SATD显著多于通用软件且所提模型优于现有基线。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.17368v1",
     "published": "2025-11-21",
     "update_time": "2025-11-21",
-    "download_time": "2025-11-24 16:01:06"
+    "download_time": "2025-12-04 23:58:50"
   },
   {
     "id": "2511.17330",
@@ -37,16 +41,19 @@
       "Abhik Roychoudhury"
     ],
     "first_author": "Haoxin Tu",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Program Verification"
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Reasoning",
+    "summary": "提出AutoRocq——一个与Rocq/Coq交互的agent式LLM证明代理，通过迭代地从定理证明器获取上下文与反馈并精炼策略，自动生成可被证明器检验的程序证明，在SV-COMP基准与Linux内核模块上显著提高了自动化程序验证效果。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.17330v1",
     "published": "2025-11-21",
     "update_time": "2025-11-21",
-    "download_time": "2025-11-24 16:01:18"
+    "download_time": "2025-12-04 23:59:18"
   },
   {
     "id": "2511.17262",
@@ -58,16 +65,19 @@
       "Yuehan Sun"
     ],
     "first_author": "Jinfeng Wen",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Retrieval and Reuse"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Serverless Computing",
+    "tag": "Function Recommendation / Reuse",
+    "summary": "本文提出SlsReuse——一个基于大型语言模型的无服务器函数重用框架，利用少样本提示工程构建语义增强表示并通过多级剪枝与相似度匹配实现意图感知的函数发现与推荐，在自建的500个函数与110个查询数据集上显著优于现有基线。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.17262v1",
     "published": "2025-11-21",
     "update_time": "2025-11-21",
-    "download_time": "2025-11-24 16:01:47"
+    "download_time": "2025-12-04 23:59:50"
   },
   {
     "id": "2511.17027",
@@ -82,16 +92,19 @@
       "Chaoyang Gao"
     ],
     "first_author": "Zhijie Chen",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Prompting"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Quality Management",
+    "tag": "Vulnerability Assessment (Severity Classification)",
+    "summary": "本文提出ReVul-CoT框架，将检索增强生成(RAG)与链式思维(CoT)提示结合，利用从NVD/CWE构建的本地知识库对12,070条漏洞进行动态检索与逐步推理，从而显著提升基于LLM的CVSS v3漏洞严重性评估效果并公开数据与代码。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.17027v1",
     "published": "2025-11-21",
     "update_time": "2025-11-21",
-    "download_time": "2025-11-24 16:02:30"
+    "download_time": "2025-12-05 00:00:20"
   },
   {
     "id": "2511.16858",
@@ -105,16 +118,18 @@
       "Martin Hirzel"
     ],
     "first_author": "Toufique Ahmed",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文在仓库级别的自动程序修复任务上，使用Agentless与e-Otter++并基于Claude-3.7-Sonnet与GPT-4o实证量化了LLM生成补丁对白盒测试的过拟合程度，评估了基于白盒测试的补丁改进对过拟合的影响并探索了缓解手段。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16858v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:02:47"
+    "download_time": "2025-12-05 00:00:46"
   },
   {
     "id": "2511.16787",
@@ -130,16 +145,18 @@
       "Katharina von der Wense"
     ],
     "first_author": "Hossain Shaikh Saadi",
-    "primary_category": "cs.CL",
-    "tag": [
-      "Code Translation"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文提出了一种用于孟加拉语指令到Python代码生成的多智能体流水线：先由生成代理产生初始程序，运行pytest单元测试仅将失败样例连同错误追踪交给调试代理进行最小化修复，最终在BLP-2025共享任务中以95.4% Pass@1获胜并开源代码。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16787v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:02:59"
+    "download_time": "2025-12-05 00:01:29"
   },
   {
     "id": "2511.16395",
@@ -153,16 +170,18 @@
       "Bing Li"
     ],
     "first_author": "Kangwei Xu",
-    "primary_category": "cs.AI",
-    "tag": [
-      "Code Translation"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Translation",
+    "summary": "提出CorrectHDL框架，利用HLS生成的HDL作为功能参考，结合LLM、RAG与差分验证迭代修复LLM生成的HDL，从而实现功能正确且在面积与功耗上显著优于传统HLS的硬件设计。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16395v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:03:33"
+    "download_time": "2025-12-05 09:51:26"
   },
   {
     "id": "2511.16383",
@@ -175,16 +194,18 @@
       "Eitan Farchi"
     ],
     "first_author": "Alexander Zadorojniy",
-    "primary_category": "cs.AI",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出一种基于多代理的自动化验证框架，利用LLM生成问题级测试接口、测试用例和针对优化模型的变异体，并通过变异覆盖率评估来自自然语言描述的线性规划模型的正确性。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16383v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:03:44"
+    "download_time": "2025-12-05 09:51:51"
   },
   {
     "id": "2511.16224",
@@ -198,16 +219,19 @@
       "Remo Pareschi"
     ],
     "first_author": "Francesco Salzano",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Completion"
+    "category": [
+      "Experience / Empirical",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文系统评估了四款大型模型在从自然语言描述生成Solidity智能合约函数时的语义相似度、功能可行性、gas效率与代码复杂度，发现尽管语义相似但功能正确率较低，而检索增强生成（RAG）能显著提升表现并降低gas消耗。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16224v2",
     "published": "2025-11-20",
     "update_time": "2025-11-21",
-    "download_time": "2025-11-24 16:03:59"
+    "download_time": "2025-12-05 09:56:09"
   },
   {
     "id": "2511.16123",
@@ -225,16 +249,18 @@
       "Qing Huang"
     ],
     "first_author": "Linyi Han",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Summarization"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Vulnerability Analysis & Documentation",
+    "tag": "Textual Vulnerability Description Synthesis",
+    "summary": "本文提出一种域约束的大模型合成框架（包含提取、基于领域锚词的自评估和基于信息熵的融合）及 Digest Labels 可视化工具，用以统一并保全来自不同漏洞库中不一致的关键要素，从而提高漏洞描述的完整性与分析效率。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16123v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:04:14"
+    "download_time": "2025-12-05 09:56:31"
   },
   {
     "id": "2511.16092",
@@ -247,36 +273,41 @@
       "Christoph Treude"
     ],
     "first_author": "Xing Hu",
-    "primary_category": "cs.SE",
-    "tag": [
-      "AI-Assisted Development Environments"
+    "category": [
+      "Survey / Review"
     ],
-    "benchmark": false,
+    "field": "Requirements & Design",
+    "tag": "Analysis",
+    "summary": "本文为一次Shonan会议报告，综述并讨论了AI基础模型对软件开发环境（IDE）的影响、可能带来的挑战与风险，并提出若干未来研究问题与方向。",
+    "quality": "Middle",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16092v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:04:23"
+    "download_time": "2025-12-05 09:56:54"
   },
   {
     "id": "2511.16708",
-    "title": "Multi-Agent Code Verification with Compound Vulnerability Detection",
-    "abstract": "LLMs generate buggy code: 29.6% of SWE-bench \"solved\" patches fail, 62% of BaxBench solutions have vulnerabilities, and existing tools only catch 65% of bugs with 35% false positives. We built CodeX-Verify, a multi-agent system that uses four specialized agents to detect different types of bugs. We prove mathematically that combining agents with different detection patterns finds more bugs than any single agent when the agents look for different problems, confirmed by measuring agent correlation of p = 0.05--0.25. We also show that multiple vulnerabilities in the same code create exponentially more risk than previously thought--SQL injection plus exposed credentials creates 15x more danger (risk 300 vs. 20) than traditional models predict. Testing on 99 code samples with verified labels shows our system catches 76.1% of bugs, matching the best existing method while running faster and without test execution. We tested 15 different agent combinations and found that using multiple agents improves accuracy by 39.7 percentage points (from 32.8% to 72.4%) compared to single agents, with gains of +14.9pp, +13.5pp, and +11.2pp for agents 2, 3, and 4. The best two-agent combination reaches 79.3% accuracy. Testing on 300 real patches from Claude Sonnet 4.5 runs in under 200ms per sample, making this practical for production use.",
+    "title": "Multi-Agent Code Verification via Information Theory",
+    "abstract": "LLMs generate buggy code: 29.6% of SWE-bench solved patches fail, 62% of BaxBench solutions have vulnerabilities, and existing   tools only catch 65% of bugs with 35% false positives. We built CodeX-Verify, a multi-agent system that uses four specialized   agents to detect different types of bugs. We prove mathematically that combining agents with different detection patterns   finds more bugs than any single agent when the agents look for different problems, using submodularity of mutual information   under conditional independence. Measuring agent correlation of rho = 0.05 to 0.25 confirms they detect different bugs. Testing   on 99 code samples with verified labels shows our system catches 76.1% of bugs, matching the best existing method (Meta   Prompt Testing: 75%) while running faster and without test execution. We tested all 15 agent combinations and found that using   multiple agents improves accuracy by 39.7 percentage points (from 32.8% to 72.4%) compared to single agents, with diminishing   returns of +14.9pp, +13.5pp, and +11.2pp for agents 2, 3, and 4, validating our theoretical model. The best two-agent   combination (Correctness + Performance) reaches 79.3% accuracy. Testing on 300 real patches from Claude Sonnet 4.5 runs in   under 200ms per sample, making this practical for production use.",
     "arxiv_url": "https://arxiv.org/abs/2511.16708",
     "authors": [
       "Shreshth Rajan"
     ],
     "first_author": "Shreshth Rajan",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": false,
+    "field": "Quality Management",
+    "tag": "Defect Prediction",
+    "summary": "本文提出CodeX-Verify，一种由正确性、 安全、 性能与风格四个专用智能体组成的多智能体静态代码验证系统，并基于条件独立下互信息的次模性质证明组合智能体可提高缺陷检测率，实验在99个有验证标签样本上达到76.1%检出率并开源数据集。",
+    "quality": "Middle",
     "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.16708v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.16708v2",
     "published": "2025-11-20",
-    "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:04:36"
+    "update_time": "2025-12-02",
+    "download_time": "2025-12-05 09:57:21"
   },
   {
     "id": "2511.16005",
@@ -296,16 +327,19 @@
       "Weifeng Lv"
     ],
     "first_author": "Qingao Dong",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": false,
+    "field": "Quality Management",
+    "tag": "Bug Repair",
+    "summary": "本文提出InfCode-C++，结合意图引导的语义检索与基于AST的结构化查询，为复杂C++代码库构建语言感知的上下文检索与修复流程，在MultiSWE-bench-CPP上将问题解决率提升至25.58%，显著优于现有代理。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16005v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:04:48"
+    "download_time": "2025-12-05 09:57:47"
   },
   {
     "id": "2511.16004",
@@ -325,16 +359,18 @@
       "Weifeng Lv"
     ],
     "first_author": "KeFan Li",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Quality Management",
+    "tag": "Bug Repair",
+    "summary": "本文提出 InfCode —— 一个在容器化环境中通过测试生成器与代码补丁生成器的对抗迭代、多代理协作来强化仓库级别缺陷定位与修复的框架，并在 SWE-bench 验证集上取得了新的 SOTA（79.4%）。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.16004v1",
     "published": "2025-11-20",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-24 16:04:59"
+    "download_time": "2025-12-05 09:58:13"
   },
   {
     "id": "2511.15817",
@@ -350,59 +386,20 @@
       "Denys Poshyvanyk"
     ],
     "first_author": "Alejandro Velasco",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Experience / Empirical",
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文从因果视角验证并应用PSC指标，系统测量、解释并缓解LLM生成代码中的code smells，量化解码策略、模型架构与提示设计的影响并发布基准与数据集。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.15817v2",
     "published": "2025-11-19",
     "update_time": "2025-11-21",
-    "download_time": "2025-11-24 16:05:36"
-  },
-  {
-    "id": "2511.15665",
-    "title": "Quantum-Guided Test Case Minimization for LLM-Based Code Generation",
-    "abstract": "Precisely controlling Large Language Models (LLMs) to generate efficient and concise code is a central challenge in software engineering. We introduce a framework based on Test-Driven Development (TDD) that transforms code specification into a combinatorial optimization task. The framework first prompts an LLM to generate a test suite, then formulates the Test Case Minimization (TCM) problem as a Quadratic Unconstrained Binary Optimization (QUBO) model. This QUBO paradigm is compatible with both classical solvers and emerging hardware such as quantum annealers. Experimentally, quantum annealing solves the core TCM task 16 times faster than simulated annealing. This performance underpins our end-to-end framework, which reduces total token consumption by 36.5\\% and significantly improves code quality. This work demonstrates a powerful synergy between generative AI and combinatorial optimization in software engineering, highlighting the critical importance of precise model formulation.",
-    "arxiv_url": "https://arxiv.org/abs/2511.15665",
-    "authors": [
-      "Huixiang Zhang",
-      "Mahzabeen Emu"
-    ],
-    "first_author": "Huixiang Zhang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
-    ],
-    "benchmark": false,
-    "conference": "This is a preprint version, full paper has been accepted in IEEE CASCON 2025 and...",
-    "pdf_url": "https://arxiv.org/pdf/2511.15665v1",
-    "published": "2025-11-19",
-    "update_time": "2025-11-19",
-    "download_time": "2025-11-24 16:05:46"
-  },
-  {
-    "id": "2511.15403",
-    "title": "MutDafny: A Mutation-Based Approach to Assess Dafny Specifications",
-    "abstract": "This paper explores the use of mutation testing to reveal weaknesses in formal specifications written in Dafny. In verification-aware programming languages, such as Dafny, despite their critical role, specifications are as prone to errors as implementations. Flaws in specs can result in formally verified programs that deviate from the intended behavior.   We present MutDafny, a tool that increases the reliability of Dafny specifications by automatically signaling potential weaknesses. Using a mutation testing approach, we introduce faults (mutations) into the code and rely on formal specifications for detecting them. If a program with a mutant verifies, this may indicate a weakness in the specification. We extensively analyze mutation operators from popular tools, identifying the ones applicable to Dafny. In addition, we synthesize new operators tailored for Dafny from bugfix commits in publicly available Dafny projects on GitHub. Drawing from both, we equipped our tool with a total of 32 mutation operators. We evaluate MutDafny's effectiveness and efficiency in a dataset of 794 real-world Dafny programs and we manually analyze a subset of the resulting undetected mutants, identifying five weak real-world specifications (on average, one at every 241 lines of code) that would benefit from strengthening.",
-    "arxiv_url": "https://arxiv.org/abs/2511.15403",
-    "authors": [
-      "Isabel Amaral",
-      "Alexandra Mendes",
-      "José Campos"
-    ],
-    "first_author": "Isabel Amaral",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
-    ],
-    "benchmark": true,
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.15403v1",
-    "published": "2025-11-19",
-    "update_time": "2025-11-19",
-    "download_time": "2025-11-24 16:06:15"
+    "download_time": "2025-12-05 09:58:39"
   },
   {
     "id": "2511.15293",
@@ -412,22 +409,24 @@
     "authors": [
       "Jia Li",
       "Zhi Jin",
-      "Kechi Zhang",
       "Huangzhao Zhang",
+      "Kechi Zhang",
       "Jiaru Qian",
       "Tiankuo Zhao"
     ],
     "first_author": "Jia Li",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Automated Software Development"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Requirements & Design",
+    "tag": "Elicitation",
+    "summary": "本文提出了名为AutoSW的迭代端到端自动化软件开发范式，基于协同代理在分析-规划-实现-交付的循环中将AI作为第一类参与者，从自然语言意图出发自动化产生可测试、可部署的软件并支持可追溯的演化。",
+    "quality": "Middle",
     "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.15293v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.15293v2",
     "published": "2025-11-19",
-    "update_time": "2025-11-19",
-    "download_time": "2025-11-24 16:06:36"
+    "update_time": "2025-11-23",
+    "download_time": "2025-12-05 09:59:31"
   },
   {
     "id": "2511.15757",
@@ -444,89 +443,19 @@
       "Zhiyun Qian"
     ],
     "first_author": "Kareem Shehada",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
-    "conference": "NeurIPS 2025",
+    "field": "Quality Management",
+    "tag": "Bug Repair",
+    "summary": "本文提出 RGym——一个可在本地运行的轻量级内核APR评估框架，发布并验证了包含143个KASAN内核漏洞的数据集，并设计了基于bug-inducing commit与调用栈的现实定位策略与简单高效的LLM补丁流水线，实现在低成本下显著提升修复通过率并进行了消融分析。",
+    "quality": "High",
+    "conference": "NeurIPS 2025 Workshop: Evaluating the Evolving LLM Lifecycle: Benchmarks, Emergent Abilities, and Scaling 2025",
     "pdf_url": "https://arxiv.org/pdf/2511.15757v1",
     "published": "2025-11-19",
     "update_time": "2025-11-19",
-    "download_time": "2025-11-24 16:06:58"
-  },
-  {
-    "id": "2511.15229",
-    "title": "From Code Smells to Best Practices: Tackling Resource Leaks in PyTorch, TensorFlow, and Keras",
-    "abstract": "Much of the existing ML research focuses on model performance metrics, leaving limited attention to the long-term sustainability and resource efficiency of ML applications. While high performance is essential, ensuring efficient resource management is equally critical for robust deployment. This study addresses this gap by systematically identifying code smells that lead to resource leaks in ML applications. We conducted an empirical investigation of developer discussions and real-world code snippets from PyTorch, TensorFlow, and Keras. The analysis identified 30 PyTorch-related smells and 16 TensorFlow/Keras smells linked to resource leaks. These smells were categorized in two ways: (1) based on their root causes, and (2) as general ML smells with framework-specific characteristics. For each smell, we derived at least one best practice, resulting in 50 recommended coding patterns aimed at reducing resource leakage and improving efficiency. To ensure the validity of our findings, we employed a three-phase validation process involving independent analysis by three authors followed by consensus discussions. This is the first comprehensive study to examine resource-leak-inducing code smells across major ML frameworks and to present actionable best practices for mitigating them. The contributions support developers in building more efficient and sustainable ML applications and offer a structured view of the underlying causes of resource leaks.",
-    "arxiv_url": "https://arxiv.org/abs/2511.15229",
-    "authors": [
-      "Bashar Abdallah",
-      "Martyna E. Wojciechowska",
-      "Gustavo Santos",
-      "Edmand Yu",
-      "Maxime Lamothe",
-      "Alain Abran",
-      "Mohammad Hamdaqa"
-    ],
-    "first_author": "Bashar Abdallah",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
-    ],
-    "benchmark": false,
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.15229v1",
-    "published": "2025-11-19",
-    "update_time": "2025-11-19",
-    "download_time": "2025-11-24 16:07:09"
-  },
-  {
-    "id": "2511.17417",
-    "title": "CREST: Improving Interpretability and Effectiveness of Troubleshooting at Ericsson through Criterion-Specific Trouble Report Retrieval",
-    "abstract": "The rapid evolution of the telecommunication industry necessitates efficient troubleshooting processes to maintain network reliability, software maintainability, and service quality. Trouble Reports (TRs), which document issues in Ericsson's production system, play a critical role in facilitating the timely resolution of software faults. However, the complexity and volume of TR data, along with the presence of diverse criteria that reflect different aspects of each fault, present challenges for retrieval systems. Building on prior work at Ericsson, which utilized a two-stage workflow, comprising Initial Retrieval (IR) and Re-Ranking (RR) stages, this study investigates different TR observation criteria and their impact on the performance of retrieval models. We propose \\textbf{CREST} (\\textbf{C}riteria-specific \\textbf{R}etrieval via \\textbf{E}nsemble of \\textbf{S}pecialized \\textbf{T}R models), a criterion-driven retrieval approach that leverages specialized models for different TR fields to improve both effectiveness and interpretability, thereby enabling quicker fault resolution and supporting software maintenance. CREST utilizes specialized models trained on specific TR criteria and aggregates their outputs to capture diverse and complementary signals. This approach leads to enhanced retrieval accuracy, better calibration of predicted scores, and improved interpretability by providing relevance scores for each criterion, helping users understand why specific TRs were retrieved. Using a subset of Ericsson's internal TRs, this research demonstrates that criterion-specific models significantly outperform a single model approach across key evaluation metrics. This highlights the importance of all targeted criteria used in this study for optimizing the performance of retrieval systems.",
-    "arxiv_url": "https://arxiv.org/abs/2511.17417",
-    "authors": [
-      "Soroush Javdan",
-      "Pragash Krishnamoorthy",
-      "Olga Baysal"
-    ],
-    "first_author": "Soroush Javdan",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
-    ],
-    "benchmark": false,
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.17417v1",
-    "published": "2025-11-21",
-    "update_time": "2025-11-21",
-    "download_time": "2025-11-24 09:54:12"
-  },
-  {
-    "id": "2511.17131",
-    "title": "UI-CUBE: Enterprise-Grade Computer Use Agent Benchmarking Beyond Task Accuracy to Operational Reliability",
-    "abstract": "While current Computer Use Agent (CUA) benchmarks measure task completion effectively, they provide limited assessment of enterprise deployment readiness, emphasizing functional correctness over the operational reliability required for production systems. We present UI-CUBE (UiPath Computer Use BEnchmark), a systematic benchmark comprising 226 tasks across two difficulty tiers designed to expose fundamental architectural limitations in current CUAs. Our evaluation covers simple UI interactions (136 tasks) and complex workflows including copy-paste tasks (50 tasks) and enterprise application scenarios (40 tasks), with systematic interface variation coverage, multi-resolution testing and automated validation of task success through the application state. Evaluation of five state-of-the-art models reveals a sharp capability cliff rather than gradual performance degradation. Simple UI interactions achieve 67-85% success rates (compared to 97.9% human performance), but complex workflows drop precipitously to 9-19%. Human evaluators with no prior application experience achieve only 61.2% on complex tasks despite near-perfect performance on simple tasks, establishing realistic performance ceilings. This discontinuous performance pattern -- where agents achieve 68-87% of human performance on simple tasks but only 15-32% on complex workflows -- indicates fundamental architectural limitations in memory management, hierarchical planning, and state coordination rather than incremental capability gaps addressable through better training or prompting. UI-CUBE functions as an enterprise-readiness diagnostic, revealing that while current CUAs can manipulate individual interface elements, they cannot yet function as reliable workflow automation tools. These findings provide architectural insights essential for developing production-ready CUAs capable of managing complex, multi-step enterprise processes.",
-    "arxiv_url": "https://arxiv.org/abs/2511.17131",
-    "authors": [
-      "Horia Cristescu",
-      "Charles Park",
-      "Trong Canh Nguyen",
-      "Sergiu Talmacel",
-      "Alexandru-Gabriel Ilie",
-      "Stefan Adam"
-    ],
-    "first_author": "Horia Cristescu",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Agentic UI Automation Evaluation"
-    ],
-    "benchmark": true,
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.17131v1",
-    "published": "2025-11-21",
-    "update_time": "2025-11-21",
-    "download_time": "2025-11-24 09:55:38"
+    "download_time": "2025-12-05 09:59:57"
   },
   {
     "id": "2511.15168",
@@ -544,16 +473,19 @@
       "Le-Minh Nguyen"
     ],
     "first_author": "Nguyen-Khang Le",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出一种针对Selenium表单交互的LLM微调方法并构建并发布首个表单交互测试数据集，通过合成与人工标注数据训练模型生成语法正确、可执行且覆盖率高的Selenium测试脚本，实验证明在语法正确性、脚本可执行性和输入字段覆盖率上优于多种强基线（含GPT‑4o）。",
+    "quality": "High",
     "conference": "Proceedings of KSE 2025",
     "pdf_url": "https://arxiv.org/pdf/2511.15168v2",
     "published": "2025-11-19",
     "update_time": "2025-11-20",
-    "download_time": "2025-11-25 01:01:11"
+    "download_time": "2025-12-05 10:00:56"
   },
   {
     "id": "2511.15755",
@@ -564,16 +496,19 @@
       "Philip Drammeh"
     ],
     "first_author": "Philip Drammeh",
-    "primary_category": "cs.AI",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "AIOps",
+    "tag": "Incident Response / Decision Support",
+    "summary": "本文通过可复现的容器化框架 MyAntFarm.ai，在348次受控试验中比较单体 LLM 与分工多智能体编排，提出多维决策质量（Decision Quality）指标并证明多智能体在可执行性、具体性与正确性上显著优于单体方案，使其在事故响应场景中实现确定性、高质量的决策支持。",
+    "quality": "Middle",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.15755v1",
     "published": "2025-11-19",
     "update_time": "2025-11-19",
-    "download_time": "2025-11-25 01:01:22"
+    "download_time": "2025-12-05 10:01:17"
   },
   {
     "id": "2511.19427",
@@ -590,16 +525,19 @@
       "Jason Mars"
     ],
     "first_author": "Jayanaka L. Dantanarayana",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Prompting"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文提出了语义工程并引入语言级的语义上下文注释SemText，将自然语言意图绑定到程序构造中以扩展MTP的中间表示，从而在显著减少开发者手工提示成本的同时将自动生成的提示性能提升到接近或优于传统Prompt Engineering，并通过在Jac中实现及一套更贴近实际场景的基准评测验证其有效性。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.19427v1",
     "published": "2025-11-24",
     "update_time": "2025-11-24",
-    "download_time": "2025-11-25 03:35:58"
+    "download_time": "2025-12-05 10:01:39"
   },
   {
     "id": "2511.19132",
@@ -612,16 +550,19 @@
       "Andreas Rausch"
     ],
     "first_author": "Mohammad Abboush",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出一种基于大型语言模型（如GPT‑4o）的实时故障注入测试用例生成方法，能够从功能安全需求自动进行传感器/执行器分类并生成单点及并发故障测试用例，并在硬件在环（HIL）仿真中验证，取得分类F1=88%与测试用例生成F1=97.5%的优异结果。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.19132v1",
     "published": "2025-11-24",
     "update_time": "2025-11-24",
-    "download_time": "2025-11-25 03:36:28"
+    "download_time": "2025-12-05 10:02:07"
   },
   {
     "id": "2511.19422",
@@ -637,16 +578,19 @@
       "Vikram Adve"
     ],
     "first_author": "David Jiahao Fu",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Editing",
+    "summary": "本文提出SLMFix：在不微调大型模型的前提下，利用经强化学习微调的小型语言模型修复LLM生成的DSL代码中的静态错误，并构建了Ansible数据集以验证方法在低资源语言上的有效性。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.19422v1",
     "published": "2025-11-24",
     "update_time": "2025-11-24",
-    "download_time": "2025-11-26 01:46:07"
+    "download_time": "2025-12-05 10:02:30"
   },
   {
     "id": "2511.19130",
@@ -658,40 +602,20 @@
       "Suman Saha"
     ],
     "first_author": "Rong Feng",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Translation"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "Program Analysis & Reverse Engineering",
+    "tag": "Deobfuscation / Program Semantics Recovery",
+    "summary": "本文构建包含四种常见混淆变换的数据集，并提出将 KLEE 符号执行产生的约束、路径统计和测试用例等工件与 LLM 微调相结合的混合方法以恢复被混淆程序的可编译性与语义一致性，实验证明该方法显著提升了语法正确性、语义保真度和代码可读性。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.19130v1",
     "published": "2025-11-24",
     "update_time": "2025-11-24",
-    "download_time": "2025-11-26 01:46:33"
-  },
-  {
-    "id": "2511.20617",
-    "title": "Translating Large-Scale C Repositories to Idiomatic Rust",
-    "abstract": "Existing C to Rust translation techniques fail to balance quality and scalability: transpilation-based approaches scale to large projects but produce code with poor safety, idiomaticity, and readability. In contrast, LLM-based techniques are prohibitively expensive due to their reliance on frontier models (without which they cannot reliably generate compilable translations), thus limiting scalability. This paper proposes Rustine, a fully automated pipeline for effective and efficient repository-level C to idiomatic safe Rust translation. Evaluating on a diverse set of 23 C programs, ranging from 27 to 13,200 lines of code, Rustine can generate fully compilable Rust code for all and achieve 87% functional equivalence (passing 1,063,099 assertions out of 1,221,192 in test suites with average function and line coverage of 74.7% and 72.2%). Compared to six prior repository-level C to Rust translation techniques, the translations by Rustine are overall safer (fewer raw pointers, pointer arithmetic, and unsafe constructs), more idiomatic (fewer Rust linter violations), and more readable. When the translations cannot pass all tests to fulfill functional equivalence, human developers were able to complete the task in 4.5 hours, on average, using Rustine as debugging support.",
-    "arxiv_url": "https://arxiv.org/abs/2511.20617",
-    "authors": [
-      "Saman Dehghan",
-      "Tianran Sun",
-      "Tianxiang Wu",
-      "Zihan Li",
-      "Reyhaneh Jabbarvand"
-    ],
-    "first_author": "Saman Dehghan",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Translation"
-    ],
-    "benchmark": false,
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2511.20617v1",
-    "published": "2025-11-25",
-    "update_time": "2025-11-25",
-    "download_time": "2025-11-27 01:43:56"
+    "download_time": "2025-12-05 10:02:56"
   },
   {
     "id": "2511.20403",
@@ -703,19 +627,23 @@
       "Fedelucio Narducci",
       "Azzurra Ragone",
       "Michelantonio Trizio",
-      "Claudio Barto"
+      "Claudio Bartolini"
     ],
     "first_author": "Andrea Lops",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
-    "conference": "40th IEEE/ACM International Conference on Automated Software Engineering",
-    "pdf_url": "https://arxiv.org/pdf/2511.20403v1",
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出AGONETEST——一个用于端到端自动化评估LLM生成的Java类级别单元测试的框架，并发布了映射类到测试类的CLASSES2TEST数据集，结合覆盖率、变异分数和测试味等指标对生成测试进行综合评估，实验证明在可编译测试子集上LLM生成的测试在覆盖率和缺陷检测能力上可与人工测试媲美。",
+    "quality": "High",
+    "conference": "ASE 2025",
+    "pdf_url": "https://arxiv.org/pdf/2511.20403v2",
     "published": "2025-11-25",
-    "update_time": "2025-11-25",
-    "download_time": "2025-11-27 01:44:11"
+    "update_time": "2025-11-26",
+    "download_time": "2025-12-05 10:03:31"
   },
   {
     "id": "2511.21382",
@@ -731,16 +659,18 @@
       "Baowen Xu"
     ],
     "first_author": "Bei Chu",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Survey / Review"
     ],
-    "benchmark": false,
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文对2021–2025年间115篇关于利用大语言模型生成单元测试的研究进行了系统综述，提出基于生成生命周期的统一分类，梳理了核心策略与增强技术，指出了评估基准不足与缺陷检测能力薄弱等关键挑战并给出未来路线图。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.21382v1",
     "published": "2025-11-26",
     "update_time": "2025-11-26",
-    "download_time": "2025-11-28 01:44:01"
+    "download_time": "2025-12-05 10:03:51"
   },
   {
     "id": "2511.21380",
@@ -755,16 +685,18 @@
       "Jiasi Shen"
     ],
     "first_author": "Jingyi Chen",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Editing"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Editing",
+    "summary": "本文首次对基于大型语言模型的多智能体系统（以GitHub Copilot agent为代表）在软件工程研究工件的数据集适配任务上进行了系统实证评估，提出五阶段评估流程并发现当前系统能识别关键文件并生成部分适配代码但很少产生功能正确的实现，且提供执行错误信息与参考代码等提示能显著提升生成代码的结构相似度。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.21380v1",
     "published": "2025-11-26",
     "update_time": "2025-11-26",
-    "download_time": "2025-11-28 01:44:11"
+    "download_time": "2025-12-05 10:04:12"
   },
   {
     "id": "2511.21022",
@@ -780,16 +712,20 @@
       "Alex X. Liu"
     ],
     "first_author": "Guancheng Lin",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Editing"
+    "category": [
+      "Experience / Empirical",
+      "Technical / Method",
+      "Benchmark / Dataset"
     ],
-    "benchmark": true,
+    "field": "Coding Assistant",
+    "tag": "Code Completion",
+    "summary": "本文构建了用于评估过时API知识编辑的基准EDAPIBench、比较了10种轻量级模型编辑方法在三款代码模型上的表现，并提出AdaLoRA-L通过区分“通用API层”和“特定API层”显著提高编辑的特异性同时保持效果与泛化能力。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.21022v1",
     "published": "2025-11-26",
     "update_time": "2025-11-26",
-    "download_time": "2025-11-29 01:43:50"
+    "download_time": "2025-12-05 10:04:39"
   },
   {
     "id": "2511.20933",
@@ -804,16 +740,19 @@
       "Tushar Sharma"
     ],
     "first_author": "Mootez Saad",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "Requirements & Design",
+    "tag": "Analysis",
+    "summary": "本文提出了一个可控的分层评估基准与方法，系统生成带有内聚与耦合缺陷的代码片段并在不同引导级别与噪声条件下评测DeepSeek‑R1系列模型，发现在噪声与开放式任务下耦合推理高度脆弱而内聚分析相对稳健。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.20933v1",
     "published": "2025-11-25",
     "update_time": "2025-11-25",
-    "download_time": "2025-11-29 01:44:11"
+    "download_time": "2025-12-05 10:05:01"
   },
   {
     "id": "2511.21197",
@@ -833,16 +772,18 @@
       "Cesare Tucci"
     ],
     "first_author": "Paolo Buono",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Quality Management",
+    "tag": "Defect Prediction",
+    "summary": "本文通过六场涵盖58名开发者的共创工作坊，探讨了开发者对IDE中AI辅助缺陷检测与代码可读性评估工具的心智模型，提出“Bug Detective”和“Quality Coach”两种隐喻并归纳出以解释清晰、时机与可控性为核心的设计原则以增强信任与协作。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.21197v1",
     "published": "2025-11-26",
     "update_time": "2025-11-26",
-    "download_time": "2025-11-30 01:56:35"
+    "download_time": "2025-12-05 10:05:26"
   },
   {
     "id": "2511.19875",
@@ -856,16 +797,19 @@
       "Chenxiong Qian"
     ],
     "first_author": "Qingyu Zhang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "Coding Assistant",
+    "tag": "Code Alignment",
+    "summary": "本文提出了CODEFUSE-COMMITEVAL——基于ApacheCM并通过规则化突变与双重验证构建的首个用于提交信息与代码差异不一致（MCI）检测的基准数据集，并在六个开源大模型与多种增强策略下进行了系统评估与类型分析。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.19875v1",
     "published": "2025-11-25",
     "update_time": "2025-11-25",
-    "download_time": "2025-11-30 01:58:09"
+    "download_time": "2025-12-05 10:05:50"
   },
   {
     "id": "2511.20709",
@@ -882,16 +826,20 @@
       "Haipeng Cai"
     ],
     "first_author": "Abhijeet Pathak",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Testing"
+    "category": [
+      "Technical / Method",
+      "Benchmark / Dataset",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "Software Testing",
+    "tag": "Testing automation",
+    "summary": "本文提出DUALGAUGE及DUALGAUGE-BENCH，一个自动化的联合功能与安全性基准测试框架与覆盖驱动的测试套件，通过沙箱执行、依赖自动解析和基于LLM的语义评估来同时评估LLM生成代码的正确性与可被利用的漏洞，并对多款主流模型进行了大规模测试揭示关键缺陷。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.20709v1",
     "published": "2025-11-24",
     "update_time": "2025-11-24",
-    "download_time": "2025-12-01 02:06:16"
+    "download_time": "2025-12-05 10:06:15"
   },
   {
     "id": "2511.19635",
@@ -904,16 +852,18 @@
       "Vijay Somasundaram"
     ],
     "first_author": "Abhi Chivukula",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Agent Systems"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
-    "conference": "NeurIPS 2025",
+    "field": "Coding Assistant",
+    "tag": "Code Completion",
+    "summary": "本文提出Agint——一种将自然语言意图逐步编译为类型化、具效应感知的代码DAG并通过混合LLM/函数JIT运行时进行增量解析、并行执行与可重现部署的代理图编译器与运行时，旨在提高代码生成的可靠性、低延迟和可组合性。",
+    "quality": "High",
+    "conference": "NeurIPS Workshop: Deep Learning for Code in the Agentic Era 2025",
     "pdf_url": "https://arxiv.org/pdf/2511.19635v1",
     "published": "2025-11-24",
     "update_time": "2025-11-24",
-    "download_time": "2025-12-01 02:06:27"
+    "download_time": "2025-12-05 10:06:46"
   },
   {
     "id": "2511.23408",
@@ -927,16 +877,18 @@
       "Qiang Tang"
     ],
     "first_author": "Aayush Garg",
-    "primary_category": "cs.CR",
-    "tag": [
-      "Code Debug"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
-    "conference": "41st ACM/SIGAPP Symposium on Applied Computing (SAC) Smarter Engineering-Building AI and Building with AI (SEAI) 2026",
+    "field": "Quality Management",
+    "tag": "Vulnerability Repair",
+    "summary": "本文通过对14款主流LLM在15个真实漏洞及41个对应人工漏洞上进行一次性补丁生成并以PoV测试执行验证，发现LLM对真实漏洞的修复效果优于人工漏洞且不同模型在修复上存在显著的互补性与重叠性。",
+    "quality": "High",
+    "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.23408v1",
     "published": "2025-11-28",
     "update_time": "2025-11-28",
-    "download_time": "2025-12-02 01:47:57"
+    "download_time": "2025-12-05 10:07:12"
   },
   {
     "id": "2511.23321",
@@ -951,16 +903,18 @@
       "Yuchen Cao"
     ],
     "first_author": "Yifei Wang",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Translation"
+    "category": [
+      "Technical / Method"
     ],
-    "benchmark": false,
+    "field": "Coding Assistant",
+    "tag": "Code Translation",
+    "summary": "本文提出C2C-MoLA，一种将Mixture of Experts与LoRA结合的多模态图表到代码生成框架，通过复杂度感知的动态路由、参数高效微调与语法语义联合训练在Chart2Code-160k上显著提升生成准确率、降低显存占用并加速收敛。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2511.23321v1",
     "published": "2025-11-28",
     "update_time": "2025-11-28",
-    "download_time": "2025-12-02 01:48:11"
+    "download_time": "2025-12-05 10:07:36"
   },
   {
     "id": "2512.01010",
@@ -972,16 +926,19 @@
       "Venkat Raman"
     ],
     "first_author": "Vansh Sharma",
-    "primary_category": "cs.MA",
-    "tag": [
-      "Scientific Code Synthesis"
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
     ],
-    "benchmark": true,
+    "field": "Coding Assistant",
+    "tag": "Code Reasoning",
+    "summary": "本文提出 Chain of Unit-Physics 框架，通过人类专家编写的基于第一性原理的“单元物理”可测试约束与多智能体迭代生成/验证流程，显著提升基于LLM的科学计算代码合成的物理一致性与可靠性，并在一个12自由度燃烧求解器任务上达到接近人工实现的精度同时提升性能。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01010v1",
     "published": "2025-11-30",
     "update_time": "2025-11-30",
-    "download_time": "2025-12-02 10:59:48"
+    "download_time": "2025-12-05 10:08:59"
   },
   {
     "id": "2512.00867",
@@ -992,15 +949,65 @@
       "Obada Kraishan"
     ],
     "first_author": "Obada Kraishan",
-    "primary_category": "cs.SE",
-    "tag": [
-      "Code Governance & Socio-Technical Practices"
+    "category": [
+      "Experience / Empirical"
     ],
-    "benchmark": false,
+    "field": "Human-AI Collaboration",
+    "tag": "Attribution & Transparency in Open-Source Software",
+    "summary": "基于对2023–2025年14,300次GitHub提交的实证分析，本文揭示了开发者在开源项目中对AI生成代码的归属披露是一种战略性沟通（“AI归属悖论”），并比较了不同工具、社区响应及其随时间的演进。",
+    "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.00867v1",
     "published": "2025-11-30",
     "update_time": "2025-11-30",
-    "download_time": "2025-12-02 11:00:16"
+    "download_time": "2025-12-05 10:09:31"
+  },
+  {
+    "id": "2511.15665",
+    "title": "Quantum-Guided Test Case Minimization for LLM-Based Code Generation",
+    "abstract": "Precisely controlling Large Language Models (LLMs) to generate efficient and concise code is a central challenge in software engineering. We introduce a framework based on Test-Driven Development (TDD) that transforms code specification into a combinatorial optimization task. The framework first prompts an LLM to generate a test suite, then formulates the Test Case Minimization (TCM) problem as a Quadratic Unconstrained Binary Optimization (QUBO) model. This QUBO paradigm is compatible with both classical solvers and emerging hardware such as quantum annealers. Experimentally, quantum annealing solves the core TCM task 16 times faster than simulated annealing. This performance underpins our end-to-end framework, which reduces total token consumption by 36.5\\% and significantly improves code quality. This work demonstrates a powerful synergy between generative AI and combinatorial optimization in software engineering, highlighting the critical importance of precise model formulation.",
+    "arxiv_url": "https://arxiv.org/abs/2511.15665",
+    "authors": [
+      "Huixiang Zhang",
+      "Mahzabeen Emu"
+    ],
+    "first_author": "Huixiang Zhang",
+    "category": [
+      "Technical / Method"
+    ],
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出一个结合TDD与QUBO优化的端到端框架：先用LLM生成带功能标签的冗余测试集，再将测试用例最小化问题建模为QUBO并使用量子退火（或经典求解器）求解，以显著减少token消耗并提升LLM生成代码的质量与效率；实验证明量子退火在核心优化上比模拟退火快约16倍，整体token减少36.5%、代码复杂度降低26.1%、生成时间缩短54.3%。",
+    "quality": "Middle",
+    "conference": "IEEE CASCON 2025",
+    "pdf_url": "https://arxiv.org/pdf/2511.15665v1",
+    "published": "2025-11-19",
+    "update_time": "2025-11-19",
+    "download_time": "2025-12-05 16:54:31"
+  },
+  {
+    "id": "2511.17417",
+    "title": "CREST: Improving Interpretability and Effectiveness of Troubleshooting at Ericsson through Criterion-Specific Trouble Report Retrieval",
+    "abstract": "The rapid evolution of the telecommunication industry necessitates efficient troubleshooting processes to maintain network reliability, software maintainability, and service quality. Trouble Reports (TRs), which document issues in Ericsson's production system, play a critical role in facilitating the timely resolution of software faults. However, the complexity and volume of TR data, along with the presence of diverse criteria that reflect different aspects of each fault, present challenges for retrieval systems. Building on prior work at Ericsson, which utilized a two-stage workflow, comprising Initial Retrieval (IR) and Re-Ranking (RR) stages, this study investigates different TR observation criteria and their impact on the performance of retrieval models. We propose \\textbf{CREST} (\\textbf{C}riteria-specific \\textbf{R}etrieval via \\textbf{E}nsemble of \\textbf{S}pecialized \\textbf{T}R models), a criterion-driven retrieval approach that leverages specialized models for different TR fields to improve both effectiveness and interpretability, thereby enabling quicker fault resolution and supporting software maintenance. CREST utilizes specialized models trained on specific TR criteria and aggregates their outputs to capture diverse and complementary signals. This approach leads to enhanced retrieval accuracy, better calibration of predicted scores, and improved interpretability by providing relevance scores for each criterion, helping users understand why specific TRs were retrieved. Using a subset of Ericsson's internal TRs, this research demonstrates that criterion-specific models significantly outperform a single model approach across key evaluation metrics. This highlights the importance of all targeted criteria used in this study for optimizing the performance of retrieval systems.",
+    "arxiv_url": "https://arxiv.org/abs/2511.17417",
+    "authors": [
+      "Soroush Javdan",
+      "Pragash Krishnamoorthy",
+      "Olga Baysal"
+    ],
+    "first_author": "Soroush Javdan",
+    "category": [
+      "Technical / Method",
+      "Experience / Empirical"
+    ],
+    "field": "Maintenance",
+    "tag": "Trouble Report Retrieval",
+    "summary": "本文提出 CREST，一种基于准则的故障报告检索方法，通过为故障报告中不同的观察准则训练专门模型并融合其输出，提高检索准确性、得分校准与可解释性，从而加速 Ericsson 的故障排查与维护流程。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.17417v1",
+    "published": "2025-11-21",
+    "update_time": "2025-11-21",
+    "download_time": "2025-12-05 17:24:08"
   }
 ]

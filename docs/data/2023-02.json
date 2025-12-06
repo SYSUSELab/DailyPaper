@@ -1,0 +1,30 @@
+[
+  {
+    "id": "2302.08468",
+    "title": "LEVER: Learning to Verify Language-to-Code Generation with Execution",
+    "abstract": "The advent of large language models trained on code (code LLMs) has led to significant progress in language-to-code generation. State-of-the-art approaches in this area combine LLM decoding with sample pruning and reranking using test cases or heuristics based on the execution results. However, it is challenging to obtain test cases for many real-world language-to-code applications, and heuristics cannot well capture the semantic features of the execution results, such as data type and value range, which often indicates the correctness of the program. In this work, we propose LEVER, a simple approach to improve language-to-code generation by learning to verify the generated programs with their execution results. Specifically, we train verifiers to determine whether a program sampled from the LLMs is correct or not based on the natural language input, the program itself and its execution results. The sampled programs are reranked by combining the verification score with the LLM generation probability, and marginalizing over programs with the same execution results. On four datasets across the domains of table QA, math QA and basic Python programming, LEVER consistently improves over the base code LLMs(4.6% to 10.9% with code-davinci-002) and achieves new state-of-the-art results on all of them.",
+    "arxiv_url": "https://arxiv.org/abs/2302.08468",
+    "authors": [
+      "Ansong Ni",
+      "Srini Iyer",
+      "Dragomir Radev",
+      "Ves Stoyanov",
+      "Wen-tau Yih",
+      "Sida I. Wang",
+      "Xi Victoria Lin"
+    ],
+    "first_author": "Ansong Ni",
+    "category": [
+      "Technical / Method"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Reasoning",
+    "summary": "本文提出LEVER，一种通过对代码LLM生成的候选程序结合其执行结果训练判别器并据此重排序的方法，以提高语言到代码生成的执行准确率，在四个基准上显著优于基线并达成SOTA。",
+    "quality": "High",
+    "conference": "ICML 2023",
+    "pdf_url": "https://arxiv.org/pdf/2302.08468v3",
+    "published": "2023-02-16",
+    "update_time": "2023-09-01",
+    "download_time": "2025-12-04 23:22:58"
+  }
+]

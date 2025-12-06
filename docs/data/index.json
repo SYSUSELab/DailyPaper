@@ -1,34 +1,242 @@
 [
   {
     "month": "2025-12",
-    "count": 10,
-    "published_count": 3,
-    "preprint_count": 7,
-    "benchmark_count": 5,
-    "non-benchmark_count": 5
+    "count": 12,
+    "published_count": 4,
+    "preprint_count": 8,
+    "benchmark_count": 0,
+    "non-benchmark_count": 12
   },
   {
     "month": "2025-11",
-    "count": 42,
-    "published_count": 6,
-    "preprint_count": 36,
-    "benchmark_count": 17,
-    "non-benchmark_count": 25
+    "count": 38,
+    "published_count": 5,
+    "preprint_count": 33,
+    "benchmark_count": 0,
+    "non-benchmark_count": 38
+  },
+  {
+    "month": "2025-05",
+    "count": 1,
+    "published_count": 1,
+    "preprint_count": 0,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
   },
   {
     "month": "2025-03",
     "count": 1,
     "published_count": 0,
     "preprint_count": 1,
-    "benchmark_count": 1,
-    "non-benchmark_count": 0
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2024-12",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2024-11",
+    "count": 4,
+    "published_count": 0,
+    "preprint_count": 4,
+    "benchmark_count": 0,
+    "non-benchmark_count": 4
+  },
+  {
+    "month": "2024-10",
+    "count": 1,
+    "published_count": 1,
+    "preprint_count": 0,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2024-09",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2024-08",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2024-06",
+    "count": 3,
+    "published_count": 0,
+    "preprint_count": 3,
+    "benchmark_count": 0,
+    "non-benchmark_count": 3
+  },
+  {
+    "month": "2024-03",
+    "count": 2,
+    "published_count": 0,
+    "preprint_count": 2,
+    "benchmark_count": 0,
+    "non-benchmark_count": 2
+  },
+  {
+    "month": "2024-02",
+    "count": 2,
+    "published_count": 0,
+    "preprint_count": 2,
+    "benchmark_count": 0,
+    "non-benchmark_count": 2
   },
   {
     "month": "2024-01",
+    "count": 3,
+    "published_count": 1,
+    "preprint_count": 2,
+    "benchmark_count": 0,
+    "non-benchmark_count": 3
+  },
+  {
+    "month": "2023-12",
+    "count": 1,
+    "published_count": 1,
+    "preprint_count": 0,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2023-10",
+    "count": 1,
+    "published_count": 1,
+    "preprint_count": 0,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2023-08",
+    "count": 4,
+    "published_count": 0,
+    "preprint_count": 4,
+    "benchmark_count": 0,
+    "non-benchmark_count": 4
+  },
+  {
+    "month": "2023-07",
     "count": 2,
     "published_count": 1,
     "preprint_count": 1,
-    "benchmark_count": 2,
-    "non-benchmark_count": 0
+    "benchmark_count": 0,
+    "non-benchmark_count": 2
+  },
+  {
+    "month": "2023-06",
+    "count": 6,
+    "published_count": 3,
+    "preprint_count": 3,
+    "benchmark_count": 0,
+    "non-benchmark_count": 6
+  },
+  {
+    "month": "2023-05",
+    "count": 5,
+    "published_count": 1,
+    "preprint_count": 4,
+    "benchmark_count": 0,
+    "non-benchmark_count": 5
+  },
+  {
+    "month": "2023-04",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2023-03",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2023-02",
+    "count": 1,
+    "published_count": 1,
+    "preprint_count": 0,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2023-01",
+    "count": 2,
+    "published_count": 1,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 2
+  },
+  {
+    "month": "2022-11",
+    "count": 2,
+    "published_count": 0,
+    "preprint_count": 2,
+    "benchmark_count": 0,
+    "non-benchmark_count": 2
+  },
+  {
+    "month": "2022-08",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2022-07",
+    "count": 2,
+    "published_count": 1,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 2
+  },
+  {
+    "month": "2022-03",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2021-08",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2021-07",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
+  },
+  {
+    "month": "2021-05",
+    "count": 1,
+    "published_count": 1,
+    "preprint_count": 0,
+    "benchmark_count": 0,
+    "non-benchmark_count": 1
   }
 ]

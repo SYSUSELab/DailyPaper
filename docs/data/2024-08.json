@@ -1,0 +1,31 @@
+[
+  {
+    "id": "2408.06450",
+    "title": "Evaluating Language Models for Efficient Code Generation",
+    "abstract": "We introduce Differential Performance Evaluation (DPE), a framework designed to reliably evaluate Large Language Models (LLMs) for efficient code generation. Traditional coding benchmarks often fail to provide reliable insights into code efficiency, due to their reliance on simplistic test inputs and the absence of effective compound metrics. DPE addresses these issues by focusing on efficiency-demanding programming tasks and establishing an insightful compound metric for performance evaluation. DPE operates in two phases: To curate efficiency datasets, it selects efficiency-demanding tasks from existing coding benchmarks and generates computationally expensive inputs to stress the efficiency of LLM solutions. To assess the code efficiency, DPE profiles the new solution and compares it globally against a set of reference solutions that exhibit distinct efficiency levels, where the matched level defines its efficiency score. As a proof of concept, we use DPE to create EvalPerf, a benchmark with 121 performance-challenging coding tasks. Our comprehensive evaluation draws interesting findings on the efficiency impact of model sizes, instruction tuning, and prompting. For example, while the scaling law fails to account for code efficiency, general instruction tuning benefits both code correctness and efficiency. We also evaluate the evaluation by examining the effectiveness of DPE, showing that EvalPerf is reliable and convenient to use even across platforms.",
+    "arxiv_url": "https://arxiv.org/abs/2408.06450",
+    "authors": [
+      "Jiawei Liu",
+      "Songrun Xie",
+      "Junhao Wang",
+      "Yuxiang Wei",
+      "Yifeng Ding",
+      "Lingming Zhang"
+    ],
+    "first_author": "Jiawei Liu",
+    "category": [
+      "Experience / Empirical",
+      "Technical / Method",
+      "Benchmark / Dataset"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Completion",
+    "summary": "本文提出差异化性能评估（DPE）框架并构建了 EVALPERF 基准，通过自动合成性能测试输入、性能聚类与参考解比较，可靠地评估和量化大语言模型生成代码的运行效率，并基于此对模型规模、指令微调和提示进行了实证分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2408.06450v1",
+    "published": "2024-08-12",
+    "update_time": "2024-08-12",
+    "download_time": "2025-12-04 23:26:06"
+  }
+]
