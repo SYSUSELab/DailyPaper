@@ -935,6 +935,9 @@ document.addEventListener('DOMContentLoaded', function() {
             allPapersData = monthsCache[month];
             console.log(`Using cached data for ${month}, ${allPapersData.length} papers`);
         }
+        
+        // 渲染task按钮
+        renderTaskButtons(currentField);
 
         // 数据加载完成后，触发筛选
         filterAndSortPapers();
@@ -1106,62 +1109,79 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 渲染 task 按钮（基于 field2task）
     function renderTaskButtons(field) {
-        // 1) 找到任务按钮容器：优先使用已有的 taskBtns 的父容器
-        let container = null;
-        if (taskBtns && taskBtns.length > 0) {
-            container = taskBtns[0].parentElement;
-        } else {
-            // 尝试几种常见选择器（你可以把 HTML 中的容器加上 id="task-buttons" 或 class="task-buttons"）
-            container = document.querySelector('#task-buttons') || document.querySelector('.task-buttons') || null;
-        }
-
+        // 1) 找到容器 —— 优先使用页面中已有 .task-btn 的父节点
+        const anyTaskBtn = document.querySelector('.task-btn');
+        const container = anyTaskBtn ? anyTaskBtn.parentElement : (document.querySelector('#task-buttons') || document.querySelector('.task-buttons'));
+    
         if (!container) {
-            console.warn('No container found for task buttons. Please add a container with id="task-buttons" or class="task-buttons", or ensure at least one .task-btn exists in HTML.');
+            console.warn('未找到 task 按钮容器：请确保页面存在 .task-btn 或 #task-buttons/.task-buttons 容器。');
             return;
         }
-
-        // 2) 清空现有
+    
+        // 2) 找到一个可用的样板按钮（优先 container 内的第一个 .task-btn）
+        const prototypeBtn = container.querySelector('.task-btn') || document.querySelector('.task-btn');
+    
+        // 3) 清空容器
         container.innerHTML = '';
-
-        // Helper: 创建一个按钮并附带 dataset、class、事件监听
-        function makeTaskButton(taskKey, isActive=false) {
-            const btn = document.createElement('button');
-            btn.className = 'task-btn';
+    
+        // helper: 根据 prototype 克隆或回退创建按钮
+        function makeTaskButton(taskKey, isActive = false) {
+            let btn;
+            if (prototypeBtn) {
+                btn = prototypeBtn.cloneNode(true); // 深拷贝，保留所有类名/结构
+                btn.classList.remove('active');     // 初始状态不带 active，按 isActive 决定
+            } else {
+                // 回退：创建一个和 HTML 匹配的按钮结构
+                btn = document.createElement('button');
+                btn.className = 'filter-btn task-btn';
+                // 把文本放在按钮内
+                btn.type = 'button';
+            }
+    
+            // 设置 dataset、active 状态、并更新文本内容（若内部有文本节点/子元素，尽量保留原结构）
             btn.dataset.task = taskKey;
-            if (isActive) btn.classList.add('active');
-            btn.type = 'button';
-            btn.textContent = `${taskKey} (0)`; // 先给占位计数，稍后 updateTaskButtonCounts 会更新
-            btn.addEventListener('click', function() {
-                // 点击后设置 active 并触发筛选
-                document.querySelectorAll('.task-btn').forEach(b => b.classList.remove('active'));
+            if (isActive) btn.classList.add('active'); else btn.classList.remove('active');
+    
+            // 如果样板中有一个子元素用于文本（例如直接文本或 <span>），尝试更新它优先
+            const labelSpan = btn.querySelector('.label') || btn.querySelector('span');
+            const text = (taskKey === 'all') ? `全部 (0)` : `${taskKey} (0)`;
+            if (labelSpan) {
+                labelSpan.textContent = text;
+                // 如果原样板含图标等，克隆会保留它们
+            } else {
+                // 若没有合适的子元素，直接设置按钮的文本
+                btn.textContent = text;
+            }
+    
+            // 确保是按钮类型
+            if (btn.tagName.toLowerCase() === 'button') btn.type = 'button';
+            else if (!btn.hasAttribute('role')) btn.setAttribute('role', 'button');
+    
+            // 绑定点击事件 —— 设置 currentTask 并触发筛选
+            btn.addEventListener('click', function () {
+                // 取消其它按钮的 active
+                container.querySelectorAll('.task-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 currentTask = this.dataset.task;
-                filterAndSortPapers();
+                filterAndSortPapers(); // 由 filterAndSortPapers() 内部更新计数
             });
+    
             return btn;
         }
-
-        // 3) 根据 field 渲染按钮
-        // 总是放一个 'all' 按钮
-        const allBtn = makeTaskButton('all', currentTask === 'all');
-        allBtn.textContent = `全部 (0)`; // 占位
-        container.appendChild(allBtn);
-
+    
+        // Always add 'all' first
+        container.appendChild(makeTaskButton('all', currentTask === 'all'));
+    
         if (field !== 'all') {
             const tasks = field2task[field] || [];
             tasks.forEach(t => {
-                const b = makeTaskButton(t, currentTask === t);
-                container.appendChild(b);
+                container.appendChild(makeTaskButton(t, currentTask === t));
             });
         }
-
-        // 4) 重新查询 taskBtns 以反映新的 DOM
+    
+        // 更新全局 taskBtns 节点集合引用
         taskBtns = document.querySelectorAll('.task-btn');
-
-        // 5) 刷新计数与显示文本
-        // updateTaskButtonCounts();
     }
-
 
     // 更新研究领域按钮的数量
     function updateFieldButtonCounts() {
