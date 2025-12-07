@@ -209,40 +209,72 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 更新task按钮的数量
     function updateTaskButtonCounts() {
-        // 先筛选出符合当前状态的论文
-        const statusFilteredPapers = allPapersData.filter(paper => {
-            const status = paper.conference ? 'published' : 'preprint';
-            const category = paper.category || [];
-            const field = paper.field;
+        try {
+            // 筛选符合当前状态和分类的论文（但不按 task 筛选）
+            const statusFilteredPapers = allPapersData.filter(paper => {
+                const status = paper.conference ? 'published' : 'preprint';
+                const category = paper.category || [];
+                const field = paper.field;
 
-            const matchStatus = currentStatus === 'all' || status === currentStatus;
-            const matchCategory = currentCategory === 'all' || category.includes(currentCategory);
-            const matchField = currentField === 'all' || field === currentField;
+                const matchStatus = currentStatus === 'all' || status === currentStatus;
+                const matchCategory = currentCategory === 'all' || category.includes(currentCategory);
+                const matchField = currentField === 'all' || field === currentField;
 
-            return matchStatus && matchCategory && matchField;
-        });
+                return matchStatus && matchCategory && matchField;
+            });
 
-        // 计算各个领域的数量
-        const taskCounts = {
-            'all': statusFilteredPapers.length
-        };
-        field2task[currentField].forEach(task => {
-            taskCounts[task] = 0;
-        });
+            // 如果 currentField === 'all'，我们只展示 "all" 按钮，其他按钮隐藏
+            if (currentField === 'all') {
+                // 统计总数，并只显示全部按钮（其余按钮隐藏）
+                const total = statusFilteredPapers.length;
+                taskBtns.forEach(btn => {
+                    const task = btn.dataset.task;
+                    if (task === 'all') {
+                        btn.style.display = ''; // 显示
+                        btn.textContent = `全部 (${total})`;
+                    } else {
+                        btn.style.display = 'none'; // 隐藏其他 task 按钮
+                    }
+                });
+                return;
+            }
 
-        statusFilteredPapers.forEach(paper => {
-            const task = paper.tag;
-            taskCounts[task]++;
-        });
+            // 如果是具体的 field，展示该 field 对应的 tasks（先从 field2task 找到任务列表）
+            const tasksForField = field2task[currentField] || [];
 
-        // 更新按钮文本
-        taskBtns.forEach(btn => {
-            const task = btn.dataset.task;
-            const displayName = task === 'all' ? '全部' : task;
-                               // category === 'Natural Language Processing' ? 'NLP' : category;
-            const count = taskCounts[task] || 0;
-            btn.textContent = `${displayName} (${count})`;
-        });
+            // 初始化计数映射（包含 all）
+            const taskCounts = { 'all': statusFilteredPapers.length };
+            tasksForField.forEach(t => { taskCounts[t] = 0; });
+
+            // 统计
+            statusFilteredPapers.forEach(paper => {
+                const tag = paper.tag || '';
+                if (!tag) return;
+                if (taskCounts.hasOwnProperty(tag)) {
+                    taskCounts[tag]++;
+                } else {
+                    // 若 tag 不在预定义 tasksForField 中，也把它计入
+                    taskCounts[tag] = (taskCounts[tag] || 0) + 1;
+                }
+            });
+
+            // 更新按钮：只显示 'all' 和 tasksForField；其他按钮隐藏
+            taskBtns.forEach(btn => {
+                const task = btn.dataset.task;
+                if (task === 'all') {
+                    btn.style.display = '';
+                    btn.textContent = `全部 (${taskCounts['all'] || 0})`;
+                } else if (tasksForField.includes(task)) {
+                    btn.style.display = '';
+                    btn.textContent = `${task} (${taskCounts[task] || 0})`;
+                } else {
+                    // 隐藏不属于当前 field 的 task 按钮
+                    btn.style.display = 'none';
+                }
+            });
+        } catch (err) {
+            console.error('updateTaskButtonCounts error:', err);
+        }
     }
 
     // 更新研究领域按钮的数量
