@@ -354,6 +354,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // 更新全局 taskBtns 节点集合引用
         taskBtns = document.querySelectorAll('.task-btn');
+        
+        // 渲染task按钮后，设置all为active
+        currentTask = 'all';
+        taskBtns.forEach(b => b.classList.remove('active'));
+        const allBtn = document.querySelector('.task-btn[data-task="all"]');
+        if (allBtn) allBtn.classList.add('active');
     }
 
     // 更新研究领域按钮的数量
