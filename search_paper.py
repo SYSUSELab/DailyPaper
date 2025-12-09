@@ -256,7 +256,8 @@ class PaperSearch:
                 # 'primary_category': primary_category,  # 主要分类
                 "category": resp['category'],
                 "field": resp['field'],
-                "tag": resp['task'],
+                "task": resp['task'],
+                "tags": resp['tags'],
                 "summary": resp['summary'],
                 "quality": resp['quality'],
                 "conference": conference,  # 会议/期刊
@@ -337,7 +338,7 @@ class PaperSearch:
             (1) Survey — synthesizes, summarizes, or organizes existing research or tools.
             (2) Empirical — analyzes existing phenomena in LLM4SE (e.g., evaluating current LLMs on tasks, understanding behavior, measuring performance); does not introduce a new method or dataset.
             (3) Technical — proposes a new method, model, algorithm, or tool for an SE task using LLMs.
-            (4) Benchmark —  introduces a brand‑new benchmark, dataset, or evaluation suite for LLM4SE.
+            (4) Benchmark —  introduces a brand‑new benchmark, dataset for LLM4SE.
                   - What does NOT qualify as “Benchmark / Dataset” :
                       1. Using an existing, publicly available benchmark or dataset for experiments or evaluation.
                       2. Presenting only evaluation results on a pre‑existing benchmark without providing any new data or evaluation framework. 
@@ -351,11 +352,20 @@ class PaperSearch:
             If the paper's focus does not clearly match any provided `field` or `task`, summarize a new `field` or `task`.
             **Provided Taxonomy:** `{self.config['topic']}`
         
-        3. One-Sentence Summary
+        3. Tags Summary
+        
+            Your goal is to summarize more detailed tags for the paper. The tags need to be at the same level as the task, or more detailed.
+                - Identify the most salient concepts, techniques, or application areas described in the paper.
+                - If a tag is ambiguous or not clearly supported, omit it.
+                - Do not invent tags that are unrelated to the content.
+            Return the list ["tag1", "tag2", ...].
+            For example, input text: "Title: Lightweight Model Editing for LLMs to Correct Deprecated API Recommendations", output tags: ["Model Editing", "Deprecated API", "API Recommendations"]
+            
+        4. One-Sentence Summary
         
             Summarize the paper in one concise sentence in Chinese.
         
-        4. Quality Assessment
+        5. Quality Assessment
         
             Rate the overall quality as exactly one of:
             
@@ -370,6 +380,7 @@ class PaperSearch:
           "category": [],
           "field": "",
           "task": "",
+          "tags": [],
           "summary": "",
           "quality": ""
         }}

@@ -84,7 +84,8 @@ def scan_paper_jsonl(paper_search):
                                     # 'primary_category': primary_category,  # 主要分类
                                     "category": resp['category'],
                                     "field": resp['field'],
-                                    "tag": resp['task'],
+                                    "task": resp['task'],
+                                    "tags": resp['tags'],
                                     "summary": resp['summary'],
                                     "quality": resp['quality'],
                                     "conference": conference,  # 会议/期刊

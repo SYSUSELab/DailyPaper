@@ -287,26 +287,26 @@ class HTMLGenerator:
         return ('venue-other', conference)
 
     def generate_papers_html(self) -> str:
-        """生成论文列表 HTML（兼容 paper['tag'] 为 string 或 list）"""
+        """生成论文列表 HTML（兼容 paper['task'] 为 string 或 list）"""
         if not self.papers:
             return '<p class="no-results">暂无论文数据</p>'
 
         html_parts = []
         for paper in self.papers:
-            # 兼容 tag 为 string 或 list。若是 string，支持单个标签或逗号分隔多个标签。
-            raw_tag = paper.get('tag', '')
-            if isinstance(raw_tag, list):
-                tags_list = [t for t in raw_tag if isinstance(t, str) and t.strip()]
-            elif isinstance(raw_tag, str):
-                if ',' in raw_tag:
-                    tags_list = [t.strip() for t in raw_tag.split(',') if t.strip()]
+            # 兼容 task 为 string 或 list。若是 string，支持单个标签或逗号分隔多个标签。
+            raw_task = paper.get('task', '')
+            if isinstance(raw_task, list):
+                task_list = [t for t in raw_task if isinstance(t, str) and t.strip()]
+            elif isinstance(raw_task, str):
+                if ',' in raw_task:
+                    task_list = [t.strip() for t in raw_task.split(',') if t.strip()]
                 else:
-                    tags_list = [raw_tag.strip()] if raw_tag.strip() else []
+                    task_list = [raw_task.strip()] if raw_task.strip() else []
             else:
-                tags_list = []
+                task_list = []
 
-            tags_html = ''.join([f'<span class="tag">{tag}</span>' for tag in tags_list])
-            data_tags_attr = ','.join(tags_list)  # 用于 data-tags 属性
+            task_html = ''.join([f'<span class="task">{task}</span>' for task in task_list])
+            data_task_attr = ','.join(task_list)  # 用于 data-task 属性
 
             authors = paper.get('authors', [])
             authors_html = ', '.join(authors[:5])
@@ -333,7 +333,7 @@ class HTMLGenerator:
                 code_links_html += f'<a href="{code_links["project"]}" target="_blank" class="btn-link btn-project">🌐 Project</a>'
 
             paper_html = f"""
-            <article class="paper-card" data-tags="{data_tags_attr}" data-status="{is_published}" data-date="{paper.get('published', '')}">
+            <article class="paper-card" data-task="{data_task_attr}" data-status="{is_published}" data-date="{paper.get('published', '')}">
                 <div class="venue-badge {venue_class}">{venue_display}</div>
                 <h2 class="paper-title">
                     <a href="{paper.get('arxiv_url', '')}" target="_blank">{paper.get('title', '')}</a>
@@ -345,8 +345,8 @@ class HTMLGenerator:
                 <div class="paper-authors">
                     👥 {authors_html}
                 </div>
-                <div class="paper-tags">
-                    {tags_html}
+                <div class="paper-task">
+                    {task_html}
                 </div>
                 <div class="paper-abstract">
                     <details>
@@ -678,14 +678,14 @@ main {
     font-size: 0.95rem;
 }
 
-.paper-tags {
+.paper-task {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.tag {
+.task {
     display: inline-block;
     padding: 0.3rem 0.8rem;
     background: #e3f2fd;
@@ -945,7 +945,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 生成论文HTML
     function createPaperHTML(paper) {
-        const tags = paper.tag ? `<span class="tag">${paper.tag}</span>` : '';
+        const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
 
         // 提取代码链接
         let codeLink = '';
@@ -966,7 +966,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstCategory = paper.primary_category;
 
         return `
-            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-tags="${paper.tag ? paper.tag : ''}" data-paper-id="${paper.id}">
+            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-task="${paper.task ? paper.task : ''}" data-paper-id="${paper.id}">
                 <div class="paper-select">
                     <input type="checkbox" class="paper-checkbox" id="check-${paper.id}" data-paper-id="${paper.id}">
                     <label for="check-${paper.id}"></label>
@@ -986,8 +986,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="paper-summary">
                         🤖 ${paper.summary}
                     </div>
-                    <div class="paper-tags">
-                        ${tags}
+                    <div class="paper-task">
+                        ${task}
                     </div>
                     <div class="paper-abstract">
                         <details>
@@ -1078,13 +1078,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 统计
             statusFilteredPapers.forEach(paper => {
-                const tag = paper.tag || '';
-                if (!tag) return;
-                if (taskCounts.hasOwnProperty(tag)) {
-                    taskCounts[tag]++;
+                const task = paper.task || '';
+                if (!task) return;
+                if (taskCounts.hasOwnProperty(task)) {
+                    taskCounts[task]++;
                 } else {
-                    // 若 tag 不在预定义 tasksForField 中，也把它计入
-                    taskCounts[tag] = (taskCounts[tag] || 0) + 1;
+                    // 若 task 不在预定义 tasksForField 中，也把它计入
+                    taskCounts[task] = (taskCounts[task] || 0) + 1;
                 }
             });
 
@@ -1301,7 +1301,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const status = paper.conference ? 'published' : 'preprint';
             const category = paper.category || [];
             const field = paper.field;
-            const task = paper.tag;
+            const task =paper.task;
             const text = `${paper.title} ${paper.authors} ${paper.abstract}`.toLowerCase();
 
             const matchStatus = currentStatus === 'all' || status === currentStatus;
