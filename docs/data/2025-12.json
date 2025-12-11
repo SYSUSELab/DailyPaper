@@ -789,5 +789,176 @@
     "published": "2025-12-08",
     "update_time": "2025-12-08",
     "download_time": "2025-12-10 01:55:01"
+  },
+  {
+    "id": "2512.08867",
+    "title": "SimpleDevQA: Benchmarking Large Language Models on Development Knowledge QA",
+    "abstract": "The Development Knowledge Question Answering (Dev Knowledge QA) task aims to provide natural language answers to knowledge-seeking questions during software development. To investigate its importance and to what extent it has been explored, we analyze real user-LLM dialogues from WildChat and find that: (1) The Dev Knowledge QA task accounts for 39.6% of interactions(highest among all tasks), revealing broad knowledge needs beyond code generation (32.3%). (2) Only 27.5% of real Dev Knowledge QA dialogues focus on code understanding, leaving out development knowledge-seeking. (3) Only 17.1% of real-world Dev Knowledge QA dialogues can be used for constructing a benchmark. Existing benchmarks have two primary limitations for evaluating the Dev Knowledge QA capability of LLMs. First, existing benchmarks offer a limited development knowledge scope, mainly focusing on code understanding and neglecting broader knowledge during development. Second, some benchmarks are not built from real user queries. To bridge this gap, we design a three-phase pipeline that transforms real-world dialogue into simple development knowledge-seeking QA pairs. Through this pipeline, we introduce SimpleDevQA, a multilingual benchmark derived from real user dialogues. It contains 2,740 QA pairs in three languages (English, Chinese, and Russian), and focuses on questions with unique, short, and verifiable answers for accurate and simple evaluation. Experiments show that: Code LLMs generally outperform general LLMs of similar scale; Knowledge injection with the Retrieval-Augmented Generation (RAG) strategy can boost LLM accuracy by 11.3% on average; LLMs show systematic overconfidence in Dev Knowledge QA, and the answering accuracy of LLMs shows a positive correlation with their stated confidence; Generally, LLMs with stronger code generation performance also exhibit stronger performance in Dev Knowledge QA.",
+    "arxiv_url": "https://arxiv.org/abs/2512.08867",
+    "authors": [
+      "Jing Zhang",
+      "Lianghong Guo",
+      "Yanlin Wang",
+      "Mingwei Liu",
+      "Jiachi Chen",
+      "Yuchi Ma",
+      "Ensheng Shi",
+      "Terry Yue Zhuo",
+      "Hongyu Zhang",
+      "Zibin Zheng"
+    ],
+    "first_author": "Jing Zhang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Development Knowledge",
+    "task": "Development Knowledge QA",
+    "tags": [
+      "Benchmark Construction",
+      "Dev Knowledge QA",
+      "Multilingual Dataset",
+      "WildChat Dialogue Mining",
+      "Data Pipeline",
+      "Reference Retrieval",
+      "RAG (Retrieval-Augmented Generation)",
+      "LLM Evaluation",
+      "Factuality Verification",
+      "Human Annotation",
+      "Closed-source vs Open-source Comparison",
+      "Code LLM vs General LLM Performance",
+      "Overconfidence Analysis"
+    ],
+    "summary": "本文提出SimpleDevQA——一个基于真实用户对话、覆盖英中俄三语的开发知识问答基准及其三阶段构建流水线，并通过对18种主流LLM的评测揭示了RAG可提升性能、闭源/代码模型普遍优于开源/通用模型以及模型过度自信等现象。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.08867v1",
+    "published": "2025-12-09",
+    "update_time": "2025-12-09",
+    "download_time": "2025-12-11 01:52:20"
+  },
+  {
+    "id": "2512.08810",
+    "title": "Multicalibration for LLM-based Code Generation",
+    "abstract": "As AI-based code generation becomes widespread, researchers are investigating the calibration of code LLMs - ensuring their confidence scores faithfully represent the true likelihood of code correctness. To do so, we investigate multicalibration, which can capture additional factors about a coding problem, such as complexity, code length, or programming language used. We study four multicalibration approaches on three function synthesis benchmarks, using latest-generation code LLMs (Qwen3 Coder, GPT-OSS, DeepSeek-R1-Distill). Our results demonstrate that multicalibration can yield distinct improvements over both uncalibrated token likelihoods (+1.03 in skill score) and baseline calibrations (+0.37 in skill score). We study the influence of the aforementioned factors in ablations, and make our dataset (consisting of code generations, likelihoods, and correctness labels) available for future research on code LLM calibration.",
+    "arxiv_url": "https://arxiv.org/abs/2512.08810",
+    "authors": [
+      "Viola Campos",
+      "Robin Kuschnereit",
+      "Adrian Ulges"
+    ],
+    "first_author": "Viola Campos",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Uncertainty Estimation & Calibration",
+    "tags": [
+      "Multicalibration",
+      "Post-hoc calibration",
+      "Uncertainty estimation",
+      "Group-aware calibration (complexity/code-length/prompt-length/language)",
+      "Brier Skill Score",
+      "Expected Calibration Error",
+      "Token likelihood aggregation",
+      "CALIBRI dataset",
+      "Function synthesis benchmarks",
+      "Code LLM evaluation (Qwen3/GPT-OSS/DeepSeek)"
+    ],
+    "summary": "本文首次将多组校准(multicalibration)方法应用于代码生成LLM，通过按复杂度、代码/提示长度及编程语言分组的后验校准显著提高置信度估计的可靠性，并发布了包含生成代码、似然与正确性标签的CALIBRI数据集以促进后续研究。",
+    "quality": "High",
+    "conference": "AI-SQE 2026 (The 1st International Workshop on AI for Software Quality Evaluation: Judgment, Metrics, Benchmarks, and Beyond) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.08810v1",
+    "published": "2025-12-09",
+    "update_time": "2025-12-09",
+    "download_time": "2025-12-11 01:52:53"
+  },
+  {
+    "id": "2512.08810",
+    "title": "Multicalibration for LLM-based Code Generation",
+    "abstract": "As AI-based code generation becomes widespread, researchers are investigating the calibration of code LLMs - ensuring their confidence scores faithfully represent the true likelihood of code correctness. To do so, we investigate multicalibration, which can capture additional factors about a coding problem, such as complexity, code length, or programming language used. We study four multicalibration approaches on three function synthesis benchmarks, using latest-generation code LLMs (Qwen3 Coder, GPT-OSS, DeepSeek-R1-Distill). Our results demonstrate that multicalibration can yield distinct improvements over both uncalibrated token likelihoods (+1.03 in skill score) and baseline calibrations (+0.37 in skill score). We study the influence of the aforementioned factors in ablations, and make our dataset (consisting of code generations, likelihoods, and correctness labels) available for future research on code LLM calibration.",
+    "arxiv_url": "https://arxiv.org/abs/2512.08810",
+    "authors": [
+      "Viola Campos",
+      "Robin Kuschnereit",
+      "Adrian Ulges"
+    ],
+    "first_author": "Viola Campos",
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "Multicalibration",
+      "Calibration",
+      "Uncertainty Estimation",
+      "Post-hoc Calibration",
+      "Group-conditioned Calibration",
+      "Brier Skill Score",
+      "Code LLMs",
+      "Function Synthesis Benchmarks",
+      "CALIBRI dataset",
+      "Likelihood Aggregation"
+    ],
+    "summary": "本文将多群体校准（multicalibration）方法引入代码生成场景，通过按代码复杂度、代码长度、提示长度和编程语言分组对生成候选的置信度进行后验校准，并在多模型多数据集上验证了显著提升，同时发布了包含生成、似然与正确性标签的 CALIBRI 数据集以促进未来研究。",
+    "quality": "High",
+    "conference": "AI-SQE (The 1st International Workshop on AI for Software Quality Evaluation) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.08810v1",
+    "published": "2025-12-09",
+    "update_time": "2025-12-09",
+    "download_time": "2025-12-11 01:55:45"
+  },
+  {
+    "id": "2512.08769",
+    "title": "A Practical Guide for Designing, Developing, and Deploying Production-Grade Agentic AI Workflows",
+    "abstract": "Agentic AI marks a major shift in how autonomous systems reason, plan, and execute multi-step tasks. Unlike traditional single model prompting, agentic workflows integrate multiple specialized agents with different Large Language Models(LLMs), tool-augmented capabilities, orchestration logic, and external system interactions to form dynamic pipelines capable of autonomous decision-making and action. As adoption accelerates across industry and research, organizations face a central challenge: how to design, engineer, and operate production-grade agentic AI workflows that are reliable, observable, maintainable, and aligned with safety and governance requirements. This paper provides a practical, end-to-end guide for designing, developing, and deploying production-quality agentic AI systems. We introduce a structured engineering lifecycle encompassing workflow decomposition, multi-agent design patterns, Model Context Protocol(MCP), and tool integration, deterministic orchestration, Responsible-AI considerations, and environment-aware deployment strategies. We then present nine core best practices for engineering production-grade agentic AI workflows, including tool-first design over MCP, pure-function invocation, single-tool and single-responsibility agents, externalized prompt management, Responsible-AI-aligned model-consortium design, clean separation between workflow logic and MCP servers, containerized deployment for scalable operations, and adherence to the Keep it Simple, Stupid (KISS) principle to maintain simplicity and robustness. To demonstrate these principles in practice, we present a comprehensive case study: a multimodal news-analysis and media-generation workflow. By combining architectural guidance, operational patterns, and practical implementation insights, this paper offers a foundational reference to build robust, extensible, and production-ready agentic AI workflows.",
+    "arxiv_url": "https://arxiv.org/abs/2512.08769",
+    "authors": [
+      "Eranga Bandara",
+      "Ross Gore",
+      "Peter Foytik",
+      "Sachin Shetty",
+      "Ravi Mukkamala",
+      "Abdul Rahman",
+      "Xueping Liang",
+      "Safdar H. Bouk",
+      "Amin Hass",
+      "Sachini Rajapakse",
+      "Ng Wee Keong",
+      "Kasun De Zoysa",
+      "Aruna Withanage",
+      "Nilaan Loganathan"
+    ],
+    "first_author": "Eranga Bandara",
+    "category": [
+      "Survey",
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Management",
+    "tags": [
+      "Agentic AI",
+      "Multi-Agent Workflows",
+      "Model Context Protocol (MCP)",
+      "Tool Integration",
+      "Orchestration",
+      "Deterministic Execution",
+      "Responsible AI",
+      "Deployment & Containerization",
+      "Prompt Management",
+      "Single-Responsibility Agents",
+      "Case Study: Multimodal News Analysis"
+    ],
+    "summary": "本文提供了一套面向生产的 agentic AI 工作流的端到端工程指南，包含工作流分解、多代理设计模式、Model Context Protocol、工具集成、确定性编排、责任化 AI 考量及部署策略，并通过多模态新闻分析案例演示最佳实践。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.08769v1",
+    "published": "2025-12-09",
+    "update_time": "2025-12-09",
+    "download_time": "2025-12-11 01:57:12"
   }
 ]

@@ -271,6 +271,7 @@ class PaperSearch:
             with open(jsonl_file, 'a', encoding='utf-8') as f:
                 # 将字典转换为JSON字符串并写入文件，末尾添加换行符
                 f.write(json.dumps(paper_metadata, ensure_ascii=False) + '\n')
+                self.paper.add(paper_key)
                 # current_position = f.tell()
                 # save_last_position(current_position)
 
