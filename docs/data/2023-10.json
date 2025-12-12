@@ -28,5 +28,125 @@
     "published": "2023-10-10",
     "update_time": "2024-11-11",
     "download_time": "2025-12-04 23:27:45"
+  },
+  {
+    "id": "2310.17903",
+    "title": "Pitfalls in Language Models for Code Intelligence: A Taxonomy and Survey",
+    "abstract": "Modern language models (LMs) have been successfully employed in source code generation and understanding, leading to a significant increase in research focused on learning-based code intelligence, such as automated bug repair, and test case generation. Despite their great potential, language models for code intelligence (LM4Code) are susceptible to potential pitfalls, which hinder realistic performance and further impact their reliability and applicability in real-world deployment. Such challenges drive the need for a comprehensive understanding - not just identifying these issues but delving into their possible implications and existing solutions to build more reliable language models tailored to code intelligence. Based on a well-defined systematic research approach, we conducted an extensive literature review to uncover the pitfalls inherent in LM4Code. Finally, 67 primary studies from top-tier venues have been identified. After carefully examining these studies, we designed a taxonomy of pitfalls in LM4Code research and conducted a systematic study to summarize the issues, implications, current solutions, and challenges of different pitfalls for LM4Code systems. We developed a comprehensive classification scheme that dissects pitfalls across four crucial aspects: data collection and labeling, system design and learning, performance evaluation, and deployment and maintenance. Through this study, we aim to provide a roadmap for researchers and practitioners, facilitating their understanding and utilization of LM4Code in reliable and trustworthy ways.",
+    "arxiv_url": "https://arxiv.org/abs/2310.17903",
+    "authors": [
+      "Xinyu She",
+      "Yue Liu",
+      "Yanjie Zhao",
+      "Yiling He",
+      "Li Li",
+      "Chakkrit Tantithamthavorn",
+      "Zhan Qin",
+      "Haoyu Wang"
+    ],
+    "first_author": "Xinyu She",
+    "category": [
+      "Survey"
+    ],
+    "field": "Model Reliability & Trustworthiness",
+    "task": "Pitfalls Taxonomy & Evaluation",
+    "tags": [
+      "Pitfall Taxonomy",
+      "Data collection and labeling issues",
+      "Dataset contamination and leakage",
+      "Evaluation bias and metric validity",
+      "Model robustness and reliability",
+      "Deployment and maintenance risks",
+      "Mitigation strategies and best practices",
+      "Reproducibility and transparency"
+    ],
+    "summary": "本文基于系统文献综述构建了面向代码智能的语言模型陷阱分类法，系统梳理了数据、模型设计、性能评估与部署维护等方面的常见问题、影响及现有应对策略，并提出未来研究方向与实践建议。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2310.17903v1",
+    "published": "2023-10-27",
+    "update_time": "2023-10-27",
+    "download_time": "2025-12-10 16:15:54"
+  },
+  {
+    "id": "2310.11248",
+    "title": "CrossCodeEval: A Diverse and Multilingual Benchmark for Cross-File Code Completion",
+    "abstract": "Code completion models have made significant progress in recent years, yet current popular evaluation datasets, such as HumanEval and MBPP, predominantly focus on code completion tasks within a single file. This over-simplified setting falls short of representing the real-world software development scenario where repositories span multiple files with numerous cross-file dependencies, and accessing and understanding cross-file context is often required to complete the code correctly.   To fill in this gap, we propose CrossCodeEval, a diverse and multilingual code completion benchmark that necessitates an in-depth cross-file contextual understanding to complete the code accurately. CrossCodeEval is built on a diverse set of real-world, open-sourced, permissively-licensed repositories in four popular programming languages: Python, Java, TypeScript, and C#. To create examples that strictly require cross-file context for accurate completion, we propose a straightforward yet efficient static-analysis-based approach to pinpoint the use of cross-file context within the current file.   Extensive experiments on state-of-the-art code language models like CodeGen and StarCoder demonstrate that CrossCodeEval is extremely challenging when the relevant cross-file context is absent, and we see clear improvements when adding these context into the prompt. However, despite such improvements, the pinnacle of performance remains notably unattained even with the highest-performing model, indicating that CrossCodeEval is also capable of assessing model's capability in leveraging extensive context to make better code completion. Finally, we benchmarked various methods in retrieving cross-file context, and show that CrossCodeEval can also be used to measure the capability of code retrievers.",
+    "arxiv_url": "https://arxiv.org/abs/2310.11248",
+    "authors": [
+      "Yangruibo Ding",
+      "Zijian Wang",
+      "Wasi Uddin Ahmad",
+      "Hantian Ding",
+      "Ming Tan",
+      "Nihal Jain",
+      "Murali Krishna Ramanathan",
+      "Ramesh Nallapati",
+      "Parminder Bhatia",
+      "Dan Roth",
+      "Bing Xiang"
+    ],
+    "first_author": "Yangruibo Ding",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Cross-file Context",
+      "Cross-file Code Completion Benchmark",
+      "Static-analysis-based Example Selection",
+      "Undefined-name Detection",
+      "Multilingual (Python/Java/TypeScript/C#)",
+      "Repository-level Context Retrieval",
+      "Data-leakage Mitigation",
+      "Prompt Context Augmentation"
+    ],
+    "summary": "该论文提出了CROSSCODEEVAL——一个来自真实开源仓库的多语言跨文件代码补全基准，使用静态分析自动构造必须依赖跨文件上下文的样例，并评估了多种代码模型和检索方法以展示跨文件上下文对补全性能的重要性。",
+    "quality": "High",
+    "conference": "NeurIPS",
+    "pdf_url": "https://arxiv.org/pdf/2310.11248v2",
+    "published": "2023-10-17",
+    "update_time": "2023-11-17",
+    "download_time": "2025-12-11 16:32:51"
+  },
+  {
+    "id": "2310.04951",
+    "title": "CodeTransOcean: A Comprehensive Multilingual Benchmark for Code Translation",
+    "abstract": "Recent code translation techniques exploit neural machine translation models to translate source code from one programming language to another to satisfy production compatibility or to improve efficiency of codebase maintenance. Most existing code translation datasets only focus on a single pair of popular programming languages. To advance research on code translation and meet diverse requirements of real-world applications, we construct CodeTransOcean, a large-scale comprehensive benchmark that supports the largest variety of programming languages for code translation. CodeTransOcean consists of three novel multilingual datasets, namely, MultilingualTrans supporting translations between multiple popular programming languages, NicheTrans for translating between niche programming languages and popular ones, and LLMTrans for evaluating executability of translated code by large language models (LLMs). CodeTransOcean also includes a novel cross-framework dataset, DLTrans, for translating deep learning code across different frameworks. We develop multilingual modeling approaches for code translation and demonstrate their great potential in improving the translation quality of both low-resource and high-resource language pairs and boosting the training efficiency. We also propose a novel evaluation metric Debugging Success Rate@K for program-level code translation. Last but not least, we evaluate LLM ChatGPT on our datasets and investigate its potential for fuzzy execution predictions. We build baselines for CodeTransOcean and analyze challenges of code translation for guiding future research. The CodeTransOcean datasets and code are publicly available at https://github.com/WeixiangYAN/CodeTransOcean.",
+    "arxiv_url": "https://arxiv.org/abs/2310.04951",
+    "authors": [
+      "Weixiang Yan",
+      "Yuchen Tian",
+      "Yunzhe Li",
+      "Qian Chen",
+      "Wen Wang"
+    ],
+    "first_author": "Weixiang Yan",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Multilingual code translation",
+      "Niche-to-popular language transfer",
+      "Deep-learning-framework translation",
+      "Execution-based evaluation",
+      "Debugging Success Rate@K (DSR@K)",
+      "AutoTransExecuter pipeline",
+      "Fuzzy execution metric",
+      "Multilingual modeling for low-resource pairs",
+      "ChatGPT prompting and self-debugging study"
+    ],
+    "summary": "本文提出了CodeTransOcean——一个覆盖多种主流与小众编程语言及深度学习框架的大规模代码翻译基准，包含多套数据集、自动化翻译-执行评估流水线与新的执行型评价指标，并展示了多语言建模与ChatGPT在代码翻译任务中的表现与挑战。",
+    "quality": "High",
+    "conference": "EMNLP 2023",
+    "pdf_url": "https://arxiv.org/pdf/2310.04951v2",
+    "published": "2023-10-08",
+    "update_time": "2023-10-25",
+    "download_time": "2025-12-11 16:52:47"
   }
 ]

@@ -720,44 +720,6 @@
     "download_time": "2025-12-10 01:51:28"
   },
   {
-    "id": "2512.07814",
-    "title": "Understanding Privacy Risks in Code Models Through Training Dynamics: A Causal Approach",
-    "abstract": "Large language models for code (LLM4Code) have greatly improved developer productivity but also raise privacy concerns due to their reliance on open-source repositories containing abundant personally identifiable information (PII). Prior work shows that commercial models can reproduce sensitive PII, yet existing studies largely treat PII as a single category and overlook the heterogeneous risks among different types. We investigate whether distinct PII types vary in their likelihood of being learned and leaked by LLM4Code, and whether this relationship is causal. Our methodology includes building a dataset with diverse PII types, fine-tuning representative models of different scales, computing training dynamics on real PII data, and formulating a structural causal model to estimate the causal effect of learnability on leakage. Results show that leakage risks differ substantially across PII types and correlate with their training dynamics: easy-to-learn instances such as IP addresses exhibit higher leakage, while harder types such as keys and passwords leak less frequently. Ambiguous types show mixed behaviors. This work provides the first causal evidence that leakage risks are type-dependent and offers guidance for developing type-aware and learnability-aware defenses for LLM4Code.",
-    "arxiv_url": "https://arxiv.org/abs/2512.07814",
-    "authors": [
-      "Hua Yang",
-      "Alejandro Velasco",
-      "Sen Fang",
-      "Bowen Xu",
-      "Denys Poshyvanyk"
-    ],
-    "first_author": "Hua Yang",
-    "category": [
-      "Empirical",
-      "Benchmark",
-      "Technical"
-    ],
-    "field": "Coding Assistant",
-    "task": "Code Pre-Training",
-    "tags": [
-      "PII in code",
-      "Privacy leakage",
-      "Training dynamics",
-      "Structural causal model",
-      "PII dataset",
-      "PII extraction attacks",
-      "Fine-tuning LLM4Code",
-      "Type-specific leakage risk"
-    ],
-    "summary": "本文通过构建多类型PII代码数据集、测量模型训练动态并引入结构因果模型，实证并因果证明不同类型的PII在LLM4Code中存在显著且可解释的漏泄风险差异，为面向类型与可学性防御设计提供依据。",
-    "quality": "High",
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2512.07814v1",
-    "published": "2025-12-08",
-    "update_time": "2025-12-08",
-    "download_time": "2025-12-10 01:52:21"
-  },
-  {
     "id": "2512.07631",
     "title": "The Agent Capability Problem: Predicting Solvability Through Information-Theoretic Bounds",
     "abstract": "When should an autonomous agent commit resources to a task? We introduce the Agent Capability Problem (ACP), a framework for predicting whether an agent can solve a problem under resource constraints. Rather than relying on empirical heuristics, ACP frames problem-solving as information acquisition: an agent requires $\\Itotal$ bits to identify a solution and gains $\\Istep$ bits per action at cost $\\Cstep$, yielding an effective cost $\\Ceff = (\\Itotal/\\Istep), \\Cstep$ that predicts resource requirements before search. We prove that $\\Ceff$ lower-bounds expected cost and provide tight probabilistic upper bounds. Experimental validation shows that ACP predictions closely track actual agent performance, consistently bounding search effort while improving efficiency over greedy and random strategies. The framework generalizes across LLM-based and agentic workflows, linking principles from active learning, Bayesian optimization, and reinforcement learning through a unified information-theoretic lens. \\",
@@ -875,44 +837,6 @@
     "download_time": "2025-12-11 01:52:53"
   },
   {
-    "id": "2512.08810",
-    "title": "Multicalibration for LLM-based Code Generation",
-    "abstract": "As AI-based code generation becomes widespread, researchers are investigating the calibration of code LLMs - ensuring their confidence scores faithfully represent the true likelihood of code correctness. To do so, we investigate multicalibration, which can capture additional factors about a coding problem, such as complexity, code length, or programming language used. We study four multicalibration approaches on three function synthesis benchmarks, using latest-generation code LLMs (Qwen3 Coder, GPT-OSS, DeepSeek-R1-Distill). Our results demonstrate that multicalibration can yield distinct improvements over both uncalibrated token likelihoods (+1.03 in skill score) and baseline calibrations (+0.37 in skill score). We study the influence of the aforementioned factors in ablations, and make our dataset (consisting of code generations, likelihoods, and correctness labels) available for future research on code LLM calibration.",
-    "arxiv_url": "https://arxiv.org/abs/2512.08810",
-    "authors": [
-      "Viola Campos",
-      "Robin Kuschnereit",
-      "Adrian Ulges"
-    ],
-    "first_author": "Viola Campos",
-    "category": [
-      "Technical",
-      "Benchmark",
-      "Empirical"
-    ],
-    "field": "Coding Assistant",
-    "task": "Code Alignment",
-    "tags": [
-      "Multicalibration",
-      "Calibration",
-      "Uncertainty Estimation",
-      "Post-hoc Calibration",
-      "Group-conditioned Calibration",
-      "Brier Skill Score",
-      "Code LLMs",
-      "Function Synthesis Benchmarks",
-      "CALIBRI dataset",
-      "Likelihood Aggregation"
-    ],
-    "summary": "本文将多群体校准（multicalibration）方法引入代码生成场景，通过按代码复杂度、代码长度、提示长度和编程语言分组对生成候选的置信度进行后验校准，并在多模型多数据集上验证了显著提升，同时发布了包含生成、似然与正确性标签的 CALIBRI 数据集以促进未来研究。",
-    "quality": "High",
-    "conference": "AI-SQE (The 1st International Workshop on AI for Software Quality Evaluation) 2026",
-    "pdf_url": "https://arxiv.org/pdf/2512.08810v1",
-    "published": "2025-12-09",
-    "update_time": "2025-12-09",
-    "download_time": "2025-12-11 01:55:45"
-  },
-  {
     "id": "2512.08769",
     "title": "A Practical Guide for Designing, Developing, and Deploying Production-Grade Agentic AI Workflows",
     "abstract": "Agentic AI marks a major shift in how autonomous systems reason, plan, and execute multi-step tasks. Unlike traditional single model prompting, agentic workflows integrate multiple specialized agents with different Large Language Models(LLMs), tool-augmented capabilities, orchestration logic, and external system interactions to form dynamic pipelines capable of autonomous decision-making and action. As adoption accelerates across industry and research, organizations face a central challenge: how to design, engineer, and operate production-grade agentic AI workflows that are reliable, observable, maintainable, and aligned with safety and governance requirements. This paper provides a practical, end-to-end guide for designing, developing, and deploying production-quality agentic AI systems. We introduce a structured engineering lifecycle encompassing workflow decomposition, multi-agent design patterns, Model Context Protocol(MCP), and tool integration, deterministic orchestration, Responsible-AI considerations, and environment-aware deployment strategies. We then present nine core best practices for engineering production-grade agentic AI workflows, including tool-first design over MCP, pure-function invocation, single-tool and single-responsibility agents, externalized prompt management, Responsible-AI-aligned model-consortium design, clean separation between workflow logic and MCP servers, containerized deployment for scalable operations, and adherence to the Keep it Simple, Stupid (KISS) principle to maintain simplicity and robustness. To demonstrate these principles in practice, we present a comprehensive case study: a multimodal news-analysis and media-generation workflow. By combining architectural guidance, operational patterns, and practical implementation insights, this paper offers a foundational reference to build robust, extensible, and production-ready agentic AI workflows.",
@@ -960,5 +884,169 @@
     "published": "2025-12-09",
     "update_time": "2025-12-09",
     "download_time": "2025-12-11 01:57:12"
+  },
+  {
+    "id": "2512.09679",
+    "title": "Understanding Chain-of-Thought Effectiveness in Code Generation: An Empirical and Information-Theoretic Analysis",
+    "abstract": "Large language models (LLMs) achieve strong performance on code generation, but the mechanisms by which Chain-of-Thought (CoT) prompting helps remain unclear. We present a systematic empirical and information-theoretic study of CoT effectiveness in neural code generation, evaluating five paradigms (Zero-Shot, Zero-Shot CoT, Self-Planning, Structured CoT, Reasoning-CoT) across six Python benchmarks, a multilingual benchmark with 12 programming languages, and six models from 7B to 480B parameters, using conditional mutual information $I(Y;C|X)$ as a conceptual lens. Our results show that externally guided CoT consistently outperforms direct generation, with structured methods improving Pass@1 by 5--12\\% on average while using substantially fewer tokens than reflective reasoning, and that CoT benefits depend on language type systems and model capacity. We further find that reasoning \\emph{quality} is critical: high-quality structured CoT from strong generators yields significantly higher accuracy than lightweight alternatives with the same template, whereas naive Zero-Shot CoT can even degrade performance. These findings provide practical guidance for choosing CoT strategies based on model capacity, language characteristics, and task complexity.",
+    "arxiv_url": "https://arxiv.org/abs/2512.09679",
+    "authors": [
+      "Naizhu Jin",
+      "Zhong Li",
+      "Guang Yang",
+      "Tian Zhang",
+      "Qingkai Zeng"
+    ],
+    "first_author": "Naizhu Jin",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Chain-of-Thought prompting",
+      "Structured CoT (SCoT)",
+      "Self-planning prompts",
+      "Reflective reasoning",
+      "Conditional mutual information",
+      "Information density metric",
+      "Cross-language generalization",
+      "Model scale / capacity effects",
+      "Token-efficiency vs accuracy",
+      "Reasoning quality evaluation"
+    ],
+    "summary": "本文提出基于条件互信息的信息论框架，并通过跨语言、跨模型的大规模实证实验系统地评估多种 Chain-of-Thought 提示范式在代码生成中对准确性与效率的影响，发现结构化 CoT 在令牌效率和稳定性上优于反思式方法且推理质量与模型容量显著影响效果。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.09679v1",
+    "published": "2025-12-10",
+    "update_time": "2025-12-10",
+    "download_time": "2025-12-12 01:51:32"
+  },
+  {
+    "id": "2512.09627",
+    "title": "LogICL: Distilling LLM Reasoning to Bridge the Semantic Gap in Cross-Domain Log Anomaly Detection",
+    "abstract": "Effective log anomaly detection is critical to sustaining reliability in large-scale IT infrastructures. Transformer-based models require substantial resources and labeled data, exacerbating the cold-start problem in target domains where logs are scarce. Existing cross-domain methods leverage source logs but struggle with generalization due to reliance on surface lexical similarity, failing to capture latent semantic equivalence amid structural divergences. To address this, we propose LogICL, a framework distilling Large Language Model (LLM) reasoning into a lightweight encoder for cross-domain anomaly detection. During training, LogICL constructs a delta matrix measuring the utility of demonstrations selected via Maximal Marginal Relevance relative to zero-shot inference. The encoder is optimized via a multi-objective loss comprising an ICL-Guided term that aligns representations based on reasoning assistance utility, maximum mean discrepancy for domain alignment, and supervised contrastive loss. At inference, the optimized encoder retrieves reasoning-aware demonstrations using semantic similarity and delta scores, enabling frozen-LLM in-context learning with Chain-of-Thought for accurate and interpretable detection. Experiments on few-shot and zero-shot cross-domain benchmarks confirm LogICL achieves state-of-the-art performance across heterogeneous systems. Further analysis via visualizations and case studies confirms LogICL bridges the semantic gap beyond surface lexical similarity, effectively capturing latent semantic equivalence for rapid deployment.",
+    "arxiv_url": "https://arxiv.org/abs/2512.09627",
+    "authors": [
+      "Jingwei Ye",
+      "Zhi Wang",
+      "Chenbin Su",
+      "Jieshuai Yang",
+      "Jiayi Ding",
+      "Chunbo Liu",
+      "Ge Chu"
+    ],
+    "first_author": "Jingwei Ye",
+    "category": [
+      "Technical"
+    ],
+    "field": "AIOps",
+    "task": "Log Anomaly Detection",
+    "tags": [
+      "In-Context Learning Distillation",
+      "Delta Matrix for Demonstration Utility",
+      "Maximal Marginal Relevance Demonstration Selection",
+      "ICL-guided Contrastive Representation Learning",
+      "Maximum Mean Discrepancy Domain Alignment",
+      "Supervised Contrastive Loss for Anomaly Discrimination",
+      "Reasoning-aware Demonstration Retrieval",
+      "Frozen-LLM Chain-of-Thought Inference",
+      "Lightweight Log Sequence Encoder",
+      "Cross-domain Few-shot/Zero-shot Adaptation"
+    ],
+    "summary": "本文提出LogICL，通过将大模型的推理能力蒸馏到轻量级日志编码器并结合基于ICL的示例选择、delta矩阵衡量、MMD域对齐和对比损失，实现对异构系统的跨域少样本/零样本日志异常检测与可解释推理。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.09627v1",
+    "published": "2025-12-10",
+    "update_time": "2025-12-10",
+    "download_time": "2025-12-12 01:52:03"
+  },
+  {
+    "id": "2512.09543",
+    "title": "SWEnergy: An Empirical Study on Energy Efficiency in Agentic Issue Resolution Frameworks with SLMs",
+    "abstract": "Context. LLM-based autonomous agents in software engineering rely on large, proprietary models, limiting local deployment. This has spurred interest in Small Language Models (SLMs), but their practical effectiveness and efficiency within complex agentic frameworks for automated issue resolution remain poorly understood.   Goal. We investigate the performance, energy efficiency, and resource consumption of four leading agentic issue resolution frameworks when deliberately constrained to using SLMs. We aim to assess the viability of these systems for this task in resource-limited settings and characterize the resulting trade-offs.   Method. We conduct a controlled evaluation of four leading agentic frameworks (SWE-Agent, OpenHands, Mini SWE Agent, AutoCodeRover) using two SLMs (Gemma-3 4B, Qwen-3 1.7B) on the SWE-bench Verified Mini benchmark. On fixed hardware, we measure energy, duration, token usage, and memory over 150 runs per configuration.   Results. We find that framework architecture is the primary driver of energy consumption. The most energy-intensive framework, AutoCodeRover (Gemma), consumed 9.4x more energy on average than the least energy-intensive, OpenHands (Gemma). However, this energy is largely wasted. Task resolution rates were near-zero, demonstrating that current frameworks, when paired with SLMs, consume significant energy on unproductive reasoning loops. The SLM's limited reasoning was the bottleneck for success, but the framework's design was the bottleneck for efficiency.   Conclusions. Current agentic frameworks, designed for powerful LLMs, fail to operate efficiently with SLMs. We find that framework architecture is the primary driver of energy consumption, but this energy is largely wasted due to the SLMs' limited reasoning. Viable low-energy solutions require shifting from passive orchestration to architectures that actively manage SLM weaknesses.",
+    "arxiv_url": "https://arxiv.org/abs/2512.09543",
+    "authors": [
+      "Arihant Tripathy",
+      "Ch Pavan Harshit",
+      "Karthik Vaidhyanathan"
+    ],
+    "first_author": "Arihant Tripathy",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Energy-aware agentic frameworks",
+      "Hardware-level CPU/GPU energy profiling",
+      "Small-model multi-turn reasoning limitations",
+      "Framework architectural trade-offs",
+      "Resource-constrained autonomous bug repair",
+      "Wasted inference energy from reasoning loops",
+      "Reproducible energy measurement methodology",
+      "Failure-mode analysis for agentic workflows"
+    ],
+    "summary": "本文在固定硬件上用两种小型语言模型对四种代理式问题修复框架进行大规模能耗与性能评估，发现框架架构决定能耗且大部分能耗因SLM推理能力受限导致无效循环被浪费，表明需设计主动管理SLM弱点的新型架构以实现低能耗可行性。",
+    "quality": "High",
+    "conference": "AGENT (ICSE 2026 workshop) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.09543v1",
+    "published": "2025-12-10",
+    "update_time": "2025-12-10",
+    "download_time": "2025-12-12 01:58:17"
+  },
+  {
+    "id": "2512.09108",
+    "title": "Evolving Excellence: Automated Optimization of LLM-based Agents",
+    "abstract": "Agentic AI systems built on large language models (LLMs) offer significant potential for automating complex workflows, from software development to customer support. However, LLM agents often underperform due to suboptimal configurations; poorly tuned prompts, tool descriptions, and parameters that typically require weeks of manual refinement. Existing optimization methods either are too complex for general use or treat components in isolation, missing critical interdependencies.   We present ARTEMIS, a no-code evolutionary optimization platform that jointly optimizes agent configurations through semantically-aware genetic operators. Given only a benchmark script and natural language goals, ARTEMIS automatically discovers configurable components, extracts performance signals from execution logs, and evolves configurations without requiring architectural modifications.   We evaluate ARTEMIS on four representative agent systems: the \\emph{ALE Agent} for competitive programming on AtCoder Heuristic Contest, achieving a \\textbf{$13.6\\%$ improvement} in acceptance rate; the \\emph{Mini-SWE Agent} for code optimization on SWE-Perf, with a statistically significant \\textbf{10.1\\% performance gain}; and the \\emph{CrewAI Agent} for cost and mathematical reasoning on Math Odyssey, achieving a statistically significant \\textbf{$36.9\\%$ reduction} in the number of tokens required for evaluation. We also evaluate the \\emph{MathTales-Teacher Agent} powered by a smaller open-source model (Qwen2.5-7B) on GSM8K primary-level mathematics problems, achieving a \\textbf{22\\% accuracy improvement} and demonstrating that ARTEMIS can optimize agents based on both commercial and local models.",
+    "arxiv_url": "https://arxiv.org/abs/2512.09108",
+    "authors": [
+      "Paul Brookes",
+      "Vardan Voskanyan",
+      "Rafail Giavrimis",
+      "Matthew Truscott",
+      "Mina Ilieva",
+      "Chrystalla Pavlou",
+      "Alexandru Staicu",
+      "Manal Adham",
+      "Will Evers- Hood",
+      "Jingzhi Gong",
+      "Kejia Zhang",
+      "Matvey Fedoseev",
+      "Vishal Sharma",
+      "Roman Bauer",
+      "Zheng Wang",
+      "Hema Nair",
+      "Wei Jie",
+      "Tianhua Xu",
+      "Aurora Constantin",
+      "Leslie Kanthan",
+      "Michail Basios"
+    ],
+    "first_author": "Paul Brookes",
+    "category": [
+      "Technical"
+    ],
+    "field": "LLM Agents & Deployment",
+    "task": "Agent Configuration Optimization",
+    "tags": [
+      "Black-box agent tuning",
+      "Semantically-aware mutation and crossover",
+      "No-code evolutionary platform",
+      "Execution-log based fitness",
+      "LLM-ensemble guided edits",
+      "Joint textual and parametric optimization",
+      "Prompt + tool description co-optimization",
+      "Cost vs. performance trade-off analysis"
+    ],
+    "summary": "本文提出Artemis——一个无代码的基于进化算法的代理配置自动优化平台，通过语义感知的变异与交叉操作并利用执行日志与基准反馈，自动联合调优提示、工具描述和参数，从而显著提升不同LLM代理在多种任务上的准确性与效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.09108v1",
+    "published": "2025-12-09",
+    "update_time": "2025-12-09",
+    "download_time": "2025-12-12 02:05:43"
   }
 ]

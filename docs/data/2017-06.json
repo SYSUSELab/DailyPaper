@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1706.03762",
+    "title": "Attention Is All You Need",
+    "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+    "arxiv_url": "https://arxiv.org/abs/1706.03762",
+    "authors": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Niki Parmar",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Aidan N. Gomez",
+      "Lukasz Kaiser",
+      "Illia Polosukhin"
+    ],
+    "first_author": "Ashish Vaswani",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Architecture",
+    "task": "Self-Attention Transformer for Sequence Transduction",
+    "tags": [
+      "Self-Attention",
+      "Multi-Head Attention",
+      "Scaled Dot-Product Attention",
+      "Positional Encoding",
+      "Encoder-Decoder Stack",
+      "Position-wise Feed-Forward",
+      "Parallelizable Training",
+      "Autoregressive Decoding & Masking"
+    ],
+    "summary": "本文提出了Transformer——一种完全基于自注意力的序列转换模型，通过多头注意力、位置编码与逐点前馈网络替代循环和卷积，从而显著提升并行性与翻译性能。",
+    "quality": "High",
+    "conference": "NeurIPS 2017",
+    "pdf_url": "https://arxiv.org/pdf/1706.03762v7",
+    "published": "2017-06-12",
+    "update_time": "2023-08-02",
+    "download_time": "2025-12-11 15:57:25"
+  }
+]

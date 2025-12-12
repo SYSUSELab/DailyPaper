@@ -130,5 +130,161 @@
     "published": "2023-08-31",
     "update_time": "2024-05-20",
     "download_time": "2025-12-04 23:29:24"
+  },
+  {
+    "id": "2308.10620",
+    "title": "Large Language Models for Software Engineering: A Systematic Literature Review",
+    "abstract": "Large Language Models (LLMs) have significantly impacted numerous domains, including Software Engineering (SE). Many recent publications have explored LLMs applied to various SE tasks. Nevertheless, a comprehensive understanding of the application, effects, and possible limitations of LLMs on SE is still in its early stages. To bridge this gap, we conducted a systematic literature review (SLR) on LLM4SE, with a particular focus on understanding how LLMs can be exploited to optimize processes and outcomes. We select and analyze 395 research papers from January 2017 to January 2024 to answer four key research questions (RQs). In RQ1, we categorize different LLMs that have been employed in SE tasks, characterizing their distinctive features and uses. In RQ2, we analyze the methods used in data collection, preprocessing, and application, highlighting the role of well-curated datasets for successful LLM for SE implementation. RQ3 investigates the strategies employed to optimize and evaluate the performance of LLMs in SE. Finally, RQ4 examines the specific SE tasks where LLMs have shown success to date, illustrating their practical contributions to the field. From the answers to these RQs, we discuss the current state-of-the-art and trends, identifying gaps in existing research, and flagging promising areas for future study. Our artifacts are publicly available at https://github.com/xinyi-hou/LLM4SE_SLR.",
+    "arxiv_url": "https://arxiv.org/abs/2308.10620",
+    "authors": [
+      "Xinyi Hou",
+      "Yanjie Zhao",
+      "Yue Liu",
+      "Zhou Yang",
+      "Kailong Wang",
+      "Li Li",
+      "Xiapu Luo",
+      "David Lo",
+      "John Grundy",
+      "Haoyu Wang"
+    ],
+    "first_author": "Xinyi Hou",
+    "category": [
+      "Survey"
+    ],
+    "field": "LLM4SE",
+    "task": "Systematic Literature Review",
+    "tags": [
+      "Systematic literature review",
+      "LLM categorization for software engineering",
+      "Data sourcing and preprocessing practices",
+      "Prompt engineering strategies",
+      "Instruction‑tuning & parameter‑efficient adaptation",
+      "Evaluation metrics and benchmarking practices",
+      "Mapping LLMs to 85 specific SE tasks",
+      "Challenges and future research directions in LLM4SE"
+    ],
+    "summary": "本文对2017至2024年间395篇将大型语言模型应用于软件工程的研究进行了系统文献综述，归类LLM类型与SE任务、分析数据处理与调优/评估方法，并总结应用场景、挑战与未来研究方向。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2308.10620v6",
+    "published": "2023-08-21",
+    "update_time": "2024-04-10",
+    "download_time": "2025-12-10 16:14:25"
+  },
+  {
+    "id": "2308.11396",
+    "title": "Towards an Understanding of Large Language Models in Software Engineering Tasks",
+    "abstract": "Large Language Models (LLMs) have drawn widespread attention and research due to their astounding performance in text generation and reasoning tasks. Derivative products, like ChatGPT, have been extensively deployed and highly sought after. Meanwhile, the evaluation and optimization of LLMs in software engineering tasks, such as code generation, have become a research focus. However, there is still a lack of systematic research on applying and evaluating LLMs in software engineering. Therefore, this paper comprehensively investigate and collate the research and products combining LLMs with software engineering, aiming to answer two questions: (1) What are the current integrations of LLMs with software engineering? (2) Can LLMs effectively handle software engineering tasks? To find the answers, we have collected related literature as extensively as possible from seven mainstream databases and selected 123 timely papers published starting from 2022 for analysis. We have categorized these papers in detail and reviewed the current research status of LLMs from the perspective of seven major software engineering tasks, hoping this will help researchers better grasp the research trends and address the issues when applying LLMs. Meanwhile, we have also organized and presented papers with evaluation content to reveal the performance and effectiveness of LLMs in various software engineering tasks, guiding researchers and developers to optimize.",
+    "arxiv_url": "https://arxiv.org/abs/2308.11396",
+    "authors": [
+      "Zibin Zheng",
+      "Kaiwen Ning",
+      "Qingyuan Zhong",
+      "Jiachi Chen",
+      "Wenqing Chen",
+      "Lianghong Guo",
+      "Weicheng Wang",
+      "Yanlin Wang"
+    ],
+    "first_author": "Zibin Zheng",
+    "category": [
+      "Survey",
+      "Empirical"
+    ],
+    "field": "LLM for Software Engineering",
+    "task": "Survey & Cross-task Evaluation",
+    "tags": [
+      "Systematic Literature Review",
+      "Cross-task Evaluation",
+      "Code Generation",
+      "Test Case Generation",
+      "Vulnerability Detection",
+      "Tool/Product Survey",
+      "Research Trend Analysis"
+    ],
+    "summary": "本文系统收集并分析了自2022年起的123篇相关论文，综述了大模型在代码生成、测试、缺陷与安全检测等软件工程各类任务中的应用、评估结果与研究趋势并总结了存在的挑战。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2308.11396v3",
+    "published": "2023-08-22",
+    "update_time": "2024-12-10",
+    "download_time": "2025-12-10 16:15:12"
+  },
+  {
+    "id": "2308.07655",
+    "title": "From Commit Message Generation to History-Aware Commit Message Completion",
+    "abstract": "Commit messages are crucial to software development, allowing developers to track changes and collaborate effectively. Despite their utility, most commit messages lack important information since writing high-quality commit messages is tedious and time-consuming. The active research on commit message generation (CMG) has not yet led to wide adoption in practice. We argue that if we could shift the focus from commit message generation to commit message completion and use previous commit history as additional context, we could significantly improve the quality and the personal nature of the resulting commit messages.   In this paper, we propose and evaluate both of these novel ideas. Since the existing datasets lack historical data, we collect and share a novel dataset called CommitChronicle, containing 10.7M commits across 20 programming languages. We use this dataset to evaluate the completion setting and the usefulness of the historical context for state-of-the-art CMG models and GPT-3.5-turbo. Our results show that in some contexts, commit message completion shows better results than generation, and that while in general GPT-3.5-turbo performs worse, it shows potential for long and detailed messages. As for the history, the results show that historical information improves the performance of CMG models in the generation task, and the performance of GPT-3.5-turbo in both generation and completion.",
+    "arxiv_url": "https://arxiv.org/abs/2308.07655",
+    "authors": [
+      "Aleksandra Eliseeva",
+      "Yaroslav Sokolov",
+      "Egor Bogomolov",
+      "Yaroslav Golubev",
+      "Danny Dig",
+      "Timofey Bryksin"
+    ],
+    "first_author": "Aleksandra Eliseeva",
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "Commit message completion",
+      "History-aware generation",
+      "Prefix-conditioned suggestion",
+      "Diff-based textual representation",
+      "Large-scale multilingual commit history",
+      "Dataset filter bias analysis",
+      "Evaluation of generation vs completion",
+      "Personalization of commit messages"
+    ],
+    "summary": "本文将提交信息生成重新表述为基于已输入前缀的提交信息补全并将历史提交作为上下文，构建并发布包含约1070万提交的多语言历史数据集，对多种CMG模型与LLM进行了系统评估，证明在若干场景下补全与历史信息能提升性能。",
+    "quality": "High",
+    "conference": "ASE (IEEE/ACM International Conference on Automated Software Engineering) 2023",
+    "pdf_url": "https://arxiv.org/pdf/2308.07655v1",
+    "published": "2023-08-15",
+    "update_time": "2023-08-15",
+    "download_time": "2025-12-11 16:29:48"
+  },
+  {
+    "id": "2308.08961",
+    "title": "On the Evaluation of Neural Code Translation: Taxonomy and Benchmark",
+    "abstract": "In recent years, neural code translation has gained increasing attention. While most of the research focuses on improving model architectures and training processes, we notice that the evaluation process and benchmark for code translation models are severely limited: they primarily treat source code as natural languages and provide a holistic accuracy score while disregarding the full spectrum of model capabilities across different translation types and complexity. In this paper, we present a comprehensive investigation of four state-of-the-art models and analyze in-depth the advantages and limitations of three existing benchmarks. Based on the empirical results, we develop a taxonomy that categorizes code translation tasks into four primary types according to their complexity and knowledge dependence: token level (type 1), syntactic level (type 2), library level (type 3), and algorithm level (type 4). We then conduct a thorough analysis of how existing approaches perform across these four categories. Our findings indicate that while state-of-the-art code translation models excel in type-1 and type-2 translations, they struggle with knowledge-dependent ones such as type-3 and type-4. Existing benchmarks are biased towards trivial translations, such as keyword mapping. To overcome these limitations, we construct G-TransEval, a new benchmark by manually curating type-3 and type-4 translation pairs and unit test cases. Results on our new benchmark suggest that G-TransEval can exhibit more comprehensive and finer-grained capability of code translation models and thus provide a more rigorous evaluation. Our studies also provide more insightful findings and suggestions for future research, such as building type-3 and type-4 training data and ensembling multiple pretraining approaches.",
+    "arxiv_url": "https://arxiv.org/abs/2308.08961",
+    "authors": [
+      "Mingsheng Jiao",
+      "Tingrui Yu",
+      "Xuan Li",
+      "Guanjie Qiu",
+      "Xiaodong Gu",
+      "Beijun Shen"
+    ],
+    "first_author": "Mingsheng Jiao",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Translation Taxonomy",
+      "Token/Syntax/Library/Algorithm Levels",
+      "Unit-test Functional Evaluation",
+      "Benchmark Bias Analysis",
+      "Cross-language Difficulty (dynamic→static)",
+      "Fine-grained Evaluation Metrics (BLEU/CodeBLEU/CA)",
+      "Curated High-Complexity Translation Pairs"
+    ],
+    "summary": "本文提出针对神经代码翻译的四层复杂度分类（词法、语法、库、算法），通过细粒度实证分析揭示现有模型在库级与算法级翻译上的不足，并构建了包含高难度样本与单元测试的G-TransEval基准以实现更严格的评估。",
+    "quality": "High",
+    "conference": "International Conference on Automated Software Engineering (ASE 2023)",
+    "pdf_url": "https://arxiv.org/pdf/2308.08961v1",
+    "published": "2023-08-17",
+    "update_time": "2023-08-17",
+    "download_time": "2025-12-11 16:52:12"
   }
 ]

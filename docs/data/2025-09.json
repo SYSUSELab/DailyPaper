@@ -1,0 +1,257 @@
+[
+  {
+    "id": "2509.14856",
+    "title": "CodeFuse-CR-Bench: A Comprehensiveness-aware Benchmark for End-to-End Code Review Evaluation in Python Projects",
+    "abstract": "Automated code review (CR) is a key application for Large Language Models (LLMs), but progress is hampered by a \"reality gap\": existing benchmarks evaluate models on isolated sub-tasks using simplified, context-poor data. This fails to reflect the holistic context-rich nature of real-world CR. To bridge this gap, we introduce CodeFuse-CR-Bench, the first comprehensiveness-aware benchmark for repository-level CR evaluation. CodeFuse-CR-Bench comprises 601 high-quality instances from 70 Python projects covering nine Pull-Request (PR) problem domains, where each instance provides rich, multi-faceted context including the associated issue, PR details, and repository state, enabling end-to-end evaluation. Beyond superficial metrics, we also propose a novel evaluation framework that combines rule-based checks for location and syntax with model-based judgments of review quality. We present the first large-scale assessment of state-of-the-art LLMs on this comprehensive CR task. Our results establish crucial baselines and reveal that (1) no single LLM dominates all aspects of CR; (2) Gemini 2.5 Pro achieves the highest comprehensive performance; and (3) different LLMs exhibit varying robustness to redundant context. These findings highlight the necessity of holistic, multi-dimensional evaluation and provide actionable insights for advancing truly intelligent yet practical CR assistants.",
+    "arxiv_url": "https://arxiv.org/abs/2509.14856",
+    "authors": [
+      "Hanyang Guo",
+      "Xunjin Zheng",
+      "Zihan Liao",
+      "Hang Yu",
+      "Peng DI",
+      "Ziyin Zhang",
+      "Hong-Ning Dai"
+    ],
+    "first_author": "Hanyang Guo",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Maintenance",
+    "task": "Code Review",
+    "tags": [
+      "Repository-level Context",
+      "End-to-End Evaluation",
+      "Comprehensive Code Review",
+      "Holistic Evaluation Framework"
+    ],
+    "summary": "该论文提出首个面向端到端代码审查的全面性基准，通过提供丰富仓库级上下文并结合规则与模型评估框架，更真实地衡量LLM在实际代码审查任务中的能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.14856v3",
+    "published": "2025-09-18",
+    "update_time": "2025-10-23",
+    "download_time": "2025-12-10 15:34:47"
+  },
+  {
+    "id": "2509.04078",
+    "title": "RepoDebug: Repository-Level Multi-Task and Multi-Language Debugging Evaluation of Large Language Models",
+    "abstract": "Large Language Models (LLMs) have exhibited significant proficiency in code debugging, especially in automatic program repair, which may substantially reduce the time consumption of developers and enhance their efficiency. Significant advancements in debugging datasets have been made to promote the development of code debugging. However, these datasets primarily focus on assessing the LLM's function-level code repair capabilities, neglecting the more complex and realistic repository-level scenarios, which leads to an incomplete understanding of the LLM's challenges in repository-level debugging. While several repository-level datasets have been proposed, they often suffer from limitations such as limited diversity of tasks, languages, and error types. To mitigate this challenge, this paper introduces RepoDebug, a multi-task and multi-language repository-level code debugging dataset with 22 subtypes of errors that supports 8 commonly used programming languages and 3 debugging tasks. Furthermore, we conduct evaluation experiments on 10 LLMs, where Claude 3.5 Sonnect, the best-performing model, still cannot perform well in repository-level debugging.",
+    "arxiv_url": "https://arxiv.org/abs/2509.04078",
+    "authors": [
+      "Jingjing Liu",
+      "Zeming Liu",
+      "Zihao Cheng",
+      "Mengliang He",
+      "Xiaoming Shi",
+      "Yuhang Guo",
+      "Xiangrong Zhu",
+      "Yuanfang Guo",
+      "Yunhong Wang",
+      "Haifeng Wang"
+    ],
+    "first_author": "Jingjing Liu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Repository-level debugging",
+      "Multi-language benchmark",
+      "Multi-task evaluation (identification, localization, repair)",
+      "22 bug subtypes taxonomy",
+      "AST-based bug injection (tree-sitter)",
+      "Cross-repository train/test split to avoid data leakage",
+      "Automated filtering plus manual validation",
+      "Metrics distinguishing single vs. multiple error localization",
+      "Empirical LLM comparison across languages and error types"
+    ],
+    "summary": "本文提出了RepoDebug，一个覆盖8种语言、3类调试任务和22种错误子类型的仓库级多语言多任务代码调试基准，并用多款大模型评估显示现有模型在仓库级调试上仍存在显著不足。",
+    "quality": "High",
+    "conference": "EMNLP 2025",
+    "pdf_url": "https://arxiv.org/pdf/2509.04078v2",
+    "published": "2025-09-04",
+    "update_time": "2025-09-08",
+    "download_time": "2025-12-11 15:53:22"
+  },
+  {
+    "id": "2509.16941",
+    "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+    "abstract": "We introduce SWE-Bench Pro, a substantially more challenging benchmark that builds upon the best practices of SWE-BENCH [25], but is explicitly designed to capture realistic, complex, enterprise-level problems beyond the scope of SWE-BENCH. SWE-BENCH PRO contains 1,865 problems sourced from a diverse set of 41 actively maintained repositories spanning business applications, B2B services, and developer tools. The benchmark is partitioned into a public set with open access to problems sourced from 11 repositories, a held-out set of 12 repositories and a commercial set of 18 proprietary repositories where we have formal partnership agreements with early-stage startups. Problems in the held-out and the commercial set are not publicly accessible, but we release results on the commercial set. Our benchmark features long-horizon tasks that may require hours to days for a professional software engineer to complete, often involving patches across multiple files and substantial code modifications. All tasks are human-verified and augmented with sufficient context to ensure resolvability. To better understand these limitations, we cluster the failure modes observed in the collected agent trajectories for a clearer characterization of the error patterns exhibited by current models. Overall, SWE-BENCH PRO provides a contamination-resistant testbed that more faithfully captures the complexity and diversity of real-world software development, advancing the pursuit of truly autonomous software engineering agents at a professional level.",
+    "arxiv_url": "https://arxiv.org/abs/2509.16941",
+    "authors": [
+      "Xiang Deng",
+      "Jeff Da",
+      "Edwin Pan",
+      "Yannis Yiming He",
+      "Charles Ide",
+      "Kanak Garg",
+      "Niklas Lauffer",
+      "Andrew Park",
+      "Nitin Pasari",
+      "Chetan Rane",
+      "Karmini Sampath",
+      "Maya Krishnan",
+      "Srivatsa Kundurthy",
+      "Sean Hendryx",
+      "Zifan Wang",
+      "Vijay Bharadwaj",
+      "Jeff Holm",
+      "Raja Aluri",
+      "Chen Bo Calvin Zhang",
+      "Noah Jacobson",
+      "Bing Liu",
+      "Brad Kenstler"
+    ],
+    "first_author": "Xiang Deng",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Contamination-resistant curation",
+      "Copyleft (GPL) licensing strategy",
+      "Private commercial repositories",
+      "Long-horizon multi-file code patches",
+      "Human-in-the-loop task augmentation",
+      "Unit-test-based verification",
+      "Held-out and commercial test partitions",
+      "Trajectory-level failure clustering",
+      "Repository-level evaluation protocols",
+      "Diagnostic analyses of agent failures"
+    ],
+    "summary": "本文提出了一个面向企业级、长时程、多文件修改的污染抵抗软件工程基准，通过仅选用强制开源许可仓库并引入私有商用代码库、人工增强与单元测试验证来构建和评估能解决真实工程问题的代码代理，并对失败轨迹进行聚类分析以诊断当前模型局限。 ",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.16941v2",
+    "published": "2025-09-21",
+    "update_time": "2025-11-14",
+    "download_time": "2025-12-11 15:53:52"
+  },
+  {
+    "id": "2509.21891",
+    "title": "AgentPack: A Dataset of Code Changes, Co-Authored by Agents and Humans",
+    "abstract": "Fine-tuning large language models for code editing has typically relied on mining commits and pull requests. The working hypothesis has been that commit messages describe human intent in natural language, and patches to code describe the changes that implement that intent. However, much of the previously collected data is noisy: commit messages are terse, human-written commits commingle several unrelated edits, and many commits come from simple, rule-based bots.   The recent adoption of software engineering agents changes this landscape. Code changes co-authored by humans and agents tend to be more narrowly scoped and focused on clearer goals. Their commit messages, generated by LLMs, articulate intent and rationale in much greater detail. Moreover, when these changes land in public repositories, they are implicitly filtered by humans: maintainers discard low-quality commits to their projects.   We present AgentPack, a corpus of 1.3M code edits co-authored by Claude Code, OpenAI Codex, and Cursor Agent across public GitHub projects up to mid-August 2025. We describe the identification and curation pipeline, quantify adoption trends of these agents, and analyze the structural properties of the edits. Finally, we show that models fine-tuned on AgentPack can outperform models trained on prior human-only commit corpora, highlighting the potential of using public data from software engineering agents to train future code-editing models.",
+    "arxiv_url": "https://arxiv.org/abs/2509.21891",
+    "authors": [
+      "Yangtian Zi",
+      "Zixuan Wu",
+      "Aleksander Boruch-Gruszecki",
+      "Jonathan Bell",
+      "Arjun Guha"
+    ],
+    "first_author": "Yangtian Zi",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Agent–human coauthored commits",
+      "Commit-signature identification",
+      "GitHub public-timeline mining & curation pipeline",
+      "Multi-file code-change diffs",
+      "Agent-written tests",
+      "Detailed commit rationale / intent",
+      "Adoption trends of coding agents",
+      "Fine-tuning for code-editing performance"
+    ],
+    "summary": "本文提出AGENTPACK——一个包含1.3M条由软件工程代理与人类共同撰写的GitHub代码更改数据集，说明了识别与清洗流水线、量化代理採用与编辑结构特性，并展示用该数据集微调模型可显著提升代码编辑能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.21891v1",
+    "published": "2025-09-26",
+    "update_time": "2025-09-26",
+    "download_time": "2025-12-11 17:03:51"
+  },
+  {
+    "id": "2509.25203",
+    "title": "Generating High-Quality Datasets for Code Editing via Open-Source Language Models",
+    "abstract": "Code editing plays a vital role in software engineering, requiring developers to adjust existing code according to natural language instructions while keeping functionality intact and avoiding unnecessary modifications. However, commit-based datasets commonly used for this task are often noisy, lack diversity, and fail to reflect the style of real-world edit instructions. To address this, we introduce OpenCodeEdit, an open-source pipeline that leverages multiple LLMs to synthesize realistic code-edit triplets. The pipeline produces both concise \"lazy\" instructions and more detailed \"descriptive\" ones, and applies filtering based on diffs and topics to guarantee data quality and variety. Using this process, we construct OCEDataFT, a curated dataset of 20K samples. Fine-tuning three advanced base models on OCEDataFT leads to significant performance boosts on the CanItEdit benchmark, with relative pass@1 improvements ranging from 4.50% to 20.79%. Notably, the resulting models achieve performance close to closed-source systems, narrowing the gap to GPT-4 to just 3.54%, without relying on proprietary resources or manual annotation.",
+    "arxiv_url": "https://arxiv.org/abs/2509.25203",
+    "authors": [
+      "Zekai Zhang",
+      "Mingwei Liu",
+      "Zhenxi Chen",
+      "Linxi Liang",
+      "Yuxuan Chen",
+      "Guangsheng Ou",
+      "Yanlin Wang",
+      "Dan Li",
+      "Xin Peng",
+      "Zibin Zheng"
+    ],
+    "first_author": "Zekai Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Synthetic pre-edit/instruction/post-edit triplets",
+      "Lazy vs descriptive instruction styles",
+      "Multi-LLM data synthesis",
+      "Diff- and topic-based filtering",
+      "Instruction-tuning for code editing",
+      "Reproducible open-source data pipeline",
+      "Data pruning / 'less-is-more' effect",
+      "Fine-tuning small open-weight code models",
+      "Quantitative pass@1 performance gains"
+    ],
+    "summary": "本文提出OpenCodeEdit，一种利用开源大模型合成高质量（前代码-指令-后代码）编辑三元组并通过差异与主题过滤的可复现数据生成管道，发布了20K样本的OCEDataFT数据集并证明其能显著提升开源小模型在指令驱动代码编辑任务上的性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.25203v3",
+    "published": "2025-09-19",
+    "update_time": "2025-10-07",
+    "download_time": "2025-12-11 17:04:30"
+  },
+  {
+    "id": "2509.25242",
+    "title": "A Benchmark for Localizing Code and Non-Code Issues in Software Projects",
+    "abstract": "Accurate project localization (e.g., files and functions) for issue resolution is a critical first step in software maintenance. However, existing benchmarks for issue localization, such as SWE-Bench and LocBench, are limited. They focus predominantly on pull-request issues and code locations, ignoring other evidence and non-code files such as commits, comments, configurations, and documentation. To address this gap, we introduce MULocBench, a comprehensive dataset of 1,100 issues from 46 popular GitHub Python projects. Comparing with existing benchmarks, MULocBench offers greater diversity in issue types, root causes, location scopes, and file types, providing a more realistic testbed for evaluation. Using this benchmark, we assess the performance of state-of-the-art localization methods and five LLM-based prompting strategies. Our results reveal significant limitations in current techniques: even at the file level, performance metrics (Acc@5, F1) remain below 40%. This underscores the challenge of generalizing to realistic, multi-faceted issue resolution. To enable future research on project localization for issue resolution, we publicly release MULocBench at https://huggingface.co/datasets/somethingone/MULocBench.",
+    "arxiv_url": "https://arxiv.org/abs/2509.25242",
+    "authors": [
+      "Zejun Zhang",
+      "Jian Wang",
+      "Qingyun Yang",
+      "Yifan Pan",
+      "Yi Tang",
+      "Yi Li",
+      "Zhenchang Xing",
+      "Tian Zhang",
+      "Xuandong Li",
+      "Guoan Zhang"
+    ],
+    "first_author": "Zejun Zhang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "tags": [
+      "Multi-granularity localization (file/class/function)",
+      "Cross-artifact localization (code, config, docs, tests, assets)",
+      "Resolution-evidence extraction from PRs/commits/comments",
+      "Manual annotation & patch parsing",
+      "LLM prompting strategies for localization",
+      "Issue type and root-cause taxonomy",
+      "Comparison of retrieval-/procedure-/agent-based localizers",
+      "Real-world GitHub Python corpus"
+    ],
+    "summary": "本文提出并公开了 MULocBench——一个涵盖46个流行 Python 项目、1100 个问题的定位基准，包含代码与非代码文件及详细位置标注，并通过实证比较现有定位方法与五种基于提示的 LLM 策略，揭示当前方法在真实场景下（文件/类/函数级）定位效果仍然较差（文件级 Acc@5 < 40%）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.25242v1",
+    "published": "2025-09-26",
+    "update_time": "2025-09-26",
+    "download_time": "2025-12-11 17:42:48"
+  }
+]

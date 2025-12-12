@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2506.04418",
+    "title": "Characterizing Multi-Hunk Patches: Divergence, Proximity, and LLM Repair Challenges",
+    "abstract": "Multi-hunk bugs, where fixes span disjoint regions of code, are common in practice, yet remain underrepresented in automated repair. Existing techniques and benchmarks pre-dominantly target single-hunk scenarios, overlooking the added complexity of coordinating semantically related changes across the codebase. In this work, we characterize HUNK4J, a dataset of multi-hunk patches derived from 372 real-world defects. We propose hunk divergence, a metric that quantifies the variation among edits in a patch by capturing lexical, structural, and file-level differences, while incorporating the number of hunks involved. We further define spatial proximity, a classification that models how hunks are spatially distributed across the program hierarchy. Our empirical study spanning six LLMs reveals that model success rates decline with increased divergence and spatial dispersion. Notably, when using the LLM alone, no model succeeds in the most dispersed Fragment class. These findings highlight a critical gap in LLM capabilities and motivate divergence-aware repair strategies.",
+    "arxiv_url": "https://arxiv.org/abs/2506.04418",
+    "authors": [
+      "Noor Nashid",
+      "Daniel Ding",
+      "Keheliya Gallaba",
+      "Ahmed E. Hassan",
+      "Ali Mesbah"
+    ],
+    "first_author": "Noor Nashid",
+    "category": [
+      "Benchmark",
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Multi-hunk patch characterization",
+      "Hunk divergence metric",
+      "Spatial proximity classification",
+      "Lexical/AST/file-level pairwise distance",
+      "Divergence-aware repair analysis",
+      "LLM-based program repair evaluation",
+      "Context retrieval and scope effects"
+    ],
+    "summary": "本文提出了衡量多块补丁内部差异的 hunk divergence 指标与表示补丁空间分布的 spatial proximity 分类，并基于372个真实多块缺陷构建基准和评估平台，对六种LLM的多块修复能力进行系统实证，揭示随着散度和分散程度增加模型修复成功率显著下降。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2506.04418v2",
+    "published": "2025-06-04",
+    "update_time": "2025-11-17",
+    "download_time": "2025-12-11 17:03:20"
+  }
+]

@@ -23,5 +23,417 @@
     "published": "2025-05-13",
     "update_time": "2025-05-13",
     "download_time": "2025-12-04 23:08:14"
+  },
+  {
+    "id": "2505.16901",
+    "title": "Code Graph Model (CGM): A Graph-Integrated Large Language Model for Repository-Level Software Engineering Tasks",
+    "abstract": "Recent advances in Large Language Models (LLMs) have shown promise in function-level code generation, yet repository-level software engineering tasks remain challenging. Current solutions predominantly rely on proprietary LLM agents, which introduce unpredictability and limit accessibility, raising concerns about data privacy and model customization. This paper investigates whether open-source LLMs can effectively address repository-level tasks without requiring agent-based approaches. We demonstrate this is possible by enabling LLMs to comprehend functions and files within codebases through their semantic information and structural dependencies. To this end, we introduce Code Graph Models (CGMs), which integrate repository code graph structures into the LLM's attention mechanism and map node attributes to the LLM's input space using a specialized adapter. When combined with an agentless graph RAG framework, our approach achieves a 43.00% resolution rate on the SWE-bench Lite benchmark using the open-source Qwen2.5-72B model. This performance ranks first among open weight models, second among methods with open-source systems, and eighth overall, surpassing the previous best open-source model-based method by 12.33%.",
+    "arxiv_url": "https://arxiv.org/abs/2505.16901",
+    "authors": [
+      "Hongyuan Tao",
+      "Ying Zhang",
+      "Zhenhao Tang",
+      "Hongen Peng",
+      "Xukun Zhu",
+      "Bingchang Liu",
+      "Yingguang Yang",
+      "Ziyin Zhang",
+      "Zhaogui Xu",
+      "Haipeng Zhang",
+      "Linchao Zhu",
+      "Rui Wang",
+      "Hang Yu",
+      "Jianguo Li",
+      "Peng Di"
+    ],
+    "first_author": "Hongyuan Tao",
+    "category": [
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Repository-level Issue Fixing",
+      "Graph-Integrated Attention",
+      "Code Graph Representation",
+      "Agentless RAG"
+    ],
+    "summary": "该论文提出通过将代码图结构融入LLM并结合无代理的图检索框架，实现开源模型在仓库级缺陷修复任务中的大幅性能提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.16901v4",
+    "published": "2025-05-22",
+    "update_time": "2025-06-23",
+    "download_time": "2025-12-10 15:35:12"
+  },
+  {
+    "id": "2505.04606",
+    "title": "OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution",
+    "abstract": "The GitHub issue resolution task aims to resolve issues reported in repositories automatically. With advances in large language models (LLMs), this task has gained increasing attention, and several benchmarks are proposed to evaluate the issue resolution ability of LLMs. However, existing benchmarks have three main limitations. First, current benchmarks focus on a single programming language, limiting the evaluation of issues from repositories across different languages. Second, they usually cover a narrow range of domains, which may fail to represent the diversity of real-world issues. Third, existing benchmarks rely solely on textual information in issue descriptions, overlooking multimodal information such as images in issues. In this paper, we propose OmniGIRL, a GitHub Issue ResoLution benchmark that is multilingual, multimodal, and multi-domain. OmniGIRL includes 959 task instances, which are collected from repositories across four programming languages (i.e., Python, JavaScript, TypeScript, and Java) and eight different domains. Our evaluation shows that current LLMs show limited performances on OmniGIRL. Notably, the best-performing model, GPT-4o, resolves only 8.6% of the issues. Besides, we find that current LLMs struggle to resolve issues requiring understanding images. The best performance is achieved by Claude-3.5-Sonnet, which resolves only 10.5% of the issues with image information. Finally, we analyze the reasons behind current LLMs' failure on OmniGIRL, providing insights for future improvements.",
+    "arxiv_url": "https://arxiv.org/abs/2505.04606",
+    "authors": [
+      "Lianghong Guo",
+      "Wei Tao",
+      "Runhan Jiang",
+      "Yanlin Wang",
+      "Jiachi Chen",
+      "Xilin Liu",
+      "Yuchi Ma",
+      "Mingzhi Mao",
+      "Hongyu Zhang",
+      "Zibin Zheng"
+    ],
+    "first_author": "Lianghong Guo",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Multilingual issue resolution",
+      "Multimodal (image) issue cases",
+      "Cross‑language evaluation",
+      "Multi‑domain repository selection",
+      "Test-driven patch application",
+      "Multi-file modification analysis",
+      "LLM failure modes: formatting & parsing"
+    ],
+    "summary": "OmniGIRL 提出一个包含 959 条实例的多语言、多模态、多领域的 GitHub 问题修复基准，并评估与分析现有大模型在跨语言、多文件和含图像问题上的有限表现与失败原因。",
+    "quality": "High",
+    "conference": "ISSTA 2025",
+    "pdf_url": "https://arxiv.org/pdf/2505.04606v1",
+    "published": "2025-05-07",
+    "update_time": "2025-05-07",
+    "download_time": "2025-12-11 15:48:00"
+  },
+  {
+    "id": "2505.16975",
+    "title": "SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development",
+    "abstract": "Large Language Models (LLMs) have shown strong capability in diverse software engineering tasks, e.g. code completion, bug fixing, and document generation. However, feature-driven development (FDD), a highly prevalent real-world task that involves developing new functionalities for large, existing codebases, remains underexplored. We therefore introduce SWE-Dev, the first large-scale dataset (with 14,000 training and 500 test samples) designed to evaluate and train autonomous coding systems on real-world feature development tasks. To ensure verifiable and diverse training, SWE-Dev uniquely provides all instances with a runnable environment and its developer-authored executable unit tests. This collection not only provides high-quality data for Supervised Fine-Tuning (SFT), but also enables Reinforcement Learning (RL) by delivering accurate reward signals from executable unit tests. Our extensive evaluations on SWE-Dev, covering 17 chatbot LLMs, 10 reasoning models, and 10 Multi-Agent Systems (MAS), reveal that FDD is a profoundly challenging frontier for current AI (e.g., Claude-3.7-Sonnet achieves only 22.45\\% Pass@3 on the hard test split). Crucially, we demonstrate that SWE-Dev serves as an effective platform for model improvement: fine-tuning on training set enabled a 7B model comparable to GPT-4o on \\textit{hard} split, underscoring the value of its high-quality training data. Code is available here \\href{https://github.com/DorothyDUUU/SWE-Dev}{https://github.com/DorothyDUUU/SWE-Dev}.",
+    "arxiv_url": "https://arxiv.org/abs/2505.16975",
+    "authors": [
+      "Yaxin Du",
+      "Yuzhu Cai",
+      "Yifan Zhou",
+      "Cheng Wang",
+      "Yu Qian",
+      "Xianghe Pang",
+      "Qian Liu",
+      "Yue Hu",
+      "Siheng Chen"
+    ],
+    "first_author": "Yaxin Du",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Feature-driven development",
+      "Executable unit-test supervision",
+      "Runnable repository environments",
+      "Cross-file refactoring and additions",
+      "Test-based reinforcement learning rewards",
+      "Supervised fine-tuning for repository tasks",
+      "Multi-agent collaboration for coding",
+      "Functional correctness evaluation",
+      "Long-context code generation"
+    ],
+    "summary": "该论文构建并公开了SWE-Dev——一个含1.45万可执行训练样本与500测试样本的仓库级功能开发基准，提供可运行环境与单元测试以评估并用于SFT、RL和多智能体训练，展示了在真实特性开发任务中对模型评估与训练的有效性与挑战。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.16975v2",
+    "published": "2025-05-22",
+    "update_time": "2025-06-19",
+    "download_time": "2025-12-11 15:48:35"
+  },
+  {
+    "id": "2505.20411",
+    "title": "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents",
+    "abstract": "LLM-based agents have shown promising capabilities in a growing range of software engineering (SWE) tasks. However, advancing this field faces two critical challenges. First, high-quality training data is scarce, especially data that reflects real-world SWE scenarios, where agents must interact with development environments, execute code and adapt behavior based on the outcomes of their actions. Existing datasets are either limited to one-shot code generation or comprise small, manually curated collections of interactive tasks, lacking both scale and diversity. Second, the lack of fresh interactive SWE tasks affects evaluation of rapidly improving models, as static benchmarks quickly become outdated due to contamination issues. To address these limitations, we introduce a novel, automated, and scalable pipeline to continuously extract real-world interactive SWE tasks from diverse GitHub repositories. Using this pipeline, we construct SWE-rebench, a public dataset comprising over 21,000 interactive Python-based SWE tasks, suitable for reinforcement learning of SWE agents at scale. Additionally, we use continuous supply of fresh tasks collected using SWE-rebench methodology to build a contamination-free benchmark for agentic software engineering. We compare results of various LLMs on this benchmark to results on SWE-bench Verified and show that performance of some language models might be inflated due to contamination issues.",
+    "arxiv_url": "https://arxiv.org/abs/2505.20411",
+    "authors": [
+      "Ibragim Badertdinov",
+      "Alexander Golubev",
+      "Maksim Nekrashevich",
+      "Anton Shevtsov",
+      "Simon Karasik",
+      "Andrei Andriushchenko",
+      "Maria Trofimova",
+      "Daria Litvintseva",
+      "Boris Yangel"
+    ],
+    "first_author": "Ibragim Badertdinov",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Testing automation",
+    "tags": [
+      "Automated task mining",
+      "Executable environment configuration",
+      "Test-driven verification",
+      "Decontamination-aware benchmarking",
+      "Continuous dataset collection",
+      "Reinforcement-learning-ready tasks",
+      "GitHub PR/issue mining",
+      "Distributed pipeline for large-scale processing"
+    ],
+    "summary": "本文提出一个可扩展的自动化管道从 GitHub 挖掘可执行的交互式软件工程任务，发布了包含 21,000+ Python 任务的 SWE-rebench 数据集并建立了持续更新且去污染的基准与排行榜以评估软件工程代理。",
+    "quality": "High",
+    "conference": "NeurIPS 2025",
+    "pdf_url": "https://arxiv.org/pdf/2505.20411v2",
+    "published": "2025-05-26",
+    "update_time": "2025-11-04",
+    "download_time": "2025-12-11 15:49:05"
+  },
+  {
+    "id": "2505.20749",
+    "title": "Can Agents Fix Agent Issues?",
+    "abstract": "LLM-based agent systems are emerging as a new software paradigm and have been widely adopted across diverse domains such as medicine, robotics, and programming. However, maintaining these systems requires substantial effort, as they are inevitably prone to bugs and continually evolve to meet changing external requirements. Therefore, automatically resolving agent issues (i.e., bug reports or feature requests) is a crucial and challenging task. While recent software engineering (SE) agents (e.g., SWE-agent) have shown promise in addressing issues in traditional software systems, it remains unclear how effectively they can resolve real-world issues in agent systems, which differ significantly from traditional software. To fill this gap, we first manually analyze 201 real-world agent issues and identify common categories of agent issues. We then spend 500 person-hours constructing AgentIssue-Bench, a reproducible benchmark comprising 50 agent issue resolution tasks (each with an executable environment and failure-triggering tests). We further evaluate state-of-the-art SE agents on AgentIssue-Bench and reveal their limited effectiveness (i.e., with only 0.67% - 4.67% resolution rates). These results underscore the unique challenges of maintaining agent systems compared to traditional software, highlighting the need for further research to develop advanced SE agents for resolving agent issues. Data and code are available at https://github.com/alfin06/AgentIssue-Bench.",
+    "arxiv_url": "https://arxiv.org/abs/2505.20749",
+    "authors": [
+      "Alfin Wijaya Rahardja",
+      "Junwei Liu",
+      "Weitong Chen",
+      "Zhenpeng Chen",
+      "Yiling Lou"
+    ],
+    "first_author": "Alfin Wijaya Rahardja",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Agent issue taxonomy",
+      "Reproducible agent-issue benchmark",
+      "Dockerized failure reproduction",
+      "Failure-triggering tests",
+      "SE agent empirical evaluation",
+      "LLM nondeterminism and volatility",
+      "Agent-specific failures (model binding, memory, tool use)",
+      "Qualitative resolution analysis"
+    ],
+    "summary": "本文通过对201个真实Agent系统问题的人工分析构建了包含50个可复现任务的AGENTISSUE-BENCH基准，并评估多种现有SE agents，结果显示其在修复Agent问题上成功率极低，从而揭示了维护Agent系统的独特挑战。",
+    "quality": "High",
+    "conference": "NeurIPS 2025",
+    "pdf_url": "https://arxiv.org/pdf/2505.20749v4",
+    "published": "2025-05-27",
+    "update_time": "2025-10-24",
+    "download_time": "2025-12-11 15:49:37"
+  },
+  {
+    "id": "2505.22583",
+    "title": "GitGoodBench: A Novel Benchmark For Evaluating Agentic Performance On Git",
+    "abstract": "Benchmarks for Software Engineering (SE) AI agents, most notably SWE-bench, have catalyzed progress in programming capabilities of AI agents. However, they overlook critical developer workflows such as Version Control System (VCS) operations. To address this issue, we present GitGoodBench, a novel benchmark for evaluating AI agent performance on VCS tasks. GitGoodBench covers three core Git scenarios extracted from permissive open-source Python, Java, and Kotlin repositories. Our benchmark provides three datasets: a comprehensive evaluation suite (900 samples), a rapid prototyping version (120 samples), and a training corpus (17,469 samples). We establish baseline performance on the prototyping version of our benchmark using GPT-4o equipped with custom tools, achieving a 21.11% solve rate overall. We expect GitGoodBench to serve as a crucial stepping stone toward truly comprehensive SE agents that go beyond mere programming.",
+    "arxiv_url": "https://arxiv.org/abs/2505.22583",
+    "authors": [
+      "Tobias Lindenbauer",
+      "Egor Bogomolov",
+      "Yaroslav Zharov"
+    ],
+    "first_author": "Tobias Lindenbauer",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Version Control & Collaboration",
+    "task": "Git VCS",
+    "tags": [
+      "Agentic VCS evaluation",
+      "Merge conflict resolution benchmark",
+      "Interactive rebase planning",
+      "Iterative commit reconstruction",
+      "File-Commit Chain sampling",
+      "Repository selection & filtering heuristics",
+      "Agent trajectory training corpus",
+      "Tool-enabled agent baseline evaluation"
+    ],
+    "summary": "本文提出 GitGoodBench，一个用于评估 AI 代理在 Git 版本控制任务（合并冲突解决、交互式变基、迭代提交重构）上的端到端基准，发布了评估集、轻量集与用于收集轨迹的训练集并给出基线结果。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.22583v1",
+    "published": "2025-05-28",
+    "update_time": "2025-05-28",
+    "download_time": "2025-12-11 15:50:19"
+  },
+  {
+    "id": "2505.23932",
+    "title": "SwingArena: Competitive Programming Arena for Long-context GitHub Issue Solving",
+    "abstract": "We present SwingArena, a competitive evaluation framework for Large Language Models (LLMs) that closely mirrors real-world software development workflows. Unlike traditional static benchmarks, SwingArena models the collaborative process of software iteration by pairing LLMs as submitters, who generate patches, and reviewers, who create test cases and verify the patches through continuous integration (CI) pipelines. To support these interactive evaluations, we introduce a retrieval-augmented code generation (RACG) module that efficiently handles long-context challenges by providing syntactically and semantically relevant code snippets from large codebases, supporting multiple programming languages (C++, Python, Rust, and Go). This enables the framework to scale across diverse tasks and contexts while respecting token limitations. Our experiments, using over 400 high-quality real-world GitHub issues selected from a pool of 2,300 issues, show that models like GPT-4o excel at aggressive patch generation, whereas DeepSeek and Gemini prioritize correctness in CI validation. SwingArena presents a scalable and extensible methodology for evaluating LLMs in realistic, CI-driven software development settings. More details are available on our project page: swing-bench.github.io",
+    "arxiv_url": "https://arxiv.org/abs/2505.23932",
+    "authors": [
+      "Wendong Xu",
+      "Jing Xiong",
+      "Chenyang Zhao",
+      "Qiujiang Chen",
+      "Haoran Wang",
+      "Hui Shen",
+      "Zhongwei Wan",
+      "Jianbo Dai",
+      "Taiqiang Wu",
+      "He Xiao",
+      "Chaofan Tao",
+      "Z. Morley Mao",
+      "Ying Sheng",
+      "Zhijiang Guo",
+      "Hongxia Yang",
+      "Bei Yu",
+      "Lingpeng Kong",
+      "Quanquan Gu",
+      "Ngai Wong"
+    ],
+    "first_author": "Wendong Xu",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "CI-driven evaluation",
+      "Submitter–reviewer interaction",
+      "Retrieval-augmented code generation",
+      "BM25 sparse retrieval with dense reranking",
+      "Syntax-aware code chunking",
+      "Adversarial patch and test generation",
+      "Multi-language repository support",
+      "GitHub Actions pipeline simulation",
+      "Long-context code understanding"
+    ],
+    "summary": "SWINGARENA 提出一个通过模拟完整 CI 流水线、提交者—评审循环和检索增强的长上下文代码检索来评估 LLM 在真实多语言 GitHub issue 修复场景中表现的可扩展基准与框架。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.23932v2",
+    "published": "2025-05-29",
+    "update_time": "2025-06-02",
+    "download_time": "2025-12-11 15:50:55"
+  },
+  {
+    "id": "2505.19828",
+    "title": "SecVulEval: Benchmarking LLMs for Real-World C/C++ Vulnerability Detection",
+    "abstract": "Large Language Models (LLMs) have shown promise in software engineering tasks, but evaluating their effectiveness in vulnerability detection is challenging due to the lack of high-quality datasets. Most existing datasets are limited to function-level labels, ignoring finer-grained vulnerability patterns and crucial contextual information. Also, poor data quality such as mislabeling, inconsistent annotations, and duplicates can lead to inflated performance and weak generalization. Moreover, by including only the functions, these datasets miss broader program context, like data/control dependencies and interprocedural interactions, that are essential for accurately understanding real-world security flaws. Without this context, detection models are evaluated under unrealistic assumptions.   To address these limitations, this paper introduces SecVulEval, a benchmark designed to support fine-grained evaluation of LLMs and other detection methods with rich contextual information. SecVulEval focuses on real-world C/C++ vulnerabilities at the statement level. This granularity enables more precise evaluation of a model's ability to localize vulnerabilities, beyond simple binary classification at the function level. By incorporating rich contextual information, SecVulEval sets a new standard for vulnerability detection benchmarks in realistic scenarios. This benchmark includes 25,440 function samples covering 5,867 unique CVEs in C/C++ projects from 1999 to 2024. We evaluated the SOTA LLMs with a multi-agent-based approach. The evaluation on our dataset shows that the models are still far from accurately predicting vulnerable statements in a given function. The best-performing Claude-3.7-Sonnet model achieves 23.83% F1-score for detecting vulnerable statements with correct reasoning. Finally, we analyze the LLM outputs and provide insights into their behavior in vulnerability detection for C/C++.",
+    "arxiv_url": "https://arxiv.org/abs/2505.19828",
+    "authors": [
+      "Md Basim Uddin Ahmed",
+      "Nima Shiri Harzevili",
+      "Jiho Shin",
+      "Hung Viet Pham",
+      "Song Wang"
+    ],
+    "first_author": "Md Basim Uddin Ahmed",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Statement-level vulnerability localization",
+      "Patch-derived labels and commit metadata",
+      "CWE/CVE annotation",
+      "Context extraction across five context levels",
+      "Interprocedural and data/control dependency context",
+      "Multi-agent LLM evaluation pipeline",
+      "De-duplication and data quality curation",
+      "Empirical F1 evaluation of LLM vulnerability localization"
+    ],
+    "summary": "本文提出SECVULEVAL——一个面向真实C/C++项目、具备语句级漏洞标注与丰富上下文（函数参数、外部函数、类型定义、全局量、执行环境）和CVE/CWE元数据的基准，并通过多代理LLM评估显示当前模型在语句级漏洞定位上表现仍然很差。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.19828v1",
+    "published": "2025-05-26",
+    "update_time": "2025-05-26",
+    "download_time": "2025-12-11 17:21:02"
+  },
+  {
+    "id": "2505.20630",
+    "title": "SV-TrustEval-C: Evaluating Structure and Semantic Reasoning in Large Language Models for Source Code Vulnerability Analysis",
+    "abstract": "As Large Language Models (LLMs) evolve in understanding and generating code, accurately evaluating their reliability in analyzing source code vulnerabilities becomes increasingly vital. While studies have examined LLM capabilities in tasks like vulnerability detection and repair, they often overlook the importance of both structure and semantic reasoning crucial for trustworthy vulnerability analysis. To address this gap, we introduce SV-TrustEval-C, a benchmark designed to evaluate LLMs' abilities for vulnerability analysis of code written in the C programming language through two key dimensions: structure reasoning - assessing how models identify relationships between code elements under varying data and control flow complexities; and semantic reasoning - examining their logical consistency in scenarios where code is structurally and semantically perturbed. Our results show that current LLMs are far from satisfactory in understanding complex code relationships and that their vulnerability analyses rely more on pattern matching than on robust logical reasoning. These findings underscore the effectiveness of the SV-TrustEval-C benchmark and highlight critical areas for enhancing the reasoning capabilities and trustworthiness of LLMs in real-world vulnerability analysis tasks. Our initial benchmark dataset is publicly available.",
+    "arxiv_url": "https://arxiv.org/abs/2505.20630",
+    "authors": [
+      "Yansong Li",
+      "Paula Branco",
+      "Alexander M. Hoole",
+      "Manish Marwah",
+      "Hari Manassery Koduvely",
+      "Guy-Vincent Jourdan",
+      "Stephan Jou"
+    ],
+    "first_author": "Yansong Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Structure reasoning",
+      "Semantic reasoning",
+      "Counterfactual code perturbations",
+      "Goal-driven completion scenarios",
+      "Predictive vulnerability scenarios",
+      "Structure-oriented variants generator",
+      "Data-flow perturbation",
+      "Control-flow perturbation",
+      "C language vulnerabilities",
+      "Reasoning-based QA evaluation",
+      "Pattern-matching vs logical reasoning"
+    ],
+    "summary": "本文提出了 SV-TRUSTEVAL-C 基准，通过结构导向变体生成器对 C 语言代码进行语义和结构扰动，以评估 LLM 在漏洞分析中对结构与语义推理的能力，并通过多模型实验发现现有模型更依赖模式匹配而非稳健逻辑推理。",
+    "quality": "High",
+    "conference": "IEEE Symposium on Security and Privacy (SP) 2025",
+    "pdf_url": "https://arxiv.org/pdf/2505.20630v1",
+    "published": "2025-05-27",
+    "update_time": "2025-05-27",
+    "download_time": "2025-12-11 17:23:17"
+  },
+  {
+    "id": "2506.11066",
+    "title": "CoQuIR: A Comprehensive Benchmark for Code Quality-Aware Information Retrieval",
+    "abstract": "Code retrieval is essential in modern software development, as it boosts code reuse and accelerates debugging. However, current benchmarks primarily emphasize functional relevance while neglecting critical dimensions of software quality. Motivated by this gap, we introduce CoQuIR, the first large-scale, multilingual benchmark specifically designed to evaluate quality-aware code retrieval across four key dimensions: correctness, efficiency, security, and maintainability. CoQuIR provides fine-grained quality annotations for 42,725 queries and 134,907 code snippets in 11 programming languages, and is accompanied by two quality-centric evaluation metrics: Pairwise Preference Accuracy and Margin-based Ranking Score. Using CoQuIR, we benchmark 23 retrieval models, covering both open-source and proprietary systems, and find that even top-performing models frequently fail to distinguish buggy or insecure code from their more robust counterparts. Furthermore, we conduct preliminary investigations into training methods that explicitly encourage retrievers to recognize code quality. Using synthetic datasets, we demonstrate promising improvements in quality-aware metrics across various models, without sacrificing semantic relevance. Downstream code generation experiments further validate the effectiveness of our approach. Overall, our work highlights the importance of integrating quality signals into code retrieval systems, laying the groundwork for more trustworthy and robust software development tools.",
+    "arxiv_url": "https://arxiv.org/abs/2506.11066",
+    "authors": [
+      "Jiahui Geng",
+      "Fengyu Cai",
+      "Shaobo Cui",
+      "Qing Li",
+      "Liangwei Chen",
+      "Chenyang Lyu",
+      "Haonan Li",
+      "Derui Zhu",
+      "Walter Pretschner",
+      "Heinz Koeppl",
+      "Fakhri Karray"
+    ],
+    "first_author": "Jiahui Geng",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Quality-aware retrieval",
+      "Contrastive training for code quality",
+      "Quality annotations: correctness, efficiency, security, maintainability",
+      "Pairwise Preference Accuracy",
+      "Margin-based Ranking Score",
+      "Multilingual code corpus",
+      "Contrastive code pairs and hard negatives",
+      "Downstream retrieval-augmented generation evaluation"
+    ],
+    "summary": "本文提出CoQuIR，一个面向正确性、效率、安全性和可维护性四个代码质量维度的大规模多语言代码检索基准，包含质量标注、质量感知评估指标，并通过对比训练提高检索器的质量识别能力，从而改善检索和下游生成的安全与可靠性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2506.11066v2",
+    "published": "2025-05-31",
+    "update_time": "2025-08-27",
+    "download_time": "2025-12-11 17:50:17"
   }
 ]

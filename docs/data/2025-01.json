@@ -1,0 +1,315 @@
+[
+  {
+    "id": "2501.01329",
+    "title": "The Prompt Alchemist: Automated LLM-Tailored Prompt Optimization for Test Case Generation",
+    "abstract": "Test cases are essential for validating the reliability and quality of software applications. Recent studies have demonstrated the capability of Large Language Models (LLMs) to generate useful test cases for given source code. However, the existing work primarily relies on human-written plain prompts, which often leads to suboptimal results since the performance of LLMs can be highly influenced by the prompts. Moreover, these approaches use the same prompt for all LLMs, overlooking the fact that different LLMs might be best suited to different prompts. Given the wide variety of possible prompt formulations, automatically discovering the optimal prompt for each LLM presents a significant challenge. Although there are methods on automated prompt optimization in the natural language processing field, they are hard to produce effective prompts for the test case generation task. First, the methods iteratively optimize prompts by simply combining and mutating existing ones without proper guidance, resulting in prompts that lack diversity and tend to repeat the same errors in the generated test cases. Second, the prompts are generally lack of domain contextual knowledge, limiting LLMs' performance in the task.",
+    "arxiv_url": "https://arxiv.org/abs/2501.01329",
+    "authors": [
+      "Shuzheng Gao",
+      "Chaozheng Wang",
+      "Cuiyun Gao",
+      "Xiaoqian Jiao",
+      "Chun Yong Chong",
+      "Shan Gao",
+      "Michael Lyu"
+    ],
+    "first_author": "Shuzheng Gao",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Prompt Optimization for Testing",
+      "Diversity-Guided Prompt Generation",
+      "Failure-Driven Rule Induction",
+      "Domain Contextual Knowledge Extraction",
+      "Tailored Prompts per LLM",
+      "Reflection-based Error Mitigation",
+      "Cross-file Inheritance and Invocation Context"
+    ],
+    "summary": "本文提出MAPS，一种用于测试用例生成的自动化LLM定制提示优化方法，结合多样性引导、基于失败的规则归纳与领域上下文提取，为不同LLM生成定制化提示并显著提升线覆盖与分支覆盖率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.01329v1",
+    "published": "2025-01-02",
+    "update_time": "2025-01-02",
+    "download_time": "2025-12-11 15:41:12"
+  },
+  {
+    "id": "2501.07425",
+    "title": "Enhancing LLM's Ability to Generate More Repository-Aware Unit Tests Through Precise Contextual Information Injection",
+    "abstract": "Though many learning-based approaches have been proposed for unit test generation and achieved remarkable performance, they still have limitations in relying on task-specific datasets. Recently, Large Language Models (LLMs) guided by prompt engineering have gained attention for their ability to handle a broad range of tasks, including unit test generation. Despite their success, LLMs may exhibit hallucinations when generating unit tests for focal methods or functions due to their lack of awareness regarding the project's global context. These hallucinations may manifest as calls to non-existent methods, as well as incorrect parameters or return values, such as mismatched parameter types or numbers. While many studies have explored the role of context, they often extract fixed patterns of context for different models and focal methods, which may not be suitable for all generation processes (e.g., excessive irrelevant context could lead to redundancy, preventing the model from focusing on essential information). To overcome this limitation, we propose RATester, which enhances the LLM's ability to generate more repository-aware unit tests through global contextual information injection. To equip LLMs with global knowledge similar to that of human testers, we integrate the language server gopls, which provides essential features (e.g., definition lookup) to assist the LLM. When RATester encounters an unfamiliar identifier (e.g., an unfamiliar struct name), it first leverages gopls to fetch relevant definitions and documentation comments, and then uses this global knowledge to guide the LLM. By utilizing gopls, RATester enriches the LLM's knowledge of the project's global context, thereby reducing hallucinations during unit test generation.",
+    "arxiv_url": "https://arxiv.org/abs/2501.07425",
+    "authors": [
+      "Xin Yin",
+      "Chao Ni",
+      "Xinrui Li",
+      "Liushan Chen",
+      "Guojun Ma",
+      "Xiaohu Yang"
+    ],
+    "first_author": "Xin Yin",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Repository-aware context injection",
+      "Language-server-assisted definition lookup",
+      "Prompt augmentation for unit tests",
+      "Hallucination mitigation",
+      "Golang unit test generation",
+      "Mutation testing evaluation",
+      "Line-coverage improvement",
+      "Model-agnostic testing framework"
+    ],
+    "summary": "提出RATester，通过集成语言服务器以注入仓库级全局上下文信息，增强LLM生成更具仓库感的Golang单元测试，从而减少幻觉并显著提升覆盖率与变异检测效果。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.07425v1",
+    "published": "2025-01-13",
+    "update_time": "2025-01-13",
+    "download_time": "2025-12-11 15:41:48"
+  },
+  {
+    "id": "2501.10200",
+    "title": "Test Wars: A Comparative Study of SBST, Symbolic Execution, and LLM-Based Approaches to Unit Test Generation",
+    "abstract": "Generating tests automatically is a key and ongoing area of focus in software engineering research. The emergence of Large Language Models (LLMs) has opened up new opportunities, given their ability to perform a wide spectrum of tasks. However, the effectiveness of LLM-based approaches compared to traditional techniques such as search-based software testing (SBST) and symbolic execution remains uncertain. In this paper, we perform an extensive study of automatic test generation approaches based on three tools: EvoSuite for SBST, Kex for symbolic execution, and TestSpark for LLM-based test generation. We evaluate tools performance on the GitBug Java dataset and compare them using various execution-based and feature-based metrics. Our results show that while LLM-based test generation is promising, it falls behind traditional methods in terms of coverage. However, it significantly outperforms them in mutation scores, suggesting that LLMs provide a deeper semantic understanding of code. LLM-based approach also performed worse than SBST and symbolic execution-based approaches w.r.t. fault detection capabilities. Additionally, our feature-based analysis shows that all tools are primarily affected by the complexity and internal dependencies of the class under test (CUT), with LLM-based approaches being especially sensitive to the CUT size.",
+    "arxiv_url": "https://arxiv.org/abs/2501.10200",
+    "authors": [
+      "Azat Abdullin",
+      "Pouria Derakhshanfar",
+      "Annibale Panichella"
+    ],
+    "first_author": "Azat Abdullin",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Comparative evaluation of SBST, symbolic execution, and LLM-based tests",
+      "Coverage vs. mutation-score tradeoffs",
+      "Statistical analysis of nondeterministic LLM outputs",
+      "Data-leakage-aware benchmark selection",
+      "Sensitivity to class-under-test complexity and size",
+      "Automated, extensible test-generation evaluation pipeline",
+      "Execution- and feature-based metrics",
+      "Repeatability via multiple seeds and independent sessions"
+    ],
+    "summary": "本文在为避免数据泄露的GitBug Java基准上，使用多次随机重复与统计检验比较了EvoSuite（SBST）、Kex（符号执行）和基于LLM的TestSpark的单元测试生成性能，发现LLM在变异得分上表现优异但在覆盖率与缺陷检测上落后，并分析了类复杂度等对方法效果的影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.10200v1",
+    "published": "2025-01-17",
+    "update_time": "2025-01-17",
+    "download_time": "2025-12-11 15:42:22"
+  },
+  {
+    "id": "2501.11086",
+    "title": "Can LLM Generate Regression Tests for Software Commits?",
+    "abstract": "Large Language Models (LLMs) have shown tremendous promise in automated software engineering. In this paper, we investigate the opportunities of LLMs for automatic regression test generation for programs that take highly structured, human-readable inputs, such as XML parsers or JavaScript interpreters. Concretely, we explore the following regression test generation scenarios for such programs that have so far been difficult to test automatically in the absence of corresponding input grammars:   $\\bullet$ Bug finding. Given a code change (e.g., a commit or pull request), our LLM-based approach generates a test case with the objective of revealing any bugs that might be introduced if that change is applied.   $\\bullet$ Patch testing. Given a patch, our LLM-based approach generates a test case that fails before but passes after the patch. This test can be added to the regression test suite to catch similar bugs in the future.   We implement Cleverest, a feedback-directed, zero-shot LLM-based regression test generation technique, and evaluate its effectiveness on 22 commits to three subject programs: Mujs, Libxml2, and Poppler. For programs using more human-readable file formats, like XML or JavaScript, we found Cleverest performed very well. It generated easy-to-understand bug-revealing or bug-reproduction test cases for the majority of commits in just under three minutes -- even when only the code diff or commit message (unless it was too vague) was given. For programs with more compact file formats, like PDF, as expected, it struggled to generate effective test cases. However, the LLM-supplied test cases are not very far from becoming effective (e.g., when used as a seed by a greybox fuzzer or as a starting point by the developer).",
+    "arxiv_url": "https://arxiv.org/abs/2501.11086",
+    "authors": [
+      "Jing Liu",
+      "Seongmin Lee",
+      "Eleonora Losiouk",
+      "Marcel Böhme"
+    ],
+    "first_author": "Jing Liu",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Feedback-directed zero-shot test generation",
+      "Commit-diff and commit-message prompting",
+      "Regression test generation for structured human-readable inputs",
+      "Patch testing and bug reproduction",
+      "Seed generation for greybox fuzzers",
+      "Comparison to directed greybox fuzzing",
+      "Hyperparameter and ablation analysis",
+      "Limitations on compact/binary input formats"
+    ],
+    "summary": "本文提出 Cleverest——一种基于大语言模型的反馈驱动零样本回归测试生成技术，能够从提交的 diff 或提交信息自动合成针对人类可读结构化输入（如 XML/JavaScript）的回归测试，并在多数案例中快速找到或复现 bug，且可作为灰盒模糊测试的种子提升发现能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.11086v1",
+    "published": "2025-01-19",
+    "update_time": "2025-01-19",
+    "download_time": "2025-12-11 15:43:00"
+  },
+  {
+    "id": "2501.13699",
+    "title": "DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale",
+    "abstract": "Large Language Models have advanced automated software development, however, it remains a challenge to correctly infer dependencies, namely, identifying the internal components and external packages required for a repository to successfully run. Existing studies highlight that dependency-related issues cause over 40\\% of observed runtime errors on the generated repository. To address this, we introduce DI-BENCH, a large-scale benchmark and evaluation framework specifically designed to assess LLMs' capability on dependency inference. The benchmark features 581 repositories with testing environments across Python, C#, Rust, and JavaScript. Extensive experiments with textual and execution-based metrics reveal that the current best-performing model achieves only a 42.9% execution pass rate, indicating significant room for improvement. DI-BENCH establishes a new viewpoint for evaluating LLM performance on repositories, paving the way for more robust end-to-end software synthesis.",
+    "arxiv_url": "https://arxiv.org/abs/2501.13699",
+    "authors": [
+      "Linghao Zhang",
+      "Junhao Wang",
+      "Shilin He",
+      "Chaoyun Zhang",
+      "Yu Kang",
+      "Bowen Li",
+      "Jiaheng Wen",
+      "Chengxing Xie",
+      "Maoquan Wang",
+      "Yufan Huang",
+      "Elsie Nallipogu",
+      "Qingwei Lin",
+      "Yingnong Dang",
+      "Saravan Rajmohan",
+      "Dongmei Zhang",
+      "Qi Zhang"
+    ],
+    "first_author": "Linghao Zhang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Dependency & Build Management",
+    "task": "Dependency Inference",
+    "tags": [
+      "CI-based execution evaluation",
+      "Repository-level dependency extraction",
+      "Masked build configuration reconstruction",
+      "Cross-language coverage (Python, C#, Rust, JavaScript)",
+      "Execution pass rate metric",
+      "Dependency version resolution and mismatch",
+      "Scalable curated testable repositories",
+      "Precision/recall for dependency lists"
+    ],
+    "summary": "DI-BENCH 提出一个包含581个可执行仓库、跨 Python/C#/Rust/JavaScript 的依赖推断基准，并通过复用 CI 流水线进行文本与执行级评估，揭示当前 LLM 在依赖推断上的显著不足（最佳执行率仅 42.9%）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.13699v1",
+    "published": "2025-01-23",
+    "update_time": "2025-01-23",
+    "download_time": "2025-12-11 16:42:35"
+  },
+  {
+    "id": "2502.00226",
+    "title": "HackerRank-ASTRA: Evaluating Correctness & Consistency of Large Language Models on cross-domain multi-file project problems",
+    "abstract": "Evaluating the real-world applicability of large language models (LLMs) provides valuable insights for their development and use in software development tasks. Existing benchmarks often focus on standalone coding problems or specific libraries, overlooking multi-file, project-based scenarios and lacking a rigorous evaluation of consistency. The HackerRank-ASTRA Benchmark introduces project-based coding problems that mirror real-world scenarios. It evaluates model consistency through 32 runs (k = 32) and median standard deviation while incorporating taxonomy-level analysis to assess sub-skill capabilities. Initial evaluations on 65 problems show that the top three models -- o1, o1-preview, and Claude-3.5-Sonnet-1022 -- achieved comparable average scores of 75%, with no statistically significant differences in performance. Notably, Claude-3.5-Sonnet-1022 demonstrated the highest consistency across problems, with low variability (SD = 0.0497), which was statistically significant compared to other models, highlighting its reliability for real-world software development tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2502.00226",
+    "authors": [
+      "Jun Xing",
+      "Mayur Bhatia",
+      "Sahil Phulwani",
+      "Darshan Suresh",
+      "Rafik Matta"
+    ],
+    "first_author": "Jun Xing",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Multi-file project problems",
+      "Cross-framework frontend tasks",
+      "Consistency evaluation across runs",
+      "Median standard deviation (k=32)",
+      "Mean pass@1 and mean score metrics",
+      "Taxonomy-level subskill analysis",
+      "Long-context code generation",
+      "High test-case coverage",
+      "Industry-aligned proprietary problem bank"
+    ],
+    "summary": "HackerRank-ASTRA 提出并发布了一个包含65个多文件、跨框架项目级前端开发问题的基准，并通过32次独立运行的中位标准差与多项正确性指标评估LLM在正确性与一致性及子技能层面的表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.00226v1",
+    "published": "2025-01-31",
+    "update_time": "2025-01-31",
+    "download_time": "2025-12-11 16:43:08"
+  },
+  {
+    "id": "2501.16050",
+    "title": "Skeleton-Guided-Translation: A Benchmarking Framework for Code Repository Translation with Fine-Grained Quality Evaluation",
+    "abstract": "The advancement of large language models has intensified the need to modernize enterprise applications and migrate legacy systems to secure, versatile languages. However, existing code translation benchmarks primarily focus on individual functions, overlooking the complexities involved in translating entire repositories, such as maintaining inter-module coherence and managing dependencies. While some recent repository-level translation benchmarks attempt to address these challenges, they still face limitations, including poor maintainability and overly coarse evaluation granularity, which make them less developer-friendly. We introduce Skeleton-Guided-Translation, a framework for repository-level Java to C# code translation with fine-grained quality evaluation. It uses a two-step process: first translating the repository's structural \"skeletons\", then translating the full repository guided by these skeletons. Building on this, we present TRANSREPO-BENCH, a benchmark of high quality open-source Java repositories and their corresponding C# skeletons, including matching unit tests and build configurations. Our unit tests are fixed and can be applied across multiple or incremental translations without manual adjustments, enhancing automation and scalability in evaluations. Additionally, we develop fine-grained evaluation metrics that assess translation quality at the individual test case level, addressing traditional binary metrics' inability to distinguish when build failures cause all tests to fail. Evaluations using TRANSREPO-BENCH highlight key challenges and advance more accurate repository level code translation.",
+    "arxiv_url": "https://arxiv.org/abs/2501.16050",
+    "authors": [
+      "Xing Zhang",
+      "Jiaheng Wen",
+      "Fangkai Yang",
+      "Pu Zhao",
+      "Yu Kang",
+      "Junhao Wang",
+      "Maoquan Wang",
+      "Yufan Huang",
+      "Elsie Nallipogu",
+      "Qingwei Lin",
+      "Yingnong Dang",
+      "Saravan Rajmohan",
+      "Dongmei Zhang",
+      "Qi Zhang"
+    ],
+    "first_author": "Xing Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Repository-level code translation",
+      "Skeleton-guided translation",
+      "Fine-grained unit-test evaluation",
+      "Incremental/partial translation",
+      "Cross-file dependency management",
+      "Per-testcase translation scoring",
+      "Build-config aware evaluation",
+      "Java-to-C# migration"
+    ],
+    "summary": "本文提出Skeleton-Guided-Translation框架并构建TRANSREPO-BENCH基准，通过先翻译仓库骨架再填充实现Java到C#的仓库级翻译，并基于单元测试引入细粒度的测试用例级别评价指标以提升可维护性与评估准确性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.16050v1",
+    "published": "2025-01-27",
+    "update_time": "2025-01-27",
+    "download_time": "2025-12-11 16:54:54"
+  },
+  {
+    "id": "2501.09745",
+    "title": "Suggesting Code Edits in Interactive Machine Learning Notebooks Using Large Language Models",
+    "abstract": "Machine learning developers frequently use interactive computational notebooks, such as Jupyter notebooks, to host code for data processing and model training. Jupyter notebooks provide a convenient tool for writing machine learning pipelines and interactively observing outputs, however, maintaining Jupyter notebooks, e.g., to add new features or fix bugs, can be challenging due to the length and complexity of the notebooks. Moreover, there is no existing benchmark related to developer edits on Jupyter notebooks. To address this, we present the first dataset of 48,398 Jupyter notebook edits derived from 20,095 revisions of 792 machine learning repositories on GitHub, and perform the first study of the using LLMs to predict code edits in Jupyter notebooks. Our dataset captures granular details of cell-level and line-level modifications, offering a foundation for understanding real-world maintenance patterns in machine learning workflows. We observed that the edits on Jupyter notebooks are highly localized, with changes averaging only 166 lines of code in repositories. While larger models outperform smaller counterparts in code editing, all models have low accuracy on our dataset even after finetuning, demonstrating the complexity of real-world machine learning maintenance tasks. Our findings emphasize the critical role of contextual information in improving model performance and point toward promising avenues for advancing large language models' capabilities in engineering machine learning code.",
+    "arxiv_url": "https://arxiv.org/abs/2501.09745",
+    "authors": [
+      "Bihui Jin",
+      "Jiayue Wang",
+      "Pengyu Nie"
+    ],
+    "first_author": "Bihui Jin",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Jupyter notebook edit dataset",
+      "Cell-level and line-level diffs",
+      "GitHub ML repository mining",
+      "Commit-message conditioned edit prediction",
+      "Localized/incremental notebook edits",
+      "Few-shot prompting for code edits",
+      "Supervised fine-tuning and parameter-efficient tuning",
+      "Context-aware evaluation of edit predictions",
+      "Edit-similarity and code-centric metrics"
+    ],
+    "summary": "本文构建并开源了一个包含48,398次Jupyter笔记本代码编辑的基准数据集，分析笔记本维护的局部编辑模式并通过few-shot与微调评估LLM在单元格/行级代码修改预测上的性能，发现模型在真实维护任务上表现仍然较差且对上下文依赖显著。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.09745v1",
+    "published": "2025-01-16",
+    "update_time": "2025-01-16",
+    "download_time": "2025-12-11 17:02:40"
+  }
+]

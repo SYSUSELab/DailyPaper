@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2206.08474",
+    "title": "XLCoST: A Benchmark Dataset for Cross-lingual Code Intelligence",
+    "abstract": "Recent advances in machine learning have significantly improved the understanding of source code data and achieved good performance on a number of downstream tasks. Open source repositories like GitHub enable this process with rich unlabeled code data. However, the lack of high quality labeled data has largely hindered the progress of several code related tasks, such as program translation, summarization, synthesis, and code search. This paper introduces XLCoST, Cross-Lingual Code SnippeT dataset, a new benchmark dataset for cross-lingual code intelligence. Our dataset contains fine-grained parallel data from 8 languages (7 commonly used programming languages and English), and supports 10 cross-lingual code tasks. To the best of our knowledge, it is the largest parallel dataset for source code both in terms of size and the number of languages. We also provide the performance of several state-of-the-art baseline models for each task. We believe this new dataset can be a valuable asset for the research community and facilitate the development and validation of new methods for cross-lingual code intelligence.",
+    "arxiv_url": "https://arxiv.org/abs/2206.08474",
+    "authors": [
+      "Ming Zhu",
+      "Aneesh Jain",
+      "Karthik Suresh",
+      "Roshan Ravindran",
+      "Sindhu Tipirneni",
+      "Chandan K. Reddy"
+    ],
+    "first_author": "Ming Zhu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Cross-lingual parallel snippets",
+      "Snippet-level alignment",
+      "Program-level alignment",
+      "Multilingual code translation/summarization/synthesis",
+      "Cross-lingual code search",
+      "Fine-grained alignment from programming-problem solutions",
+      "Baseline performance evaluation"
+    ],
+    "summary": "本文提出并发布了 XLCoST，一个包含七种编程语言与英语的百万级细粒度并行代码片段数据集，支持十项跨语种代码任务并提供多种基线评测。 ",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2206.08474v1",
+    "published": "2022-06-16",
+    "update_time": "2022-06-16",
+    "download_time": "2025-12-11 16:51:09"
+  }
+]

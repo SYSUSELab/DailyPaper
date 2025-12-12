@@ -33,5 +33,159 @@
     "published": "2023-03-30",
     "update_time": "2024-07-10",
     "download_time": "2025-12-04 23:15:01"
+  },
+  {
+    "id": "2303.12570",
+    "title": "RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation",
+    "abstract": "The task of repository-level code completion is to continue writing the unfinished code based on a broader context of the repository. While for automated code completion tools, it is difficult to utilize the useful information scattered in different files. We propose RepoCoder, a simple, generic, and effective framework to address the challenge. It streamlines the repository-level code completion process by incorporating a similarity-based retriever and a pre-trained code language model in an iterative retrieval-generation pipeline. RepoCoder makes effective utilization of repository-level information for code completion and has the ability to generate code at various levels of granularity. Moreover, we propose a new benchmark RepoEval, which consists of the latest and high-quality real-world repositories covering line, API invocation, and function body completion scenarios. Experimental results indicate that RepoCoder significantly improves the In-File completion baseline by over 10% in all settings and consistently outperforms the vanilla retrieval-augmented code completion approach. Furthermore, we validate the effectiveness of RepoCoder through comprehensive analysis, providing valuable insights for future research. Our source code and benchmark are publicly available: https://github.com/microsoft/CodeT/tree/main/RepoCoder",
+    "arxiv_url": "https://arxiv.org/abs/2303.12570",
+    "authors": [
+      "Fengji Zhang",
+      "Bei Chen",
+      "Yue Zhang",
+      "Jacky Keung",
+      "Jin Liu",
+      "Daoguang Zan",
+      "Yi Mao",
+      "Jian-Guang Lou",
+      "Weizhu Chen"
+    ],
+    "first_author": "Fengji Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Iterative retrieval-generation",
+      "Repository-level context retrieval",
+      "Retrieval-augmented code completion",
+      "Sliding-window code snippet indexing",
+      "Query grounding with model-generated code",
+      "Multi-granularity completion (line/API/function)",
+      "Unit-test-based evaluation"
+    ],
+    "summary": "本文提出RepoCoder，一种通过迭代检索-生成管道利用仓库级上下文进行代码补全的框架，并构建了包含行、API 调用与函数体多粒度且借助单元测试评估的RepoEval基准，实验证明显著提升补全性能。",
+    "quality": "High",
+    "conference": "EMNLP 2023",
+    "pdf_url": "https://arxiv.org/pdf/2303.12570v3",
+    "published": "2023-03-22",
+    "update_time": "2023-10-20",
+    "download_time": "2025-12-11 16:30:21"
+  },
+  {
+    "id": "2303.03004",
+    "title": "xCodeEval: A Large Scale Multilingual Multitask Benchmark for Code Understanding, Generation, Translation and Retrieval",
+    "abstract": "Recently, pre-trained large language models (LLMs) have shown impressive abilities in generating codes from natural language descriptions, repairing buggy codes, translating codes between languages, and retrieving relevant code segments. However, the evaluation of these models has often been performed in a scattered way on only one or two specific tasks, in a few languages, at a partial granularity (e.g., function) level, and in many cases without proper training data. Even more concerning is that in most cases the evaluation of generated codes has been done in terms of mere lexical overlap with a reference code rather than actual execution. We introduce xCodeEval, the largest executable multilingual multitask benchmark to date consisting of $25$M document-level coding examples ($16.5$B tokens) from about $7.5$K unique problems covering up to $11$ programming languages with execution-level parallelism. It features a total of $7$ tasks involving code understanding, generation, translation and retrieval. xCodeEval adopts an execution-based evaluation and offers a multilingual code execution engine, ExecEval that supports unit test based execution in all the $11$ languages. To address the challenge of balancing the distributions of text-code samples over multiple attributes in validation/test sets, we propose a novel data splitting and a data selection schema based on the geometric mean and graph-theoretic principle. Our experiments with OpenAI's LLMs (zero-shot) and open-LLMs (zero-shot and fine-tuned) on the tasks and languages demonstrate **xCodeEval** to be quite challenging as per the current advancements in language models.",
+    "arxiv_url": "https://arxiv.org/abs/2303.03004",
+    "authors": [
+      "Mohammad Abdullah Matin Khan",
+      "M Saiful Bari",
+      "Xuan Long Do",
+      "Weishi Wang",
+      "Md Rizwan Parvez",
+      "Shafiq Joty"
+    ],
+    "first_author": "Mohammad Abdullah Matin Khan",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Multilingual Program Synthesis & Evaluation Benchmark",
+    "tags": [
+      "Execution-based evaluation",
+      "Unit-test harness",
+      "Multilingual code parallelism",
+      "Large-scale Codeforces corpus",
+      "Program synthesis benchmark",
+      "Code translation and retrieval tasks",
+      "Geometric-mean split strategy",
+      "Graph-theoretic data selection",
+      "Difficulty-stratified sampling",
+      "Distributed execution engine"
+    ],
+    "summary": "本文提出XCODEEVAL——一个包含约2500万可执行多语言多任务代码样本的大规模基准及其ExecEval执行引擎，并通过基于单元测试的执行评估、几何平均的数据切分和图论数据选择策略为代码理解、生成、翻译和检索任务提供标准化评测。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2303.03004v4",
+    "published": "2023-03-06",
+    "update_time": "2023-11-06",
+    "download_time": "2025-12-11 16:51:45"
+  },
+  {
+    "id": "2303.18184",
+    "title": "A Survey on Automated Program Repair Techniques",
+    "abstract": "With the rapid development and large-scale popularity of program software, modern society increasingly relies on software systems. However, the problems exposed by software have also come to the fore. Software defect has become an important factor troubling developers. In this context, Automated Program Repair (APR) techniques have emerged, aiming to automatically fix software defect problems and reduce manual debugging work. In particular, benefiting from the advances in deep learning, numerous learning-based APR techniques have emerged in recent years, which also bring new opportunities for APR research. To give researchers a quick overview of APR techniques' complete development and future opportunities, we revisit the evolution of APR techniques and discuss in depth the latest advances in APR research. In this paper, the development of APR techniques is introduced in terms of four different patch generation schemes: search-based, constraint-based, template-based, and learning-based. Moreover, we propose a uniform set of criteria to review and compare each APR tool, summarize the advantages and disadvantages of APR techniques, and discuss the current state of APR development. Furthermore, we introduce the research on the related technical areas of APR that have also provided a strong motivation to advance APR development. Finally, we analyze current challenges and future directions, especially highlighting the critical opportunities that large language models bring to APR research.",
+    "arxiv_url": "https://arxiv.org/abs/2303.18184",
+    "authors": [
+      "Kai Huang",
+      "Zhengzi Xu",
+      "Su Yang",
+      "Hongyu Sun",
+      "Xuejun Li",
+      "Zheng Yan",
+      "Yuqing Zhang"
+    ],
+    "first_author": "Kai Huang",
+    "category": [
+      "Survey"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Search-based Repair",
+      "Constraint-based Repair",
+      "Template-based Repair",
+      "Learning-based Repair",
+      "Evaluation Criteria for APR",
+      "Patch Assessment and Overfitting",
+      "Fault Localization",
+      "Dataset Quality and Overlap",
+      "Industrial Deployment Challenges",
+      "LLM-enabled Program Repair"
+    ],
+    "summary": "本文为自动程序修复（APR）领域的系统综述，按照搜索式、约束式、模板式和学习式四类修复策略回顾进展，提出统一评估标准，分析现有问题并展望包括大语言模型在内的未来研究方向。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2303.18184v3",
+    "published": "2023-03-31",
+    "update_time": "2023-05-13",
+    "download_time": "2025-12-11 16:57:05"
+  },
+  {
+    "id": "2303.09564",
+    "title": "TypeT5: Seq2seq Type Inference using Static Analysis",
+    "abstract": "There has been growing interest in automatically predicting missing type annotations in programs written in Python and JavaScript. While prior methods have achieved impressive accuracy when predicting the most common types, they often perform poorly on rare or complex types. In this paper, we present a new type inference method that treats type prediction as a code infilling task by leveraging CodeT5, a state-of-the-art seq2seq pre-trained language model for code. Our method uses static analysis to construct dynamic contexts for each code element whose type signature is to be predicted by the model. We also propose an iterative decoding scheme that incorporates previous type predictions in the model's input context, allowing information exchange between related code elements. Our evaluation shows that the proposed approach, TypeT5, not only achieves a higher overall accuracy (particularly on rare and complex types) but also produces more coherent results with fewer type errors -- while enabling easy user intervention.",
+    "arxiv_url": "https://arxiv.org/abs/2303.09564",
+    "authors": [
+      "Jiayi Wei",
+      "Greg Durrett",
+      "Isil Dillig"
+    ],
+    "first_author": "Jiayi Wei",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Type Inference for Python",
+      "Static usage graph",
+      "Context augmentation via static analysis",
+      "Seq2seq code infilling",
+      "Iterative two-pass decoding",
+      "Coherence via type-checking constraints",
+      "Interactive human-in-the-loop correction",
+      "Handling parametric and user-defined types"
+    ],
+    "summary": "本文提出TypeT5，将类型推断视为seq2seq代码填空任务，结合静态分析构造跨文件使用关系上下文并采用迭代解码以提高对罕见与复杂类型的一致性和准确率。",
+    "quality": "High",
+    "conference": "ICLR 2023",
+    "pdf_url": "https://arxiv.org/pdf/2303.09564v1",
+    "published": "2023-03-16",
+    "update_time": "2023-03-16",
+    "download_time": "2025-12-11 17:53:05"
   }
 ]

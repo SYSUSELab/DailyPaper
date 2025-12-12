@@ -192,5 +192,77 @@
     "published": "2023-05-29",
     "update_time": "2024-04-28",
     "download_time": "2025-12-04 23:30:18"
+  },
+  {
+    "id": "2305.05959",
+    "title": "Survey of Code Search Based on Deep Learning",
+    "abstract": "Code writing is repetitive and predictable, inspiring us to develop various code intelligence techniques. This survey focuses on code search, that is, to retrieve code that matches a given query by effectively capturing the semantic similarity between the query and code. Deep learning, being able to extract complex semantics information, has achieved great success in this field. Recently, various deep learning methods, such as graph neural networks and pretraining models, have been applied to code search with significant progress. Deep learning is now the leading paradigm for code search. In this survey, we provide a comprehensive overview of deep learning-based code search. We review the existing deep learning-based code search framework which maps query/code to vectors and measures their similarity. Furthermore, we propose a new taxonomy to illustrate the state-of-the-art deep learning-based code search in a three-steps process: query semantics modeling, code semantics modeling, and matching modeling which involves the deep learning model training. Finally, we suggest potential avenues for future research in this promising field.",
+    "arxiv_url": "https://arxiv.org/abs/2305.05959",
+    "authors": [
+      "Yutao Xie",
+      "Jiayi Lin",
+      "Hande Dong",
+      "Lei Zhang",
+      "Zhonghai Wu"
+    ],
+    "first_author": "Yutao Xie",
+    "category": [
+      "Survey"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "NL-to-code retrieval",
+      "Query intent modeling",
+      "Code semantic representation",
+      "Graph-based code representations",
+      "Transformer-based code encoders",
+      "Contrastive and ranking training objectives",
+      "Evaluation metrics and benchmarking",
+      "Training / pretraining strategies for retrieval"
+    ],
+    "summary": "本文综述了基于深度学习的代码检索研究，提出了查询语义建模、代码语义建模与匹配建模的三步分类法，并总结了现有方法、评估指标与未来研究方向。",
+    "quality": "High",
+    "conference": "ACM Transactions on Software Engineering and Methodology 2023",
+    "pdf_url": "https://arxiv.org/pdf/2305.05959v2",
+    "published": "2023-05-10",
+    "update_time": "2023-12-13",
+    "download_time": "2025-12-11 17:43:30"
+  },
+  {
+    "id": "2305.17145",
+    "title": "Type Prediction With Program Decomposition and Fill-in-the-Type Training",
+    "abstract": "TypeScript and Python are two programming languages that support optional type annotations, which are useful but tedious to introduce and maintain. This has motivated automated type prediction: given an untyped program, produce a well-typed output program. Large language models (LLMs) are promising for type prediction, but there are challenges: fill-in-the-middle performs poorly, programs may not fit into the context window, generated types may not type check, and it is difficult to measure how well-typed the output program is. We address these challenges by building OpenTau, a search-based approach for type prediction that leverages large language models. We propose a new metric for type prediction quality, give a tree-based program decomposition that searches a space of generated types, and present fill-in-the-type fine-tuning for LLMs. We evaluate our work with a new dataset for TypeScript type prediction, and show that 47.4% of files type check (14.5% absolute improvement) with an overall rate of 3.3 type errors per file. All code, data, and models are available at: https://github.com/GammaTauAI/opentau.",
+    "arxiv_url": "https://arxiv.org/abs/2305.17145",
+    "authors": [
+      "Federico Cassano",
+      "Ming-Ho Yee",
+      "Noah Shinn",
+      "Arjun Guha",
+      "Steven Holtzen"
+    ],
+    "first_author": "Federico Cassano",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Tree-based program decomposition",
+      "Fill-in-the-type fine-tuning",
+      "Typedness evaluation metric",
+      "Search over type candidates",
+      "Type-checking guided ranking",
+      "Local type inference",
+      "TypeScript gradual migration"
+    ],
+    "summary": "本文提出OPENTAU，通过将程序递归分解为树状代码块、基于搜索的候选类型生成与一种名为fill-in-the-type的微调方法，并辅以新的typedness评估和TypeScript数据集，有效提升了自动类型注入的可检类型率与类型精确度。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2305.17145v1",
+    "published": "2023-05-25",
+    "update_time": "2023-05-25",
+    "download_time": "2025-12-11 17:53:38"
   }
 ]

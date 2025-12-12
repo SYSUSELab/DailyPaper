@@ -116,5 +116,234 @@
     "published": "2024-06-26",
     "update_time": "2024-06-27",
     "download_time": "2025-12-04 23:20:47"
+  },
+  {
+    "id": "2406.12902",
+    "title": "JavaBench: A Benchmark of Object-Oriented Code Generation for Evaluating Large Language Models",
+    "abstract": "Code generation benchmarks such as HumanEval are widely adopted to evaluate LLMs' capabilities. However, after consolidating the latest 24 benchmarks, we noticed three significant imbalances. First, imbalanced programming language. 95.8% of benchmarks involve Python, while only 5 benchmarks involve Java. Second, imbalanced code granularity. Function-/statement-level benchmarks account for over 83.3% of benchmarks. Only a mere handful extends to class-/project-levels, and all are limited to Python. Third, lacking advanced features. Existing benchmarks primarily assess basic coding skills, while overlooking advanced Object-Oriented Programming (OOP) features (i.e., encapsulation, inheritance, and polymorphism).   To fill these gaps, we propose JavaBench, a project-level Java benchmark that exercises OOP features. It comprises four Java projects with 389 methods in 106 Java classes. The test coverage is up to 92%, and JavaBench is attested by 282 undergraduate students, reaching a 90.93/100 average score (i.e., pass rate against the test suite), ensuring the quality of documentation, code skeleton, and tests. To better evaluate LLM's capability against JavaBench, we introduce a systematic evaluation design covering three context settings and five synthesis strategies at two granularities using three hierarchical metrics. Our extensive experiment yields several interesting findings. First, we noticed that regarding project-level Java programming, LLMs are far behind undergraduate students (no project can be correctly completed by any studied LLMs, and at most 41.17% Pass@5 in a more relaxed evaluation). Second, using method signature as prompt context may strike an ideal balance for project-level code generation. JavaBench is publicly available at https://github.com/java-bench/JavaBench.",
+    "arxiv_url": "https://arxiv.org/abs/2406.12902",
+    "authors": [
+      "Jialun Cao",
+      "Zhiyong Chen",
+      "Jiarong Wu",
+      "Shing-chi Cheung",
+      "Chang Xu"
+    ],
+    "first_author": "Jialun Cao",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Project-level Java generation",
+      "Object-oriented features (encapsulation, inheritance, polymorphism)",
+      "Method-signature context prompting",
+      "Context ablation (max/min/selected)",
+      "Synthesis strategies (holistic/independent/incremental)",
+      "Hierarchical evaluation metrics (Completion/Compilation/Pass@k)",
+      "Class-wise vs test-wise evaluation granularity",
+      "Student-validated canonical solutions and human baseline",
+      "High test coverage with mocking-based tests"
+    ],
+    "summary": "本文提出了JavaBench——一个包含四个面向对象Java项目、由学生验证并带高覆盖测试的项目级基准，并给出系统化的多上下文、多合成策略评估，揭示当前LLM在面向对象Java生成上明显落后于本科生且在仅提供方法签名时表现最好。",
+    "quality": "High",
+    "conference": "ASE",
+    "pdf_url": "https://arxiv.org/pdf/2406.12902v2",
+    "published": "2024-06-10",
+    "update_time": "2024-10-11",
+    "download_time": "2025-12-11 16:34:30"
+  },
+  {
+    "id": "2406.06918",
+    "title": "HumanEvo: An Evolution-aware Benchmark for More Realistic Evaluation of Repository-level Code Generation",
+    "abstract": "To evaluate the repository-level code generation capabilities of Large Language Models (LLMs) in complex real-world software development scenarios, many evaluation methods have been developed. These methods typically leverage contextual code from the latest version of a project to assist LLMs in accurately generating the desired function. However, such evaluation methods fail to consider the dynamic evolution of software projects over time, which we refer to as evolution-ignored settings. This in turn results in inaccurate evaluation of LLMs' performance. In this paper, we conduct an empirical study to deeply understand LLMs' code generation performance within settings that reflect the evolution nature of software development. To achieve this, we first construct an evolution-aware repository-level code generation dataset, namely HumanEvo, equipped with an automated execution-based evaluation tool. Second, we manually categorize HumanEvo according to dependency levels to more comprehensively analyze the model's performance in generating functions with different dependency levels. Third, we conduct extensive experiments on HumanEvo with seven representative and diverse LLMs to verify the effectiveness of the proposed benchmark. We obtain several important findings through our experimental study. For example, we find that previous evolution-ignored evaluation methods result in inflated performance of LLMs, with performance overestimations ranging from 10.0% to 61.1% under different context acquisition methods, compared to the evolution-aware evaluation approach. Based on the findings, we give actionable suggestions for more realistic evaluation of LLMs on code generation. We also build a shared evolution-aware code generation toolbox to facilitate future research.",
+    "arxiv_url": "https://arxiv.org/abs/2406.06918",
+    "authors": [
+      "Dewu Zheng",
+      "Yanlin Wang",
+      "Ensheng Shi",
+      "Ruikai Zhang",
+      "Yuchi Ma",
+      "Hongyu Zhang",
+      "Zibin Zheng"
+    ],
+    "first_author": "Dewu Zheng",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Evolution-aware evaluation",
+      "Future context leakage",
+      "Useful context missing",
+      "Repository rollback to base commit",
+      "Dependency-level categorization",
+      "Execution-based automated testing",
+      "Temporal/context acquisition analysis",
+      "Cross-language (Python and Java) benchmark"
+    ],
+    "summary": "本文提出了HumanEvo——一个考虑代码库随时间演化的存储库级代码生成基准（含400个Python/Java任务与自动化执行评估），并实证表明忽略演化会导致LLM性能被显著高估，同时分析了依赖级别与上下文检索策略的影响。",
+    "quality": "High",
+    "conference": "International Conference on Software Engineering (ICSE 2025)",
+    "pdf_url": "https://arxiv.org/pdf/2406.06918v2",
+    "published": "2024-06-11",
+    "update_time": "2025-03-18",
+    "download_time": "2025-12-11 16:34:58"
+  },
+  {
+    "id": "2406.11927",
+    "title": "On the Impacts of Contexts on Repository-Level Code Generation",
+    "abstract": "CodeLLMs have gained widespread adoption for code generation tasks, yet their capacity to handle repository-level code generation with complex contextual dependencies remains underexplored. Our work underscores the critical importance of leveraging repository-level contexts to generate executable and functionally correct code. We present RepoExec, a novel benchmark designed to evaluate repository-level code generation, with a focus on three key aspects: executability, functional correctness through comprehensive test case generation, and accurate utilization of cross-file contexts. Our study examines a controlled scenario where developers specify essential code dependencies (contexts), challenging models to integrate them effectively. Additionally, we introduce an instruction-tuned dataset that enhances CodeLLMs' ability to leverage dependencies, along with a new metric, Dependency Invocation Rate (DIR), to quantify context utilization. Experimental results reveal that while pretrained LLMs demonstrate superior performance in terms of correctness, instruction-tuned models excel in context utilization and debugging capabilities. RepoExec offers a comprehensive evaluation framework for assessing code functionality and alignment with developer intent, thereby advancing the development of more reliable CodeLLMs for real-world applications. The dataset and source code are available at https://github.com/FSoft-AI4Code/RepoExec.",
+    "arxiv_url": "https://arxiv.org/abs/2406.11927",
+    "authors": [
+      "Nam Le Hai",
+      "Dung Manh Nguyen",
+      "Nghi D. Q. Bui"
+    ],
+    "first_author": "Nam Le Hai",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Repository-level dependency handling",
+      "Executable evaluation environment",
+      "Dependency Invocation Rate (DIR)",
+      "Automated high-coverage unit-test generation",
+      "Dependency extraction tool",
+      "Dependency-aware instruction tuning",
+      "Multi-round test-driven debugging",
+      "Context-size ablation (full/medium/small)"
+    ],
+    "summary": "该论文提出了一个可执行的仓库级代码生成基准与评估范式（包含高覆盖单元测试与依赖提取工具）、引入依赖调用率（DIR）度量并通过对18个模型的实证评估和依赖增强的指令微调与多轮调试展示了依赖上下文对生成正确性与依赖利用的影响。",
+    "quality": "High",
+    "conference": "NAACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2406.11927v4",
+    "published": "2024-06-17",
+    "update_time": "2025-02-09",
+    "download_time": "2025-12-11 16:35:35"
+  },
+  {
+    "id": "2406.16801",
+    "title": "RES-Q: Evaluating Code-Editing Large Language Model Systems at the Repository Scale",
+    "abstract": "The instruction-following ability of Large Language Models (LLMs) has cultivated a class of LLM-based systems capable of approaching complex tasks such as making edits to large code repositories. Due to the high sensitivity and unpredictability of LLM behavior in response to changes in prompting, robust evaluation tools are needed to drive future iteration of these systems. We propose RES-Q, a natural language instruction-based benchmark for evaluating $\\textbf{R}$epository $\\textbf{E}$diting $\\textbf{S}$ystems, which consists of 100 handcrafted repository editing tasks derived from real GitHub commits. Given an edit instruction and a code repository, RES-Q evaluates an LLM system's ability to interpret the instruction, navigate the repository to gather relevant information, and construct an appropriate edit that satisfies the specified criteria. We argue that evaluating LLMs in this way addresses issues with traditional benchmarks and provides a more holistic assessment of a model's abilities. We evaluate various state-of-the-art LLMs as language agents in a repository-editing system built on Qurrent OS, our language agent development software. Despite their 1% pass@1 performance difference on HumanEval, we find Claude Sonnet 3.5 outperforms GPT-4o by 12% pass@1 on RES-Q, indicating RES-Q's capacity to differentiate model capability as traditional benchmarks approach saturation. We further investigate token efficiency, performance relationships with existing benchmarks, and interesting disparities between closed and open-source LLMs. Code and dataset are available at https://github.com/Qurrent-AI/RES-Q.",
+    "arxiv_url": "https://arxiv.org/abs/2406.16801",
+    "authors": [
+      "Beck LaBash",
+      "August Rosedale",
+      "Alex Reents",
+      "Lucas Negritto",
+      "Colin Wiel"
+    ],
+    "first_author": "Beck LaBash",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Repository-scale code editing",
+      "Handcrafted test suites for verification",
+      "Lazy (ambiguous) natural-language edit instructions",
+      "Cross-file and multi-file patches",
+      "Commit-derived realistic tasks",
+      "Language-agent (LLM agent) evaluation",
+      "Submission/evaluation harness for automated scoring",
+      "Token-efficiency and benchmark saturation analysis"
+    ],
+    "summary": "本文提出了RES-Q——由100个基于真实GitHub提交的仓库级代码编辑任务及手工测试套件组成的基准，并在语言代理系统中评估多种大型模型的仓库编辑能力且发布了提交评测环境。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2406.16801v2",
+    "published": "2024-06-24",
+    "update_time": "2024-06-25",
+    "download_time": "2025-12-11 16:36:10"
+  },
+  {
+    "id": "2406.07595",
+    "title": "VulDetectBench: Evaluating the Deep Capability of Vulnerability Detection with Large Language Models",
+    "abstract": "Large Language Models (LLMs) have training corpora containing large amounts of program code, greatly improving the model's code comprehension and generation capabilities. However, sound comprehensive research on detecting program vulnerabilities, a more specific task related to code, and evaluating the performance of LLMs in this more specialized scenario is still lacking. To address common challenges in vulnerability analysis, our study introduces a new benchmark, VulDetectBench, specifically designed to assess the vulnerability detection capabilities of LLMs. The benchmark comprehensively evaluates LLM's ability to identify, classify, and locate vulnerabilities through five tasks of increasing difficulty. We evaluate the performance of 17 models (both open- and closed-source) and find that while existing models can achieve over 80% accuracy on tasks related to vulnerability identification and classification, they still fall short on specific, more detailed vulnerability analysis tasks, with less than 30% accuracy, making it difficult to provide valuable auxiliary information for professional vulnerability mining. Our benchmark effectively evaluates the capabilities of various LLMs at different levels in the specific task of vulnerability detection, providing a foundation for future research and improvements in this critical area of code security. VulDetectBench is publicly available at https://github.com/Sweetaroo/VulDetectBench.",
+    "arxiv_url": "https://arxiv.org/abs/2406.07595",
+    "authors": [
+      "Yu Liu",
+      "Lang Gao",
+      "Mingxin Yang",
+      "Yu Xie",
+      "Ping Chen",
+      "Xiaojin Zhang",
+      "Wei Chen"
+    ],
+    "first_author": "Yu Liu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Vulnerability existence detection",
+      "CWE type classification",
+      "Root cause localization",
+      "Trigger point identification",
+      "Key objects/functions extraction",
+      "C/C++ memory-safety vulnerabilities",
+      "Mixed real-world and synthetic corpus",
+      "Multi-task benchmark",
+      "Cross-model comparative evaluation"
+    ],
+    "summary": "本文提出VulDetectBench——一个面向C/C++漏洞检测的多任务基准（包含五个难度递增任务并结合真实与合成代码），对17个开闭源模型进行了比较评估，发现模型在漏洞存在检测与类型分类上表现良好但在根因与触发点等精细定位任务上表现不佳。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2406.07595v4",
+    "published": "2024-06-11",
+    "update_time": "2024-08-21",
+    "download_time": "2025-12-11 17:15:44"
+  },
+  {
+    "id": "2406.11589",
+    "title": "CoSQA+: Pioneering the Multi-Choice Code Search Benchmark with Test-Driven Agents",
+    "abstract": "Semantic code search, retrieving code that matches a given natural language query, is an important task to improve productivity in software engineering. Existing code search datasets face limitations: they rely on human annotators who assess code primarily through semantic understanding rather than functional verification, leading to potential inaccuracies and scalability issues. Additionally, current evaluation metrics often overlook the multi-choice nature of code search. This paper introduces CoSQA+, pairing high-quality queries from CoSQA with multiple suitable codes. We develop an automated pipeline featuring multiple model-based candidate selections and the novel test-driven agent annotation system. Among a single Large Language Model (LLM) annotator and Python expert annotators (without test-based verification), agents leverage test-based verification and achieve the highest accuracy of 93.9%. Through extensive experiments, CoSQA+ has demonstrated superior quality over CoSQA. Models trained on CoSQA+ exhibit improved performance. We publicly release both CoSQA+_all, which contains 412,080 agent-annotated pairs, and CoSQA+_verified, which contains 1,000 human-verified pairs, at https://github.com/DeepSoftwareAnalytics/CoSQA_Plus.",
+    "arxiv_url": "https://arxiv.org/abs/2406.11589",
+    "authors": [
+      "Jing Gong",
+      "Yanghui Wu",
+      "Linxi Liang",
+      "Yanlin Wang",
+      "Jiachi Chen",
+      "Mingwei Liu",
+      "Zibin Zheng"
+    ],
+    "first_author": "Jing Gong",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Multi-choice code search",
+      "Test-driven agent annotation",
+      "Automatic test generation and execution",
+      "Multi-model candidate selection",
+      "Executable verification",
+      "Human-verified gold subset",
+      "MAP@10 evaluation",
+      "Cross-language generalization"
+    ],
+    "summary": "本文提出CoSQA+，通过多模型候选筛选与测试驱动的多智能体自动标注流水线构建面向多选场景的代码检索基准，并公开了大规模自动标注集与1000条人工验证子集以提升检索评估与模型性能。",
+    "quality": "High",
+    "conference": "IEEE Transactions on Software Engineering (TSE) 2025",
+    "pdf_url": "https://arxiv.org/pdf/2406.11589v6",
+    "published": "2024-06-17",
+    "update_time": "2025-11-10",
+    "download_time": "2025-12-11 17:48:25"
   }
 ]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2510.14509",
+    "title": "E2Edev: Benchmarking Large Language Models in End-to-End Software Development Task",
+    "abstract": "The rapid advancement in large language models (LLMs) has demonstrated significant potential in End-to-End Software Development (E2ESD). However, existing E2ESD benchmarks are limited by coarse-grained requirement specifications and unreliable evaluation protocols, hindering a true understanding of current framework capabilities. To address these limitations, we present E2EDev, a novel benchmark grounded in the principles of Behavior-Driven Development (BDD), which evaluates the capabilities of E2ESD frameworks by assessing whether the generated software meets user needs through mimicking real user interactions (Figure 1). E2EDev comprises (i) a fine-grained set of user requirements, (ii) multiple BDD test scenarios with corresponding Python step implementations for each requirement, and (iii) a fully automated testing pipeline built on the Behave framework. To ensure its quality while reducing the annotation effort, E2EDev leverages our proposed Human-in-the-Loop Multi-Agent Annotation Framework (HITL-MAA). By evaluating various E2ESD frameworks and LLM backbones with E2EDev, our analysis reveals a persistent struggle to effectively solve these tasks, underscoring the critical need for more effective and cost-efficient E2ESD solutions. Our codebase and benchmark are publicly available at https://github.com/SCUNLP/E2EDev.",
+    "arxiv_url": "https://arxiv.org/abs/2510.14509",
+    "authors": [
+      "Jingyao Liu",
+      "Chen Huang",
+      "Zhizhao Guan",
+      "Wenqiang Lei",
+      "Yang Deng"
+    ],
+    "first_author": "Jingyao Liu",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Behavior-Driven Development",
+      "Executable BDD test scenarios",
+      "Human-in-the-Loop Multi-Agent Annotation",
+      "Behave framework integration",
+      "Fine-grained user requirement decomposition",
+      "End-to-end software generation evaluation",
+      "Multi-agent vs single-agent E2ESD comparison",
+      "Error analysis and token-cost evaluation"
+    ],
+    "summary": "该论文提出了基于BDD的E2EDev基准与人机协同多代理注释框架，通过可执行的BDD测试和自动化管道评估端到端软件生成框架的需求满足情况并分析其性能与开销。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.14509v2",
+    "published": "2025-10-16",
+    "update_time": "2025-10-24",
+    "download_time": "2025-12-11 15:54:37"
+  }
+]

@@ -27,5 +27,131 @@
     "published": "2024-08-12",
     "update_time": "2024-08-12",
     "download_time": "2025-12-04 23:26:06"
+  },
+  {
+    "id": "2408.14354",
+    "title": "SWE-bench-java: A GitHub Issue Resolving Benchmark for Java",
+    "abstract": "GitHub issue resolving is a critical task in software engineering, recently gaining significant attention in both industry and academia. Within this task, SWE-bench has been released to evaluate issue resolving capabilities of large language models (LLMs), but has so far only focused on Python version. However, supporting more programming languages is also important, as there is a strong demand in industry. As a first step toward multilingual support, we have developed a Java version of SWE-bench, called SWE-bench-java. We have publicly released the dataset, along with the corresponding Docker-based evaluation environment and leaderboard, which will be continuously maintained and updated in the coming months. To verify the reliability of SWE-bench-java, we implement a classic method SWE-agent and test several powerful LLMs on it. As is well known, developing a high-quality multi-lingual benchmark is time-consuming and labor-intensive, so we welcome contributions through pull requests or collaboration to accelerate its iteration and refinement, paving the way for fully automated programming.",
+    "arxiv_url": "https://arxiv.org/abs/2408.14354",
+    "authors": [
+      "Daoguang Zan",
+      "Zhirong Huang",
+      "Ailun Yu",
+      "Shaoxin Lin",
+      "Yifan Shi",
+      "Wei Liu",
+      "Dong Chen",
+      "Zongshuai Qi",
+      "Hao Yu",
+      "Lei Yu",
+      "Dezhi Ran",
+      "Muhan Zeng",
+      "Bo Shen",
+      "Pan Bian",
+      "Guangtai Liang",
+      "Bei Guan",
+      "Pengjie Huang",
+      "Tao Xie",
+      "Yongji Wang",
+      "Qianxiang Wang"
+    ],
+    "first_author": "Daoguang Zan",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Automated Program Repair",
+      "Issue-to-Patch Generation",
+      "Fail-to-Pass Test Extraction",
+      "Docker-based Reproducible Evaluation",
+      "Build Tool & JDK Inference",
+      "Questionnaire-based Manual Verification",
+      "Repository and Patch Mining",
+      "Dependency Caching and Evaluation Optimization"
+    ],
+    "summary": "本文提出并开源SWE-bench-java-verified——一个经手工验证的Java语言GitHub issue修复基准（91个可复现问题）、相应的Docker评测环境与排行榜，并基于该基准评估了多种模型与代理的修复能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2408.14354v1",
+    "published": "2024-08-26",
+    "update_time": "2024-08-26",
+    "download_time": "2025-12-11 16:36:39"
+  },
+  {
+    "id": "2408.11081",
+    "title": "What can Large Language Models Capture about Code Functional Equivalence?",
+    "abstract": "Code-LLMs, LLMs pre-trained on large code corpora, have shown great progress in learning rich representations of the structure and syntax of code, successfully using it to generate or classify code fragments. At the same time, understanding if they are able to do so because they capture code semantics, and how well, is still an open question. In this paper, we tackle this problem by introducing SeqCoBench, a benchmark for systematically assessing how Code-LLMs can capture code functional equivalence. SeqCoBench contains over 20 code transformations that either preserve or alter the semantics of Python programs. We conduct extensive evaluations in different settings, including zero-shot and parameter-efficient finetuning methods on state-of-the-art (Code)-LLMs to see if they can discern semantically equivalent or different pairs of programs in SeqCoBench. We find that the performance gap between these LLMs and classical match-based retrieval scores is minimal, with both approaches showing a concerning lack of depth in understanding code semantics.",
+    "arxiv_url": "https://arxiv.org/abs/2408.11081",
+    "authors": [
+      "Nickil Maveli",
+      "Antonio Vergari",
+      "Shay B. Cohen"
+    ],
+    "first_author": "Nickil Maveli",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Maintenance",
+    "task": "Clone Detection",
+    "tags": [
+      "Semantic code clones",
+      "Functional equivalence classification",
+      "Semantic-preserving transformations",
+      "Semantic-altering transformations",
+      "Pairwise program comparison",
+      "Parameter-efficient fine-tuning evaluation",
+      "Comparison to match-based similarity metrics",
+      "Python program transformation suite"
+    ],
+    "summary": "本文构建了SeqCoBench基准，包含20余种对Python程序进行语义保持或改变的变换，用以系统评估代码LLM在判别函数功能等价性方面的能力，并发现这些模型在该任务上与传统匹配度量表现相近且整体理解深度不足。",
+    "quality": "High",
+    "conference": "NAACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2408.11081v2",
+    "published": "2024-08-20",
+    "update_time": "2025-02-12",
+    "download_time": "2025-12-11 17:49:40"
+  },
+  {
+    "id": "2408.10718",
+    "title": "CodeJudge-Eval: Can Large Language Models be Good Judges in Code Understanding?",
+    "abstract": "Recent advancements in large language models (LLMs) have showcased impressive code generation capabilities, primarily evaluated through language-to-code benchmarks. However, these benchmarks may not fully capture a model's code understanding abilities. We introduce CodeJudge-Eval (CJ-Eval), a novel benchmark designed to assess LLMs' code understanding abilities from the perspective of code judging rather than code generation. CJ-Eval challenges models to determine the correctness of provided code solutions, encompassing various error types and compilation issues. By leveraging a diverse set of problems and a fine-grained judging system, CJ-Eval addresses the limitations of traditional benchmarks, including the potential memorization of solutions. Evaluation of 12 well-known LLMs on CJ-Eval reveals that even state-of-the-art models struggle, highlighting the benchmark's ability to probe deeper into models' code understanding abilities. Our codes and benchmark are available at \\url{https://github.com/CodeLLM-Research/CodeJudge-Eval}.",
+    "arxiv_url": "https://arxiv.org/abs/2408.10718",
+    "authors": [
+      "Yuwei Zhao",
+      "Ziyang Luo",
+      "Yuchen Tian",
+      "Hongzhan Lin",
+      "Weixiang Yan",
+      "Annan Li",
+      "Jing Ma"
+    ],
+    "first_author": "Yuwei Zhao",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "LLM-as-a-judge",
+      "Code understanding evaluation",
+      "Fine-grained verdict taxonomy",
+      "Execution-grounded annotations",
+      "Programming-contest problems",
+      "Cross-model candidate solutions",
+      "Memorization mitigation",
+      "Multiple-choice judging"
+    ],
+    "summary": "本文提出了CodeJudge-Eval基准，通过让模型对来自不同模型的候选代码进行细粒度（如AC/WA/TLE等）判定以评估代码理解能力，并在竞赛级题目上对多种模型的判题性能进行了实证分析，结果表明当前模型在判题任务上仍存在显著不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2408.10718v2",
+    "published": "2024-08-20",
+    "update_time": "2024-09-13",
+    "download_time": "2025-12-11 17:54:13"
   }
 ]

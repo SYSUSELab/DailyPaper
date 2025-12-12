@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2309.12499",
+    "title": "CodePlan: Repository-level Coding using LLMs and Planning",
+    "abstract": "Software engineering activities such as package migration, fixing errors reports from static analysis or testing, and adding type annotations or other specifications to a codebase, involve pervasively editing the entire repository of code. We formulate these activities as repository-level coding tasks.   Recent tools like GitHub Copilot, which are powered by Large Language Models (LLMs), have succeeded in offering high-quality solutions to localized coding problems. Repository-level coding tasks are more involved and cannot be solved directly using LLMs, since code within a repository is inter-dependent and the entire repository may be too large to fit into the prompt. We frame repository-level coding as a planning problem and present a task-agnostic framework, called CodePlan to solve it. CodePlan synthesizes a multi-step chain of edits (plan), where each step results in a call to an LLM on a code location with context derived from the entire repository, previous code changes and task-specific instructions. CodePlan is based on a novel combination of an incremental dependency analysis, a change may-impact analysis and an adaptive planning algorithm.   We evaluate the effectiveness of CodePlan on two repository-level tasks: package migration (C#) and temporal code edits (Python). Each task is evaluated on multiple code repositories, each of which requires inter-dependent changes to many files (between 2-97 files). Coding tasks of this level of complexity have not been automated using LLMs before. Our results show that CodePlan has better match with the ground truth compared to baselines. CodePlan is able to get 5/6 repositories to pass the validity checks (e.g., to build without errors and make correct code edits) whereas the baselines (without planning but with the same type of contextual information as CodePlan) cannot get any of the repositories to pass them.",
+    "arxiv_url": "https://arxiv.org/abs/2309.12499",
+    "authors": [
+      "Ramakrishna Bairi",
+      "Atharv Sonwane",
+      "Aditya Kanade",
+      "Vageesh D C",
+      "Arun Iyer",
+      "Suresh Parthasarathy",
+      "Sriram Rajamani",
+      "B. Ashok",
+      "Shashank Shet"
+    ],
+    "first_author": "Ramakrishna Bairi",
+    "category": [
+      "Technical"
+    ],
+    "field": "Maintenance",
+    "task": "Refactoring",
+    "tags": [
+      "Repository-level planning",
+      "Incremental dependency analysis",
+      "Change may-impact analysis",
+      "Adaptive planning algorithm",
+      "Edit-obligation plan graph",
+      "Seed vs derived edit specification synthesis",
+      "Oracle-driven validation (build/tests/type)",
+      "Multi-file API migration"
+    ],
+    "summary": "本文提出CodePlan，将仓库级代码编辑建模为规划问题，结合增量依赖分析、变更影响分析与自适应规划，生成多步LLM驱动的跨文件编辑以完成包迁移和时间性代码修改等仓库级维护任务并通过构建/验证保证正确性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2309.12499v1",
+    "published": "2023-09-21",
+    "update_time": "2023-09-21",
+    "download_time": "2025-12-11 16:32:15"
+  }
+]

@@ -1009,5 +1009,126 @@
     "published": "2025-11-21",
     "update_time": "2025-11-21",
     "download_time": "2025-12-05 17:24:08"
+  },
+  {
+    "id": "2511.02352",
+    "title": "SWE-Sharp-Bench: A Reproducible Benchmark for C# Software Engineering Tasks",
+    "abstract": "AI coding agents have shown great progress on Python software engineering benchmarks like SWE-Bench, and for other languages like Java and C in benchmarks like Multi-SWE-Bench. However, C# -- a prominent enterprise language ranking #5 in the TIOBE index -- remains absent from such benchmarks. We introduce SWE-Sharp-Bench, a reproducible software engineering benchmark for C# featuring 150 instances from 17 repositories. Evaluating identical model-agent configurations across languages reveals a significant performance gap: while 70% of Python tasks in SWE-Bench Verified are solved, only 40% of our C# tasks are resolved. We open-source SWE-Sharp-Bench and our entire curation pipeline.",
+    "arxiv_url": "https://arxiv.org/abs/2511.02352",
+    "authors": [
+      "Sanket Mhatre",
+      "Yasharth Bajpai",
+      "Sumit Gulwani",
+      "Emerson Murphy-Hill",
+      "Gustavo Soares"
+    ],
+    "first_author": "Sanket Mhatre",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "C#/.NET ecosystem",
+      "Reproducible containerized environments",
+      "NuGet/MSBuild dependency resolution",
+      "Execution-based filtering (pass→fail→pass)",
+      "Patch complexity analysis",
+      "Repository-level pull-request tasks",
+      "Agent resolution-rate evaluation",
+      "Multi-file coordinated edits"
+    ],
+    "summary": "本文提出SWE-Sharp-Bench——首个面向C#/.NET生态的可复现软件工程基准（150个实例、17个仓库）并开源构建管道，实验证明当前大模型代理在C#上解决率显著低于Python，主要受复杂多文件补丁和依赖/构建管理影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.02352v3",
+    "published": "2025-11-04",
+    "update_time": "2025-11-18",
+    "download_time": "2025-12-11 15:55:19"
+  },
+  {
+    "id": "2511.03404",
+    "title": "Towards Realistic Project-Level Code Generation via Multi-Agent Collaboration and Semantic Architecture Modeling",
+    "abstract": "In recent years, Large Language Models (LLMs) have achieved remarkable progress in automated code generation. In real-world software engineering, the growing demand for rapid iteration and continuous delivery underscores the importance of project-level code generation, where LLMs are expected to generate complete software projects directly from complex user requirements. Although existing studies have made initial explorations, they still face key limitations, including unrealistic datasets and unreliable evaluation metrics that fail to reflect real-world complexity, the semantic gap between human-written requirements and machine-interpretable structures, and difficulties in managing hierarchical dependencies and maintaining quality throughout the generation process. To address these limitations, we first introduce CodeProjectEval, a project-level code generation dataset built from 18 real-world repositories with 12.7 files and 2,388.6 lines of code per task on average, supplemented with documentation and executable test cases for automatic evaluation. We further propose ProjectGen, a multi-agent framework that decomposes projects into architecture design, skeleton generation, and code filling stages with iterative refinement and memory-based context management. Within this framework, we introduce the Semantic Software Architecture Tree (SSAT), a structured and semantically rich representation that effectively bridges user requirements and source code implementation. Experiments show that ProjectGen achieves state-of-the-art performance, passing 52/124 test cases on the small-scale project-level code generation dataset DevBench, a 57% improvement over the baseline approaches, and 310 test cases on CodeProjectEval, representing an improvement of roughly tenfold compared to the baselines.",
+    "arxiv_url": "https://arxiv.org/abs/2511.03404",
+    "authors": [
+      "Qianhui Zhao",
+      "Li Zhang",
+      "Fang Liu",
+      "Junhang Cheng",
+      "Chengru Wu",
+      "Junchen Ai",
+      "Qiaoyuanhe Meng",
+      "Lichen Zhang",
+      "Xiaoli Lian",
+      "Shubin Song",
+      "Yuanping Guo"
+    ],
+    "first_author": "Qianhui Zhao",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Project-level Code Generation",
+      "Multi-agent Collaboration",
+      "Semantic Software Architecture Tree",
+      "Architecture-aware Synthesis",
+      "Skeleton-and-fill Pipeline",
+      "Iterative Refinement",
+      "Memory-based Context Management",
+      "Executable Test-case Evaluation",
+      "Hierarchical Dependency Management"
+    ],
+    "summary": "该论文提出了真实项目级代码生成数据集CodeProjectEval，并设计了多智能体ProjectGen框架与语义软件架构树（SSAT）作为中间表征，通过架构设计、骨架生成与代码填充的分阶段迭代及记忆化上下文管理显著提升了项目级代码生成的可执行性与质量。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.03404v1",
+    "published": "2025-11-05",
+    "update_time": "2025-11-05",
+    "download_time": "2025-12-11 15:55:52"
+  },
+  {
+    "id": "2511.06090",
+    "title": "SWE-fficiency: Can Language Models Optimize Real-World Repositories on Real Workloads?",
+    "abstract": "Optimizing the performance of large-scale software repositories demands expertise in code reasoning and software engineering (SWE) to reduce runtime while preserving program correctness. However, most benchmarks emphasize what to fix rather than how to fix code. We introduce SWE-fficiency, a benchmark for evaluating repository-level performance optimization on real workloads. Our suite contains 498 tasks across nine widely used data-science, machine-learning, and HPC repositories (e.g., numpy, pandas, scipy): given a complete codebase and a slow workload, an agent must investigate code semantics, localize bottlenecks and relevant tests, and produce a patch that matches or exceeds expert speedup while passing the same unit tests. To enable this how-to-fix evaluation, our automated pipeline scrapes GitHub pull requests for performance-improving edits, combining keyword filtering, static analysis, coverage tooling, and execution validation to both confirm expert speedup baselines and identify relevant repository unit tests. Empirical evaluation of state-of-the-art agents reveals significant underperformance. On average, agents achieve less than 0.15x the expert speedup: agents struggle in localizing optimization opportunities, reasoning about execution across functions, and maintaining correctness in proposed edits. We release the benchmark and accompanying data pipeline to facilitate research on automated performance engineering and long-horizon software reasoning.",
+    "arxiv_url": "https://arxiv.org/abs/2511.06090",
+    "authors": [
+      "Jeffrey Jian Ma",
+      "Milad Hashemi",
+      "Amir Yazdanbakhsh",
+      "Kevin Swersky",
+      "Ofir Press",
+      "Enhui Li",
+      "Vijay Janapa Reddi",
+      "Parthasarathy Ranganathan"
+    ],
+    "first_author": "Jeffrey Jian Ma",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Repository-level performance optimization",
+      "Workload-driven patch generation",
+      "Test localization via coverage",
+      "Automated PR scraping pipeline",
+      "Oracle-free evaluation",
+      "Speedup ratio metric",
+      "Real-world Python scientific libraries",
+      "Correctness-preserving edits",
+      "Long-horizon codebase reasoning"
+    ],
+    "summary": "本文提出SWE-FFICIENCY基准与可复现的数据采集管道，包含498个来自真实Python科学计算仓库的性能优化任务，要求在不破坏仓库单元测试的前提下通过代码修改加速指定工作负载，并发现现有语言模型在定位瓶颈、跨函数执行推理和保持正确性方面远落后于专家（平均仅达专家提速的0.15倍）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.06090v2",
+    "published": "2025-11-08",
+    "update_time": "2025-11-11",
+    "download_time": "2025-12-11 15:56:27"
   }
 ]

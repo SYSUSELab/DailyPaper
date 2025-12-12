@@ -1,0 +1,37 @@
+[
+  {
+    "id": "2502.12115",
+    "title": "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?",
+    "abstract": "We introduce SWE-Lancer, a benchmark of over 1,400 freelance software engineering tasks from Upwork, valued at \\$1 million USD total in real-world payouts. SWE-Lancer encompasses both independent engineering tasks--ranging from \\$50 bug fixes to \\$32,000 feature implementations--and managerial tasks, where models choose between technical implementation proposals. Independent tasks are graded with end-to-end tests triple-verified by experienced software engineers, while managerial decisions are assessed against the choices of the original hired engineering managers. We evaluate model performance and find that frontier models are still unable to solve the majority of tasks. To facilitate future research, we open-source a unified Docker image and a public evaluation split, SWE-Lancer Diamond (https://github.com/openai/SWELancer-Benchmark). By mapping model performance to monetary value, we hope SWE-Lancer enables greater research into the economic impact of AI model development.",
+    "arxiv_url": "https://arxiv.org/abs/2502.12115",
+    "authors": [
+      "Samuel Miserendino",
+      "Michele Wang",
+      "Tejal Patwardhan",
+      "Johannes Heidecke"
+    ],
+    "first_author": "Samuel Miserendino",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Freelance job-derived benchmark",
+      "End-to-end browser automation tests",
+      "Economic payout mapping",
+      "Managerial proposal selection evaluation",
+      "Full-stack repository-level patching",
+      "Triple-verified test validation",
+      "Public/private evaluation splits"
+    ],
+    "summary": "本文构建并公开了一个基于真实Upwork自由职业软件工程任务（共1,488个、总计约100万美元报酬）的基准，采用专业工程师编写并三重验证的端到端测试评估模型对真实全栈修补与管理决策的能力，并报告前沿模型在该基准上的表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.12115v4",
+    "published": "2025-02-17",
+    "update_time": "2025-05-29",
+    "download_time": "2025-12-11 16:43:43"
+  }
+]

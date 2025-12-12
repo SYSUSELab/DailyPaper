@@ -1,0 +1,35 @@
+[
+  {
+    "id": "2008.12193",
+    "title": "Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent",
+    "abstract": "In this work, we propose and study annotated code search: the retrieval of code snippets paired with brief descriptions of their intent using natural language queries. On three benchmark datasets, we investigate how code retrieval systems can be improved by leveraging descriptions to better capture the intents of code snippets. Building on recent progress in transfer learning and natural language processing, we create a domain-specific retrieval model for code annotated with a natural language description. We find that our model yields significantly more relevant search results (with absolute gains up to 20.6% in mean reciprocal rank) compared to state-of-the-art code retrieval methods that do not use descriptions but attempt to compute the intent of snippets solely from unannotated code.",
+    "arxiv_url": "https://arxiv.org/abs/2008.12193",
+    "authors": [
+      "Geert Heyman",
+      "Tom Van Cutsem"
+    ],
+    "first_author": "Geert Heyman",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Annotated code snippets",
+      "Natural language intent descriptions",
+      "Description-aware ranking",
+      "Semantic-similarity fine-tuning",
+      "Transfer learning for retrieval",
+      "Benchmark dataset creation",
+      "Snippet-description pairing heuristics"
+    ],
+    "summary": "本文提出并研究“注释代码搜索”任务（带有自然语言意图描述的代码片段检索），构建三个基准数据集并通过对预训练模型的细化微调利用描述显著提升检索性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2008.12193v1",
+    "published": "2020-08-27",
+    "update_time": "2020-08-27",
+    "download_time": "2025-12-11 17:45:44"
+  }
+]

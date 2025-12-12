@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1807.04320",
+    "title": "Automated Vulnerability Detection in Source Code Using Deep Representation Learning",
+    "abstract": "Increasing numbers of software vulnerabilities are discovered every year whether they are reported publicly or discovered internally in proprietary code. These vulnerabilities can pose serious risk of exploit and result in system compromise, information leaks, or denial of service. We leveraged the wealth of C and C++ open-source code available to develop a large-scale function-level vulnerability detection system using machine learning. To supplement existing labeled vulnerability datasets, we compiled a vast dataset of millions of open-source functions and labeled it with carefully-selected findings from three different static analyzers that indicate potential exploits. The labeled dataset is available at: https://osf.io/d45bw/. Using these datasets, we developed a fast and scalable vulnerability detection tool based on deep feature representation learning that directly interprets lexed source code. We evaluated our tool on code from both real software packages and the NIST SATE IV benchmark dataset. Our results demonstrate that deep feature representation learning on source code is a promising approach for automated software vulnerability detection.",
+    "arxiv_url": "https://arxiv.org/abs/1807.04320",
+    "authors": [
+      "Rebecca L. Russell",
+      "Louis Kim",
+      "Lei H. Hamilton",
+      "Tomo Lazovich",
+      "Jacob A. Harer",
+      "Onur Ozdemir",
+      "Paul M. Ellingwood",
+      "Marc W. McConley"
+    ],
+    "first_author": "Rebecca L. Russell",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Function-level vulnerability detection",
+      "Lexed token representation with placeholder tokens",
+      "Static-analyzer-derived binary labels",
+      "Strict duplicate and near-duplicate removal",
+      "Neural embeddings with CNN/RNN feature extraction",
+      "Random-forest ensemble on learned features",
+      "Large-scale mined C/C++ corpus"
+    ],
+    "summary": "本文构建了一个由静态分析器标注的大规模C/C++函数语料并提出一种基于词法化表示、神经表征学习（CNN/RNN）与随机森林集成的自动漏洞检测方法，实验证明在真实软件包与基准集上效果良好。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/1807.04320v2",
+    "published": "2018-07-11",
+    "update_time": "2018-11-28",
+    "download_time": "2025-12-11 17:08:13"
+  },
+  {
+    "id": "1807.06756",
+    "title": "SySeVR: A Framework for Using Deep Learning to Detect Software Vulnerabilities",
+    "abstract": "The detection of software vulnerabilities (or vulnerabilities for short) is an important problem that has yet to be tackled, as manifested by the many vulnerabilities reported on a daily basis. This calls for machine learning methods for vulnerability detection. Deep learning is attractive for this purpose because it alleviates the requirement to manually define features. Despite the tremendous success of deep learning in other application domains, its applicability to vulnerability detection is not systematically understood. In order to fill this void, we propose the first systematic framework for using deep learning to detect vulnerabilities in C/C++ programs with source code. The framework, dubbed Syntax-based, Semantics-based, and Vector Representations (SySeVR), focuses on obtaining program representations that can accommodate syntax and semantic information pertinent to vulnerabilities. Our experiments with 4 software products demonstrate the usefulness of the framework: we detect 15 vulnerabilities that are not reported in the National Vulnerability Database. Among these 15 vulnerabilities, 7 are unknown and have been reported to the vendors, and the other 8 have been \"silently\" patched by the vendors when releasing newer versions of the pertinent software products.",
+    "arxiv_url": "https://arxiv.org/abs/1807.06756",
+    "authors": [
+      "Zhen Li",
+      "Deqing Zou",
+      "Shouhuai Xu",
+      "Hai Jin",
+      "Yawei Zhu",
+      "Zhaoxuan Chen"
+    ],
+    "first_author": "Zhen Li",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Syntax-based Vulnerability Candidates (SyVC)",
+      "Semantics-based Vulnerability Candidates (SeVC)",
+      "Program vectorization for vulnerability detection",
+      "AST-driven syntax extraction",
+      "Data- and control-dependency slicing",
+      "Bidirectional recurrent networks (BGRU) for code classification",
+      "Explainability of false positives/false negatives",
+      "Large-scale 126-type labeled vulnerability dataset"
+    ],
+    "summary": "本文提出SySeVR框架，通过提取基于语法的候选（SyVC）并扩展为包含数据与控制依赖的语义候选（SeVC），将SeVC编码为向量并使用深度神经网络（尤其双向GRU）检测C/C++源代码中的漏洞，同时发布了包含126类漏洞的数据集并在实际软件中发现若干未登记的漏洞。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/1807.06756v3",
+    "published": "2018-07-18",
+    "update_time": "2021-01-12",
+    "download_time": "2025-12-11 17:08:59"
+  }
+]

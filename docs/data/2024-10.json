@@ -24,5 +24,251 @@
     "published": "2024-10-02",
     "update_time": "2025-11-22",
     "download_time": "2025-12-04 23:20:17"
+  },
+  {
+    "id": "2410.01353",
+    "title": "Codev-Bench: How Do LLMs Understand Developer-Centric Code Completion?",
+    "abstract": "Code completion, a key downstream task in code generation, is one of the most frequent and impactful methods for enhancing developer productivity in software development. As intelligent completion tools evolve, we need a robust evaluation benchmark that enables meaningful comparisons between products and guides future advancements. However, existing benchmarks focus more on coarse-grained tasks without industrial analysis resembling general code generation rather than the real-world scenarios developers encounter. Moreover, these benchmarks often rely on costly and time-consuming human annotation, and the standalone test cases fail to leverage minimal tests for maximum repository-level understanding and code coverage. To address these limitations, we first analyze business data from an industrial code completion tool and redefine the evaluation criteria to better align with the developer's intent and desired completion behavior throughout the coding process. Based on these insights, we introduce Codev-Agent, an agent-based system that automates repository crawling, constructs execution environments, extracts dynamic calling chains from existing unit tests, and generates new test samples to avoid data leakage, ensuring fair and effective comparisons. Using Codev-Agent, we present the Code-Development Benchmark (Codev-Bench), a fine-grained, real-world, repository-level, and developer-centric evaluation framework. Codev-Bench assesses whether a code completion tool can capture a developer's immediate intent and suggest appropriate code across diverse contexts, providing a more realistic benchmark for code completion in modern software development.",
+    "arxiv_url": "https://arxiv.org/abs/2410.01353",
+    "authors": [
+      "Zhenyu Pan",
+      "Rongyu Cao",
+      "Yongchang Cao",
+      "Yingwei Ma",
+      "Binhua Li",
+      "Fei Huang",
+      "Han Liu",
+      "Yongbin Li"
+    ],
+    "first_author": "Zhenyu Pan",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Developer-centric evaluation",
+      "Repository-level context",
+      "Agent-based pipeline",
+      "Dynamic call-chain extraction",
+      "Automated test generation",
+      "Execution environment reconstruction",
+      "Data-leakage-aware sampling",
+      "Industrial product feedback analysis"
+    ],
+    "summary": "本文基于工业代码补全产品的使用反馈提出Codev-Agent自动化系统并构建了Codev-Bench，一个面向开发者、仓库级且细粒度的代码补全评测基准，通过仓库爬取、执行环境搭建、动态调用链提取与自动生成测试样例实现更真实和公平的模型评估。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.01353v3",
+    "published": "2024-10-02",
+    "update_time": "2024-10-24",
+    "download_time": "2025-12-11 16:37:15"
+  },
+  {
+    "id": "2410.03859",
+    "title": "SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?",
+    "abstract": "Autonomous systems for software engineering are now capable of fixing bugs and developing features. These systems are commonly evaluated on SWE-bench (Jimenez et al., 2024a), which assesses their ability to solve software issues from GitHub repositories. However, SWE-bench uses only Python repositories, with problem statements presented predominantly as text and lacking visual elements such as images. This limited coverage motivates our inquiry into how existing systems might perform on unrepresented software engineering domains (e.g., front-end, game development, DevOps), which use different programming languages and paradigms. Therefore, we propose SWE-bench Multimodal (SWE-bench M), to evaluate systems on their ability to fix bugs in visual, user-facing JavaScript software. SWE-bench M features 617 task instances collected from 17 JavaScript libraries used for web interface design, diagramming, data visualization, syntax highlighting, and interactive mapping. Each SWE-bench M task instance contains at least one image in its problem statement or unit tests. Our analysis finds that top-performing SWE-bench systems struggle with SWE-bench M, revealing limitations in visual problem-solving and cross-language generalization. Lastly, we show that SWE-agent's flexible language-agnostic features enable it to substantially outperform alternatives on SWE-bench M, resolving 12% of task instances compared to 6% for the next best system.",
+    "arxiv_url": "https://arxiv.org/abs/2410.03859",
+    "authors": [
+      "John Yang",
+      "Carlos E. Jimenez",
+      "Alex L. Zhang",
+      "Kilian Lieret",
+      "Joyce Yang",
+      "Xindi Wu",
+      "Ori Press",
+      "Niklas Muennighoff",
+      "Gabriel Synnaeve",
+      "Karthik R. Narasimhan",
+      "Diyi Yang",
+      "Sida I. Wang",
+      "Ofir Press"
+    ],
+    "first_author": "John Yang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Multimodal bug fixing",
+      "UI screenshot comprehension",
+      "Frontend JavaScript ecosystems",
+      "Repository-level fail-to-pass evaluation",
+      "Image-required task instances",
+      "Cross-language generalization challenges",
+      "Agent toolchain language-agnosticism"
+    ],
+    "summary": "本文提出 SWE-bench Multimodal，一个包含图像/视频问题的 JavaScript 前端仓库级别缺陷修复基准，揭示现有自动化 LLM 系统在视觉问题理解与跨语言泛化上的不足并提供分析与改进建议。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.03859v1",
+    "published": "2024-10-04",
+    "update_time": "2024-10-04",
+    "download_time": "2025-12-11 16:37:50"
+  },
+  {
+    "id": "2410.06992",
+    "title": "SWE-Bench+: Enhanced Coding Benchmark for LLMs",
+    "abstract": "Large Language Models (LLMs) in Software Engineering (SE) can offer assistance for coding. To facilitate a rigorous evaluation of LLMs in practical coding contexts, Carlos et al. introduced the SWE-bench dataset, which comprises 2,294 real-world GitHub issues and their corresponding pull requests, collected from 12 widely used Python repositories. Several impressive LLM-based toolkits recently are developed and evaluated on this dataset. However, a systematic evaluation of the quality of SWE-bench remains missing. In this paper, we addressed this gap by presenting an empirical analysis of the SWE-bench dataset. We conducted a manual screening of instances where SWEAgent + GPT-4 successfully resolved issues by comparing the model-generated patches with the actual pull requests. SWE-Agent+GPT-4 was at the top of SWE-bench leaderboard during the time of our study. Our analysis reveals some critical issues with the SWE-bench dataset: 1) 32.67% of the successful patches involve cheating as the solutions were directly provided in the issue report or the comments. We refer to as solution leakage problem. 2) 31.08% of the passed patches are suspicious patches due to weak test cases, i.e., the tests were not adequate to verify the correctness of a patch. When we filtered out these problematic issues, the resolution rate of SWE-Agent+GPT-4 dropped from 12.47% to 3.97%. We also observed that the same data quality issues also exist in the two variants of SWE-bench, i.e., SWE-bench Lite and SWE-Bench Verified. In addition, over 94% of the issues were created before LLM's knowledge cutoff dates, posing potential data leakage issues.",
+    "arxiv_url": "https://arxiv.org/abs/2410.06992",
+    "authors": [
+      "Reem Aleithan",
+      "Haoran Xue",
+      "Mohammad Mahdi Mohajer",
+      "Elijah Nnorom",
+      "Gias Uddin",
+      "Song Wang"
+    ],
+    "first_author": "Reem Aleithan",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Solution leakage detection",
+      "Test adequacy / weak tests",
+      "Temporal cutoff filtering",
+      "Issue-to-patch evaluation",
+      "Patch-level gold vs generated comparison",
+      "Dataset curation for robust evaluation",
+      "Leaderboard/result auditing"
+    ],
+    "summary": "本文通过对现有SWE‑bench基准进行人工与实证分析，发现大量“解答泄露”和弱测试导致的可疑通过补丁并据此构建了避开模型训练截止期且去除泄露的新基准SWE‑Bench+，在新基准上模型的修复通过率显著下降。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.06992v2",
+    "published": "2024-10-09",
+    "update_time": "2024-10-10",
+    "download_time": "2025-12-11 16:38:28"
+  },
+  {
+    "id": "2410.07331",
+    "title": "DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models",
+    "abstract": "We introduce DA-Code, a code generation benchmark specifically designed to assess LLMs on agent-based data science tasks. This benchmark features three core elements: First, the tasks within DA-Code are inherently challenging, setting them apart from traditional code generation tasks and demanding advanced coding skills in grounding and planning. Second, examples in DA-Code are all based on real and diverse data, covering a wide range of complex data wrangling and analytics tasks. Third, to solve the tasks, the models must utilize complex data science programming languages, to perform intricate data processing and derive the answers. We set up the benchmark in a controllable and executable environment that aligns with real-world data analysis scenarios and is scalable. The annotators meticulously design the evaluation suite to ensure the accuracy and robustness of the evaluation. We develop the DA-Agent baseline. Experiments show that although the baseline performs better than other existing frameworks, using the current best LLMs achieves only 30.5% accuracy, leaving ample room for improvement. We release our benchmark at https://da-code-bench.github.io.",
+    "arxiv_url": "https://arxiv.org/abs/2410.07331",
+    "authors": [
+      "Yiming Huang",
+      "Jianwen Luo",
+      "Yan Yu",
+      "Yitong Zhang",
+      "Fangyu Lei",
+      "Yifan Wei",
+      "Shizhu He",
+      "Lifu Huang",
+      "Xiao Liu",
+      "Jun Zhao",
+      "Kang Liu"
+    ],
+    "first_author": "Yiming Huang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Agent-based data science",
+      "Interactive executable sandbox",
+      "Data wrangling / EDA / ML pipeline",
+      "Multi-source data (files, databases, documents)",
+      "SQL+Python+Bash multi-language execution",
+      "Autonomous iterative code editing",
+      "Evaluation suite with red-teaming",
+      "Baseline code agent framework"
+    ],
+    "summary": "本文提出了DA-Code，一个包含500个真实复杂代理式数据科学任务的可执行基准与交互沙箱，并提供评估套件及基线代理以衡量大型语言模型在数据清洗、探索性分析与整个机器学习流水线上的自动化代码生成与推理能力。",
+    "quality": "High",
+    "conference": "EMNLP 2024",
+    "pdf_url": "https://arxiv.org/pdf/2410.07331v2",
+    "published": "2024-10-09",
+    "update_time": "2024-10-11",
+    "download_time": "2025-12-11 16:39:06"
+  },
+  {
+    "id": "2410.21647",
+    "title": "Can Language Models Replace Programmers for Coding? REPOCOD Says 'Not Yet'",
+    "abstract": "Recently, a number of repository-level code generation benchmarks-such as CoderEval, DevEval, RepoEval, RepoBench, and LongCodeArena-have emerged to evaluate the capabilities of large language models (LLMs) beyond standalone benchmarks like HumanEval and MBPP. Thus, a natural question is, would LLMs have similar performance in real world coding tasks as their performance in these benchmarks? Unfortunately, one cannot answer this question, since these benchmarks consist of short completions, synthetic examples, or focus on limited scale repositories, failing to represent real-world coding tasks.   To address these challenges, we create REPOCOD, a Python code-generation benchmark containing complex tasks with realistic dependencies in real-world large projects and appropriate metrics for evaluating source code. It includes 980 whole-function generation tasks from 11 popular projects, 50.8% of which require repository-level context. REPOCOD includes 314 developer-written test cases per instance for better evaluation. We evaluate ten LLMs on REPOCOD and find that none achieves more than 30% pass@1 on REPOCOD, indicating the necessity of building stronger LLMs that can help developers in real-world software development. In addition, we found that retrieval-augmented generation achieves better results than using target function dependencies as context.",
+    "arxiv_url": "https://arxiv.org/abs/2410.21647",
+    "authors": [
+      "Shanchao Liang",
+      "Yiran Hu",
+      "Nan Jiang",
+      "Lin Tan"
+    ],
+    "first_author": "Shanchao Liang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Repository-level dependencies",
+      "Whole-function generation",
+      "Developer-written unit tests for validation",
+      "Static and dynamic analysis for test-function mapping",
+      "Targeted test selection to reduce evaluation cost",
+      "Retrieval-augmented generation vs dependency-context",
+      "Large-scale real-world Python repositories",
+      "Execution-based evaluation (unit-test based)"
+    ],
+    "summary": "本文提出REPOCOD，一个包含来自11个大型Python项目的980个复杂仓库级全函数生成任务的基准，使用开发者编写的单元测试进行执行式评估并展示现有LLM在真实软件开发场景下表现仍然有限。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.21647v4",
+    "published": "2024-10-29",
+    "update_time": "2025-06-24",
+    "download_time": "2025-12-11 16:39:44"
+  },
+  {
+    "id": "2410.21157",
+    "title": "M2rc-Eval: Massively Multilingual Repository-level Code Completion Evaluation",
+    "abstract": "Repository-level code completion has drawn great attention in software engineering, and several benchmark datasets have been introduced. However, existing repository-level code completion benchmarks usually focus on a limited number of languages (<5), which cannot evaluate the general code intelligence abilities across different languages for existing code Large Language Models (LLMs). Besides, the existing benchmarks usually report overall average scores of different languages, where the fine-grained abilities in different completion scenarios are ignored. Therefore, to facilitate the research of code LLMs in multilingual scenarios, we propose a massively multilingual repository-level code completion benchmark covering 18 programming languages (called M2RC-EVAL), and two types of fine-grained annotations (i.e., bucket-level and semantic-level) on different completion scenarios are provided, where we obtain these annotations based on the parsed abstract syntax tree. Moreover, we also curate a massively multilingual instruction corpora M2RC- INSTRUCT dataset to improve the repository-level code completion abilities of existing code LLMs. Comprehensive experimental results demonstrate the effectiveness of our M2RC-EVAL and M2RC-INSTRUCT.",
+    "arxiv_url": "https://arxiv.org/abs/2410.21157",
+    "authors": [
+      "Jiaheng Liu",
+      "Ken Deng",
+      "Congnan Liu",
+      "Jian Yang",
+      "Shukai Liu",
+      "He Zhu",
+      "Peng Zhao",
+      "Linzheng Chai",
+      "Yanan Wu",
+      "Ke Jin",
+      "Ge Zhang",
+      "Zekun Wang",
+      "Guoan Zhang",
+      "Bangyu Xiang",
+      "Wenbo Su",
+      "Bo Zheng"
+    ],
+    "first_author": "Jiaheng Liu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Repository-level completion",
+      "Multilingual evaluation (18 languages)",
+      "AST-based cursor selection",
+      "Bucket-level difficulty labeling",
+      "Semantic-level code labels",
+      "Cross-file context retrieval",
+      "Multilingual instruction corpora for tuning"
+    ],
+    "summary": "该论文提出了一个包含18种编程语言、基于AST提供桶级与语义级精细标注的仓库级多语言代码补全基准并发布配套的多语言指令语料，以评估并提升代码大模型的跨语言仓库级补全能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.21157v1",
+    "published": "2024-10-28",
+    "update_time": "2024-10-28",
+    "download_time": "2025-12-11 16:40:18"
   }
 ]

@@ -44,5 +44,39 @@
     "published": "2024-09-18",
     "update_time": "2024-11-12",
     "download_time": "2025-12-04 23:08:44"
+  },
+  {
+    "id": "2409.04183",
+    "title": "GALLa: Graph Aligned Large Language Models for Improved Source Code Understanding",
+    "abstract": "Programming languages possess rich semantic information - such as data flow - that is represented by graphs and not available from the surface form of source code. Recent code language models have scaled to billions of parameters, but model source code solely as text tokens while ignoring any other structural information. Conversely, models that do encode structural information of code make modifications to the Transformer architecture, limiting their scale and compatibility with pretrained LLMs. In this work, we take the best of both worlds with GALLa - Graph Aligned Large Language Models. GALLa utilizes graph neural networks and cross-modal alignment technologies to inject the structural information of code into LLMs as an auxiliary task during finetuning. This framework is both model-agnostic and task-agnostic, as it can be applied to any code LLM for any code downstream task, and requires the structural graph data only at training time from a corpus unrelated to the finetuning data, while incurring no cost at inference time over the baseline LLM. Experiments on five code tasks with seven different baseline LLMs ranging in size from 350M to 14B validate the effectiveness of GALLa, demonstrating consistent improvement over the baseline, even for powerful models such as LLaMA3 and Qwen2.5-Coder.",
+    "arxiv_url": "https://arxiv.org/abs/2409.04183",
+    "authors": [
+      "Ziyin Zhang",
+      "Hang Yu",
+      "Shijie Li",
+      "Peng Di",
+      "Jianguo Li",
+      "Rui Wang"
+    ],
+    "first_author": "Ziyin Zhang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Graph Alignment",
+      "AST Integration",
+      "DFG Integration",
+      "GNN Adapters",
+      "Cross‑Modal Representation"
+    ],
+    "summary": "该论文提出GALLa框架利用图结构信息对代码LLM进行对齐，从而在多种代码理解与生成任务中提升模型性能。",
+    "quality": "High",
+    "conference": "ACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2409.04183v4",
+    "published": "2024-09-06",
+    "update_time": "2025-09-23",
+    "download_time": "2025-12-10 15:35:38"
   }
 ]

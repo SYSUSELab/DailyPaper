@@ -23,5 +23,76 @@
     "published": "2023-04-11",
     "update_time": "2023-10-05",
     "download_time": "2025-12-04 23:22:35"
+  },
+  {
+    "id": "2304.01102",
+    "title": "RunBugRun -- An Executable Dataset for Automated Program Repair",
+    "abstract": "Recently, we can notice a transition to data-driven techniques in Automated Program Repair (APR), in particular towards deep neural networks. This entails training on hundreds of thousands or even millions of non-executable code fragments. We would like to bring more attention to an aspect of code often neglected in Neural Program Repair (NPR), namely its execution. Code execution has several significant advantages. It allows for test-based evaluation of candidate fixes and can provide valuable information to aid repair. In this work we present a fully executable dataset of 450,000 small buggy/fixed program pairs originally submitted to programming competition websites written in eight different programming languages. Along with the dataset we provide infrastructure to compile, safely execute and test programs as well as fine-grained bug-type labels. To give a point of reference, we provide basic evaluation results for two baselines, one based on a generate-and-validate approach and one on deep learning. With this dataset we follow several goals: we want to lift Neural Program Repair beyond fully static code representations, foster the use of execution-based features and, by including several different languages, counterbalance the predominance of Java in the current landscape of APR datasets and benchmarks.",
+    "arxiv_url": "https://arxiv.org/abs/2304.01102",
+    "authors": [
+      "Julian Aron Prenner",
+      "Romain Robbes"
+    ],
+    "first_author": "Julian Aron Prenner",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Executable bug-fix pairs",
+      "Polyglot (8 languages)",
+      "Competitive programming submissions",
+      "Test-case harness and sandboxed execution",
+      "Fine-grained hierarchical bug labels",
+      "Runtime errors and stack traces",
+      "Curation and de-duplication pipeline",
+      "Baseline evaluations for G&V and neural repair",
+      "Cross-language knowledge transfer analysis"
+    ],
+    "summary": "本文构建了一个包含45万条可执行错误/修复程序对的跨语言自动程序修复数据集，提供编译与沙箱执行基础设施、测试用例、细粒度错误标签并给出基线评估与分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2304.01102v1",
+    "published": "2023-04-03",
+    "update_time": "2023-04-03",
+    "download_time": "2025-12-11 17:00:57"
+  },
+  {
+    "id": "2304.00409",
+    "title": "DiverseVul: A New Vulnerable Source Code Dataset for Deep Learning Based Vulnerability Detection",
+    "abstract": "We propose and release a new vulnerable source code dataset. We curate the dataset by crawling security issue websites, extracting vulnerability-fixing commits and source codes from the corresponding projects. Our new dataset contains 18,945 vulnerable functions spanning 150 CWEs and 330,492 non-vulnerable functions extracted from 7,514 commits. Our dataset covers 295 more projects than all previous datasets combined.   Combining our new dataset with previous datasets, we present an analysis of the challenges and promising research directions of using deep learning for detecting software vulnerabilities. We study 11 model architectures belonging to 4 families. Our results show that deep learning is still not ready for vulnerability detection, due to high false positive rate, low F1 score, and difficulty of detecting hard CWEs. In particular, we demonstrate an important generalization challenge for the deployment of deep learning-based models. We show that increasing the volume of training data may not further improve the performance of deep learning models for vulnerability detection, but might be useful to improve the generalization ability to unseen projects.   We also identify hopeful future research directions. We demonstrate that large language models (LLMs) are a promising research direction for ML-based vulnerability detection, outperforming Graph Neural Networks (GNNs) with code-structure features in our experiments. Moreover, developing source code specific pre-training objectives is a promising research direction to improve the vulnerability detection performance.",
+    "arxiv_url": "https://arxiv.org/abs/2304.00409",
+    "authors": [
+      "Yizheng Chen",
+      "Zhoujie Ding",
+      "Lamya Alowain",
+      "Xinyun Chen",
+      "David Wagner"
+    ],
+    "first_author": "Yizheng Chen",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "C/C++ function-level vulnerability labels",
+      "Vulnerability-fixing-commit labeling",
+      "Label noise quantification",
+      "Cross-project generalization",
+      "Code-specific pretraining objectives",
+      "Transformer vs GNN comparison",
+      "False positive rate analysis",
+      "CWE diversity coverage"
+    ],
+    "summary": "本文发布了DiverseVul，一个大规模且多样化的C/C++漏洞函数数据集，并通过对多种模型的系统评估发现：在更大训练集下基于代码预训练的Transformer优于GNN但总体F1和跨项目泛化仍然很差且标签噪声显著，强调需改进代码专用预训练与泛化方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2304.00409v2",
+    "published": "2023-04-01",
+    "update_time": "2023-08-09",
+    "download_time": "2025-12-11 17:13:24"
   }
 ]

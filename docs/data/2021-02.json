@@ -1,0 +1,98 @@
+[
+  {
+    "id": "2102.07995",
+    "title": "D2A: A Dataset Built for AI-Based Vulnerability Detection Methods Using Differential Analysis",
+    "abstract": "Static analysis tools are widely used for vulnerability detection as they understand programs with complex behavior and millions of lines of code. Despite their popularity, static analysis tools are known to generate an excess of false positives. The recent ability of Machine Learning models to understand programming languages opens new possibilities when applied to static analysis. However, existing datasets to train models for vulnerability identification suffer from multiple limitations such as limited bug context, limited size, and synthetic and unrealistic source code. We propose D2A, a differential analysis based approach to label issues reported by static analysis tools. The D2A dataset is built by analyzing version pairs from multiple open source projects. From each project, we select bug fixing commits and we run static analysis on the versions before and after such commits. If some issues detected in a before-commit version disappear in the corresponding after-commit version, they are very likely to be real bugs that got fixed by the commit. We use D2A to generate a large labeled dataset to train models for vulnerability identification. We show that the dataset can be used to build a classifier to identify possible false alarms among the issues reported by static analysis, hence helping developers prioritize and investigate potential true positives first.",
+    "arxiv_url": "https://arxiv.org/abs/2102.07995",
+    "authors": [
+      "Yunhui Zheng",
+      "Saurabh Pujar",
+      "Burn Lewis",
+      "Luca Buratti",
+      "Edward Epstein",
+      "Bo Yang",
+      "Jim Laredo",
+      "Alessandro Morari",
+      "Zhong Su"
+    ],
+    "first_author": "Yunhui Zheng",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Differential labeling from version pairs",
+      "Auto-labeler pipeline",
+      "Static-analyzer false-positive reduction",
+      "Inter-procedural trace preservation",
+      "Commit-pair based ground-truth heuristics",
+      "Scalable parallel static analysis",
+      "Static-analysis-derived features",
+      "Label quality validation via manual review"
+    ],
+    "summary": "本文提出D2A：一种基于版本差分静态分析和提交历史的自动标注方法，构建了大规模真实C/C++漏洞检测数据集并展示其在静态分析误报抑制任务中的有效性。",
+    "quality": "High",
+    "conference": "International Conference on Software Engineering (ICSE)",
+    "pdf_url": "https://arxiv.org/pdf/2102.07995v1",
+    "published": "2021-02-16",
+    "update_time": "2021-02-16",
+    "download_time": "2025-12-11 17:11:36"
+  },
+  {
+    "id": "2102.04664",
+    "title": "CodeXGLUE: A Machine Learning Benchmark Dataset for Code Understanding and Generation",
+    "abstract": "Benchmark datasets have a significant impact on accelerating research in programming language tasks. In this paper, we introduce CodeXGLUE, a benchmark dataset to foster machine learning research for program understanding and generation. CodeXGLUE includes a collection of 10 tasks across 14 datasets and a platform for model evaluation and comparison. CodeXGLUE also features three baseline systems, including the BERT-style, GPT-style, and Encoder-Decoder models, to make it easy for researchers to use the platform. The availability of such data and baselines can help the development and validation of new methods that can be applied to various program understanding and generation problems.",
+    "arxiv_url": "https://arxiv.org/abs/2102.04664",
+    "authors": [
+      "Shuai Lu",
+      "Daya Guo",
+      "Shuo Ren",
+      "Junjie Huang",
+      "Alexey Svyatkovskiy",
+      "Ambrosio Blanco",
+      "Colin Clement",
+      "Dawn Drain",
+      "Daxin Jiang",
+      "Duyu Tang",
+      "Ge Li",
+      "Lidong Zhou",
+      "Linjun Shou",
+      "Long Zhou",
+      "Michele Tufano",
+      "Ming Gong",
+      "Ming Zhou",
+      "Nan Duan",
+      "Neel Sundaresan",
+      "Shao Kun Deng",
+      "Shengyu Fu",
+      "Shujie Liu"
+    ],
+    "first_author": "Shuai Lu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Multi-task code benchmark",
+      "Program understanding and generation",
+      "Cloze-style semantic probing",
+      "Line-level code completion",
+      "Code-to-code translation (Java↔C#)",
+      "Natural-language code search (web queries, normalized identifiers)",
+      "Documentation translation",
+      "Clone detection",
+      "Defect / vulnerability detection",
+      "Baseline model suite and evaluation platform"
+    ],
+    "summary": "本文提出并发布了 CodeXGLUE，一个包含14个数据集、覆盖10类代码理解与生成任务并提供评测平台与基线实现的多任务代码基准套件。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2102.04664v2",
+    "published": "2021-02-09",
+    "update_time": "2021-03-16",
+    "download_time": "2025-12-11 17:46:31"
+  }
+]

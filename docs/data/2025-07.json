@@ -1,0 +1,127 @@
+[
+  {
+    "id": "2507.05281",
+    "title": "CoreCodeBench: A Configurable Multi-Scenario Repository-Level Benchmark",
+    "abstract": "As Large Language Models (LLMs) demonstrate increasingly sophisticated code processing capabilities, evaluating their performance on engineering-level code remains challenging. Existing repository-level benchmarks primarily focus on single scenarios, such as code generation or bug fixing, without adequately capturing the diversity and complexity of real-world software or project engineering workflows. Furthermore, these benchmarks suffer from limited controllability in question positioning and reliability issues in their generated test cases. To address these limitations, we present CorePipe, a fully automated pipeline that converts repositories into comprehensive test cases, and introduce CoreCodeBench, a configurable multi-scenario repository-level benchmark. To simulate real engineering scenarios, CorePipe generates three types of atomic questions (Development, BugFix, and Test-Driven Development) specifically targeting core code segments. These atomic questions are further combined into three types of composite questions, with difficulty levels flexibly adjusted through hyperparameter tuning. CoreCodeBench provides a comprehensive and extensive repository-level benchmark to investigate the applicability of LLMs in real-world engineering projects. Experiments with 16 LLMs across diverse scenarios reveal varying capabilities and offer multi-dimensional insights into LLM performance in engineering contexts. The code for CorePipe is available at https://github.com/AGI-Eval-Official/CoreCodeBench, and the data for CoreCodeBench can be accessed at https://huggingface.co/collections/tubehhh/corecodebench-68256d2faabf4b1610a08caa.",
+    "arxiv_url": "https://arxiv.org/abs/2507.05281",
+    "authors": [
+      "Lingyue Fu",
+      "Hao Guan",
+      "Bolun Zhang",
+      "Haowei Yuan",
+      "Yaoming Zhu",
+      "Jun Xu",
+      "Zongyu Wang",
+      "Lin Qiu",
+      "Xunliang Cai",
+      "Xuezhi Cao",
+      "Weiwen Liu",
+      "Weinan Zhang",
+      "Yong Yu"
+    ],
+    "first_author": "Lingyue Fu",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Repository-level benchmark generation",
+      "Automated repository-to-test pipeline",
+      "Core code segment identification",
+      "Atomic and composite problem composition",
+      "Configurable difficulty and position control",
+      "Test-driven development scenario synthesis",
+      "Quality inspection of generated tests",
+      "Cross-file contextual reasoning evaluation"
+    ],
+    "summary": "本文提出了自动化管道CorePipe并发布CORECODEBENCH，一个可配置的多场景仓库级基准，用于从真实代码库生成高质量的开发、修复和TDD测试用例并评估LLM在工程级代码任务中的表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2507.05281v1",
+    "published": "2025-07-04",
+    "update_time": "2025-07-04",
+    "download_time": "2025-12-11 15:51:30"
+  },
+  {
+    "id": "2507.09866",
+    "title": "Turning the Tide: Repository-based Code Reflection",
+    "abstract": "Code large language models (LLMs) enhance programming by understanding and generating code across languages, offering intelligent feedback, bug detection, and code updates through reflection, improving development efficiency and accessibility. While benchmarks (e.g. HumanEval/LiveCodeBench) evaluate code generation and real-world relevance, previous works ignore the scenario of modifying code in repositories. Considering challenges remaining in improving reflection capabilities and avoiding data contamination in dynamic benchmarks, we introduce LiveRepoReflection, a challenging benchmark for evaluating code understanding and generation in multi-file repository contexts, featuring 1,888 rigorously filtered test cases across $6$ programming languages to ensure diversity, correctness, and high difficulty. Further, we create RepoReflection-Instruct, a large-scale, quality-filtered instruction-tuning dataset derived from diverse sources, used to train RepoReflectionCoder through a two-turn dialogue process involving code generation and error-driven repair. The leaderboard evaluates over 40 LLMs to reflect the model performance of repository-based code reflection.",
+    "arxiv_url": "https://arxiv.org/abs/2507.09866",
+    "authors": [
+      "Wei Zhang",
+      "Jian Yang",
+      "Jiaxi Yang",
+      "Ya Wang",
+      "Zhoujun Li",
+      "Zeyu Cui",
+      "Binyuan Hui",
+      "Junyang Lin"
+    ],
+    "first_author": "Wei Zhang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Repository-level code reflection",
+      "Multi-file dependency reasoning",
+      "Unit-test-driven problem selection",
+      "Cross-execution verification",
+      "Dynamic decontamination and deduplication",
+      "Simulated multi-turn instruction generation",
+      "Difficulty filtering via multi-model pass rates"
+    ],
+    "summary": "本文提出了 LiveRepoReflection——一个面向多文件仓库情境的动态高难度代码反思基准，构建了用于指令微调的 RepoReflection-Instruct 数据集并训练出 RepoReflectionCoder，同时通过自动化管线、沙箱交叉执行和多模型评估建立排行榜以量化仓库级别的代码理解与修复能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2507.09866v1",
+    "published": "2025-07-14",
+    "update_time": "2025-07-14",
+    "download_time": "2025-12-11 15:52:08"
+  },
+  {
+    "id": "2507.12415",
+    "title": "SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?",
+    "abstract": "Code performance optimization is paramount in real-world software engineering and critical for production-level systems. While Large Language Models (LLMs) have demonstrated impressive capabilities in code generation and bug fixing, their proficiency in enhancing code performance at the repository level remains largely unexplored. To address this gap, we introduce SWE-Perf, the first benchmark specifically designed to systematically evaluate LLMs on code performance optimization tasks within authentic repository contexts. SWE-Perf comprises 140 carefully curated instances, each derived from performance-improving pull requests from popular GitHub repositories. Each benchmark instance includes the relevant codebase, target functions, performance-related tests, expert-authored patches, and executable environments. Through a comprehensive evaluation of representative methods that span file-level and repo-level approaches (e.g., Agentless and OpenHands), we reveal a substantial capability gap between existing LLMs and expert-level optimization performance, highlighting critical research opportunities in this emerging field.",
+    "arxiv_url": "https://arxiv.org/abs/2507.12415",
+    "authors": [
+      "Xinyi He",
+      "Qian Liu",
+      "Mingzhe Du",
+      "Lin Yan",
+      "Zhijie Fan",
+      "Yiming Huang",
+      "Zejian Yuan",
+      "Zejun Ma"
+    ],
+    "first_author": "Xinyi He",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Repository-level performance benchmark",
+      "Pull-request mining for performance improvements",
+      "Runtime-based evaluation metrics",
+      "Performance-oriented unit tests",
+      "Executable Docker environments",
+      "Expert-patch gold standards",
+      "Oracle (file-level) vs realistic (repo-level) evaluations",
+      "Repository-scale optimization challenges"
+    ],
+    "summary": "SWE-Perf 提出并发布了第一个评估语言模型在真实代码仓库中进行代码性能优化能力的基准数据集，包含 140 个基于性能改进的 PR 实例、可执行环境、性能测试与专家补丁，并在文件级与仓库级设置下对多种方法进行了系统评估，揭示模型与专家之间显著的性能差距。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2507.12415v1",
+    "published": "2025-07-16",
+    "update_time": "2025-07-16",
+    "download_time": "2025-12-11 15:52:42"
+  }
+]

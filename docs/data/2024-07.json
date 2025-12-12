@@ -1,0 +1,41 @@
+[
+  {
+    "id": "2407.02883",
+    "title": "CoIR: A Comprehensive Benchmark for Code Information Retrieval Models",
+    "abstract": "Despite the substantial success of Information Retrieval (IR) in various NLP tasks, most IR systems predominantly handle queries and corpora in natural language, neglecting the domain of code retrieval. Code retrieval is critically important yet remains under-explored, with existing methods and benchmarks inadequately representing the diversity of code in various domains and tasks. Addressing this gap, we present COIR (Code Information Retrieval Benchmark), a robust and comprehensive benchmark specifically designed to assess code retrieval capabilities. COIR comprises ten meticulously curated code datasets, spanning eight distinctive retrieval tasks across seven diverse domains. We first discuss the construction of COIR and its diverse dataset composition. Further, we evaluate nine widely used retrieval models using COIR, uncovering significant difficulties in performing code retrieval tasks even with state-of-the-art systems. To facilitate easy adoption and integration within existing research workflows, COIR has been developed as a user-friendly Python framework, readily installable via pip. It shares same data schema as other popular benchmarks like MTEB and BEIR, enabling seamless cross-benchmark evaluations. Through COIR, we aim to invigorate research in the code retrieval domain, providing a versatile benchmarking tool that encourages further development and exploration of code retrieval systems. https://github.com/CoIR-team/coir.",
+    "arxiv_url": "https://arxiv.org/abs/2407.02883",
+    "authors": [
+      "Xiangyang Li",
+      "Kuicai Dong",
+      "Yi Quan Lee",
+      "Wei Xia",
+      "Hao Zhang",
+      "Xinyi Dai",
+      "Yasheng Wang",
+      "Ruiming Tang"
+    ],
+    "first_author": "Xiangyang Li",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Cross-domain code retrieval",
+      "Text-to-code and code-to-text retrieval",
+      "Code-to-code similarity and context retrieval",
+      "Hybrid text-and-code queries",
+      "Manual dataset curation and filtering",
+      "Standardized evaluation pipeline (BEIR/MTEB-compatible)",
+      "Overfitting analysis to existing leaderboards",
+      "Zero-shot retrieval evaluation with nDCG/MAP"
+    ],
+    "summary": "本文提出COIR，一个包含10个经人工审校的数据集、覆盖多语言与多种检索任务并兼容BEIR/MTEB的统一评测框架，用于全面评估代码信息检索模型的泛化能力。",
+    "quality": "High",
+    "conference": "ACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2407.02883v3",
+    "published": "2024-07-03",
+    "update_time": "2025-06-06",
+    "download_time": "2025-12-11 17:49:00"
+  }
+]

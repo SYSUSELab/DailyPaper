@@ -31,5 +31,198 @@
     "published": "2024-12-06",
     "update_time": "2024-12-06",
     "download_time": "2025-12-04 23:24:39"
+  },
+  {
+    "id": "2412.18843",
+    "title": "Improving the Readability of Automatically Generated Tests using Large Language Models",
+    "abstract": "Search-based test generators are effective at producing unit tests with high coverage. However, such automatically generated tests have no meaningful test and variable names, making them hard to understand and interpret by developers. On the other hand, large language models (LLMs) can generate highly readable test cases, but they are not able to match the effectiveness of search-based generators, in terms of achieved code coverage.   In this paper, we propose to combine the effectiveness of search-based generators with the readability of LLM generated tests. Our approach focuses on improving test and variable names produced by search-based tools, while keeping their semantics (i.e., their coverage) unchanged.   Our evaluation on nine industrial and open source LLMs show that our readability improvement transformations are overall semantically-preserving and stable across multiple repetitions. Moreover, a human study with ten professional developers, show that our LLM-improved tests are as readable as developer-written tests, regardless of the LLM employed.",
+    "arxiv_url": "https://arxiv.org/abs/2412.18843",
+    "authors": [
+      "Matteo Biagiola",
+      "Gianluca Ghislotti",
+      "Paolo Tonella"
+    ],
+    "first_author": "Matteo Biagiola",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Automated unit-test readability improvement",
+      "Identifier and test-name renaming",
+      "Semantic-preserving transformations",
+      "Multi-step prompting to limit context",
+      "Coverage-preservation validation",
+      "Stability analysis across LLM runs",
+      "Human developer readability study",
+      "Integration with search-based generators (Evosuite)"
+    ],
+    "summary": "本文提出一种基于多步提示的技术，利用大型语言模型对搜索驱动（如Evosuite）自动生成的单元测试进行语义保留的标识符与测试名重命名以提升可读性，并通过九个LLM的实验与人工评估验证了其在保持覆盖率的同时可读性和稳定性。",
+    "quality": "High",
+    "conference": "IEEE Conference on Software Testing, Verification and Validation (ICST) 2025",
+    "pdf_url": "https://arxiv.org/pdf/2412.18843v1",
+    "published": "2024-12-25",
+    "update_time": "2024-12-25",
+    "download_time": "2025-12-11 15:40:05"
+  },
+  {
+    "id": "2501.00217",
+    "title": "The Potential of LLMs in Automating Software Testing: From Generation to Reporting",
+    "abstract": "Having a high quality software is essential in software engineering, which requires robust validation and verification processes during testing activities. Manual testing, while effective, can be time consuming and costly, leading to an increased demand for automated methods. Recent advancements in Large Language Models (LLMs) have significantly influenced software engineering, particularly in areas like requirements analysis, test automation, and debugging. This paper explores an agent-oriented approach to automated software testing, using LLMs to reduce human intervention and enhance testing efficiency. The proposed framework integrates LLMs to generate unit tests, visualize call graphs, and automate test execution and reporting. Evaluations across multiple applications in Python and Java demonstrate the system's high test coverage and efficient operation. This research underscores the potential of LLM-powered agents to streamline software testing workflows while addressing challenges in scalability and accuracy.",
+    "arxiv_url": "https://arxiv.org/abs/2501.00217",
+    "authors": [
+      "Betim Sherifi",
+      "Khaled Slhoub",
+      "Fitzroy Nembhard"
+    ],
+    "first_author": "Betim Sherifi",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Multi-agent testing framework",
+      "Automated unit test generation",
+      "Natural-language prompt-driven testing",
+      "Call-graph DOT visualization",
+      "Automated test execution and PDF reporting",
+      "Code file locator and extraction",
+      "Cross-language evaluation (Python, Java)",
+      "Test rationale generation"
+    ],
+    "summary": "本文提出了一个由多智能体与大型语言模型驱动的自动化软件测试框架，能够基于自然语言输入自动生成单元测试、可视化调用图并执行测试与生成报告，并在多个 Python 与 Java 应用上进行案例评估。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2501.00217v1",
+    "published": "2024-12-31",
+    "update_time": "2024-12-31",
+    "download_time": "2025-12-11 15:40:40"
+  },
+  {
+    "id": "2412.01769",
+    "title": "Commit0: Library Generation from Scratch",
+    "abstract": "With the goal of benchmarking generative systems beyond expert software development ability, we introduce Commit0, a benchmark that challenges AI agents to write libraries from scratch. Agents are provided with a specification document outlining the library's API as well as a suite of interactive unit tests, with the goal of producing an implementation of this API accordingly. The implementation is validated through running these unit tests. As a benchmark, Commit0 is designed to move beyond static one-shot code generation towards agents that must process long-form natural language specifications, adapt to multi-stage feedback, and generate code with complex dependencies. Commit0 also offers an interactive environment where models receive static analysis and execution feedback on the code they generate. Our experiments demonstrate that while current agents can pass some unit tests, none can yet fully reproduce full libraries. Results also show that interactive feedback is quite useful for models to generate code that passes more unit tests, validating the benchmarks that facilitate its use.",
+    "arxiv_url": "https://arxiv.org/abs/2412.01769",
+    "authors": [
+      "Wenting Zhao",
+      "Nan Jiang",
+      "Celine Lee",
+      "Justin T Chiu",
+      "Claire Cardie",
+      "Matthias Gallé",
+      "Alexander M Rush"
+    ],
+    "first_author": "Wenting Zhao",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Repository-level code generation",
+      "Interactive test-driven synthesis",
+      "Long-form specification processing",
+      "Dependency-aware implementation ordering",
+      "Execution & static-analysis feedback loop",
+      "Starter-repo hole-filling",
+      "Automated unit-test evaluation"
+    ],
+    "summary": "COMMIT0 提出一个从零生成完整软件库的基准，提供长篇规范、起始仓库与交互式单元测试以评估和促进模型在多轮反馈、依赖管理与长上下文下的代码生成能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2412.01769v1",
+    "published": "2024-12-02",
+    "update_time": "2024-12-02",
+    "download_time": "2025-12-11 16:41:31"
+  },
+  {
+    "id": "2412.11990",
+    "title": "ExecRepoBench: Multi-level Executable Code Completion Evaluation",
+    "abstract": "Code completion has become an essential tool for daily software development. Existing evaluation benchmarks often employ static methods that do not fully capture the dynamic nature of real-world coding environments and face significant challenges, including limited context length, reliance on superficial evaluation metrics, and potential overfitting to training datasets. In this work, we introduce a novel framework for enhancing code completion in software development through the creation of a repository-level benchmark ExecRepoBench and the instruction corpora Repo-Instruct, aim at improving the functionality of open-source large language models (LLMs) in real-world coding scenarios that involve complex interdependencies across multiple files. ExecRepoBench includes 1.2K samples from active Python repositories. Plus, we present a multi-level grammar-based completion methodology conditioned on the abstract syntax tree to mask code fragments at various logical units (e.g. statements, expressions, and functions). Then, we fine-tune the open-source LLM with 7B parameters on Repo-Instruct to produce a strong code completion baseline model Qwen2.5-Coder-Instruct-C based on the open-source model. Qwen2.5-Coder-Instruct-C is rigorously evaluated against existing benchmarks, including MultiPL-E and ExecRepoBench, which consistently outperforms prior baselines across all programming languages. The deployment of \\ourmethod{} can be used as a high-performance, local service for programming development\\footnote{\\url{https://execrepobench.github.io/}}.",
+    "arxiv_url": "https://arxiv.org/abs/2412.11990",
+    "authors": [
+      "Jian Yang",
+      "Jiajun Zhang",
+      "Jiaxi Yang",
+      "Ke Jin",
+      "Lei Zhang",
+      "Qiyao Peng",
+      "Ken Deng",
+      "Yibo Miao",
+      "Tianyu Liu",
+      "Zeyu Cui",
+      "Binyuan Hui",
+      "Junyang Lin"
+    ],
+    "first_author": "Jian Yang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Executable repository benchmark",
+      "Unit-test-based evaluation",
+      "AST-based multi-level masking",
+      "Repository-level (cross-file) completion",
+      "Instruction corpus for repo completion",
+      "Data decontamination (leakage removal)",
+      "Supervised fine-tuning for completion"
+    ],
+    "summary": "本文提出了可执行的仓库级代码补全基准 EXECREPOBENCH 与基于抽象语法树的多级语法掩码指令语料 REPO-INSTRUCT，并在此基础上微调开源模型以实现基于单元测试的跨文件代码补全评测与改进。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2412.11990v1",
+    "published": "2024-12-16",
+    "update_time": "2024-12-16",
+    "download_time": "2025-12-11 16:42:03"
+  },
+  {
+    "id": "2412.17744",
+    "title": "RepoTransBench: A Real-World Benchmark for Repository-Level Code Translation",
+    "abstract": "Repository-level code translation refers to translating an entire code repository from one programming language to another while preserving the functionality of the source repository. Many benchmarks have been proposed to evaluate the performance of such code translators. However, previous benchmarks mostly provide fine-grained samples, focusing at either code snippet, function, or file-level code translation. Such benchmarks do not accurately reflect real-world demands, where entire repositories often need to be translated, involving longer code length and more complex functionalities. To address this gap, we propose a new benchmark, named RepoTransBench, which is a real-world repository-level code translation benchmark with an automatically executable test suite. We conduct experiments on RepoTransBench to evaluate the translation performance of 11 advanced LLMs. We find that the Success@1 score (test success in one attempt) of the best-performing LLM is only 7.33%. To further explore the potential of LLMs for repository-level code translation, we provide LLMs with error-related feedback to perform iterative debugging and observe an average 7.09% improvement on Success@1. However, even with this improvement, the Success@1 score of the best-performing LLM is only 21%, which may not meet the need for reliable automatic repository-level code translation. Finally, we conduct a detailed error analysis and highlight current LLMs' deficiencies in repository-level code translation, which could provide a reference for further improvements.",
+    "arxiv_url": "https://arxiv.org/abs/2412.17744",
+    "authors": [
+      "Yanli Wang",
+      "Yanlin Wang",
+      "Suiquan Wang",
+      "Daya Guo",
+      "Jiachi Chen",
+      "John Grundy",
+      "Xilin Liu",
+      "Yuchi Ma",
+      "Mingzhi Mao",
+      "Hongyu Zhang",
+      "Zibin Zheng"
+    ],
+    "first_author": "Yanli Wang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Repository-level translation",
+      "Execution-based test suites",
+      "Iterative debugging with error feedback",
+      "Resource and configuration file migration",
+      "Compilability and functional correctness evaluation",
+      "Real-world repository selection and filtering",
+      "Error taxonomy for translation failures",
+      "Success@k evaluation metric"
+    ],
+    "summary": "本文提出了RepoTransBench——一个包含100个真实可执行仓库并附自动化测试套件的仓库级代码翻译基准，评估了多款大型模型并通过迭代调试与错误分析揭示了当前模型在仓库级翻译中的不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2412.17744v1",
+    "published": "2024-12-23",
+    "update_time": "2024-12-23",
+    "download_time": "2025-12-11 16:54:25"
   }
 ]

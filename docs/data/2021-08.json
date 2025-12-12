@@ -31,5 +31,76 @@
     "published": "2021-08-16",
     "update_time": "2021-08-16",
     "download_time": "2025-12-04 23:31:49"
+  },
+  {
+    "id": "2108.11590",
+    "title": "AVATAR: A Parallel Corpus for Java-Python Program Translation",
+    "abstract": "Program translation refers to migrating source code from one programming language to another. It has tremendous practical value in software development, as porting software across languages is time-consuming and costly. Automating program translation is of paramount importance in software migration, and recently researchers explored unsupervised approaches due to the unavailability of parallel corpora. However, the availability of pre-trained language models for programming languages enables supervised fine-tuning with a small number of labeled examples. Therefore, we present AVATAR, a collection of 9,515 programming problems and their solutions written in two popular languages, Java and Python. AVATAR is collected from competitive programming sites, online platforms, and open-source repositories. Furthermore, AVATAR includes unit tests for 250 examples to facilitate functional correctness evaluation. We benchmark several pre-trained language models fine-tuned on AVATAR. Experiment results show that the models lack in generating functionally accurate code.",
+    "arxiv_url": "https://arxiv.org/abs/2108.11590",
+    "authors": [
+      "Wasi Uddin Ahmad",
+      "Md Golam Rahman Tushar",
+      "Saikat Chakraborty",
+      "Kai-Wei Chang"
+    ],
+    "first_author": "Wasi Uddin Ahmad",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Parallel Java-Python corpus",
+      "Unit-test-based functional evaluation",
+      "Competitive programming solutions",
+      "Parallel function extraction",
+      "AST and dataflow similarity metrics",
+      "Solution diversity filtering",
+      "Lexical vs. execution accuracy gap"
+    ],
+    "summary": "本文构建了一个包含9,515道题及其Java/Python解法的并行语料并提供250个带单元测试的样例用于功能性评估，同时基准实验表明现有模型在生成功能正确代码方面仍有明显不足。",
+    "quality": "High",
+    "conference": "ACL 2023",
+    "pdf_url": "https://arxiv.org/pdf/2108.11590v2",
+    "published": "2021-08-26",
+    "update_time": "2023-05-04",
+    "download_time": "2025-12-11 16:50:32"
+  },
+  {
+    "id": "2108.04631",
+    "title": "Megadiff: A Dataset of 600k Java Source Code Changes Categorized by Diff Size",
+    "abstract": "This paper presents Megadiff, a dataset of source code diffs. It focuses on Java, with strict inclusion criteria based on commit message and diff size. Megadiff contains 663 029 Java diffs that can be used for research on commit comprehension, fault localization, automated program repair, and machine learning on code changes.",
+    "arxiv_url": "https://arxiv.org/abs/2108.04631",
+    "authors": [
+      "Martin Monperrus",
+      "Matias Martinez",
+      "He Ye",
+      "Fernanda Madeiral",
+      "Thomas Durieux",
+      "Zhongxing Yu"
+    ],
+    "first_author": "Martin Monperrus",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Line-based unified diffs",
+      "Java source-code change corpus",
+      "Diff-size categorization (1–40 LOC)",
+      "Full-file before-and-after context",
+      "Fixing-commit heuristic (commit-message filtering)",
+      "Raw unprocessed diffs for reproducibility",
+      "Repository-scale collection and filtering"
+    ],
+    "summary": "该论文发布了 Megadiﬀ，一个包含663,029条按改动行数（1–40行）分类、包含完整前后文件上下文且未加工的Java源代码差异数据集，旨在支持提交理解、程序修复和基于变更的机器学习研究。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2108.04631v1",
+    "published": "2021-08-10",
+    "update_time": "2021-08-10",
+    "download_time": "2025-12-11 17:00:06"
   }
 ]

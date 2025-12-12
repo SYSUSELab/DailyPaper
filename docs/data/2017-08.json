@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1708.09492",
+    "title": "Automatically Generating Commit Messages from Diffs using Neural Machine Translation",
+    "abstract": "Commit messages are a valuable resource in comprehension of software evolution, since they provide a record of changes such as feature additions and bug repairs. Unfortunately, programmers often neglect to write good commit messages. Different techniques have been proposed to help programmers by automatically writing these messages. These techniques are effective at describing what changed, but are often verbose and lack context for understanding the rationale behind a change. In contrast, humans write messages that are short and summarize the high level rationale. In this paper, we adapt Neural Machine Translation (NMT) to automatically \"translate\" diffs into commit messages. We trained an NMT algorithm using a corpus of diffs and human-written commit messages from the top 1k Github projects. We designed a filter to help ensure that we only trained the algorithm on higher-quality commit messages. Our evaluation uncovered a pattern in which the messages we generate tend to be either very high or very low quality. Therefore, we created a quality-assurance filter to detect cases in which we are unable to produce good messages, and return a warning instead.",
+    "arxiv_url": "https://arxiv.org/abs/1708.09492",
+    "authors": [
+      "Siyuan Jiang",
+      "Ameer Armaly",
+      "Collin McMillan"
+    ],
+    "first_author": "Siyuan Jiang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "Diff-to-commit translation",
+      "Diff-level summarization",
+      "Neural Machine Translation for code changes",
+      "Verb-Direct-Object filtering",
+      "Quality-assurance filter for generation",
+      "Attentional RNN encoder-decoder",
+      "Human evaluation"
+    ],
+    "summary": "本文提出将 git diff 作为输入、使用注意力 RNN 的神经机器翻译模型自动生成一行高层次的提交信息，并通过动词-直接宾语过滤与质量保证过滤器在约2M 对提交数据上进行训练与人工评估。",
+    "quality": "High",
+    "conference": "ASE (IEEE/ACM International Conference on Automated Software Engineering) 2017",
+    "pdf_url": "https://arxiv.org/pdf/1708.09492v1",
+    "published": "2017-08-30",
+    "update_time": "2017-08-30",
+    "download_time": "2025-12-11 16:27:07"
+  }
+]

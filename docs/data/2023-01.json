@@ -87,5 +87,43 @@
     "published": "2023-01-31",
     "update_time": "2023-07-19",
     "download_time": "2025-12-04 23:19:17"
+  },
+  {
+    "id": "2301.03270",
+    "title": "A Survey of Learning-based Automated Program Repair",
+    "abstract": "Automated program repair (APR) aims to fix software bugs automatically and plays a crucial role in software development and maintenance. With the recent advances in deep learning (DL), an increasing number of APR techniques have been proposed to leverage neural networks to learn bug-fixing patterns from massive open-source code repositories. Such learning-based techniques usually treat APR as a neural machine translation (NMT) task, where buggy code snippets (i.e., source language) are translated into fixed code snippets (i.e., target language) automatically. Benefiting from the powerful capability of DL to learn hidden relationships from previous bug-fixing datasets, learning-based APR techniques have achieved remarkable performance. In this paper, we provide a systematic survey to summarize the current state-of-the-art research in the learning-based APR community. We illustrate the general workflow of learning-based APR techniques and detail the crucial components, including fault localization, patch generation, patch ranking, patch validation, and patch correctness phases. We then discuss the widely-adopted datasets and evaluation metrics and outline existing empirical studies. We discuss several critical aspects of learning-based APR techniques, such as repair domains, industrial deployment, and the open science issue. We highlight several practical guidelines on applying DL techniques for future APR studies, such as exploring explainable patch generation and utilizing code features. Overall, our paper can help researchers gain a comprehensive understanding about the achievements of the existing learning-based APR techniques and promote the practical application of these techniques. Our artifacts are publicly available at \\url{https://github.com/QuanjunZhang/AwesomeLearningAPR}.",
+    "arxiv_url": "https://arxiv.org/abs/2301.03270",
+    "authors": [
+      "Quanjun Zhang",
+      "Chunrong Fang",
+      "Yuxiang Ma",
+      "Weisong Sun",
+      "Zhenyu Chen"
+    ],
+    "first_author": "Quanjun Zhang",
+    "category": [
+      "Survey"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Neural Machine Translation formulation",
+      "Fault Localization",
+      "Patch Generation",
+      "Patch Ranking & Validation",
+      "Code Representation: Sequence/Tree/Graph",
+      "Pre-trained Models for APR",
+      "Evaluation: Plausible vs Correct Patches",
+      "Multilingual and Multi-hunk Repair",
+      "Explainable Patch Generation",
+      "Open Science and Reproducibility"
+    ],
+    "summary": "本文系统综述了基于深度学习的自动程序修复（APR）研究，梳理了常见工作流程与关键组件、数据集与评测指标、实证研究、挑战与未来方向。",
+    "quality": "High",
+    "conference": "ACM Transactions on Software Engineering and Methodology (TOSEM) 2023",
+    "pdf_url": "https://arxiv.org/pdf/2301.03270v3",
+    "published": "2023-01-09",
+    "update_time": "2023-11-01",
+    "download_time": "2025-12-11 16:56:32"
   }
 ]

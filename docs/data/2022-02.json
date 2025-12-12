@@ -1,0 +1,37 @@
+[
+  {
+    "id": "2202.10868",
+    "title": "Neural Program Repair: Systems, Challenges and Solutions",
+    "abstract": "Automated Program Repair (APR) aims to automatically fix bugs in the source code. Recently, as advances in Deep Learning (DL) field, there is a rise of Neural Program Repair (NPR) studies, which formulate APR as a translation task from buggy code to correct code and adopt neural networks based on encoder-decoder architecture. Compared with other APR techniques, NPR approaches have a great advantage in applicability because they do not need any specification (i.e., a test suite). Although NPR has been a hot research direction, there isn't any overview on this field yet. In order to help interested readers understand architectures, challenges and corresponding solutions of existing NPR systems, we conduct a literature review on latest studies in this paper. We begin with introducing the background knowledge on this field. Next, to be understandable, we decompose the NPR procedure into a series of modules and explicate various design choices on each module. Furthermore, we identify several challenges and discuss the effect of existing solutions. Finally, we conclude and provide some promising directions for future research.",
+    "arxiv_url": "https://arxiv.org/abs/2202.10868",
+    "authors": [
+      "Wenkang Zhong",
+      "Chuanyi Li",
+      "Jidong Ge",
+      "Bin Luo"
+    ],
+    "first_author": "Wenkang Zhong",
+    "category": [
+      "Survey"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "NPR pipeline",
+      "Context extraction strategies",
+      "AST and structural representations",
+      "Code abstraction and anonymization",
+      "Encoder-decoder seq2seq generation",
+      "Edit-based vs token-based patching",
+      "Patch ranking and validation",
+      "Evaluation: plausible vs correct patches"
+    ],
+    "summary": "本文系统回顾了神经程序修复（NPR）研究，按预处理、输入表示、输出搜索和补丁排序四个阶段详细分析各类设计选择、面临的挑战与现有解决方案并提出未来方向。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2202.10868v2",
+    "published": "2022-02-22",
+    "update_time": "2022-09-21",
+    "download_time": "2025-12-11 16:55:53"
+  }
+]

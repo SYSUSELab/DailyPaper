@@ -31,5 +31,233 @@
     "published": "2025-03-03",
     "update_time": "2025-03-03",
     "download_time": "2025-12-05 10:10:55"
+  },
+  {
+    "id": "2503.06680",
+    "title": "FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation",
+    "abstract": "Implementing new features in repository-level codebases is a crucial application of code generation models. However, current benchmarks lack a dedicated evaluation framework for this capability. To fill this gap, we introduce FEA-Bench, a benchmark designed to assess the ability of large language models (LLMs) to perform incremental development within code repositories. We collect pull requests from 83 GitHub repositories and use rule-based and intent-based filtering to construct task instances focused on new feature development. Each task instance containing code changes is paired with relevant unit test files to ensure that the solution can be verified. The feature implementation requires LLMs to simultaneously possess code completion capabilities for new components and code editing abilities for other relevant parts in the code repository, providing a more comprehensive evaluation method of LLMs' automated software engineering capabilities. Experimental results show that LLMs perform significantly worse in the FEA-Bench, highlighting considerable challenges in such repository-level incremental code development.",
+    "arxiv_url": "https://arxiv.org/abs/2503.06680",
+    "authors": [
+      "Wei Li",
+      "Xin Zhang",
+      "Zhongxin Guo",
+      "Shaoguang Mao",
+      "Wen Luo",
+      "Guangyue Peng",
+      "Yangyu Huang",
+      "Houfeng Wang",
+      "Scarlett Li"
+    ],
+    "first_author": "Wei Li",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Repository-level incremental development",
+      "Feature implementation from pull requests",
+      "Unit-test-based execution validation",
+      "Cross-file edits and new-file addition",
+      "Automated PR-to-task collection pipeline",
+      "Large-patch long-form code generation"
+    ],
+    "summary": "本文提出FEA-Bench——一个从GitHub pull request构建的基准，用以评估LLM在仓库级别实现新功能（包括新增组件与跨文件编辑）能力，并以单元测试执行结果作为验证，实验证明当前模型在此任务上表现较差。",
+    "quality": "High",
+    "conference": "ACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2503.06680v2",
+    "published": "2025-03-09",
+    "update_time": "2025-06-19",
+    "download_time": "2025-12-11 16:44:20"
+  },
+  {
+    "id": "2503.06689",
+    "title": "DependEval: Benchmarking LLMs for Repository Dependency Understanding",
+    "abstract": "While large language models (LLMs) have shown considerable promise in code generation, real-world software development demands advanced repository-level reasoning. This includes understanding dependencies, project structures, and managing multi-file changes. However, the ability of LLMs to effectively comprehend and handle complex code repositories has yet to be fully explored. To address challenges, we introduce a hierarchical benchmark designed to evaluate repository dependency understanding (DependEval). Benchmark is based on 15,576 repositories collected from real-world websites. It evaluates models on three core tasks: Dependency Recognition, Repository Construction, and Multi-file Editing, across 8 programming languages from actual code repositories. Our evaluation of over 25 LLMs reveals substantial performance gaps and provides valuable insights into repository-level code understanding.",
+    "arxiv_url": "https://arxiv.org/abs/2503.06689",
+    "authors": [
+      "Junjia Du",
+      "Yadi Liu",
+      "Hongcheng Guo",
+      "Jiawei Wang",
+      "Haojian Huang",
+      "Yunyi Ni",
+      "Zhoujun Li"
+    ],
+    "first_author": "Junjia Du",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Repository dependency resolution",
+      "Cross-file dependency parsing",
+      "Repository structure generation from requirements",
+      "Coordinated multi-file editing",
+      "Hierarchical evaluation metrics",
+      "Static import-based dependency extraction",
+      "Call-chain extraction",
+      "Multilingual repository benchmark"
+    ],
+    "summary": "本文提出DependEval，一个覆盖8种编程语言、基于15,576个真实仓库的分层基准，用于评估LLM在依赖识别、仓库构建和多文件编辑等仓库级代码理解任务上的能力，并在25+模型上给出细粒度性能分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.06689v1",
+    "published": "2025-03-09",
+    "update_time": "2025-03-09",
+    "download_time": "2025-12-11 16:45:03"
+  },
+  {
+    "id": "2503.07010",
+    "title": "ProjectEval: A Benchmark for Programming Agents Automated Evaluation on Project-Level Code Generation",
+    "abstract": "Recently, LLM agents have made rapid progress in improving their programming capabilities. However, existing benchmarks lack the ability to automatically evaluate from users' perspective, and also lack the explainability of the results of LLM agents' code generation capabilities. Thus, we introduce ProjectEval, a new benchmark for LLM agents project-level code generation's automated evaluation by simulating user interaction. ProjectEval is constructed by LLM with human reviewing. It has three different level inputs of natural languages or code skeletons. ProjectEval can evaluate the generated projects by user interaction simulation for execution, and by code similarity through existing objective indicators. Through ProjectEval, we find that systematic engineering project code, overall understanding of the project and comprehensive analysis capability are the keys for LLM agents to achieve practical projects. Our findings and benchmark provide valuable insights for developing more effective programming agents that can be deployed in future real-world production.",
+    "arxiv_url": "https://arxiv.org/abs/2503.07010",
+    "authors": [
+      "Kaiyuan Liu",
+      "Youcheng Pan",
+      "Yang Xiang",
+      "Daojing He",
+      "Jing Li",
+      "Yexing Du",
+      "Tianrun Gao"
+    ],
+    "first_author": "Kaiyuan Liu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Project-level code generation benchmark",
+      "User interaction simulation",
+      "Execution-based automated testing",
+      "Three-level input (NL / checklist / skeleton)",
+      "Parameter-description alignment",
+      "Semi-automated construction (LLM + human review)",
+      "Web and console project evaluation",
+      "Explainable evaluation metrics"
+    ],
+    "summary": "本文提出了ProjectEval，一个通过模拟用户交互并结合三种输入级别与执行型测试套件，对编程代理项目级代码生成进行自动化且可解释评估的基准。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.07010v2",
+    "published": "2025-03-10",
+    "update_time": "2025-05-31",
+    "download_time": "2025-12-11 16:45:49"
+  },
+  {
+    "id": "2503.07358",
+    "title": "RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing",
+    "abstract": "We present RepoST, a scalable method to construct environments that provide execution feedback for repository-level code generation for both training and evaluation. Unlike existing works that aim to build entire repositories for execution, which is challenging for both human and LLMs, we provide execution feedback with sandbox testing, which isolates a given target function and its dependencies to a separate script for testing. Sandbox testing reduces the complexity of external dependencies and enables constructing environments at a large scale. We use our method to construct RepoST-Train, a large-scale train set with 7,415 functions from 832 repositories. Training with the execution feedback provided by RepoST-Train leads to a performance gain of 5.5% Pass@1 on HumanEval and 3.5% Pass@1 on RepoEval. We also build an evaluation dataset, RepoST-Eval, and benchmark 12 code generation models.",
+    "arxiv_url": "https://arxiv.org/abs/2503.07358",
+    "authors": [
+      "Yiqing Xie",
+      "Alex Xie",
+      "Divyanshu Sheth",
+      "Pengfei Liu",
+      "Daniel Fried",
+      "Carolyn Rose"
+    ],
+    "first_author": "Yiqing Xie",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Sandbox Testing",
+      "Repository-level Environment Construction",
+      "Function-level Sandboxing",
+      "Automated Test Generation",
+      "Equivalence Testing",
+      "Mocking External APIs and Files",
+      "AST-based Functionality Verification",
+      "Iterative Debugging and Filtering",
+      "Executable Evaluation Scripts",
+      "Large-scale Train/Eval Dataset Construction"
+    ],
+    "summary": "本文提出REPOST，通过将目标函数及其局部依赖沙箱化并由LLM生成测试与模拟资源，自动构建可执行的仓库级代码生成训练与评估环境，并发布大规模的训练集与评测集以提升模型性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.07358v1",
+    "published": "2025-03-10",
+    "update_time": "2025-03-10",
+    "download_time": "2025-12-11 16:46:22"
+  },
+  {
+    "id": "2503.09433",
+    "title": "CASTLE: Benchmarking Dataset for Static Code Analyzers and LLMs towards CWE Detection",
+    "abstract": "Identifying vulnerabilities in source code is crucial, especially in critical software components. Existing methods such as static analysis, dynamic analysis, formal verification, and recently Large Language Models are widely used to detect security flaws. This paper introduces CASTLE (CWE Automated Security Testing and Low-Level Evaluation), a benchmarking framework for evaluating the vulnerability detection capabilities of different methods. We assess 13 static analysis tools, 10 LLMs, and 2 formal verification tools using a hand-crafted dataset of 250 micro-benchmark programs covering 25 common CWEs. We propose the CASTLE Score, a novel evaluation metric to ensure fair comparison. Our results reveal key differences: ESBMC (a formal verification tool) minimizes false positives but struggles with vulnerabilities beyond model checking, such as weak cryptography or SQL injection. Static analyzers suffer from high false positives, increasing manual validation efforts for developers. LLMs perform exceptionally well in the CASTLE dataset when identifying vulnerabilities in small code snippets. However, their accuracy declines, and hallucinations increase as the code size grows. These results suggest that LLMs could play a pivotal role in future security solutions, particularly within code completion frameworks, where they can provide real-time guidance to prevent vulnerabilities. The dataset is accessible at https://github.com/CASTLE-Benchmark.",
+    "arxiv_url": "https://arxiv.org/abs/2503.09433",
+    "authors": [
+      "Richard A. Dubniczky",
+      "Krisztofer Zoltán Horvát",
+      "Tamás Bisztray",
+      "Mohamed Amine Ferrag",
+      "Lucas C. Cordeiro",
+      "Norbert Tihanyi"
+    ],
+    "first_author": "Richard A. Dubniczky",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "CWE micro-benchmarks",
+      "compilable C snippets",
+      "line-level vulnerability labeling",
+      "benchmark scoring metric",
+      "static analyzer false-positive analysis",
+      "LLM detection scalability",
+      "formal verification coverage"
+    ],
+    "summary": "本文构建了一个包含250个可编译C微基准、覆盖25类CWE的漏洞检测基准并提出评估度量，通过比较静态分析器、形式验证工具与多款LLM揭示各方法在误报率、覆盖范围与随代码规模扩展时性能衰减的差异。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.09433v2",
+    "published": "2025-03-12",
+    "update_time": "2025-03-31",
+    "download_time": "2025-12-11 17:19:57"
+  },
+  {
+    "id": "2503.22388",
+    "title": "Why Stop at One Error? Benchmarking LLMs as Data Science Code Debuggers for Multi-Hop and Multi-Bug Errors",
+    "abstract": "LLMs are transforming software development, yet current code generation and code repair benchmarks mainly assess syntactic and functional correctness in simple, single-error cases. LLMs' capabilities to autonomously find and fix runtime logical errors in complex data science code remain largely unexplored. To address this gap, we introduce DSDBench: the Data Science Debugging Benchmark, the first benchmark for systematic evaluation of LLMs on multi-hop error tracing and multi-bug detection in data science code debugging. DSDBench adapts datasets from existing data science task benchmarks, such as DABench and MatPlotBench, featuring realistic data science debugging tasks with automatically synthesized multi-hop, multi-bug code snippets. DSDBench includes 1,117 annotated samples with 741 cause-effect error pairs and runtime error messages. Evaluations of state-of-the-art LLMs on DSDBench show significant performance gaps, highlighting challenges in debugging logical runtime errors in data science code. DSDBench offers a crucial resource to evaluate and improve LLMs' debugging and reasoning capabilities, enabling more reliable AI-assisted data science in the future. DSDBench is publicly available at github.com/KevinCL16/DSDBench.",
+    "arxiv_url": "https://arxiv.org/abs/2503.22388",
+    "authors": [
+      "Zhiyu Yang",
+      "Shuo Wang",
+      "Yukun Yan",
+      "Yang Deng"
+    ],
+    "first_author": "Zhiyu Yang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Multi-hop Error Tracing",
+      "Multi-Bug Detection",
+      "Runtime Error Injection",
+      "Cause-Effect Line Annotation",
+      "Automated Error Injection Pipeline",
+      "Library API Misuse",
+      "Interactive Notebook Debugging",
+      "Data Science Workflow Failures"
+    ],
+    "summary": "本文提出并发布了DSDBench——一个针对数据科学脚本的基准数据集与自动化注入/对齐流水线，用以评估LLM在多跳与多错误运行时调试（定位根因并关联错误触发行）方面的能力，并通过大规模实证揭示了现有模型在此任务上的显著不足。",
+    "quality": "High",
+    "conference": "EMNLP 2025",
+    "pdf_url": "https://arxiv.org/pdf/2503.22388v3",
+    "published": "2025-03-28",
+    "update_time": "2025-09-16",
+    "download_time": "2025-12-11 17:20:27"
   }
 ]

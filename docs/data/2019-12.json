@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1912.02972",
+    "title": "ATOM: Commit Message Generation Based on Abstract Syntax Tree and Hybrid Ranking",
+    "abstract": "Commit messages record code changes (e.g., feature modifications and bug repairs) in natural language, and are useful for program comprehension. Due to the frequent updates of software and time cost, developers are generally unmotivated to write commit messages for code changes. Therefore, automating the message writing process is necessitated. Previous studies on commit message generation have been benefited from generation models or retrieval models, but the code structure of changed code, i.e., AST, which can be important for capturing code semantics, has not been explicitly involved. Moreover, although generation models have the advantages of synthesizing commit messages for new code changes, they are not easy to bridge the semantic gap between code and natural languages which could be mitigated by retrieval models. In this paper, we propose a novel commit message generation model, named ATOM, which explicitly incorporates the abstract syntax tree for representing code changes and integrates both retrieved and generated messages through hybrid ranking. Specifically, the hybrid ranking module can prioritize the most accurate message from both retrieved and generated messages regarding one code change. We evaluate the proposed model ATOM on our dataset crawled from 56 popular Java repositories. Experimental results demonstrate that ATOM increases the state-of-the-art models by 30.72% in terms of BLEU-4 (an accuracy measure that is widely used to evaluate text generation systems). Qualitative analysis also demonstrates the effectiveness of ATOM in generating accurate code commit messages.",
+    "arxiv_url": "https://arxiv.org/abs/1912.02972",
+    "authors": [
+      "Shangqing Liu",
+      "Cuiyun Gao",
+      "Sen Chen",
+      "Lun Yiu Nie",
+      "Yang Liu"
+    ],
+    "first_author": "Shangqing Liu",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "AST-based code representation",
+      "AST-to-sequence encoding",
+      "Hybrid retrieval-generation ranking",
+      "Commit/diff-level summarization",
+      "BiLSTM with attention for AST paths",
+      "Function-level dataset cleaning"
+    ],
+    "summary": "本文提出ATOM，一种显式利用抽象语法树进行代码变更表示并通过检索与生成结果的混合排序优先选取最准确提交信息的方法，同时发布了约16万条Java提交的基准数据集，显著提升了BLEU-4成绩。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/1912.02972v2",
+    "published": "2019-12-06",
+    "update_time": "2020-11-11",
+    "download_time": "2025-12-11 16:27:38"
+  },
+  {
+    "id": "1912.03768",
+    "title": "TypeWriter: Neural Type Prediction with Search-based Validation",
+    "abstract": "Maintaining large code bases written in dynamically typed languages, such as JavaScript or Python, can be challenging due to the absence of type annotations: simple data compatibility errors proliferate, IDE support is limited, and APIs are hard to comprehend. Recent work attempts to address those issues through either static type inference or probabilistic type prediction. Unfortunately, static type inference for dynamic languages is inherently limited, while probabilistic approaches suffer from imprecision. This paper presents TypeWriter, the first combination of probabilistic type prediction with search-based refinement of predicted types. TypeWriter's predictor learns to infer the return and argument types for functions from partially annotated code bases by combining the natural language properties of code with programming language-level information. To validate predicted types, TypeWriter invokes a gradual type checker with different combinations of the predicted types, while navigating the space of possible type combinations in a feedback-directed manner. We implement the TypeWriter approach for Python and evaluate it on two code corpora: a multi-million line code base at Facebook and a collection of 1,137 popular open-source projects. We show that TypeWriter's type predictor achieves an F1 score of 0.64 (0.79) in the top-1 (top-5) predictions for return types, and 0.57 (0.80) for argument types, which clearly outperforms prior type prediction models. By combining predictions with search-based validation, TypeWriter can fully annotate between 14% to 44% of the files in a randomly selected corpus, while ensuring type correctness. A comparison with a static type inference tool shows that TypeWriter adds many more non-trivial types. TypeWriter currently suggests types to developers at Facebook and several thousands of types have already been accepted with minimal changes.",
+    "arxiv_url": "https://arxiv.org/abs/1912.03768",
+    "authors": [
+      "Michael Pradel",
+      "Georgios Gousios",
+      "Jason Liu",
+      "Satish Chandra"
+    ],
+    "first_author": "Michael Pradel",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Neural type prediction",
+      "Feedback-directed search",
+      "Gradual type checker validation",
+      "Function-level argument and return typing",
+      "Identifier and docstring context",
+      "Usage-token sequence embeddings",
+      "Combinatorial search for consistent annotations",
+      "Automated type annotation for Python"
+    ],
+    "summary": "本文提出 TypeWriter：通过结合基于神经网络的函数参数/返回类型预测与基于反馈的搜索验证（使用渐进式类型检查器）自动为 Python 代码添加类型注解，并在大规模代码库上验证了其实用性与效果。",
+    "quality": "High",
+    "conference": "ICSE 2019",
+    "pdf_url": "https://arxiv.org/pdf/1912.03768v2",
+    "published": "2019-12-08",
+    "update_time": "2020-03-06",
+    "download_time": "2025-12-11 17:51:07"
+  }
+]

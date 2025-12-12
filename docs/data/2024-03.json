@@ -68,5 +68,119 @@
     "published": "2024-03-13",
     "update_time": "2024-12-14",
     "download_time": "2025-12-04 23:27:14"
+  },
+  {
+    "id": "2404.00599",
+    "title": "EvoCodeBench: An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+    "abstract": "How to evaluate Large Language Models (LLMs) in code generation is an open question. Existing benchmarks demonstrate poor alignment with real-world code repositories and are insufficient to evaluate the coding abilities of LLMs. This paper proposes a new benchmark - EvoCodeBench to address the preceding problems, which has three primary advances. (1) EvoCodeBench aligns with real-world repositories in multiple dimensions, e.g., code distributions and dependency distributions. (2) EvoCodeBench offers comprehensive annotations (e.g., requirements, reference code, and reference dependencies), and robust evaluation metrics (e.g., Pass@k and Recall@k). (3) EvoCodeBench is an evolving benchmark to avoid data leakage. We build an automatic pipeline to update EvoCodeBench from the latest repositories. We release the first version - EvoCodeBench-2403, containing 275 samples from 25 real-world repositories. Based on EvoCodeBench, we propose repository-level code generation and evaluate 10 popular LLMs (e.g., gpt-4, gpt-3.5, DeepSeek Coder, StarCoder 2, CodeLLaMa, Gemma, and Qwen 1.5). Our experiments reveal the coding abilities of these LLMs in real-world repositories. For example, the highest Pass@1 of gpt-4 only is 20.73% in our experiments. We also analyze failed cases and summarize the shortcomings of existing LLMs in EvoCodeBench. We release EvoCodeBench, all prompts, and LLMs' completions for further community analysis.",
+    "arxiv_url": "https://arxiv.org/abs/2404.00599",
+    "authors": [
+      "Jia Li",
+      "Ge Li",
+      "Xuanming Zhang",
+      "Yihong Dong",
+      "Zhi Jin"
+    ],
+    "first_author": "Jia Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Repository-level code generation",
+      "Evolving benchmark",
+      "Dependency-aware evaluation",
+      "Reference-dependency Recall@k",
+      "Pass@k functional testing",
+      "Automatic update pipeline",
+      "Real-world repository alignment",
+      "Standalone vs non-standalone functions"
+    ],
+    "summary": "本文提出了EvoCodeBench——一个与真实开源仓库分布对齐、可周期更新的仓库级代码生成基准，提供依赖注释与测试用例并用以评估多款LLM在实际仓库情境下的代码生成能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2404.00599v1",
+    "published": "2024-03-31",
+    "update_time": "2024-03-31",
+    "download_time": "2025-12-11 16:33:24"
+  },
+  {
+    "id": "2403.18624",
+    "title": "Vulnerability Detection with Code Language Models: How Far Are We?",
+    "abstract": "In the context of the rising interest in code language models (code LMs) and vulnerability detection, we study the effectiveness of code LMs for detecting vulnerabilities. Our analysis reveals significant shortcomings in existing vulnerability datasets, including poor data quality, low label accuracy, and high duplication rates, leading to unreliable model performance in realistic vulnerability detection scenarios. Additionally, the evaluation methods used with these datasets are not representative of real-world vulnerability detection.   To address these challenges, we introduce PrimeVul, a new dataset for training and evaluating code LMs for vulnerability detection. PrimeVul incorporates a novel set of data labeling techniques that achieve comparable label accuracy to human-verified benchmarks while significantly expanding the dataset. It also implements a rigorous data de-duplication and chronological data splitting strategy to mitigate data leakage issues, alongside introducing more realistic evaluation metrics and settings. This comprehensive approach aims to provide a more accurate assessment of code LMs' performance in real-world conditions.   Evaluating code LMs on PrimeVul reveals that existing benchmarks significantly overestimate the performance of these models. For instance, a state-of-the-art 7B model scored 68.26% F1 on BigVul but only 3.09% F1 on PrimeVul. Attempts to improve performance through advanced training techniques and larger models like GPT-3.5 and GPT-4 were unsuccessful, with results akin to random guessing in the most stringent settings. These findings underscore the considerable gap between current capabilities and the practical requirements for deploying code LMs in security roles, highlighting the need for more innovative research in this domain.",
+    "arxiv_url": "https://arxiv.org/abs/2403.18624",
+    "authors": [
+      "Yangruibo Ding",
+      "Yanjun Fu",
+      "Omniyyah Ibrahim",
+      "Chawin Sitawarin",
+      "Xinyun Chen",
+      "Basel Alomair",
+      "David Wagner",
+      "Baishakhi Ray",
+      "Yizheng Chen"
+    ],
+    "first_author": "Yangruibo Ding",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Label Noise Analysis",
+      "Data De-duplication",
+      "Chronological Train-Test Split",
+      "False-Positive-Constrained Metric",
+      "Pairwise Vulnerable-vs-Fixed Evaluation",
+      "Commit-based Labeling Pitfalls",
+      "CWE Coverage Expansion",
+      "Real-world Evaluation Protocols"
+    ],
+    "summary": "本文分析了现有漏洞数据集的标签噪声与数据泄露问题，提出高质量去重的大规模漏洞数据集PRIMEVUL并引入VD‑S与成对评估等更真实的评估指南，实验证明现有代码语言模型在现实漏洞检测场景下表现严重不足。",
+    "quality": "High",
+    "conference": "IEEE/ACM International Conference on Software Engineering (ICSE 2025)",
+    "pdf_url": "https://arxiv.org/pdf/2403.18624v2",
+    "published": "2024-03-27",
+    "update_time": "2024-07-10",
+    "download_time": "2025-12-11 17:15:08"
+  },
+  {
+    "id": "2403.16702",
+    "title": "ProCQA: A Large-scale Community-based Programming Question Answering Dataset for Code Search",
+    "abstract": "Retrieval-based code question answering seeks to match user queries in natural language to relevant code snippets. Previous approaches typically rely on pretraining models using crafted bi-modal and uni-modal datasets to align text and code representations. In this paper, we introduce ProCQA, a large-scale programming question answering dataset extracted from the StackOverflow community, offering naturally structured mixed-modal QA pairs. To validate its effectiveness, we propose a modality-agnostic contrastive pre-training approach to improve the alignment of text and code representations of current code language models. Compared to previous models that primarily employ bimodal and unimodal pairs extracted from CodeSearchNet for pre-training, our model exhibits significant performance improvements across a wide range of code retrieval benchmarks.",
+    "arxiv_url": "https://arxiv.org/abs/2403.16702",
+    "authors": [
+      "Zehan Li",
+      "Jianfei Zhang",
+      "Chuantao Yin",
+      "Yuanxin Ouyang",
+      "Wenge Rong"
+    ],
+    "first_author": "Zehan Li",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "Mixed-modal (interleaved code and text) QA pairs",
+      "Community Q&A sourcing (StackOverflow)",
+      "Modality-agnostic contrastive pretraining",
+      "Dual-encoder representation learning",
+      "Retrieval-based code search",
+      "Rule-based filtering and decontamination",
+      "Large-scale multi-language corpus"
+    ],
+    "summary": "本文提出ProCQA——一个从StackOverflow挖掘的约500万条跨11种编程语言的混合模态（代码与文本交织）问答数据集，并基于此提出模态不可知的对比预训练方法以提升代码与文本表示对齐与检索性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2403.16702v1",
+    "published": "2024-03-25",
+    "update_time": "2024-03-25",
+    "download_time": "2025-12-11 17:47:46"
   }
 ]

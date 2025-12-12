@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2001.02334",
+    "title": "$μ$VulDeePecker: A Deep Learning-Based System for Multiclass Vulnerability Detection",
+    "abstract": "Fine-grained software vulnerability detection is an important and challenging problem. Ideally, a detection system (or detector) not only should be able to detect whether or not a program contains vulnerabilities, but also should be able to pinpoint the type of a vulnerability in question. Existing vulnerability detection methods based on deep learning can detect the presence of vulnerabilities (i.e., addressing the binary classification or detection problem), but cannot pinpoint types of vulnerabilities (i.e., incapable of addressing multiclass classification). In this paper, we propose the first deep learning-based system for multiclass vulnerability detection, dubbed $μ$VulDeePecker. The key insight underlying $μ$VulDeePecker is the concept of code attention, which can capture information that can help pinpoint types of vulnerabilities, even when the samples are small. For this purpose, we create a dataset from scratch and use it to evaluate the effectiveness of $μ$VulDeePecker. Experimental results show that $μ$VulDeePecker is effective for multiclass vulnerability detection and that accommodating control-dependence (other than data-dependence) can lead to higher detection capabilities.",
+    "arxiv_url": "https://arxiv.org/abs/2001.02334",
+    "authors": [
+      "Deqing Zou",
+      "Sujuan Wang",
+      "Shouhuai Xu",
+      "Zhen Li",
+      "Hai Jin"
+    ],
+    "first_author": "Deqing Zou",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Multiclass vulnerability classification",
+      "Code attention",
+      "Code gadget extraction",
+      "Control-dependence analysis",
+      "System Dependency Graphs",
+      "Feature-fusion BLSTM architecture",
+      "API/library call vulnerability detection",
+      "Fine-grained CWE-based labeling"
+    ],
+    "summary": "本文提出µVulDeePecker，通过引入“code attention”并在code gadget中融合数据依赖与控制依赖、采用特征融合的BLSTM架构，对C/C++中基于库/API调用的漏洞进行多类细粒度检测并发布了包含40类漏洞的代码片段数据集以验证其有效性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2001.02334v1",
+    "published": "2020-01-08",
+    "update_time": "2020-01-08",
+    "download_time": "2025-12-11 17:10:27"
+  }
+]

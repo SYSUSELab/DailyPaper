@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1909.09436",
+    "title": "CodeSearchNet Challenge: Evaluating the State of Semantic Code Search",
+    "abstract": "Semantic code search is the task of retrieving relevant code given a natural language query. While related to other information retrieval tasks, it requires bridging the gap between the language used in code (often abbreviated and highly technical) and natural language more suitable to describe vague concepts and ideas.   To enable evaluation of progress on code search, we are releasing the CodeSearchNet Corpus and are presenting the CodeSearchNet Challenge, which consists of 99 natural language queries with about 4k expert relevance annotations of likely results from CodeSearchNet Corpus. The corpus contains about 6 million functions from open-source code spanning six programming languages (Go, Java, JavaScript, PHP, Python, and Ruby). The CodeSearchNet Corpus also contains automatically generated query-like natural language for 2 million functions, obtained from mechanically scraping and preprocessing associated function documentation. In this article, we describe the methodology used to obtain the corpus and expert labels, as well as a number of simple baseline solutions for the task.   We hope that CodeSearchNet Challenge encourages researchers and practitioners to study this interesting task further and will host a competition and leaderboard to track the progress on the challenge. We are also keen on extending CodeSearchNet Challenge to more queries and programming languages in the future.",
+    "arxiv_url": "https://arxiv.org/abs/1909.09436",
+    "authors": [
+      "Hamel Husain",
+      "Ho-Hsiang Wu",
+      "Tiferet Gazit",
+      "Miltiadis Allamanis",
+      "Marc Brockschmidt"
+    ],
+    "first_author": "Hamel Husain",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Function-documentation pairing",
+      "Semantic code retrieval",
+      "Expert relevance annotations",
+      "Cross-language corpus (6 languages)",
+      "Heuristic preprocessing and deduplication",
+      "Annotation interface and protocol",
+      "NDCG ranking evaluation",
+      "Neural+Elasticsearch baseline ensemble"
+    ],
+    "summary": "本文发布了包含约200万条函数-文档对的CodeSearchNet语料库并提出了包含99条查询与约4026条专家相关性标注的CodeSearchNet挑战，介绍了数据收集与过滤流程、注释方法及若干基线检索模型以评估语义代码搜索进展。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/1909.09436v3",
+    "published": "2019-09-20",
+    "update_time": "2020-06-08",
+    "download_time": "2025-12-11 17:06:35"
+  }
+]

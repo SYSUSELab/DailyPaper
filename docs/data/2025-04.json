@@ -1,0 +1,177 @@
+[
+  {
+    "id": "2504.08703",
+    "title": "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents",
+    "abstract": "Coding agents powered by large language models have shown impressive capabilities in software engineering tasks, but evaluating their performance across diverse programming languages and real-world scenarios remains challenging. We introduce SWE-PolyBench, a new multi-language benchmark for repository-level, execution-based evaluation of coding agents. SWE-PolyBench contains 2110 instances from 21 repositories and includes tasks in Java (165), JavaScript (1017), TypeScript (729) and Python (199), covering bug fixes, feature additions, and code refactoring. We provide a task and repository-stratified subsample (SWE-PolyBench500) and release an evaluation harness allowing for fully automated evaluation. To enable a more comprehensive comparison of coding agents, this work also presents a novel set of metrics rooted in syntax tree analysis. We evaluate leading open source coding agents on SWE-PolyBench, revealing their strengths and limitations across languages, task types, and complexity classes. Our experiments show that current agents exhibit uneven performances across languages and struggle with complex problems while showing higher performance on simpler tasks. SWE-PolyBench aims to drive progress in developing more versatile and robust AI coding assistants for real-world software engineering. Our datasets and code are available at: https://github.com/amazon-science/SWE-PolyBench",
+    "arxiv_url": "https://arxiv.org/abs/2504.08703",
+    "authors": [
+      "Muhammad Shihab Rashid",
+      "Christian Bock",
+      "Yuan Zhuang",
+      "Alexander Buchholz",
+      "Tim Esler",
+      "Simon Valentin",
+      "Luca Franceschi",
+      "Martin Wistuba",
+      "Prabhu Teja Sivaprasad",
+      "Woo Jung Kim",
+      "Anoop Deoras",
+      "Giovanni Zappella",
+      "Laurent Callot"
+    ],
+    "first_author": "Muhammad Shihab Rashid",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Repository-level code edits",
+      "Pull-request-derived tasks",
+      "Multi-language benchmark",
+      "Execution-based evaluation with unit tests",
+      "Concrete Syntax Tree (CST) node metrics",
+      "File- and node-retrieval metrics",
+      "Stratified 500-sample subset for fast iteration",
+      "Bug/feature/refactor task taxonomy",
+      "Cross-language robustness analysis",
+      "Automated evaluation harness"
+    ],
+    "summary": "本文提出SWE-PolyBench，一个包含2110个基于Pull Request的多语言（Java/JavaScript/TypeScript/Python）仓库级执行型基准，并引入基于语法树的文件与节点检索度量与自动化评估工具以评测编码代理在不同语言与复杂度下的表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2504.08703v3",
+    "published": "2025-04-11",
+    "update_time": "2025-04-23",
+    "download_time": "2025-12-11 15:46:42"
+  },
+  {
+    "id": "2504.21205",
+    "title": "SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories",
+    "abstract": "This paper introduces SecRepoBench, a benchmark to evaluate code agents on secure code completion in real-world repositories. SecRepoBench has 318 code completion tasks in 27 C/C++ repositories, covering 15 CWEs. We evaluate 28 standalone LLMs and 13 code agents across 3 state-of-the-art agent frameworks using our benchmark. We find that state-of-the-art LLMs struggle with generating correct and secure code completions. However, code agents significantly outperform standalone LLMs. We show that SecRepoBench is more difficult than the prior state-of-the-art benchmark. Finally, our comprehensive analysis provides insights into potential directions for enhancing the ability of code agents to write correct and secure code in real-world repositories.",
+    "arxiv_url": "https://arxiv.org/abs/2504.21205",
+    "authors": [
+      "Chihao Shen",
+      "Connor Dilgren",
+      "Purva Chiniya",
+      "Luke Griffith",
+      "Yu Ding",
+      "Yizheng Chen"
+    ],
+    "first_author": "Chihao Shen",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Repository-level secure code completion",
+      "C/C++ memory-safety and CWE coverage",
+      "Developer-written unit-test correctness evaluation",
+      "OSS-Fuzz PoC crash-based security testing",
+      "AST-based masked region generation",
+      "Semantic-preserving code mutation to prevent memorization",
+      "Context retriever vs. agent-framework comparison",
+      "Automated compile-and-test evaluation pipeline"
+    ],
+    "summary": "本文提出了SecRepoBench——一个包含27个真实C/C++仓库、318个安全敏感代码补全任务的基准，结合开发者单元测试与OSS‑Fuzz PoC同时评估代码正确性与安全性，并用于比较多种独立LLM与代码代理的表现，发现代理显著优于独立模型但整体仍不足以保证正确与安全。 ",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2504.21205v2",
+    "published": "2025-04-29",
+    "update_time": "2025-11-05",
+    "download_time": "2025-12-11 15:47:14"
+  },
+  {
+    "id": "2504.02605",
+    "title": "Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving",
+    "abstract": "The task of issue resolving is to modify a codebase to generate a patch that addresses a given issue. However, existing benchmarks, such as SWE-bench, focus almost exclusively on Python, making them insufficient for evaluating Large Language Models (LLMs) across diverse software ecosystems. To address this, we introduce a multilingual issue-resolving benchmark, called Multi-SWE-bench, covering Java, TypeScript, JavaScript, Go, Rust, C, and C++. It includes a total of 1,632 high-quality instances, which were carefully annotated from 2,456 candidates by 68 expert annotators, ensuring that the benchmark can provide an accurate and reliable evaluation. Based on Multi-SWE-bench, we evaluate a series of state-of-the-art models using three representative methods (Agentless, SWE-agent, and OpenHands) and present a comprehensive analysis with key empirical insights. In addition, we launch a Multi-SWE-RL open-source community, aimed at building large-scale reinforcement learning (RL) training datasets for issue-resolving tasks. As an initial contribution, we release a set of 4,723 well-structured instances spanning seven programming languages, laying a solid foundation for RL research in this domain. More importantly, we open-source our entire data production pipeline, along with detailed tutorials, encouraging the open-source community to continuously contribute and expand the dataset. We envision our Multi-SWE-bench and the ever-growing Multi-SWE-RL community as catalysts for advancing RL toward its full potential, bringing us one step closer to the dawn of AGI.",
+    "arxiv_url": "https://arxiv.org/abs/2504.02605",
+    "authors": [
+      "Daoguang Zan",
+      "Zhirong Huang",
+      "Wei Liu",
+      "Hanwu Chen",
+      "Linhao Zhang",
+      "Shulin Xin",
+      "Lu Chen",
+      "Qi Liu",
+      "Xiaojian Zhong",
+      "Aoyan Li",
+      "Siyao Liu",
+      "Yongsheng Xiao",
+      "Liangqiang Chen",
+      "Yuyu Zhang",
+      "Jing Su",
+      "Tianyu Liu",
+      "Rui Long",
+      "Kai Shen",
+      "Liang Xiang"
+    ],
+    "first_author": "Daoguang Zan",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Multilingual issue-resolving benchmark",
+      "Pull-request based instance curation",
+      "Dockerized reproducible test environments",
+      "Dual-stage human verification",
+      "Cross-language generalization analysis",
+      "Patch complexity & multi-file impact analysis",
+      "Open RL training instance release",
+      "Agentless vs agent-based evaluation"
+    ],
+    "summary": "本文提出 Multi-SWE-bench，一个覆盖 Java、TypeScript、JavaScript、Go、Rust、C 与 C++ 的多语言 issue-resolving 基准（1,632 个人工验证实例）并发布 4,723 个用于 RL 的开放实例，提供可复现环境与严格的人工检验流程，同时对多种方法和模型进行了跨语言评测与细粒度表现分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2504.02605v1",
+    "published": "2025-04-03",
+    "update_time": "2025-04-03",
+    "download_time": "2025-12-11 16:47:22"
+  },
+  {
+    "id": "2504.15254",
+    "title": "CRUST-Bench: A Comprehensive Benchmark for C-to-safe-Rust Transpilation",
+    "abstract": "C-to-Rust transpilation is essential for modernizing legacy C code while enhancing safety and interoperability with modern Rust ecosystems. However, no dataset currently exists for evaluating whether a system can transpile C into safe Rust that passes a set of test cases. We introduce CRUST-Bench, a dataset of 100 C repositories, each paired with manually-written interfaces in safe Rust as well as test cases that can be used to validate correctness of the transpilation. By considering entire repositories rather than isolated functions, CRUST-Bench captures the challenges of translating complex projects with dependencies across multiple files. The provided Rust interfaces provide explicit specifications that ensure adherence to idiomatic, memory-safe Rust patterns, while the accompanying test cases enforce functional correctness. We evaluate state-of-the-art large language models (LLMs) on this task and find that safe and idiomatic Rust generation is still a challenging problem for various state-of-the-art methods and techniques. We also provide insights into the errors LLMs usually make in transpiling code from C to safe Rust. The best performing model, OpenAI o1, is able to solve only 15 tasks in a single-shot setting. Improvements on CRUST-Bench would lead to improved transpilation systems that can reason about complex scenarios and help in migrating legacy codebases from C into languages like Rust that ensure memory safety. You can find the dataset and code at https://github.com/anirudhkhatry/CRUST-bench.",
+    "arxiv_url": "https://arxiv.org/abs/2504.15254",
+    "authors": [
+      "Anirudh Khatry",
+      "Robert Zhang",
+      "Jia Pan",
+      "Ziteng Wang",
+      "Qiaochu Chen",
+      "Greg Durrett",
+      "Isil Dillig"
+    ],
+    "first_author": "Anirudh Khatry",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "C-to-safe-Rust transpilation",
+      "Repository-scale multi-file translation",
+      "Manually authored Rust interface specifications",
+      "Test-driven correctness and compile-run validation",
+      "Pointer-to-ownership abstraction mapping",
+      "Memory-safety and borrowing challenges",
+      "LLM error analysis for transpilation",
+      "Generate-then-repair evaluation loop"
+    ],
+    "summary": "本文提出CRUST-Bench——包含100个C仓库、手工编写的安全Rust接口与测试用例的基准，用于评估并分析LLM在将多文件C项目转译为内存安全、惯用Rust代码时的性能与常见错误模式。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2504.15254v3",
+    "published": "2025-04-21",
+    "update_time": "2025-10-01",
+    "download_time": "2025-12-11 16:55:25"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1704.04856",
+    "title": "A Neural Architecture for Generating Natural Language Descriptions from Source Code Changes",
+    "abstract": "We propose a model to automatically describe changes introduced in the source code of a program using natural language. Our method receives as input a set of code commits, which contains both the modifications and message introduced by an user. These two modalities are used to train an encoder-decoder architecture. We evaluated our approach on twelve real world open source projects from four different programming languages. Quantitative and qualitative results showed that the proposed approach can generate feasible and semantically sound descriptions not only in standard in-project settings, but also in a cross-project setting.",
+    "arxiv_url": "https://arxiv.org/abs/1704.04856",
+    "authors": [
+      "Pablo Loyola",
+      "Edison Marrese-Taylor",
+      "Yutaka Matsuo"
+    ],
+    "first_author": "Pablo Loyola",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "Commit Message Generation",
+      "Diff-level Summarization",
+      "Attention-based Encoder-Decoder",
+      "LSTM Decoder with Beam Search",
+      "Line-level Code Tokenization",
+      "Atomic-commit Assumption",
+      "Cross-project Evaluation",
+      "Neural MT Baseline Comparison"
+    ],
+    "summary": "本文提出一种基于注意力的编码-解码神经网络，用于从源码变更(diff/commit)自动生成自然语言描述，并在12个开源项目上进行原位与跨项目实证评估以验证效果。",
+    "quality": "Middle",
+    "conference": "ACL 2017",
+    "pdf_url": "https://arxiv.org/pdf/1704.04856v1",
+    "published": "2017-04-17",
+    "update_time": "2017-04-17",
+    "download_time": "2025-12-11 16:26:23"
+  }
+]

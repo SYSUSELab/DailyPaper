@@ -31,5 +31,111 @@
     "published": "2021-05-20",
     "update_time": "2021-11-08",
     "download_time": "2025-12-04 23:32:17"
+  },
+  {
+    "id": "2105.14242",
+    "title": "CommitBERT: Commit Message Generation Using Pre-Trained Programming Language Model",
+    "abstract": "Commit message is a document that summarizes source code changes in natural language. A good commit message clearly shows the source code changes, so this enhances collaboration between developers. Therefore, our work is to develop a model that automatically writes the commit message.   To this end, we release 345K datasets consisting of code modification and commit messages in six programming languages (Python, PHP, Go, Java, JavaScript, and Ruby). Similar to the neural machine translation (NMT) model, using our dataset, we feed the code modification to the encoder input and the commit message to the decoder input and measure the result of the generated commit message with BLEU-4.   Also, we propose the following two training methods to improve the result of generating the commit message: (1) A method of preprocessing the input to feed the code modification to the encoder input. (2) A method that uses an initial weight suitable for the code domain to reduce the gap in contextual representation between programming language (PL) and natural language (NL). Training code, dataset, and pre-trained weights are available at https://github.com/graykode/commit-autosuggestions",
+    "arxiv_url": "https://arxiv.org/abs/2105.14242",
+    "authors": [
+      "Tae-Hwan Jung"
+    ],
+    "first_author": "Tae-Hwan Jung",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "Commit message generation",
+      "Git diff added/deleted pair representation",
+      "Cross-language dataset (6 languages)",
+      "Pretrained code→NL transfer",
+      "Transformer encoder-decoder fine-tuning",
+      "Dataset curation and license filtering",
+      "Evaluation with BLEU-4"
+    ],
+    "summary": "本文发布了一个包含345K对添加/删除代码片段与提交消息的多语言数据集，并通过在预训练的代码域语言模型上进行微调，以区分新增/删除部分的二元输入显著提升了提交消息生成效果。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2105.14242v1",
+    "published": "2021-05-29",
+    "update_time": "2021-05-29",
+    "download_time": "2025-12-11 16:28:08"
+  },
+  {
+    "id": "2105.12787",
+    "title": "Self-Supervised Bug Detection and Repair",
+    "abstract": "Machine learning-based program analyses have recently shown the promise of integrating formal and probabilistic reasoning towards aiding software development. However, in the absence of large annotated corpora, training these analyses is challenging. Towards addressing this, we present BugLab, an approach for self-supervised learning of bug detection and repair. BugLab co-trains two models: (1) a detector model that learns to detect and repair bugs in code, (2) a selector model that learns to create buggy code for the detector to use as training data. A Python implementation of BugLab improves by up to 30% upon baseline methods on a test dataset of 2374 real-life bugs and finds 19 previously unknown bugs in open-source software.",
+    "arxiv_url": "https://arxiv.org/abs/2105.12787",
+    "authors": [
+      "Miltiadis Allamanis",
+      "Henry Jackson-Flux",
+      "Marc Brockschmidt"
+    ],
+    "first_author": "Miltiadis Allamanis",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Self-supervised adversarial co-training",
+      "Bug selector-detector",
+      "Syntax-tree rewrite operators",
+      "Localization-and-rewrite prediction",
+      "Heterogeneous code-graph representation",
+      "Relational transformer encoding",
+      "Curated real-world bug benchmark"
+    ],
+    "summary": "本文提出BUGLAB——一种通过联合训练“选择器”（生成难以检测的语法重写错误）与“检测器”（定位并修复错误）的自监督方法，基于代码重写规则在未标注代码上学习缺陷定位与修复，并在Python实现上通过新整理的真实缺陷基准显著提升性能且在开源项目中发现若干新错误。",
+    "quality": "High",
+    "conference": "NeurIPS 2021",
+    "pdf_url": "https://arxiv.org/pdf/2105.12787v3",
+    "published": "2021-05-26",
+    "update_time": "2021-11-16",
+    "download_time": "2025-12-11 17:12:10"
+  },
+  {
+    "id": "2105.13239",
+    "title": "CoSQA: 20,000+ Web Queries for Code Search and Question Answering",
+    "abstract": "Finding codes given natural language query isb eneficial to the productivity of software developers. Future progress towards better semantic matching between query and code requires richer supervised training resources. To remedy this, we introduce the CoSQA dataset.It includes 20,604 labels for pairs of natural language queries and codes, each annotated by at least 3 human annotators. We further introduce a contrastive learning method dubbed CoCLR to enhance query-code matching, which works as a data augmenter to bring more artificially generated training instances. We show that evaluated on CodeXGLUE with the same CodeBERT model, training on CoSQA improves the accuracy of code question answering by 5.1%, and incorporating CoCLR brings a further improvement of 10.5%.",
+    "arxiv_url": "https://arxiv.org/abs/2105.13239",
+    "authors": [
+      "Junjie Huang",
+      "Duyu Tang",
+      "Linjun Shou",
+      "Ming Gong",
+      "Ke Xu",
+      "Daxin Jiang",
+      "Ming Zhou",
+      "Nan Duan"
+    ],
+    "first_author": "Junjie Huang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "Web-search-query curation from search logs",
+      "Query intent filtering via heuristic keywords",
+      "Crowdsourced binary relevance annotations",
+      "Function-with-documentation as code answer unit",
+      "Contrastive learning for query-code matching",
+      "Data augmentation via synthetic query-code pairs",
+      "Query-code semantic retrieval evaluation",
+      "Large-scale human-labeled code search benchmark"
+    ],
+    "summary": "该论文发布了一个包含20,604对经过多人标注的真实网页查询与Python函数的查询-代码匹配数据集，并提出一种基于对比学习的数据增强方法以显著提升查询到代码的检索与问答性能。",
+    "quality": "High",
+    "conference": "ACL 2021",
+    "pdf_url": "https://arxiv.org/pdf/2105.13239v1",
+    "published": "2021-05-27",
+    "update_time": "2021-05-27",
+    "download_time": "2025-12-11 17:47:07"
   }
 ]

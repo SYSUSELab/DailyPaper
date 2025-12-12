@@ -78,5 +78,81 @@
     "published": "2021-07-07",
     "update_time": "2021-07-14",
     "download_time": "2025-12-04 23:11:30"
+  },
+  {
+    "id": "2107.05373",
+    "title": "On the Evaluation of Commit Message Generation Models: An Experimental Study",
+    "abstract": "Commit messages are natural language descriptions of code changes, which are important for program understanding and maintenance. However, writing commit messages manually is time-consuming and laborious, especially when the code is updated frequently. Various approaches utilizing generation or retrieval techniques have been proposed to automatically generate commit messages. To achieve a better understanding of how the existing approaches perform in solving this problem, this paper conducts a systematic and in-depth analysis of the state-of-the-art models and datasets. We find that: (1) Different variants of the BLEU metric are used in previous works, which affects the evaluation and understanding of existing methods. (2) Most existing datasets are crawled only from Java repositories while repositories in other programming languages are not sufficiently explored. (3) Dataset splitting strategies can influence the performance of existing models by a large margin. Some models show better performance when the datasets are split by commit, while other models perform better when the datasets are split by timestamp or by project. Based on our findings, we conduct a human evaluation and find the BLEU metric that best correlates with the human scores for the task. We also collect a large-scale, information-rich, and multi-language commit message dataset MCMD and evaluate existing models on this dataset. Furthermore, we conduct extensive experiments under different dataset splitting strategies and suggest the suitable models under different scenarios. Based on the experimental results and findings, we provide feasible suggestions for comprehensively evaluating commit message generation models and discuss possible future research directions. We believe this work can help practitioners and researchers better evaluate and select models for automatic commit message generation.",
+    "arxiv_url": "https://arxiv.org/abs/2107.05373",
+    "authors": [
+      "Wei Tao",
+      "Yanlin Wang",
+      "Ensheng Shi",
+      "Lun Du",
+      "Shi Han",
+      "Hongyu Zhang",
+      "Dongmei Zhang",
+      "Wenqiang Zhang"
+    ],
+    "first_author": "Wei Tao",
+    "category": [
+      "Empirical",
+      "Benchmark",
+      "Survey"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "BLEU variant comparison",
+      "Metric–human correlation",
+      "Dataset splitting strategies (commit/timestamp/project)",
+      "Multi‑language, information‑rich commit corpus",
+      "Just‑In‑Time evaluation scenario",
+      "Cross‑project generalization",
+      "Retrieval vs generation vs hybrid approaches",
+      "Commit metadata usage (timestamp, repo, SHA)"
+    ],
+    "summary": "本文系统性评估了现有的提交消息生成模型与数据集，比对不同BLEU变体与人工评分的相关性，分析数据切分策略对模型性能的影响，并发布了一个大规模多语言提交消息数据集MCMD及相应评估建议。",
+    "quality": "High",
+    "conference": "International Conference on Software Maintenance and Evolution (ICSME 2021)",
+    "pdf_url": "https://arxiv.org/pdf/2107.05373v3",
+    "published": "2021-07-12",
+    "update_time": "2021-07-26",
+    "download_time": "2025-12-11 16:28:38"
+  },
+  {
+    "id": "2107.08760",
+    "title": "CVEfixes: Automated Collection of Vulnerabilities and Their Fixes from Open-Source Software",
+    "abstract": "Data-driven research on the automated discovery and repair of security vulnerabilities in source code requires comprehensive datasets of real-life vulnerable code and their fixes. To assist in such research, we propose a method to automatically collect and curate a comprehensive vulnerability dataset from Common Vulnerabilities and Exposures (CVE) records in the public National Vulnerability Database (NVD). We implement our approach in a fully automated dataset collection tool and share an initial release of the resulting vulnerability dataset named CVEfixes.   The CVEfixes collection tool automatically fetches all available CVE records from the NVD, gathers the vulnerable code and corresponding fixes from associated open-source repositories, and organizes the collected information in a relational database. Moreover, the dataset is enriched with meta-data such as programming language, and detailed code and security metrics at five levels of abstraction. The collection can easily be repeated to keep up-to-date with newly discovered or patched vulnerabilities. The initial release of CVEfixes spans all published CVEs up to 9 June 2021, covering 5365 CVE records for 1754 open-source projects that were addressed in a total of 5495 vulnerability fixing commits.   CVEfixes supports various types of data-driven software security research, such as vulnerability prediction, vulnerability classification, vulnerability severity prediction, analysis of vulnerability-related code changes, and automated vulnerability repair.",
+    "arxiv_url": "https://arxiv.org/abs/2107.08760",
+    "authors": [
+      "Guru Prasad Bhandari",
+      "Amara Naseer",
+      "Leon Moonen"
+    ],
+    "first_author": "Guru Prasad Bhandari",
+    "category": [
+      "Benchmark",
+      "Survey"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "CVE-to-commit linking",
+      "vulnerability-fix mining",
+      "multi-granularity code artifacts",
+      "CWE-based labeling",
+      "CVSS severity enrichment",
+      "code- and commit-level metrics",
+      "language-agnostic collection",
+      "automated repository mining tool"
+    ],
+    "summary": "本文提出并开源了一种从NVD CVE记录自动收集开源项目中真实漏洞及其修复的工具与数据集，按多粒度（仓库/提交/文件/方法/CVE）组织并附加CWE分类、CVSS评分和多项代码度量，旨在支持漏洞检测、分类与自动修复等研究。",
+    "quality": "High",
+    "conference": "Proceedings of the 17th International Conference on Predictive Models and Data Analytics in Software Engineering (PROMISE '21) 2021",
+    "pdf_url": "https://arxiv.org/pdf/2107.08760v1",
+    "published": "2021-07-19",
+    "update_time": "2021-07-19",
+    "download_time": "2025-12-11 17:12:46"
   }
 ]

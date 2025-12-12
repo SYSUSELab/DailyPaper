@@ -1,0 +1,75 @@
+[
+  {
+    "id": "2311.07989",
+    "title": "Unifying the Perspectives of NLP and Software Engineering: A Survey on Language Models for Code",
+    "abstract": "In this work we systematically review the recent advancements in software engineering with language models, covering 70+ models, 40+ evaluation tasks, 180+ datasets, and 900 related works. Unlike previous works, we integrate software engineering (SE) with natural language processing (NLP) by discussing the perspectives of both sides: SE applies language models for development automation, while NLP adopts SE tasks for language model evaluation. We break down code processing models into general language models represented by the GPT family and specialized models that are specifically pretrained on code, often with tailored objectives. We discuss the relations and differences between these models, and highlight the historical transition of code modeling from statistical models and RNNs to pretrained Transformers and LLMs, which is exactly the same course that had been taken by NLP. We also go beyond programming and review LLMs' application in other software engineering activities including requirement engineering, testing, deployment, and operations in an endeavor to provide a global view of NLP in SE, and identify key challenges and potential future directions in this domain. We keep the survey open and updated on GitHub at https://github.com/codefuse-ai/Awesome-Code-LLM.",
+    "arxiv_url": "https://arxiv.org/abs/2311.07989",
+    "authors": [
+      "Ziyin Zhang",
+      "Chaoyu Chen",
+      "Bingchang Liu",
+      "Cong Liao",
+      "Zi Gong",
+      "Hang Yu",
+      "Jianguo Li",
+      "Rui Wang"
+    ],
+    "first_author": "Ziyin Zhang",
+    "category": [
+      "Survey"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "tags": [
+      "Taxonomy of Code LMs",
+      "SE–NLP Integration",
+      "Code Modeling History",
+      "Full Software Lifecycle Coverage"
+    ],
+    "summary": "该论文系统综述代码语言模型及其在软件工程全生命周期中的应用，并统一了NLP与SE两个社区的视角。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2311.07989v7",
+    "published": "2023-11-14",
+    "update_time": "2024-06-26",
+    "download_time": "2025-12-10 15:34:24"
+  },
+  {
+    "id": "2311.12420",
+    "title": "How Far Have We Gone in Vulnerability Detection Using Large Language Models",
+    "abstract": "As software becomes increasingly complex and prone to vulnerabilities, automated vulnerability detection is critically important, yet challenging. Given the significant successes of large language models (LLMs) in various tasks, there is growing anticipation of their efficacy in vulnerability detection. However, a quantitative understanding of their potential in vulnerability detection is still missing. To bridge this gap, we introduce a comprehensive vulnerability benchmark VulBench. This benchmark aggregates high-quality data from a wide range of CTF (Capture-the-Flag) challenges and real-world applications, with annotations for each vulnerable function detailing the vulnerability type and its root cause. Through our experiments encompassing 16 LLMs and 6 state-of-the-art (SOTA) deep learning-based models and static analyzers, we find that several LLMs outperform traditional deep learning approaches in vulnerability detection, revealing an untapped potential in LLMs. This work contributes to the understanding and utilization of LLMs for enhanced software security.",
+    "arxiv_url": "https://arxiv.org/abs/2311.12420",
+    "authors": [
+      "Zeyu Gao",
+      "Hao Wang",
+      "Yuchen Zhou",
+      "Wenyu Zhu",
+      "Chao Zhang"
+    ],
+    "first_author": "Zeyu Gao",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Function-level vulnerability labels",
+      "CTF and real-world CVE aggregation",
+      "Human expert annotation",
+      "Binary and multi-class classification",
+      "Root-cause vulnerability annotation",
+      "Natural-language vulnerability descriptions",
+      "LLM vs. static analyzer benchmarking",
+      "Cross-model evaluation protocol",
+      "Dataset quality curation"
+    ],
+    "summary": "本文提出了VulBench——一个从CTF与真实漏洞数据源汇聚并经人工校验的高质量函数级漏洞基准，并在该基准上系统评估了16个LLM与多种深度学习模型和静态分析器，揭示了LLM在漏洞检测中的潜力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2311.12420v3",
+    "published": "2023-11-21",
+    "update_time": "2023-12-22",
+    "download_time": "2025-12-11 17:14:38"
+  }
+]

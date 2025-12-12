@@ -1,0 +1,36 @@
+[
+  {
+    "id": "2104.04706",
+    "title": "ManyTypes4Py: A Benchmark Python Dataset for Machine Learning-based Type Inference",
+    "abstract": "In this paper, we present ManyTypes4Py, a large Python dataset for machine learning (ML)-based type inference. The dataset contains a total of 5,382 Python projects with more than 869K type annotations. Duplicate source code files were removed to eliminate the negative effect of the duplication bias. To facilitate training and evaluation of ML models, the dataset was split into training, validation and test sets by files. To extract type information from abstract syntax trees (ASTs), a lightweight static analyzer pipeline is developed and accompanied with the dataset. Using this pipeline, the collected Python projects were analyzed and the results of the AST analysis were stored in JSON-formatted files. The ManyTypes4Py dataset is shared on zenodo and its tools are publicly available on GitHub.",
+    "arxiv_url": "https://arxiv.org/abs/2104.04706",
+    "authors": [
+      "Amir M. Mir",
+      "Evaldas Latoskinas",
+      "Georgios Gousios"
+    ],
+    "first_author": "Amir M. Mir",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Type Inference",
+    "task": "ML-based Type Inference",
+    "tags": [
+      "AST-based feature extraction",
+      "Lightweight static analysis pipeline",
+      "File-level deduplication (CD4Py)",
+      "Seq2seq code representation with token-type alignment",
+      "Natural and contextual type hints (ret_exprs, params_occur)",
+      "Train/validation/test split by files",
+      "Long-tail type distribution analysis",
+      "mypy-based project selection"
+    ],
+    "summary": "本文提出ManyTypes4Py——一个包含5,382个Python项目、约869,825条类型注解并附带轻量静态分析工具（LibSA4Py）与去重处理的用于机器学习类型推断的大型基准数据集。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2104.04706v1",
+    "published": "2021-04-10",
+    "update_time": "2021-04-10",
+    "download_time": "2025-12-11 17:52:01"
+  }
+]
