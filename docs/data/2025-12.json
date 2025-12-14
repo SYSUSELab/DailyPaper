@@ -1231,5 +1231,167 @@
     "published": "2025-12-11",
     "update_time": "2025-12-11",
     "download_time": "2025-12-13 01:53:27"
+  },
+  {
+    "id": "2512.10485",
+    "title": "From Lab to Reality: A Practical Evaluation of Deep Learning Models and LLMs for Vulnerability Detection",
+    "abstract": "Vulnerability detection methods based on deep learning (DL) have shown strong performance on benchmark datasets, yet their real-world effectiveness remains underexplored. Recent work suggests that both graph neural network (GNN)-based and transformer-based models, including large language models (LLMs), yield promising results when evaluated on curated benchmark datasets. These datasets are typically characterized by consistent data distributions and heuristic or partially noisy labels. In this study, we systematically evaluate two representative DL models-ReVeal and LineVul-across four representative datasets: Juliet, Devign, BigVul, and ICVul. Each model is trained independently on each respective dataset, and their code representations are analyzed using t-SNE to uncover vulnerability related patterns. To assess realistic applicability, we deploy these models along with four pretrained LLMs, Claude 3.5 Sonnet, GPT-o3-mini, GPT-4o, and GPT-5 on a curated dataset, VentiVul, comprising 20 recently (May 2025) fixed vulnerabilities from the Linux kernel. Our experiments reveal that current models struggle to distinguish vulnerable from non-vulnerable code in representation space and generalize poorly across datasets with differing distributions. When evaluated on VentiVul, our newly constructed time-wise out-of-distribution dataset, performance drops sharply, with most models failing to detect vulnerabilities reliably. These results expose a persistent gap between academic benchmarks and real-world deployment, emphasizing the value of our deployment-oriented evaluation framework and the need for more robust code representations and higher-quality datasets.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10485",
+    "authors": [
+      "Chaomeng Lu",
+      "Bert Lagaisse"
+    ],
+    "first_author": "Chaomeng Lu",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Time-wise out-of-distribution evaluation",
+      "Whole-file evaluation mode",
+      "Function-pair evaluation mode",
+      "Cross-dataset generalization",
+      "Code representation clustering (t-SNE & centroid distance)",
+      "Graph-based vs token-based code representations",
+      "Zero-shot LLM vulnerability probing",
+      "Linux CVE fix-based testbed",
+      "Label quality and dataset bias analysis"
+    ],
+    "summary": "本文构建了一个时间分离的真实漏洞测试集并提出部署导向的评估框架，系统性比较图/序列深度模型与LLM在漏洞检测上的表示能力与跨数据集泛化性，结果表明现有模型在真实场景中表现显著下降。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10485v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 01:58:04"
+  },
+  {
+    "id": "2512.10452",
+    "title": "UniCoR: Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+    "abstract": "Effective code retrieval is indispensable and it has become an important paradigm to search code in hybrid mode using both natural language and code snippets. Nevertheless, it remains unclear whether existing approaches can effectively leverage such hybrid queries, particularly in cross-language contexts. We conduct a comprehensive empirical study of representative code models and reveal three challenges: (1) insufficient semantic understanding; (2) inefficient fusion in hybrid code retrieval; and (3) weak generalization in cross-language scenarios. To address these challenges, we propose UniCoR, a novel self-supervised framework that learns Unified Code Representations framework designed to learn unified and robust code representations. Firstly, we design a multi-perspective supervised contrastive learning module to enhance semantic understanding and modality fusion. It aligns representations from multiple perspectives, including code-to-code, natural language-to-code, and natural language-to-natural language, enforcing the model to capture a semantic essence among modalities. Secondly, we introduce a representation distribution consistency learning module to improve cross-language generalization, which explicitly aligns the feature distributions of different programming languages, enabling language-agnostic representation learning. Extensive experiments on both empirical benchmark and large-scale benchmark show that UniCoR outperforms all baseline models, achieving an average improvement of 8.64% in MRR and 11.54% in MAP over the best-performing baseline. Furthermore, UniCoR exhibits stability in hybrid code retrieval and generalization capability in cross-language scenarios.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10452",
+    "authors": [
+      "Yang Yang",
+      "Li Kuang",
+      "Jiakun Liu",
+      "Zhongxin Liu",
+      "Yingjie Xia",
+      "David Lo"
+    ],
+    "first_author": "Yang Yang",
+    "category": [
+      "Technical",
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Hybrid query fusion (code + natural language)",
+      "Cross-language alignment",
+      "Multi-perspective supervised contrastive learning",
+      "Representation distribution consistency",
+      "Maximum Mean Discrepancy (MMD) for language-agnostic alignment",
+      "Modality collaboration and fusion",
+      "Functionally equivalent code pairing",
+      "Automated natural-language query generation",
+      "Self-supervised code representation learning",
+      "Fusion strategies: input remix / vector concat / score weighting"
+    ],
+    "summary": "本文提出UniCoR，一种结合多视角监督对比学习与表示分布一致性约束的自监督框架，通过强化模态协同与跨语言对齐，显著提升混合（代码+自然语言）跨语言代码检索的语义理解、融合效果与泛化能力。",
+    "quality": "High",
+    "conference": "IEEE/ACM International Conference on Software Engineering (ICSE 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2512.10452v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 01:58:31"
+  },
+  {
+    "id": "2512.10415",
+    "title": "How to Trick Your AI TA: A Systematic Study of Academic Jailbreaking in LLM Code Evaluation",
+    "abstract": "The use of Large Language Models (LLMs) as automatic judges for code evaluation is becoming increasingly prevalent in academic environments. But their reliability can be compromised by students who may employ adversarial prompting strategies in order to induce misgrading and secure undeserved academic advantages. In this paper, we present the first large-scale study of jailbreaking LLM-based automated code evaluators in academic context. Our contributions are: (i) We systematically adapt 20+ jailbreaking strategies for jailbreaking AI code evaluators in the academic context, defining a new class of attacks termed academic jailbreaking. (ii) We release a poisoned dataset of 25K adversarial student submissions, specifically designed for the academic code-evaluation setting, sourced from diverse real-world coursework and paired with rubrics and human-graded references, and (iii) In order to capture the multidimensional impact of academic jailbreaking, we systematically adapt and define three jailbreaking metrics (Jailbreak Success Rate, Score Inflation, and Harmfulness). (iv) We comprehensively evalulate the academic jailbreaking attacks using six LLMs. We find that these models exhibit significant vulnerability, particularly to persuasive and role-play-based attacks (up to 97% JSR). Our adversarial dataset and benchmark suite lay the groundwork for next-generation robust LLM-based evaluators in academic code assessment.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10415",
+    "authors": [
+      "Devanshu Sahoo",
+      "Vasudev Majhi",
+      "Arjun Neekhra",
+      "Yash Sinha",
+      "Murari Mandal",
+      "Dhruv Kumar"
+    ],
+    "first_author": "Devanshu Sahoo",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Academic Jailbreaking",
+      "Adversarial Prompt Injection",
+      "Poisoned Student Submissions",
+      "Rubric-aware Attack Design",
+      "Jailbreak Metrics (JSR/SIR/Harmfulness)",
+      "Persona/Role-play Attacks",
+      "Token/Emoji-level Manipulation",
+      "Cross-model Robustness Benchmark"
+    ],
+    "summary": "本文首次系统研究了针对LLM自动代码评分器的“学术越狱”攻击，构建了约25K条对抗性学生提交数据集、提出专门的评价指标并在六种模型上进行基准评估，揭示了角色扮演与说服类攻击下的严重脆弱性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10415v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 02:06:36"
+  },
+  {
+    "id": "2512.10398",
+    "title": "Confucius Code Agent: An Open-sourced AI Software Engineer at Industrial Scale",
+    "abstract": "Real-world AI software engineering demands coding agents that can reason over massive repositories, maintain durable memory across and within long sessions, and robustly coordinate complex toolchains at test time. Existing open-source coding agents provide transparency but frequently fall short when pushed to these industrial-scale workloads, while proprietary coding agents offer strong practical performance but limited extensibility, interpretability, and controllability. We present the Confucius Code Agent (CCA), an open-sourced AI software engineer that can operate at an industrial scale. CCA is built atop the Confucius SDK, an open-sourced agent development platform designed around three complementary perspectives: Agent Experience (AX), User Experience (UX), and Developer Experience (DX). The SDK introduces a unified orchestrator with hierarchical working memory for long-context reasoning, a persistent note-taking system for cross-session continual learning, and a modular extension module for robust tool use. Moreover, a meta-agent automates the synthesis, evaluation, and refinement of agent configurations through a build-test-improve loop, enabling rapid agent development on new tasks, environments, and tool stacks. Instantiated on Confucius SDK with these mechanisms, CCA delivers strong performance on real-world software engineering tasks. On SWE-Bench-Pro, CCA achieves a state-of-the-art Resolve@1 performance of 54.3%, substantially improving over prior coding agents. Together, the Confucius SDK and CCA provide a transparent, extensible, and reproducible foundation for AI agents, bridge gaps between research prototypes and production-grade systems, and support agent development and deployment at industrial scale.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10398",
+    "authors": [
+      "Zhaodong Wang",
+      "Zhenting Qi",
+      "Sherman Wong",
+      "Nathan Hu",
+      "Samuel Lin",
+      "Jun Ge",
+      "Erwin Gao",
+      "Yining Yang",
+      "Ben Maurer",
+      "Wenlin Chen",
+      "David Recordon",
+      "Yilun Du",
+      "Minlan Yu",
+      "Ying Zhang"
+    ],
+    "first_author": "Zhaodong Wang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Hierarchical working memory",
+      "Adaptive context compression",
+      "Persistent note-taking",
+      "Cross-session continual learning",
+      "Meta-agent build–test–improve loop",
+      "Modular tool extensions with typed callbacks",
+      "Agent orchestration for long-horizon tasks",
+      "Developer observability and DX-focused tooling",
+      "Industrial-scale repository navigation",
+      "Ablation-driven agent evaluation"
+    ],
+    "summary": "本文提出并开源了Confucius SDK及其实例化的Confucius Code Agent，通过层次化工作内存、自适应上下文压缩、持久化笔记和模块化扩展，并借助元代理的构建-测试-改进循环，实现面向工业规模代码库的长期推理与跨会话记忆，在多种软件工程任务上表现优异。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10398v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 02:07:20"
   }
 ]
