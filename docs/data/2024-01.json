@@ -1,5 +1,95 @@
 [
   {
+    "id": "2401.14196",
+    "title": "DeepSeek-Coder: When the Large Language Model Meets Programming -- The Rise of Code Intelligence",
+    "abstract": "The rapid development of large language models has revolutionized code intelligence in software development. However, the predominance of closed-source models has restricted extensive research and development. To address this, we introduce the DeepSeek-Coder series, a range of open-source code models with sizes from 1.3B to 33B, trained from scratch on 2 trillion tokens. These models are pre-trained on a high-quality project-level code corpus and employ a fill-in-the-blank task with a 16K window to enhance code generation and infilling. Our extensive evaluations demonstrate that DeepSeek-Coder not only achieves state-of-the-art performance among open-source code models across multiple benchmarks but also surpasses existing closed-source models like Codex and GPT-3.5. Furthermore, DeepSeek-Coder models are under a permissive license that allows for both research and unrestricted commercial use.",
+    "arxiv_url": "https://arxiv.org/abs/2401.14196",
+    "authors": [
+      "Daya Guo",
+      "Qihao Zhu",
+      "Dejian Yang",
+      "Zhenda Xie",
+      "Kai Dong",
+      "Wentao Zhang",
+      "Guanting Chen",
+      "Xiao Bi",
+      "Y. Wu",
+      "Y. K. Li",
+      "Fuli Luo",
+      "Yingfei Xiong",
+      "Wenfeng Liang"
+    ],
+    "first_author": "Daya Guo",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "summary": "本文提出并开源DeepSeek-Coder系列（1.3B–33B），在包含仓库级语料的2万亿tokens上从零预训练并采用Fill-In-Middle训练与16K上下文，显著提升开源代码模型性能并在多项基准上超越现有开源及部分闭源模型。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2401.14196v2",
+    "published": "2024-01-25",
+    "update_time": "2024-01-26",
+    "download_time": "2025-12-04 23:12:47"
+  },
+  {
+    "id": "2401.12554",
+    "title": "Can Large Language Models Write Parallel Code?",
+    "abstract": "Large language models are increasingly becoming a popular tool for software development. Their ability to model and generate source code has been demonstrated in a variety of contexts, including code completion, summarization, translation, and lookup. However, they often struggle to generate code for complex programs. In this paper, we study the capabilities of state-of-the-art language models to generate parallel code. In order to evaluate language models, we create a benchmark, ParEval, consisting of prompts that represent 420 different coding tasks related to scientific and parallel computing. We use ParEval to evaluate the effectiveness of several state-of-the-art open- and closed-source language models on these tasks. We introduce novel metrics for evaluating the performance of generated code, and use them to explore how well each large language model performs for 12 different computational problem types and six different parallel programming models.",
+    "arxiv_url": "https://arxiv.org/abs/2401.12554",
+    "authors": [
+      "Daniel Nichols",
+      "Joshua H. Davis",
+      "Zhaojun Xie",
+      "Arjun Rajaram",
+      "Abhinav Bhatele"
+    ],
+    "first_author": "Daniel Nichols",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "summary": "本文提出了用于并行/HPC代码生成与翻译的基准ParEval、以及新的性能评估指标（speedup_n@k 和 efficiency_n@k），并用该基准评估多种开源与闭源大模型，发现模型普遍难以生成高质量并行代码，尤其在MPI和稀疏/非结构化问题上表现最差。",
+    "quality": "High",
+    "conference": "HPDC 2024",
+    "pdf_url": "https://arxiv.org/pdf/2401.12554v3",
+    "published": "2024-01-23",
+    "update_time": "2024-05-14",
+    "download_time": "2025-12-05 10:08:05"
+  },
+  {
+    "id": "2401.01062",
+    "title": "Experimenting a New Programming Practice with LLMs",
+    "abstract": "The recent development on large language models makes automatically constructing small programs possible. It thus has the potential to free software engineers from low-level coding and allow us to focus on the perhaps more interesting parts of software development, such as requirement engineering and system testing. In this project, we develop a prototype named AISD (AI-aided Software Development), which is capable of taking high-level (potentially vague) user requirements as inputs, generates detailed use cases, prototype system designs, and subsequently system implementation. Different from existing attempts, AISD is designed to keep the user in the loop, i.e., by repeatedly taking user feedback on use cases, high-level system designs, and prototype implementations through system testing. AISD has been evaluated with a novel benchmark of non-trivial software projects. The experimental results suggest that it might be possible to imagine a future where software engineering is reduced to requirement engineering and system testing only.",
+    "arxiv_url": "https://arxiv.org/abs/2401.01062",
+    "authors": [
+      "Simiao Zhang",
+      "Jiaping Wang",
+      "Guoliang Dong",
+      "Jun Sun",
+      "Yueling Zhang",
+      "Geguang Pu"
+    ],
+    "first_author": "Simiao Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Requirements & Design",
+    "task": "Elicitation",
+    "summary": "本文提出AISD，一个以保持用户全程参与的LLM驱动软件开发框架，并构建了用于评估自动化软件开发能力的新基准CAASD，实验证明在用例生成、设计迭代与原型测试下对比现有方法有显著提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2401.01062v1",
+    "published": "2024-01-02",
+    "update_time": "2024-01-02",
+    "download_time": "2025-12-05 10:08:32"
+  },
+  {
     "id": "2401.04621",
     "title": "DebugBench: Evaluating Debugging Capability of Large Language Models",
     "abstract": "Large Language Models (LLMs) have demonstrated exceptional coding capability. However, as another critical component of programming proficiency, the debugging capability of LLMs remains relatively unexplored. Previous evaluations of LLMs' debugging ability are significantly limited by the risk of data leakage, the scale of the dataset, and the variety of tested bugs. To overcome these deficiencies, we introduce `DebugBench', an LLM debugging benchmark consisting of 4,253 instances. It covers four major bug categories and 18 minor types in C++, Java, and Python. To construct DebugBench, we collect code snippets from the LeetCode community, implant bugs into source data with GPT-4, and assure rigorous quality checks. We evaluate two commercial and four open-source models in a zero-shot scenario. We find that (1) while closed-source models exhibit inferior debugging performance compared to humans, open-source models relatively lower pass rate scores; (2) the complexity of debugging notably fluctuates depending on the bug category; (3) incorporating runtime feedback has a clear impact on debugging performance which is not always helpful. As an extension, we also compare LLM debugging and code generation, revealing a strong correlation between them for closed-source models. These findings will benefit the development of LLMs in debugging.",

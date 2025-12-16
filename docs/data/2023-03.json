@@ -1,5 +1,40 @@
 [
   {
+    "id": "2303.17568",
+    "title": "CodeGeeX: A Pre-Trained Model for Code Generation with Multilingual Benchmarking on HumanEval-X",
+    "abstract": "Large pre-trained code generation models, such as OpenAI Codex, can generate syntax- and function-correct code, making the coding of programmers more productive and our pursuit of artificial general intelligence closer. In this paper, we introduce CodeGeeX, a multilingual model with 13 billion parameters for code generation. CodeGeeX is pre-trained on 850 billion tokens of 23 programming languages as of June 2022. Our extensive experiments suggest that CodeGeeX outperforms multilingual code models of similar scale for both the tasks of code generation and translation on HumanEval-X. Building upon HumanEval (Python only), we develop the HumanEval-X benchmark for evaluating multilingual models by hand-writing the solutions in C++, Java, JavaScript, and Go. In addition, we build CodeGeeX-based extensions on Visual Studio Code, JetBrains, and Cloud Studio, generating 4.7 billion tokens for tens of thousands of active users per week. Our user study demonstrates that CodeGeeX can help to increase coding efficiency for 83.4% of its users. Finally, CodeGeeX is publicly accessible and in Sep. 2022, we open-sourced its code, model weights (the version of 850B tokens), API, extensions, and HumanEval-X at https://github.com/THUDM/CodeGeeX.",
+    "arxiv_url": "https://arxiv.org/abs/2303.17568",
+    "authors": [
+      "Qinkai Zheng",
+      "Xiao Xia",
+      "Xu Zou",
+      "Yuxiao Dong",
+      "Shan Wang",
+      "Yufei Xue",
+      "Zihan Wang",
+      "Lei Shen",
+      "Andi Wang",
+      "Yang Li",
+      "Teng Su",
+      "Zhilin Yang",
+      "Jie Tang"
+    ],
+    "first_author": "Qinkai Zheng",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "summary": "本文提出并开源了一个13B参数的多语言代码生成预训练模型CodeGeeX，同时构建了用于多语言函数正确性评估的HumanEval-X基准，并展示了模型在生成与翻译任务上的优势与实际IDE部署带来的用户增效。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2303.17568v2",
+    "published": "2023-03-30",
+    "update_time": "2024-07-10",
+    "download_time": "2025-12-04 23:15:01"
+  },
+  {
     "id": "2303.12570",
     "title": "RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation",
     "abstract": "The task of repository-level code completion is to continue writing the unfinished code based on a broader context of the repository. While for automated code completion tools, it is difficult to utilize the useful information scattered in different files. We propose RepoCoder, a simple, generic, and effective framework to address the challenge. It streamlines the repository-level code completion process by incorporating a similarity-based retriever and a pre-trained code language model in an iterative retrieval-generation pipeline. RepoCoder makes effective utilization of repository-level information for code completion and has the ability to generate code at various levels of granularity. Moreover, we propose a new benchmark RepoEval, which consists of the latest and high-quality real-world repositories covering line, API invocation, and function body completion scenarios. Experimental results indicate that RepoCoder significantly improves the In-File completion baseline by over 10% in all settings and consistently outperforms the vanilla retrieval-augmented code completion approach. Furthermore, we validate the effectiveness of RepoCoder through comprehensive analysis, providing valuable insights for future research. Our source code and benchmark are publicly available: https://github.com/microsoft/CodeT/tree/main/RepoCoder",

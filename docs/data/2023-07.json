@@ -1,5 +1,66 @@
 [
   {
+    "id": "2307.14936",
+    "title": "PanGu-Coder2: Boosting Large Language Models for Code with Ranking Feedback",
+    "abstract": "Large Language Models for Code (Code LLM) are flourishing. New and powerful models are released on a weekly basis, demonstrating remarkable performance on the code generation task. Various approaches have been proposed to boost the code generation performance of pre-trained Code LLMs, such as supervised fine-tuning, instruction tuning, reinforcement learning, etc. In this paper, we propose a novel RRTF (Rank Responses to align Test&Teacher Feedback) framework, which can effectively and efficiently boost pre-trained large language models for code generation. Under this framework, we present PanGu-Coder2, which achieves 62.20% pass@1 on the OpenAI HumanEval benchmark. Furthermore, through an extensive evaluation on CoderEval and LeetCode benchmarks, we show that PanGu-Coder2 consistently outperforms all previous Code LLMs.",
+    "arxiv_url": "https://arxiv.org/abs/2307.14936",
+    "authors": [
+      "Bo Shen",
+      "Jiaxin Zhang",
+      "Taihong Chen",
+      "Daoguang Zan",
+      "Bing Geng",
+      "An Fu",
+      "Muhan Zeng",
+      "Ailun Yu",
+      "Jichuan Ji",
+      "Jingyang Zhao",
+      "Yuenan Guo",
+      "Qianxiang Wang"
+    ],
+    "first_author": "Bo Shen",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Instruction-Tuning",
+    "summary": "本文提出了RRTF（Rank Responses to align Test&Teacher Feedback）框架，并基于该框架对StarCoder进行排序反馈式指令微调得到PanGu-Coder2，从而在HumanEval、CoderEval和LeetCode等基准上显著提升代码生成性能并达成新的SOTA。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2307.14936v1",
+    "published": "2023-07-27",
+    "update_time": "2023-07-27",
+    "download_time": "2025-12-04 23:10:29"
+  },
+  {
+    "id": "2307.04349",
+    "title": "RLTF: Reinforcement Learning from Unit Test Feedback",
+    "abstract": "The goal of program synthesis, or code generation, is to generate executable code based on given descriptions. Recently, there has been an increasing number of studies employing reinforcement learning (RL) to improve the performance of large language models (LLMs) for code. However, current representative works either rely solely on offline frameworks, limiting the exploration of new sample spaces, or fall short in the utilization of unit test signals, not accounting for specific error locations within the code. To address these issues, we propose RLTF, i.e., Reinforcement Learning from Unit Test Feedback, a novel online RL framework with unit test feedback of multi-granularity for refining code LLMs. Our approach generates data in real-time during training and simultaneously utilizes fine-grained feedback signals to guide the model towards producing higher-quality code. Extensive experiments show that RLTF achieves state-of-the-art performance on the APPS and the MBPP benchmarks. Our code is available at: https://github.com/Zyq-scut/RLTF.",
+    "arxiv_url": "https://arxiv.org/abs/2307.04349",
+    "authors": [
+      "Jiate Liu",
+      "Yiqin Zhu",
+      "Kaiwen Xiao",
+      "Qiang Fu",
+      "Xiao Han",
+      "Wei Yang",
+      "Deheng Ye"
+    ],
+    "first_author": "Jiate Liu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "summary": "本文提出 RLTF，一种基于在线强化学习并利用多粒度单元测试反馈（细粒度与自适应反馈）的框架，用以细化代码大模型并在 APPS 与 MBPP 基准上取得显著提升。",
+    "quality": "High",
+    "conference": "TMLR 2023",
+    "pdf_url": "https://arxiv.org/pdf/2307.04349v2",
+    "published": "2023-07-10",
+    "update_time": "2023-11-13",
+    "download_time": "2025-12-04 23:18:42"
+  },
+  {
     "id": "2308.00147",
     "title": "Delving into Commit-Issue Correlation to Enhance Commit Message Generation Models",
     "abstract": "Commit message generation (CMG) is a challenging task in automated software engineering that aims to generate natural language descriptions of code changes for commits. Previous methods all start from the modified code snippets, outputting commit messages through template-based, retrieval-based, or learning-based models. While these methods can summarize what is modified from the perspective of code, they struggle to provide reasons for the commit. The correlation between commits and issues that could be a critical factor for generating rational commit messages is still unexplored.   In this work, we delve into the correlation between commits and issues from the perspective of dataset and methodology. We construct the first dataset anchored on combining correlated commits and issues. The dataset consists of an unlabeled commit-issue parallel part and a labeled part in which each example is provided with human-annotated rational information in the issue. Furthermore, we propose \\tool (\\underline{Ex}traction, \\underline{Gro}unding, \\underline{Fi}ne-tuning), a novel paradigm that can introduce the correlation between commits and issues into the training phase of models. To evaluate whether it is effective, we perform comprehensive experiments with various state-of-the-art CMG models. The results show that compared with the original models, the performance of \\tool-enhanced models is significantly improved.",

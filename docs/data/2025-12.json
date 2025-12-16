@@ -1,5 +1,650 @@
 [
   {
+    "id": "2512.01939",
+    "title": "An Empirical Study of Agent Developer Practices in AI Agent Frameworks",
+    "abstract": "The rise of large language models (LLMs) has sparked a surge of interest in agents, leading to the rapid growth of agent frameworks. Agent frameworks are software toolkits and libraries that provide standardized components, abstractions, and orchestration mechanisms to simplify agent development. Despite widespread use of agent frameworks, their practical applications and how they influence the agent development process remain underexplored. Different agent frameworks encounter similar problems during use, indicating that these recurring issues deserve greater attention and call for further improvements in agent framework design. Meanwhile, as the number of agent frameworks continues to grow and evolve, more than 80% of developers report difficulties in identifying the frameworks that best meet their specific development requirements. In this paper, we conduct the first empirical study of LLM-based agent frameworks, exploring real-world experiences of developers in building AI agents. To compare how well the agent frameworks meet developer needs, we further collect developer discussions for the ten previously identified agent frameworks, resulting in a total of 11,910 discussions. Finally, by analyzing these discussions, we compare the frameworks across five dimensions: development efficiency, functional abstraction, learning cost, performance optimization, and maintainability, which refers to how easily developers can update and extend both the framework itself and the agents built upon it over time. Our comparative analysis reveals significant differences among frameworks in how they meet the needs of agent developers. Overall, we provide a set of findings and implications for the LLM-driven AI agent framework ecosystem and offer insights for the design of future LLM-based agent frameworks and agent developers.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01939",
+    "authors": [
+      "Yanlin Wang",
+      "Xinyi Xu",
+      "Jiachi Chen",
+      "Tingting Bi",
+      "Wenchao Gu",
+      "Zibin Zheng"
+    ],
+    "first_author": "Yanlin Wang",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Management",
+    "summary": "本文通过对1,575个LLM代理项目及11,910条开发者讨论进行大规模挖掘与分析，提出了基于SDLC的代理开发挑战分类并比较了十个主流代理框架在学习成本、开发效率、功能抽象、性能优化与可维护性五个维度的差异与优劣。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01939v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-05 10:10:06"
+  },
+  {
+    "id": "2512.01690",
+    "title": "Generating REST API Tests With Descriptive Names",
+    "abstract": "Automated test generation has become a key technique for ensuring software quality, particularly in modern API-based architectures. However, automatically generated test cases are typically assigned non-descriptive names (e.g., test0, test1), which reduces their readability and hinders their usefulness during comprehension and maintenance. In this work, we present three novel deterministic techniques to generate REST API test names. We then compare eight techniques in total for generating descriptive names for REST API tests automatically produced by the fuzzer EvoMaster, using 10 test cases generated for 9 different open-source APIs. The eight techniques include rule-based heuristics and large language model (LLM)-based approaches. Their effectiveness was empirically evaluated through two surveys (involving up to 39 people recruited via LinkedIn). Our results show that a rule-based approach achieves the highest clarity ratings among deterministic methods, performs on par with state-of-the-art LLM-based models such as Gemini and GPT-4o, and significantly outperforms GPT-3.5.   To further evaluate the practical impact of our results, an industrial case study was carried out with practitioners who actively use EvoMaster at Volkswagen AG. A developer questionnaire was then carried out based on the use of EvoMaster on four different APIs by four different users, for a total of 74 evaluated test cases. Feedback from practitioners further confirms that descriptive names produced by this approach improve test suite readability.   These findings highlight that lightweight, deterministic techniques can serve as effective alternatives to computationally expensive and security-sensitive LLM-based approaches for automated system-level test naming, providing a practical step toward more developer-friendly API test generation.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01690",
+    "authors": [
+      "Philip Garrett",
+      "Juan P. Galeotti",
+      "Andrea Arcuri",
+      "Alexander Poth",
+      "Olsi Rrjolli"
+    ],
+    "first_author": "Philip Garrett",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "summary": "本文提出三种确定性方法为自动生成的REST API测试用例生成描述性名称，并通过用户调研（39名参与者）与大众汽车的工业案例比较规则与LLM方法，结果表明基于规则的方法在可读性上与先进LLM（如Gemini、GPT-4o）相当且已集成至EvoMaster作为默认策略。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01690v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-05 10:10:33"
+  },
+  {
+    "id": "2512.01609",
+    "title": "GPTrace: Effective Crash Deduplication Using LLM Embeddings",
+    "abstract": "Fuzzing is a highly effective method for uncovering software vulnerabilities, but analyzing the resulting data typically requires substantial manual effort. This is amplified by the fact that fuzzing campaigns often find a large number of crashing inputs, many of which share the same underlying bug. Crash deduplication is the task of finding such duplicate crashing inputs and thereby reducing the data that needs to be examined. Many existing deduplication approaches rely on comparing stack traces or other information that is collected when a program crashes. Although various metrics for measuring the similarity of such pieces of information have been proposed, many do not yield satisfactory deduplication results. In this work, we present GPTrace, a deduplication workflow that leverages a large language model to evaluate the similarity of various data sources associated with crashes by computing embedding vectors and supplying those as input to a clustering algorithm. We evaluate our approach on over 300 000 crashing inputs belonging to 50 ground truth labels from 14 different targets. The deduplication results produced by GPTrace show a noticeable improvement over hand-crafted stack trace comparison methods and even more complex state-of-the-art approaches that are less flexible.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01609",
+    "authors": [
+      "Patrick Herter",
+      "Vincent Ahlrichs",
+      "Ridvan Açilan",
+      "Julian Horsch"
+    ],
+    "first_author": "Patrick Herter",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Testing automation",
+    "summary": "GPTrace提出一种利用大语言模型生成堆栈跟踪和ASan报告的嵌入向量并对其进行聚类的崩溃去重工作流，从而在多目标大规模模糊测试崩溃集上显著优于现有基于栈跟踪的去重方法。",
+    "quality": "High",
+    "conference": "ICSE 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.01609v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-05 10:11:28"
+  },
+  {
+    "id": "2512.01396",
+    "title": "BackportBench: A Multilingual Benchmark for Automated Backporting of Patches",
+    "abstract": "Many modern software projects evolve rapidly to incorporate new features and security patches. It is important for users to update their dependencies to safer versions, but many still use older, vulnerable package versions because upgrading can be difficult and may break their existing codebase. Software developers can mitigate this problem by backporting security patches to older releases. However, manually backporting is time-consuming and error-prone. The effectiveness of existing automated backporting techniques on general software remains unclear since they typically target only code-hunk or function-level patch porting scenarios and are evaluated with imperfect metrics.   To facilitate the development and evaluation of automated backporting techniques, we introduce BackportBench, the first comprehensive benchmark suite for patch backporting problem. BackportBench is a multilingual benchmark that contains 202 patch backporting problems from PyPI, Maven, and npm, each with executable Docker environments and relevant test cases. We evaluated existing patch porting methods and LLM-based techniques that have the potential to adapt to this task using BackportBench. The results show that the agentic method has outperformed traditional patch porting methods, especially on cases that require logical and structural changes. However, the performance varies across different programming languages. Based on the findings, we draw several implications for researchers and software practitioners in future work on automated backporting.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01396",
+    "authors": [
+      "Zhiqing Zhong",
+      "Jiaming Huang",
+      "Pinjia He"
+    ],
+    "first_author": "Zhiqing Zhong",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Maintenance",
+    "task": "Patch Backporting",
+    "summary": "本文提出 BackportBench——一个包含来自 PyPI、Maven 和 npm 的 202 个多语言可执行补丁回移任务的基准，并用该基准评估现有补丁移植方法与多种 LLM 技术以分析其在不同语言与场景下的表现差异。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01396v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-05 10:11:49"
+  },
+  {
+    "id": "2512.01356",
+    "title": "LAURA: Enhancing Code Review Generation with Context-Enriched Retrieval-Augmented LLM",
+    "abstract": "Code review is critical for ensuring software quality and maintainability. With the rapid growth in software scale and complexity, code review has become a bottleneck in the development process because of its time-consuming and knowledge-intensive nature and the shortage of experienced developers willing to review code. Several approaches have been proposed for automatically generating code reviews based on retrieval, neural machine translation, pre-trained models, or large language models (LLMs). These approaches mainly leverage historical code changes and review comments. However, a large amount of crucial information for code review, such as the context of code changes and prior review knowledge, has been overlooked. This paper proposes an LLM-based review knowledge-augmented, context-aware framework for code review generation, named LAURA. The framework integrates review exemplar retrieval, context augmentation, and systematic guidance to enhance the performance of ChatGPT-4o and DeepSeek v3 in generating code review comments. Besides, given the extensive low-quality reviews in existing datasets, we also constructed a high-quality dataset. Experimental results show that for both models, LAURA generates review comments that are either completely correct or at least helpful to developers in 42.2% and 40.4% of cases, respectively, significantly outperforming SOTA baselines. Furthermore, our ablation studies demonstrate that all components of LAURA contribute positively to improving comment quality.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01356",
+    "authors": [
+      "Yuxin Zhang",
+      "Yuxia Zhang",
+      "Zeyu Sun",
+      "Yanjie Jiang",
+      "Hui Liu"
+    ],
+    "first_author": "Yuxin Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Maintenance",
+    "task": "Code Review",
+    "summary": "本文提出LAURA框架，通过上下文增强、相似评审示例检索与系统化引导对LLM进行检索增强生成代码评审，并构建了包含301,256条高质量diff‑comment序列的数据集，从而显著提升了ChatGPT-4o和DeepSeek v3的评审质量。",
+    "quality": "High",
+    "conference": "ASE 2025",
+    "pdf_url": "https://arxiv.org/pdf/2512.01356v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-05 10:12:12"
+  },
+  {
+    "id": "2512.01255",
+    "title": "Large Language Models Cannot Reliably Detect Vulnerabilities in JavaScript: The First Systematic Benchmark and Evaluation",
+    "abstract": "Researchers have proposed numerous methods to detect vulnerabilities in JavaScript, especially those assisted by Large Language Models (LLMs). However, the actual capability of LLMs in JavaScript vulnerability detection remains questionable, necessitating systematic evaluation and comprehensive benchmarks. Unfortunately, existing benchmarks suffer from three critical limitations: (1) incomplete coverage, such as covering a limited subset of CWE types; (2) underestimation of LLM capabilities caused by unreasonable ground truth labeling; and (3) overestimation due to unrealistic cases such as using isolated vulnerable files rather than complete projects.   In this paper, we introduce, for the first time, three principles for constructing a benchmark for JavaScript vulnerability detection that directly address these limitations: (1) comprehensiveness, (2) no underestimation, and (3) no overestimation. Guided by these principles, we propose FORGEJS, the first automatic benchmark generation framework for evaluating LLMs' capability in JavaScript vulnerability detection. Then, we use FORGEJS to construct ARENAJS-the first systematic benchmark for LLM-based JavaScript vulnerability detection-and further propose JUDGEJS, an automatic evaluation framework.   We conduct the first systematic evaluation of LLMs for JavaScript vulnerability detection, leveraging JUDGEJS to assess seven popular commercial LLMs on ARENAJS. The results show that LLMs not only exhibit limited reasoning capabilities, but also suffer from severe robustness defects, indicating that reliable JavaScript vulnerability detection with LLMs remains an open challenge.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01255",
+    "authors": [
+      "Qingyuan Fei",
+      "Xin Liu",
+      "Song Li",
+      "Shujiang Wu",
+      "Jianwei Hou",
+      "Ping Chen",
+      "Zifeng Kang"
+    ],
+    "first_author": "Qingyuan Fei",
+    "category": [
+      "Benchmark",
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "summary": "本文提出了面向JavaScript漏洞检测的自动基准生成框架FORGEJS，构建了系统性基准ARENAJS和自动评估框架JUDGEJS，并使用其对多款主流商用LLM进行系统评估，揭示了模型在推理能力、鲁棒性和可部署性方面的显著缺陷。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01255v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-05 10:12:36"
+  },
+  {
+    "id": "2512.02795",
+    "title": "Towards Observation Lakehouses: Living, Interactive Archives of Software Behavior",
+    "abstract": "Code-generating LLMs are trained largely on static artifacts (source, comments, specifications) and rarely on materializations of run-time behavior. As a result, they readily internalize buggy or mislabeled code. Since non-trivial semantic properties are undecidable in general, the only practical way to obtain ground-truth functionality is by dynamic observation of executions. In prior work, we addressed representation with Sequence Sheets, Stimulus-Response Matrices (SRMs), and Stimulus-Response Cubes (SRCs) to capture and compare behavior across tests, implementations, and contexts. These structures make observation data analyzable offline and reusable, but they do not by themselves provide persistence, evolution, or interactive analytics at scale. In this paper, therefore, we introduce observation lakehouses that operationalize continual SRCs: a tall, append-only observations table storing every actuation (stimulus, response, context) and SQL queries that materialize SRC slices on demand. Built on Apache Parquet + Iceberg + DuckDB, the lakehouse ingests data from controlled pipelines (LASSO) and CI pipelines (e.g., unit test executions), enabling n-version assessment, behavioral clustering, and consensus oracles without re-execution. On a 509-problem benchmark, we ingest $\\approx$8.6M observation rows ($<$51MiB) and reconstruct SRM/SRC views and clusters in $<$100ms on a laptop, demonstrating that continual behavior mining is practical without a distributed cluster of machines. This makes behavioral ground truth first-class alongside other run-time data and provides an infrastructure path toward behavior-aware evaluation and training. The Observation Lakehouse, together with the accompanying dataset, is publicly available as an open-source project on GitHub: https://github.com/SoftwareObservatorium/observation-lakehouse",
+    "arxiv_url": "https://arxiv.org/abs/2512.02795",
+    "authors": [
+      "Marcus Kessel"
+    ],
+    "first_author": "Marcus Kessel",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Software Testing",
+    "task": "Testing automation",
+    "summary": "本文提出 Observation Lakehouse —— 一个基于 Parquet + Iceberg + DuckDB 的可持续、可交互的观测数据湖屋，用于以细粒度调用步骤记录运行时行为并按需重构 SRM/SRC，从而实现无需重执行即可进行 n 版评估、行为聚类与共识 Oracle 并开源了相应数据集与实现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.02795v1",
+    "published": "2025-12-02",
+    "update_time": "2025-12-02",
+    "download_time": "2025-12-05 10:13:02"
+  },
+  {
+    "id": "2512.02750",
+    "title": "\"Can you feel the vibes?\": An exploration of novice programmer engagement with vibe coding",
+    "abstract": "Emerging alongside generative AI and the broader trend of AI-assisted coding, the term \"vibe coding\" refers to creating software via natural language prompts rather than direct code authorship. This approach promises to democratize software development, but its educational implications remain underexplored. This paper reports on a one-day educational hackathon investigating how novice programmers and mixed-experience teams engage with vibe coding. We organized an inclusive event at a Brazilian public university with 31 undergraduate participants from computing and non-computing disciplines, divided into nine teams. Through observations, an exit survey, and semi-structured interviews, we examined creative processes, tool usage patterns, collaboration dynamics, and learning outcomes. Findings reveal that vibe coding enabled rapid prototyping and cross-disciplinary collaboration, with participants developing prompt engineering skills and delivering functional demonstrations within time constraints. However, we observed premature convergence in ideation, uneven code quality requiring rework, and limited engagement with core software engineering practices. Teams adopted sophisticated workflows combining multiple AI tools in pipeline configurations, with human judgment remaining essential for critical refinement. The short format (9 hours) proved effective for confidence-building among newcomers while accommodating participants with limited availability. We conclude that vibe coding hackathons can serve as valuable low-stakes learning environments when coupled with explicit scaffolds for divergent thinking, critical evaluation of AI outputs, and realistic expectations about production quality.",
+    "arxiv_url": "https://arxiv.org/abs/2512.02750",
+    "authors": [
+      "Kiev Gama",
+      "Filipe Calegario",
+      "Victoria Jackson",
+      "Alexander Nolte",
+      "Luiz Augusto Morais",
+      "Vinicius Garcia"
+    ],
+    "first_author": "Kiev Gama",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "summary": "本文报道了一次在巴西公立大学举办的一日“vibe coding”教育黑客松，通过观察、问卷与访谈分析31名本科生在以自然语言提示驱动的软件开发中的协作、工具使用与学习成果，发现其有利于快速原型和跨学科合作但存在早期思路收敛、代码质量不均与对工程实践参与有限等问题，建议通过引导发散思维与批判性评估来提升教学效果。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.02750v1",
+    "published": "2025-12-02",
+    "update_time": "2025-12-02",
+    "download_time": "2025-12-05 10:13:27"
+  },
+  {
+    "id": "2512.03421",
+    "title": "Exploring the Potential and Limitations of Large Language Models for Novice Program Fault Localization",
+    "abstract": "Novice programmers often face challenges in fault localization due to their limited experience and understanding of programming syntax and logic. Traditional methods like Spectrum-Based Fault Localization (SBFL) and Mutation-Based Fault Localization (MBFL) help identify faults but often lack the ability to understand code context, making them less effective for beginners. In recent years, Large Language Models (LLMs) have shown promise in overcoming these limitations by utilizing their ability to understand program syntax and semantics. LLM-based fault localization provides more accurate and context-aware results than traditional techniques. This study evaluates six closed-source and seven open-source LLMs using the Codeflaws, Condefects, and BugT datasets, with BugT being a newly constructed dataset specifically designed to mitigate data leakage concerns. Advanced models with reasoning capabilities, such as OpenAI o3 and DeepSeekR1, achieve superior accuracy with minimal reliance on prompt engineering. In contrast, models without reasoning capabilities, like GPT-4, require carefully designed prompts to maintain performance. While LLMs perform well in simple fault localization, their accuracy decreases as problem difficulty increases, though top models maintain robust performance in the BugT dataset. Over-reasoning is another challenge, where some models generate excessive explanations that hinder fault localization clarity. Additionally, the computational cost of deploying LLMs remains a significant barrier for real-time debugging. LLM's explanations demonstrate significant value for novice programmer assistance, with one-year experience participants consistently rating them highly. Our findings demonstrate the potential of LLMs to improve debugging efficiency while stressing the need for further refinement in their reasoning and computational efficiency for practical adoption.",
+    "arxiv_url": "https://arxiv.org/abs/2512.03421",
+    "authors": [
+      "Hexiang Xu",
+      "Hengyuan Liu",
+      "Yonghao Wu",
+      "Xiaolan Kang",
+      "Xiang Chen",
+      "Yong Liu"
+    ],
+    "first_author": "Hexiang Xu",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "summary": "本文构建了新的BugT数据集并在Codeflaws、Condefects与BugT上系统评估多种开源与闭源LLM，实证分析了它们在新手程序故障定位中的性能、难度影响、推理过度与计算成本，并通过用户研究验证了LLM解释对新手的教学价值。",
+    "quality": "High",
+    "conference": "The Journal of Systems & Software",
+    "pdf_url": "https://arxiv.org/pdf/2512.03421v1",
+    "published": "2025-12-03",
+    "update_time": "2025-12-03",
+    "download_time": "2025-12-05 17:25:17"
+  },
+  {
+    "id": "2512.03420",
+    "title": "HarnessAgent: Scaling Automatic Fuzzing Harness Construction with Tool-Augmented LLM Pipelines",
+    "abstract": "Large language model (LLM)-based techniques have achieved notable progress in generating harnesses for program fuzzing. However, applying them to arbitrary functions (especially internal functions) \\textit{at scale} remains challenging due to the requirement of sophisticated contextual information, such as specification, dependencies, and usage examples. State-of-the-art methods heavily rely on static or incomplete context provisioning, causing failure of generating functional harnesses. Furthermore, LLMs tend to exploit harness validation metrics, producing plausible yet logically useless code. % Therefore, harness generation across large and diverse projects continues to face challenges in reliable compilation, robust code retrieval, and comprehensive validation.   To address these challenges, we present HarnessAgent, a tool-augmented agentic framework that achieves fully automated, scalable harness construction over hundreds of OSS-Fuzz targets. HarnessAgent introduces three key innovations: 1) a rule-based strategy to identify and minimize various compilation errors; 2) a hybrid tool pool for precise and robust symbol source code retrieval; and 3) an enhanced harness validation pipeline that detects fake definitions. We evaluate HarnessAgent on 243 target functions from OSS-Fuzz projects (65 C projects and 178 C++ projects). It improves the three-shot success rate by approximately 20\\% compared to state-of-the-art techniques, reaching 87\\% for C and 81\\% for C++. Our one-hour fuzzing results show that more than 75\\% of the harnesses generated by HarnessAgent increase the target function coverage, surpassing the baselines by over 10\\%. In addition, the hybrid tool-pool system of HarnessAgent achieves a response rate of over 90\\% for source code retrieval, outperforming Fuzz Introspector by more than 30\\%.",
+    "arxiv_url": "https://arxiv.org/abs/2512.03420",
+    "authors": [
+      "Kang Yang",
+      "Yunhang Zhang",
+      "Zichuan Li",
+      "GuanHong Tao",
+      "Jun Xu",
+      "XiaoJing Liao"
+    ],
+    "first_author": "Kang Yang",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "summary": "本文提出HarnessAgent，一种工具增强的agent框架，通过编译错误分流、混合检索工具池与强化验证流水线，实现对大型C/C++代码库中内部函数的自动化模糊测试驱动（harness）构建，并在243个OSS-Fuzz目标上显著提高生成成功率与模糊覆盖率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.03420v1",
+    "published": "2025-12-03",
+    "update_time": "2025-12-03",
+    "download_time": "2025-12-05 17:25:58"
+  },
+  {
+    "id": "2512.05073",
+    "title": "David vs. Goliath: Can Small Models Win Big with Agentic AI in Hardware Design?",
+    "abstract": "Large Language Model(LLM) inference demands massive compute and energy, making domain-specific tasks expensive and unsustainable. As foundation models keep scaling, we ask: Is bigger always better for hardware design? Our work tests this by evaluating Small Language Models coupled with a curated agentic AI framework on NVIDIA's Comprehensive Verilog Design Problems(CVDP) benchmark. Results show that agentic workflows: through task decomposition, iterative feedback, and correction - not only unlock near-LLM performance at a fraction of the cost but also create learning opportunities for agents, paving the way for efficient, adaptive solutions in complex design tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05073",
+    "authors": [
+      "Shashwat Shankar",
+      "Subhranshu Pandey",
+      "Innocent Dengkhw Mochahari",
+      "Bhabesh Mali",
+      "Animesh Basak Chowdhury",
+      "Sukanta Bhattacharjee",
+      "Chandan Karfa"
+    ],
+    "first_author": "Shashwat Shankar",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "summary": "本文提出并在NVIDIA CVDP基准上评估了一个为小型语言模型（SLM）定制的多智能体 agentic AI 框架，通过任务分解、SLM 优化提示、迭代验证与回滚机制，使低成本 SLM 在 Verilog 硬件设计与理解任务中接近或匹配大模型性能并显著降低能耗与成本。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.05073v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-06 23:50:18"
+  },
+  {
+    "id": "2512.04680",
+    "title": "Generative AI for Self-Adaptive Systems: State of the Art and Research Roadmap",
+    "abstract": "Self-adaptive systems (SASs) are designed to handle changes and uncertainties through a feedback loop with four core functionalities: monitoring, analyzing, planning, and execution. Recently, generative artificial intelligence (GenAI), especially the area of large language models, has shown impressive performance in data comprehension and logical reasoning. These capabilities are highly aligned with the functionalities required in SASs, suggesting a strong potential to employ GenAI to enhance SASs. However, the specific benefits and challenges of employing GenAI in SASs remain unclear. Yet, providing a comprehensive understanding of these benefits and challenges is complex due to several reasons: limited publications in the SAS field, the technological and application diversity within SASs, and the rapid evolution of GenAI technologies. To that end, this paper aims to provide researchers and practitioners a comprehensive snapshot that outlines the potential benefits and challenges of employing GenAI's within SAS. Specifically, we gather, filter, and analyze literature from four distinct research fields and organize them into two main categories to potential benefits: (i) enhancements to the autonomy of SASs centered around the specific functions of the MAPE-K feedback loop, and (ii) improvements in the interaction between humans and SASs within human-on-the-loop settings. From our study, we outline a research roadmap that highlights the challenges of integrating GenAI into SASs. The roadmap starts with outlining key research challenges that need to be tackled to exploit the potential for applying GenAI in the field of SAS. The roadmap concludes with a practical reflection, elaborating on current shortcomings of GenAI and proposing possible mitigation strategies.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04680",
+    "authors": [
+      "Jialong Li",
+      "Mingyue Zhang",
+      "Nianyu Li",
+      "Danny Weyns",
+      "Zhi Jin",
+      "Kenji Tei"
+    ],
+    "first_author": "Jialong Li",
+    "category": [
+      "Survey"
+    ],
+    "field": "Self-Adaptive Systems",
+    "task": "GenAI for MAPE-K (Monitoring, Analysis, Planning, Execution) and Human-on-the-loop Interaction",
+    "summary": "本文综述了将生成式AI（尤其是大型语言模型）应用于自适应系统的最新进展，分析其在增强MAPE‑K各功能和改善人机协作中的潜力与挑战，并提出了面向研究与实践的路线图与缓解策略。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04680v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-06 23:50:52"
+  },
+  {
+    "id": "2512.04702",
+    "title": "POLARIS: Is Multi-Agentic Reasoning the Next Wave in Engineering Self-Adaptive Systems?",
+    "abstract": "The growing scale, complexity, interconnectivity, and autonomy of modern software ecosystems introduce unprecedented uncertainty, challenging the foundations of traditional self-adaptation. Existing approaches, typically rule-driven controllers or isolated learning components, struggle to generalize to novel contexts or coordinate responses across distributed subsystems, leaving them ill-equipped for emergent unknown unknowns. Recent discussions on Self-Adaptation 2.0 emphasize an equal partnership between AI and adaptive systems, merging learning-driven intelligence with adaptive control for predictive and proactive behavior. Building on this foundation, we introduce POLARIS, a three-layer multi-agentic self-adaptation framework that advances beyond reactive adaptation. POLARIS integrates: (1) a low-latency Adapter layer for monitoring and safe execution, (2) a transparent Reasoning layer that generates and verifies plans using tool-aware, explainable agents, and (3) a Meta layer that records experiences and meta-learns improved adaptation policies over time. Through shared knowledge and predictive models, POLARIS handles uncertainty, learns from past actions, and evolves its strategies, enabling systems that anticipate change and maintain resilient, goal-directed behavior. Preliminary evaluation on two self-adaptive exemplars, SWIM and SWITCH, shows that POLARIS consistently outperforms state-of-the-art baselines. We argue this marks a shift toward Self-Adaptation 3.0, akin to Software 3.0: a paradigm where systems not only learn from their environment but also reason about and evolve their own adaptation processes, continuously improving to meet novel challenges.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04702",
+    "authors": [
+      "Divyansh Pandey",
+      "Vyakhya Gupta",
+      "Prakhar Singhal",
+      "Karthik Vaidhyanathan"
+    ],
+    "first_author": "Divyansh Pandey",
+    "category": [
+      "Technical"
+    ],
+    "field": "Self-Adaptive Systems",
+    "task": "Multi-Agentic Runtime Adaptation (LLM-based reasoning & meta-learning)",
+    "summary": "提出POLARIS——一个三层多智能体自适应框架，结合低延迟适配器、可解释的推理代理和元学习来实现预测性、可验证且能随经验持续演化的自适应系统，并在SWIM和SWITCH示例上显示出优于现有基线的性能提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04702v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-07 01:57:21"
+  },
+  {
+    "id": "2512.04673",
+    "title": "Cross-Task Benchmarking and Evaluation of General-Purpose and Code-Specific Large Language Models",
+    "abstract": "Large Language Models (LLMs) have revolutionized both general natural language processing and domain-specific applications such as code synthesis, legal reasoning, and finance. However, while prior studies have explored individual model capabilities, a systematic cross-domain comparison that unifies linguistic, reasoning, and code understanding abilities remains underexplored. In this work, we present a comprehensive evaluation of five general-purpose and three code-specific state-of-the-art LLMs across six diverse benchmarks encompassing linguistic competence, mathematical reasoning, and trustworthiness. Additionally, we analyze model behavior on the CoNaLa dataset for code explanation, comparing natural language and code-specialized LLMs. Our findings reveal that models optimized for code (e.g., CodeLLaMA variants) exhibit strong reasoning and syntactic precision, that even for non-coding tasks can show measurable performance gains, in contrast to general-purpose models like Mistral-7B and Llama-3-8B.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04673",
+    "authors": [
+      "Gunjan Das",
+      "Paheli Bhattacharya",
+      "Rishabh Gupta"
+    ],
+    "first_author": "Gunjan Das",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "summary": "本文对多款通用与代码专用大型语言模型在六个自然语言与推理基准及CoNaLa代码解释任务上进行了系统的横向评估与对比，发现代码优化模型在推理能力和语法精确性上具有显著优势。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04673v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-07 01:57:56"
+  },
+  {
+    "id": "2512.05100",
+    "title": "Structured Document Translation via Format Reinforcement Learning",
+    "abstract": "Recent works on structured text translation remain limited to the sentence level, as they struggle to effectively handle the complex document-level XML or HTML structures. To address this, we propose \\textbf{Format Reinforcement Learning (FormatRL)}, which employs Group Relative Policy Optimization on top of a supervised fine-tuning model to directly optimize novel structure-aware rewards: 1) TreeSim, which measures structural similarity between predicted and reference XML trees and 2) Node-chrF, which measures translation quality at the level of XML nodes. Additionally, we apply StrucAUC, a fine-grained metric distinguishing between minor errors and major structural failures. Experiments on the SAP software-documentation benchmark demonstrate improvements across six metrics and an analysis further shows how different reward functions contribute to improvements in both structural and translation quality.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05100",
+    "authors": [
+      "Haiyue Song",
+      "Johannes Eschbach-Dymanus",
+      "Hour Kaing",
+      "Sumire Honda",
+      "Hideki Tanaka",
+      "Bianka Buschbeck",
+      "Masao Utiyama"
+    ],
+    "first_author": "Haiyue Song",
+    "category": [
+      "Technical"
+    ],
+    "field": "Structured Document Translation",
+    "task": "XML/HTML Structured Document Translation",
+    "summary": "本文提出FORMATRL，一种基于Group Relative Policy Optimization的强化学习方法，通过TreeSim和Node-chrF等结构感知奖励以及StrucAUC评估，将结构信息直接纳入模型优化以提升带XML/HTML标记的软件文档翻译的结构保真度与翻译质量。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.05100v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-07 01:59:06"
+  },
+  {
+    "id": "2512.04785",
+    "title": "ASTRIDE: A Security Threat Modeling Platform for Agentic-AI Applications",
+    "abstract": "AI agent-based systems are becoming increasingly integral to modern software architectures, enabling autonomous decision-making, dynamic task execution, and multimodal interactions through large language models (LLMs). However, these systems introduce novel and evolving security challenges, including prompt injection attacks, context poisoning, model manipulation, and opaque agent-to-agent communication, that are not effectively captured by traditional threat modeling frameworks. In this paper, we introduce ASTRIDE, an automated threat modeling platform purpose-built for AI agent-based systems. ASTRIDE extends the classical STRIDE framework by introducing a new threat category, A for AI Agent-Specific Attacks, which encompasses emerging vulnerabilities such as prompt injection, unsafe tool invocation, and reasoning subversion, unique to agent-based applications. To automate threat modeling, ASTRIDE combines a consortium of fine-tuned vision-language models (VLMs) with the OpenAI-gpt-oss reasoning LLM to perform end-to-end analysis directly from visual agent architecture diagrams, such as data flow diagrams(DFDs). LLM agents orchestrate the end-to-end threat modeling automation process by coordinating interactions between the VLM consortium and the reasoning LLM. Our evaluations demonstrate that ASTRIDE provides accurate, scalable, and explainable threat modeling for next-generation intelligent systems. To the best of our knowledge, ASTRIDE is the first framework to both extend STRIDE with AI-specific threats and integrate fine-tuned VLMs with a reasoning LLM to fully automate diagram-driven threat modeling in AI agent-based applications.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04785",
+    "authors": [
+      "Eranga Bandara",
+      "Amin Hass",
+      "Ross Gore",
+      "Sachin Shetty",
+      "Ravi Mukkamala",
+      "Safdar H. Bouk",
+      "Xueping Liang",
+      "Ng Wee Keong",
+      "Kasun De Zoysa",
+      "Aruna Withanage",
+      "Nilaan Loganathan"
+    ],
+    "first_author": "Eranga Bandara",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Requirements & Design",
+    "task": "Analysis",
+    "summary": "本文提出ASTRIDE——一个面向智能体式AI应用的自动化威胁建模平台，扩展STRIDE引入AI特有威胁类别并结合微调的视觉-语言模型与推理LLM从架构图端到端自动生成可解释的威胁模型。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04785v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-07 02:04:42"
+  },
+  {
+    "id": "2512.04611",
+    "title": "PBFuzz: Agentic Directed Fuzzing for PoV Generation",
+    "abstract": "Proof-of-Vulnerability (PoV) input generation is a critical task in software security and supports downstream applications such as path generation and validation. Generating a PoV input requires solving two sets of constraints: (1) reachability constraints for reaching vulnerable code locations, and (2) triggering constraints for activating the target vulnerability. Existing approaches, including directed greybox fuzzing and LLM-assisted fuzzing, struggle to efficiently satisfy these constraints. This work presents an agentic method that mimics human experts. Human analysts iteratively study code to extract semantic reachability and triggering constraints, form hypotheses about PoV triggering strategies, encode them as test inputs, and refine their understanding using debugging feedback. We automate this process with an agentic directed fuzzing framework called PBFuzz. PBFuzz tackles four challenges in agentic PoV generation: autonomous code reasoning for semantic constraint extraction, custom program-analysis tools for targeted inference, persistent memory to avoid hypothesis drift, and property-based testing for efficient constraint solving while preserving input structure. Experiments on the Magma benchmark show strong results. PBFuzz triggered 57 vulnerabilities, surpassing all baselines, and uniquely triggered 17 vulnerabilities not exposed by existing fuzzers. PBFuzz achieved this within a 30-minute budget per target, while conventional approaches use 24 hours. Median time-to-exposure was 339 seconds for PBFuzz versus 8680 seconds for AFL++ with CmpLog, giving a 25.6x efficiency improvement with an API cost of 1.83 USD per vulnerability.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04611",
+    "authors": [
+      "Haochen Zeng",
+      "Andrew Bao",
+      "Jiajun Cheng",
+      "Chengyu Song"
+    ],
+    "first_author": "Haochen Zeng",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "summary": "本文提出PBFuzz——一种基于LLM代理的定向模糊测试框架，通过自主演绎代码约束、工具编排、持久化记忆与基于属性的测试生成PoV输入，并在Magma基准上显著优于现有方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04611v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 01:51:09"
+  },
+  {
+    "id": "2512.04538",
+    "title": "Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding",
+    "abstract": "As code completion task from function-level to repository-level, leveraging contextual information from large-scale codebases becomes a core challenge. However, existing retrieval-augmented generation (RAG) methods typically treat code as plain natural language, relying primarily on shallow semantic matching while overlooking structural semantics and code-specific dependencies. This limits their ability to capture control flow and underlying intent, ultimately constraining the quality of generated code. Therefore, we propose CoCo, a novel framework that enables code Completion by Comprehension of multi-granularity context from large-scale code repositories. CoCo employs static code analysis to extract structured context at the function, file, and project levels, capturing execution logic and semantic dependencies. It then adopts an graph-based multi-granularity context selection mechanism to filter out redundant information and remove noise. Consequently, the information is converted into natural language in a consistent manner, thereby functioning as explicit contextual prompts to guide subsequent code completion. Additionally, a structure-aware code re-ranker mechanism ensures alignment at both semantic and structural levels. Extensive experiments on CrossCodeEval and RepoEval benchmarks demonstrate that CoCo consistently surpasses state-of-the-art baselines, achieving up to 20.2% gains in EM. Moreover, the framework is model-agnostic and can be seamlessly integrated into existing methods, leading to significant performance.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04538",
+    "authors": [
+      "Xinkui Zhao",
+      "Rongkai Liu",
+      "Yifan Zhang",
+      "Chen Zhi",
+      "Lufei Zhang",
+      "Guanjie Cheng",
+      "Yueshen Xu",
+      "Shuiguang Deng",
+      "Jianwei Yin"
+    ],
+    "first_author": "Xinkui Zhao",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "summary": "本文提出CoCo框架，通过静态代码分析提取函数、文件和仓库三级结构化上下文，使用图式多粒度上下文选择与结构感知重排序将关键信息转为自然语言提示，从而指导检索增强的模型进行仓库级代码补全并在基准上显著优于现有方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04538v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 01:51:40"
+  },
+  {
+    "id": "2512.04738",
+    "title": "OsmT: Bridging OpenStreetMap Queries and Natural Language with Open-source Tag-aware Language Models",
+    "abstract": "Bridging natural language and structured query languages is a long-standing challenge in the database community. While recent advances in language models have shown promise in this direction, existing solutions often rely on large-scale closed-source models that suffer from high inference costs, limited transparency, and lack of adaptability for lightweight deployment. In this paper, we present OsmT, an open-source tag-aware language model specifically designed to bridge natural language and Overpass Query Language (OverpassQL), a structured query language for accessing large-scale OpenStreetMap (OSM) data. To enhance the accuracy and structural validity of generated queries, we introduce a Tag Retrieval Augmentation (TRA) mechanism that incorporates contextually relevant tag knowledge into the generation process. This mechanism is designed to capture the hierarchical and relational dependencies present in the OSM database, addressing the topological complexity inherent in geospatial query formulation. In addition, we define a reverse task, OverpassQL-to-Text, which translates structured queries into natural language explanations to support query interpretation and improve user accessibility. We evaluate OsmT on a public benchmark against strong baselines and observe consistent improvements in both query generation and interpretation. Despite using significantly fewer parameters, our model achieves competitive accuracy, demonstrating the effectiveness of open-source pre-trained language models in bridging natural language and structured query languages within schema-rich geospatial environments.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04738",
+    "authors": [
+      "Zhuoyue Wan",
+      "Wentao Hu",
+      "Chen Jason Zhang",
+      "Yuanfeng Song",
+      "Shuaimin Li",
+      "Ruiqiang Xiao",
+      "Xiao-Yong Wei",
+      "Raymond Chi-Wing Wong"
+    ],
+    "first_author": "Zhuoyue Wan",
+    "category": [
+      "Technical"
+    ],
+    "field": "Natural Language Interfaces for Structured Geospatial Data",
+    "task": "Text-to-OverpassQL and OverpassQL-to-Text (bidirectional NL ↔ OverpassQL translation)",
+    "summary": "本文提出OSMT，一种开源的标签感知预训练语言模型，并通过Tag Retrieval Augmentation和混合预训练策略实现对自然语言与OverpassQL的双向翻译，在参数量较小的情况下仍能在Text-to-OverpassQL和OverpassQL-to-Text任务上取得有竞争力的性能与更好的结构化生成质量。",
+    "quality": "High",
+    "conference": "42nd IEEE International Conference on Data Engineering (ICDE 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2512.04738v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 02:00:39"
+  },
+  {
+    "id": "2512.04419",
+    "title": "Solving LLM Repetition Problem in Production: A Comprehensive Study of Multiple Solutions",
+    "abstract": "The repetition problem, where Large Language Models (LLMs) continuously generate repetitive content without proper termination, poses a critical challenge in production deployments, causing severe performance degradation and system stalling. This paper presents a comprehensive investigation and multiple practical solutions for the repetition problem encountered in real-world batch code interpretation tasks.   We identify three distinct repetition patterns: (1) business rule generation repetition, (2) method call relationship analysis repetition, and (3) PlantUML diagram syntax generation repetition. Through rigorous theoretical analysis based on Markov models, we establish that the root cause lies in greedy decoding's inability to escape repetitive loops, exacerbated by self-reinforcement effects.   Our comprehensive experimental evaluation demonstrates three viable solutions: (1) Beam Search decoding with early_stopping=True serves as a universal post-hoc mechanism that effectively resolves all three repetition patterns; (2) presence_penalty hyperparameter provides an effective solution specifically for BadCase 1; and (3) Direct Preference Optimization (DPO) fine-tuning offers a universal model-level solution for all three BadCases.   The primary value of this work lies in combining first-hand production experience with extensive experimental validation. Our main contributions include systematic theoretical analysis of repetition mechanisms, comprehensive evaluation of multiple solutions with task-specific applicability mapping, identification of early_stopping as the critical parameter for Beam Search effectiveness, and practical production-ready solutions validated in real deployment environments.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04419",
+    "authors": [
+      "Weiwei Wang",
+      "Weijie Zou",
+      "Jiyong Min"
+    ],
+    "first_author": "Weiwei Wang",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "summary": "本文结合生产环境中的一手经验、理论分析与大规模实验，提出并验证了三类可行的解决方案（启用early_stopping的Beam Search、presence_penalty参数调整和基于DPO的微调）以在批量代码解析任务中根治或缓解LLM的重复生成问题。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04419v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 02:07:41"
+  },
+  {
+    "id": "2512.05908",
+    "title": "Natural Language Summarization Enables Multi-Repository Bug Localization by LLMs in Microservice Architectures",
+    "abstract": "Bug localization in multi-repository microservice architectures is challenging due to the semantic gap between natural language bug reports and code, LLM context limitations, and the need to first identify the correct repository. We propose reframing this as a natural language reasoning task by transforming codebases into hierarchical NL summaries and performing NL-to-NL search instead of cross-modal retrieval. Our approach builds context-aware summaries at file, directory, and repository levels, then uses a two-phase search: first routing bug reports to relevant repositories, then performing top-down localization within those repositories. Evaluated on DNext, an industrial system with 46 repositories and 1.1M lines of code, our method achieves Pass@10 of 0.82 and MRR of 0.50, significantly outperforming retrieval baselines and agentic RAG systems like GitHub Copilot and Cursor. This work demonstrates that engineered natural language representations can be more effective than raw source code for scalable bug localization, providing an interpretable repository -> directory -> file search path, which is vital for building trust in enterprise AI tools by providing essential transparency.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05908",
+    "authors": [
+      "Amirkia Rafiei Oskooei",
+      "S. Selcan Yukcu",
+      "Mehmet Cevheri Bozoglan",
+      "Mehmet S. Aktas"
+    ],
+    "first_author": "Amirkia Rafiei Oskooei",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "summary": "本文提出将多仓库微服务代码库转化为分层的自然语言摘要，并采用先将错误报告路由到相关仓库、再自上而下进行目录与文件级搜索的两阶段 LLM 推理流程，实现对大规模工业系统的可解释缺陷定位，显著优于检索与 RAG 基线。",
+    "quality": "High",
+    "conference": "LLM4Code Workshop, ICSE 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.05908v1",
+    "published": "2025-12-05",
+    "update_time": "2025-12-05",
+    "download_time": "2025-12-09 01:48:46"
+  },
+  {
+    "id": "2512.05887",
+    "title": "Bootstrapping Fuzzers for Compilers of Low-Resource Language Dialects Using Language Models",
+    "abstract": "Modern extensible compiler frameworks-such as MLIR-enable rapid creation of domain-specific language dialects. This flexibility, however, makes correctness harder to ensure as the same extensibility that accelerates development also complicates maintaining the testing infrastructure. Extensible languages require automated test generation that is both dialect-agnostic (works across dialects without manual adaptation) and dialect-effective (targets dialect-specific features to find bugs). Existing approaches typically sacrifice one of these goals by either requiring manually constructed seed corpora for each dialect, or by failing to be effective. We present a dialect-agnostic and dialect-effective grammar-based and coverage-guided fuzzing approach for extensible compilers that combines two key insights from existing work: (i) the grammars of dialects, which already encode the structural and type constraints, can often be extracted automatically from the dialect specification; and (ii) these grammars can be used in combination with pre-trained large language models to automatically generate representative and diverse seed inputs from the full dialect space without requiring any manual input or training data. These seeds can then be used to bootstrap coverage-guided fuzzers. We built this approach into a tool, Germinator. When evaluated on six MLIR projects spanning 91 dialects, Germinator generated seeds improve line coverage by 10-120% over grammar-based baselines. We compare against grammar-based baselines because they are the only class of existing automatic seed generators that can be applied uniformly across MLIR's heterogeneous dialect ecosystem. Germinator discovers 88 previously unknown bugs (40 confirmed), including 23 in dialects with no prior automated test generators, demonstrating effective and controllable testing of low-resource dialects at scale.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05887",
+    "authors": [
+      "Sairam Vaidya",
+      "Marcel Böhme",
+      "Loris D'Antoni"
+    ],
+    "first_author": "Sairam Vaidya",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "summary": "本文提出 Germinator：一种从 MLIR 方言的 TableGen 自动提取语法并结合语法约束的大型语言模型生成多样化种子以引导覆盖驱动的模糊测试，从而在 91 个方言上显著提升覆盖率并发现大量未知缺陷。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.05887v1",
+    "published": "2025-12-05",
+    "update_time": "2025-12-05",
+    "download_time": "2025-12-09 01:49:12"
+  },
+  {
+    "id": "2512.05962",
+    "title": "Whatever Remains Must Be True: Filtering Drives Reasoning in LLMs, Shaping Diversity",
+    "abstract": "Reinforcement Learning (RL) has become the de facto standard for tuning LLMs to solve tasks involving reasoning. However, growing evidence shows that models trained in such way often suffer from a significant loss in diversity. We argue that this arises because RL implicitly optimizes the \"mode-seeking\" or \"zero-forcing\" Reverse KL to a target distribution causing the model to concentrate mass on certain high-probability regions of the target while neglecting others. In this work, we instead begin from an explicit target distribution, obtained by filtering out incorrect answers while preserving the relative probabilities of correct ones. Starting from a pre-trained LLM, we approximate this target distribution using the $α$-divergence family, which unifies prior approaches and enables direct control of the precision-diversity trade-off by interpolating between mode-seeking and mass-covering divergences. On a Lean theorem-proving benchmark, our method achieves state-of-the-art performance along the coverage-precision Pareto frontier, outperforming all prior methods on the coverage axis.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05962",
+    "authors": [
+      "Germán Kruszewski",
+      "Pierre Erbacher",
+      "Jos Rozen",
+      "Marc Dymetman"
+    ],
+    "first_author": "Germán Kruszewski",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Reasoning & Verification",
+    "task": "Theorem Proving / Proof Search",
+    "summary": "本文提出了DMVR框架与α-DPG方法，通过以验证器过滤构造显式目标分布并利用α-散度在mode-seeking与mass-covering之间插值，从而可控地在精确性与多样性之间权衡，并在Lean定理证明基准上取得覆盖率-精度前沿上的最优表现，显著缓解了RLVR类方法导致的多样性下降。 ",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.05962v1",
+    "published": "2025-12-05",
+    "update_time": "2025-12-05",
+    "download_time": "2025-12-09 01:50:02"
+  },
+  {
+    "id": "2512.05908",
+    "title": "Natural Language Summarization Enables Multi-Repository Bug Localization by LLMs in Microservice Architectures",
+    "abstract": "Bug localization in multi-repository microservice architectures is challenging due to the semantic gap between natural language bug reports and code, LLM context limitations, and the need to first identify the correct repository. We propose reframing this as a natural language reasoning task by transforming codebases into hierarchical NL summaries and performing NL-to-NL search instead of cross-modal retrieval. Our approach builds context-aware summaries at file, directory, and repository levels, then uses a two-phase search: first routing bug reports to relevant repositories, then performing top-down localization within those repositories. Evaluated on DNext, an industrial system with 46 repositories and 1.1M lines of code, our method achieves Pass@10 of 0.82 and MRR of 0.50, significantly outperforming retrieval baselines and agentic RAG systems like GitHub Copilot and Cursor. This work demonstrates that engineered natural language representations can be more effective than raw source code for scalable bug localization, providing an interpretable repository -> directory -> file search path, which is vital for building trust in enterprise AI tools by providing essential transparency.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05908",
+    "authors": [
+      "Amirkia Rafiei Oskooei",
+      "S. Selcan Yukcu",
+      "Mehmet Cevheri Bozoglan",
+      "Mehmet S. Aktas"
+    ],
+    "first_author": "Amirkia Rafiei Oskooei",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "summary": "本文将多仓库微服务代码转换为层次化的自然语言摘要，并通过仓库路由与目录/文件自上而下的两阶段NL‑to‑NL搜索，利用LLM实现可解释且可扩展的多仓库缺陷定位，在工业级DNext系统上显著优于RAG与检索基线。",
+    "quality": "High",
+    "conference": "LLM4Code Workshop, ICSE 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.05908v1",
+    "published": "2025-12-05",
+    "update_time": "2025-12-05",
+    "download_time": "2025-12-09 01:52:21"
+  },
+  {
     "id": "2512.07814",
     "title": "Understanding Privacy Risks in Code Models Through Training Dynamics: A Causal Approach",
     "abstract": "Large language models for code (LLM4Code) have greatly improved developer productivity but also raise privacy concerns due to their reliance on open-source repositories containing abundant personally identifiable information (PII). Prior work shows that commercial models can reproduce sensitive PII, yet existing studies largely treat PII as a single category and overlook the heterogeneous risks among different types. We investigate whether distinct PII types vary in their likelihood of being learned and leaked by LLM4Code, and whether this relationship is causal. Our methodology includes building a dataset with diverse PII types, fine-tuning representative models of different scales, computing training dynamics on real PII data, and formulating a structural causal model to estimate the causal effect of learnability on leakage. Results show that leakage risks differ substantially across PII types and correlate with their training dynamics: easy-to-learn instances such as IP addresses exhibit higher leakage, while harder types such as keys and passwords leak less frequently. Ambiguous types show mixed behaviors. This work provides the first causal evidence that leakage risks are type-dependent and offers guidance for developing type-aware and learnability-aware defenses for LLM4Code.",
@@ -1038,5 +1683,140 @@
     "published": "2025-12-12",
     "update_time": "2025-12-12",
     "download_time": "2025-12-16 01:59:31"
+  },
+  {
+    "id": "2512.12719",
+    "title": "Towards AI Agents Supported Research Problem Formulation",
+    "abstract": "Poorly formulated research problems can compromise the practical relevance of Software Engineering studies by not reflecting the complexities of industrial practice. This vision paper explores the use of artificial intelligence agents to support SE researchers during the early stage of a research project, the formulation of the research problem. Based on the Lean Research Inception framework and using a published study on code maintainability in machine learning as a reference, we developed a descriptive evaluation of a scenario illustrating how AI agents, integrated into LRI, can support SE researchers by pre filling problem attributes, aligning stakeholder perspectives, refining research questions, simulating multiperspective assessments, and supporting decision making. The descriptive evaluation of the scenario suggests that AI agent support can enrich collaborative discussions and enhance critical reflection on the value, feasibility, and applicability of the research problem. Although the vision of integrating AI agents into LRI was perceived as promising to support the context aware and practice oriented formulation of research problems, empirical validation is needed to confirm and refine the integration of AI agents into problem formulation.",
+    "arxiv_url": "https://arxiv.org/abs/2512.12719",
+    "authors": [
+      "Anrafel Fernandes Pereira",
+      "Maria Teresa Baldassarre",
+      "Daniel Mendez",
+      "Marcos Kalinowski"
+    ],
+    "first_author": "Anrafel Fernandes Pereira",
+    "category": [
+      "Technical"
+    ],
+    "field": "Research Process & Methodology",
+    "task": "Research Problem Formulation",
+    "tags": [
+      "AI-assisted problem framing",
+      "Problem Vision board pre-filling",
+      "Multi-agent reasoning for research design",
+      "Stakeholder-perspective simulation",
+      "Semantic-differential assessment augmentation",
+      "Literature-and-industry evidence synthesis",
+      "Decision-support for go/pivot/abort"
+    ],
+    "summary": "该愿景论文提出将 AI 多代理体整合入 Lean Research Inception 框架，通过预填问题属性、促进利益相关者对齐、生成多视角评估并支持决策流程以改善软件工程研究问题的表述，但仍需实证验证。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.12719v1",
+    "published": "2025-12-14",
+    "update_time": "2025-12-14",
+    "download_time": "2025-12-16 02:40:02"
+  },
+  {
+    "id": "2512.12706",
+    "title": "Synergizing Code Coverage and Gameplay Intent: Coverage-Aware Game Playtesting with LLM-Guided Reinforcement Learning",
+    "abstract": "The widespread adoption of the \"Games as a Service\" model necessitates frequent content updates, placing immense pressure on quality assurance. In response, automated game testing has been viewed as a promising solution to cope with this demanding release cadence. However, existing automated testing approaches typically create a dichotomy: code-centric methods focus on structural coverage without understanding gameplay context, while player-centric agents validate high-level intent but often fail to cover specific underlying code changes. To bridge this gap, we propose SMART (Structural Mapping for Augmented Reinforcement Testing), a novel framework that synergizes structural verification and functional validation for game update testing. SMART leverages large language models (LLMs) to interpret abstract syntax tree (AST) differences and extract functional intent, constructing a context-aware hybrid reward mechanism. This mechanism guides reinforcement learning agents to sequentially fulfill gameplay goals while adaptively exploring modified code branches. We evaluate SMART on two environments, Overcooked and Minecraft. The results demonstrate that SMART significantly outperforms state-of-the-art baselines; it achieves over 94% branch coverage of modified code, nearly double that of traditional reinforcement learning methods, while maintaining a 98% task completion rate, effectively balancing structural comprehensiveness with functional correctness.",
+    "arxiv_url": "https://arxiv.org/abs/2512.12706",
+    "authors": [
+      "Enhong Mu",
+      "Minami Yoda",
+      "Yan Zhang",
+      "Mingyue Zhang",
+      "Yutaka Matsuno",
+      "Jialong Li"
+    ],
+    "first_author": "Enhong Mu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Testing automation",
+    "tags": [
+      "AST-diff semantic interpretation",
+      "LLM-driven subgoal decomposition",
+      "Hybrid structural-functional reward",
+      "Coverage-aware reinforcement learning",
+      "Context-aware mapping of subgoals to code anchors",
+      "Game-update regression testing"
+    ],
+    "summary": "本文提出SMART框架，利用LLM解析AST差异将更新意图分解为语义子目标，并通过将这些子目标与结构性代码锚点动态映射并构建混合奖励来引导强化学习代理在游戏更新测试中同时实现高分支覆盖率与高任务完成率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.12706v1",
+    "published": "2025-12-14",
+    "update_time": "2025-12-14",
+    "download_time": "2025-12-16 02:40:31"
+  },
+  {
+    "id": "2512.11296",
+    "title": "Few-Shot VLM-Based G-Code and HMI Verification in CNC Machining",
+    "abstract": "Manual generation of G-code is important for learning the operation of CNC machines. Prior work in G-code verification uses Large-Language Models (LLMs), which primarily examine errors in the written programming. However, CNC machining requires extensive use and knowledge of the Human-Machine Interface (HMI), which displays machine status and errors. LLMs currently lack the capability to leverage knowledge of HMIs due to their inability to access the vision modality. This paper proposes a few-shot VLM-based verification approach that simultaneously evaluates the G-code and the HMI display for errors and safety status. The input dataset includes paired G-code text and associated HMI screenshots from a 15-slant-PRO lathe, including both correct and error-prone cases. To enable few-shot learning, the VLM is provided with a structured JSON schema based on prior heuristic knowledge. After determining the prompts, instances of G-code and HMI that either contain errors or are error free are used as few-shot examples to guide the VLM. The model was then evaluated in comparison to a zero-shot VLM through multiple scenarios of incorrect G-code and HMI errors with respect to per-slot accuracy. The VLM showed that few-shot prompting led to overall enhancement of detecting HMI errors and discrepancies with the G-code for more comprehensive debugging. Therefore, the proposed framework was demonstrated to be suitable for verification of manually generated G-code that is typically developed in CNC training.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11296",
+    "authors": [
+      "Yasaman Hashem Pour",
+      "Nazanin Mahjourian",
+      "Vinh Nguyen"
+    ],
+    "first_author": "Yasaman Hashem Pour",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "G-code verification",
+      "HMI indicator recognition",
+      "Multimodal VLM few-shot prompting",
+      "Structured JSON slot-filling",
+      "G-code–machine-state alignment",
+      "CNC safety/status checking"
+    ],
+    "summary": "本文提出一种基于视觉-语言模型的少样本联合校验方法，通过将G-code文本与机床HMI截图配对并使用结构化JSON schema进行few-shot提示，从而同时检测G-code语法错误与HMI显示与代码的不一致以提升人工编写G-code的验证与安全性。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11296v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 02:48:32"
+  },
+  {
+    "id": "2512.11270",
+    "title": "A-LAMP: Agentic LLM-Based Framework for Automated MDP Modeling and Policy Generation",
+    "abstract": "Applying reinforcement learning (RL) to real-world tasks requires converting informal descriptions into a formal Markov decision process (MDP), implementing an executable environment, and training a policy agent. Automating this process is challenging due to modeling errors, fragile code, and misaligned objectives, which often impede policy training. We introduce an agentic large language model (LLM)-based framework for automated MDP modeling and policy generation (A-LAMP), that automatically translates free-form natural language task descriptions into an MDP formulation and trained policy. The framework decomposes modeling, coding, and training into verifiable stages, ensuring semantic alignment throughout the pipeline. Across both classic control and custom RL domains, A-LAMP consistently achieves higher policy generation capability than a single state-of-the-art LLM model. Notably, even its lightweight variant, which is built on smaller language models, approaches the performance of much larger models. Failure analysis reveals why these improvements occur. In addition, a case study also demonstrates that A-LAMP generates environments and policies that preserve the task's optimality, confirming its correctness and reliability.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11270",
+    "authors": [
+      "Hong Je-Gal",
+      "Chan-Bin Yi",
+      "Hyun-Suk Lee"
+    ],
+    "first_author": "Hong Je-Gal",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Agentic multi-agent orchestration",
+      "Automated MDP synthesis",
+      "Natural-language to environment code generation",
+      "Reward function specification",
+      "Policy training automation",
+      "Modular verifiable pipeline",
+      "Failure-mode analysis"
+    ],
+    "summary": "该论文提出A-LAMP，一个基于多智能体LLM的框架，能够将自由文本任务描述自动转为形式化MDP、生成可执行环境与训练代码并产出可验证的策略，且在多域实验中优于单一大模型。",
+    "quality": "High",
+    "conference": "NeurIPS 2025 Workshop: Multi-Turn Interactions in Large Language Models 2025",
+    "pdf_url": "https://arxiv.org/pdf/2512.11270v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 02:49:40"
   }
 ]

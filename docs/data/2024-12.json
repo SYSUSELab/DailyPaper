@@ -1,5 +1,38 @@
 [
   {
+    "id": "2412.05210",
+    "title": "Evaluating and Aligning CodeLLMs on Human Preference",
+    "abstract": "Code large language models (codeLLMs) have made significant strides in code generation. Most previous code-related benchmarks, which consist of various programming exercises along with the corresponding test cases, are used as a common measure to evaluate the performance and capabilities of code LLMs. However, the current code LLMs focus on synthesizing the correct code snippet, ignoring the alignment with human preferences, where the query should be sampled from the practical application scenarios and the model-generated responses should satisfy the human preference. To bridge the gap between the model-generated response and human preference, we present a rigorous human-curated benchmark CodeArena to emulate the complexity and diversity of real-world coding tasks, where 397 high-quality samples spanning 40 categories and 44 programming languages, carefully curated from user queries. Further, we propose a diverse synthetic instruction corpus SynCode-Instruct (nearly 20B tokens) by scaling instructions from the website to verify the effectiveness of the large-scale synthetic instruction fine-tuning, where Qwen2.5-SynCoder totally trained on synthetic instruction data can achieve top-tier performance of open-source code LLMs. The results find performance differences between execution-based benchmarks and CodeArena. Our systematic experiments of CodeArena on 40+ LLMs reveal a notable performance gap between open SOTA code LLMs (e.g. Qwen2.5-Coder) and proprietary LLMs (e.g., OpenAI o1), underscoring the importance of the human preference alignment.\\footnote{\\url{https://codearenaeval.github.io/ }}",
+    "arxiv_url": "https://arxiv.org/abs/2412.05210",
+    "authors": [
+      "Jian Yang",
+      "Jiaxi Yang",
+      "Ke Jin",
+      "Yibo Miao",
+      "Lei Zhang",
+      "Liqun Yang",
+      "Zeyu Cui",
+      "Yichang Zhang",
+      "Binyuan Hui",
+      "Junyang Lin"
+    ],
+    "first_author": "Jian Yang",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "summary": "本文提出了面向人类偏好的代码评估基准 CodeArena 与大规模合成指令语料 SynCode-Instruct，并基于此训练与评测多款 codeLLM，揭示开放模型与闭源模型在人类偏好对齐上的差距。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2412.05210v1",
+    "published": "2024-12-06",
+    "update_time": "2024-12-06",
+    "download_time": "2025-12-04 23:24:39"
+  },
+  {
     "id": "2412.18843",
     "title": "Improving the Readability of Automatically Generated Tests using Large Language Models",
     "abstract": "Search-based test generators are effective at producing unit tests with high coverage. However, such automatically generated tests have no meaningful test and variable names, making them hard to understand and interpret by developers. On the other hand, large language models (LLMs) can generate highly readable test cases, but they are not able to match the effectiveness of search-based generators, in terms of achieved code coverage.   In this paper, we propose to combine the effectiveness of search-based generators with the readability of LLM generated tests. Our approach focuses on improving test and variable names produced by search-based tools, while keeping their semantics (i.e., their coverage) unchanged.   Our evaluation on nine industrial and open source LLMs show that our readability improvement transformations are overall semantically-preserving and stable across multiple repetitions. Moreover, a human study with ten professional developers, show that our LLM-improved tests are as readable as developer-written tests, regardless of the LLM employed.",

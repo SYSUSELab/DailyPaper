@@ -1,5 +1,75 @@
 [
   {
+    "id": "2403.07974",
+    "title": "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code",
+    "abstract": "Large Language Models (LLMs) applied to code-related applications have emerged as a prominent field, attracting significant interest from both academia and industry. However, as new and improved LLMs are developed, existing evaluation benchmarks (e.g., HumanEval, MBPP) are no longer sufficient for assessing their capabilities. In this work, we propose LiveCodeBench, a comprehensive and contamination-free evaluation of LLMs for code, which continuously collects new problems over time from contests across three competition platforms, namely LeetCode, AtCoder, and CodeForces. Notably, our benchmark also focuses on a broader range of code related capabilities, such as self-repair, code execution, and test output prediction, beyond just code generation. Currently, LiveCodeBench hosts four hundred high-quality coding problems that were published between May 2023 and May 2024. We have evaluated 18 base LLMs and 34 instruction-tuned LLMs on LiveCodeBench. We present empirical findings on contamination, holistic performance comparisons, potential overfitting in existing benchmarks as well as individual model comparisons. We will release all prompts and model completions for further community analysis, along with a general toolkit for adding new scenarios and model",
+    "arxiv_url": "https://arxiv.org/abs/2403.07974",
+    "authors": [
+      "Naman Jain",
+      "King Han",
+      "Alex Gu",
+      "Wen-Ding Li",
+      "Fanjia Yan",
+      "Tianjun Zhang",
+      "Sida Wang",
+      "Armando Solar-Lezama",
+      "Koushik Sen",
+      "Ion Stoica"
+    ],
+    "first_author": "Naman Jain",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Holistic Benchmarking & Contamination-free Evaluation",
+    "summary": "本文提出 LiveCodeBench，一个持续更新且防止训练数据污染的综合性代码评测基准，收集 2023–2024 年竞赛题并在代码生成、自我修复、代码执行与测试输出预测等多种场景上对多款 LLM 进行广泛评估与污染分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2403.07974v2",
+    "published": "2024-03-12",
+    "update_time": "2024-06-06",
+    "download_time": "2025-12-04 23:26:44"
+  },
+  {
+    "id": "2403.08604",
+    "title": "Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study",
+    "abstract": "Recent advancements in large language models (LLMs) have significantly enhanced their coding capabilities. However, existing benchmarks predominantly focused on simplified or isolated aspects of coding, such as single-file code generation or repository issue debugging, falling short of measuring the full spectrum of challenges raised by real-world programming activities. In this case study, we explore the performance of LLMs across the entire software development lifecycle with DevEval, encompassing stages including software design, environment setup, implementation, acceptance testing, and unit testing. DevEval features four programming languages, multiple domains, high-quality data collection, and carefully designed and verified metrics for each task. Empirical studies show that current LLMs, including GPT-4, fail to solve the challenges presented within DevEval. Our findings offer actionable insights for the future development of LLMs toward real-world programming applications.",
+    "arxiv_url": "https://arxiv.org/abs/2403.08604",
+    "authors": [
+      "Bowen Li",
+      "Wenhan Wu",
+      "Ziwei Tang",
+      "Lin Shi",
+      "John Yang",
+      "Jinyang Li",
+      "Shunyu Yao",
+      "Chen Qian",
+      "Binyuan Hui",
+      "Qicheng Zhang",
+      "Zhiyin Yu",
+      "He Du",
+      "Ping Yang",
+      "Dahua Lin",
+      "Chao Peng",
+      "Kai Chen"
+    ],
+    "first_author": "Bowen Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "summary": "本文提出DevEval，一个覆盖软件设计、环境搭建、实现与验收/单元测试等软件全生命周期任务的基准，并通过对多种LLM（含GPT‑4系列）的评估发现其在仓库级实现与测试上仍存在显著不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2403.08604v3",
+    "published": "2024-03-13",
+    "update_time": "2024-12-14",
+    "download_time": "2025-12-04 23:27:14"
+  },
+  {
     "id": "2404.00599",
     "title": "EvoCodeBench: An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
     "abstract": "How to evaluate Large Language Models (LLMs) in code generation is an open question. Existing benchmarks demonstrate poor alignment with real-world code repositories and are insufficient to evaluate the coding abilities of LLMs. This paper proposes a new benchmark - EvoCodeBench to address the preceding problems, which has three primary advances. (1) EvoCodeBench aligns with real-world repositories in multiple dimensions, e.g., code distributions and dependency distributions. (2) EvoCodeBench offers comprehensive annotations (e.g., requirements, reference code, and reference dependencies), and robust evaluation metrics (e.g., Pass@k and Recall@k). (3) EvoCodeBench is an evolving benchmark to avoid data leakage. We build an automatic pipeline to update EvoCodeBench from the latest repositories. We release the first version - EvoCodeBench-2403, containing 275 samples from 25 real-world repositories. Based on EvoCodeBench, we propose repository-level code generation and evaluate 10 popular LLMs (e.g., gpt-4, gpt-3.5, DeepSeek Coder, StarCoder 2, CodeLLaMa, Gemma, and Qwen 1.5). Our experiments reveal the coding abilities of these LLMs in real-world repositories. For example, the highest Pass@1 of gpt-4 only is 20.73% in our experiments. We also analyze failed cases and summarize the shortcomings of existing LLMs in EvoCodeBench. We release EvoCodeBench, all prompts, and LLMs' completions for further community analysis.",

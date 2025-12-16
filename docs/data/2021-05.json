@@ -1,5 +1,38 @@
 [
   {
+    "id": "2105.09938",
+    "title": "Measuring Coding Challenge Competence With APPS",
+    "abstract": "While programming is one of the most broadly applicable skills in modern society, modern machine learning models still cannot code solutions to basic problems. Despite its importance, there has been surprisingly little work on evaluating code generation, and it can be difficult to accurately assess code generation performance rigorously. To meet this challenge, we introduce APPS, a benchmark for code generation. Unlike prior work in more restricted settings, our benchmark measures the ability of models to take an arbitrary natural language specification and generate satisfactory Python code. Similar to how companies assess candidate software developers, we then evaluate models by checking their generated code on test cases. Our benchmark includes 10,000 problems, which range from having simple one-line solutions to being substantial algorithmic challenges. We fine-tune large language models on both GitHub and our training set, and we find that the prevalence of syntax errors is decreasing exponentially as models improve. Recent models such as GPT-Neo can pass approximately 20% of the test cases of introductory problems, so we find that machine learning models are now beginning to learn how to code. As the social significance of automatic code generation increases over the coming years, our benchmark can provide an important measure for tracking advancements.",
+    "arxiv_url": "https://arxiv.org/abs/2105.09938",
+    "authors": [
+      "Dan Hendrycks",
+      "Steven Basart",
+      "Saurav Kadavath",
+      "Mantas Mazeika",
+      "Akul Arora",
+      "Ethan Guo",
+      "Collin Burns",
+      "Samir Puranik",
+      "Horace He",
+      "Dawn Song",
+      "Jacob Steinhardt"
+    ],
+    "first_author": "Dan Hendrycks",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "summary": "本文提出并发布了APPS基准——一个包含10000道自然语言编程题及超过130,000条测试用例的Python代码生成数据集，并通过测试展示和分析了多种大规模语言模型在不同难度题目上的生成性能与错误模式。",
+    "quality": "High",
+    "conference": "NeurIPS 2021",
+    "pdf_url": "https://arxiv.org/pdf/2105.09938v3",
+    "published": "2021-05-20",
+    "update_time": "2021-11-08",
+    "download_time": "2025-12-04 23:32:17"
+  },
+  {
     "id": "2105.14242",
     "title": "CommitBERT: Commit Message Generation Using Pre-Trained Programming Language Model",
     "abstract": "Commit message is a document that summarizes source code changes in natural language. A good commit message clearly shows the source code changes, so this enhances collaboration between developers. Therefore, our work is to develop a model that automatically writes the commit message.   To this end, we release 345K datasets consisting of code modification and commit messages in six programming languages (Python, PHP, Go, Java, JavaScript, and Ruby). Similar to the neural machine translation (NMT) model, using our dataset, we feed the code modification to the encoder input and the commit message to the decoder input and measure the result of the generated commit message with BLEU-4.   Also, we propose the following two training methods to improve the result of generating the commit message: (1) A method of preprocessing the input to feed the code modification to the encoder input. (2) A method that uses an initial weight suitable for the code domain to reduce the gap in contextual representation between programming language (PL) and natural language (NL). Training code, dataset, and pre-trained weights are available at https://github.com/graykode/commit-autosuggestions",

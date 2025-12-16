@@ -1,15 +1,15 @@
 [
   {
     "month": "2025-12",
-    "count": 27,
-    "published_count": 3,
-    "preprint_count": 24
+    "count": 55,
+    "published_count": 10,
+    "preprint_count": 45
   },
   {
     "month": "2025-11",
-    "count": 4,
-    "published_count": 0,
-    "preprint_count": 4
+    "count": 42,
+    "published_count": 5,
+    "preprint_count": 37
   },
   {
     "month": "2025-10",
@@ -43,8 +43,8 @@
   },
   {
     "month": "2025-05",
-    "count": 13,
-    "published_count": 4,
+    "count": 14,
+    "published_count": 5,
     "preprint_count": 9
   },
   {
@@ -55,9 +55,9 @@
   },
   {
     "month": "2025-03",
-    "count": 7,
+    "count": 8,
     "published_count": 2,
-    "preprint_count": 5
+    "preprint_count": 6
   },
   {
     "month": "2025-02",
@@ -73,33 +73,33 @@
   },
   {
     "month": "2024-12",
-    "count": 8,
+    "count": 9,
     "published_count": 2,
-    "preprint_count": 6
-  },
-  {
-    "month": "2024-11",
-    "count": 8,
-    "published_count": 1,
     "preprint_count": 7
   },
   {
+    "month": "2024-11",
+    "count": 12,
+    "published_count": 1,
+    "preprint_count": 11
+  },
+  {
     "month": "2024-10",
-    "count": 11,
-    "published_count": 2,
+    "count": 12,
+    "published_count": 3,
     "preprint_count": 9
   },
   {
     "month": "2024-09",
-    "count": 3,
+    "count": 4,
     "published_count": 1,
-    "preprint_count": 2
+    "preprint_count": 3
   },
   {
     "month": "2024-08",
-    "count": 4,
+    "count": 5,
     "published_count": 2,
-    "preprint_count": 2
+    "preprint_count": 3
   },
   {
     "month": "2024-07",
@@ -109,9 +109,9 @@
   },
   {
     "month": "2024-06",
-    "count": 9,
+    "count": 12,
     "published_count": 6,
-    "preprint_count": 3
+    "preprint_count": 6
   },
   {
     "month": "2024-05",
@@ -127,20 +127,26 @@
   },
   {
     "month": "2024-03",
-    "count": 3,
+    "count": 5,
     "published_count": 1,
+    "preprint_count": 4
+  },
+  {
+    "month": "2024-02",
+    "count": 2,
+    "published_count": 0,
     "preprint_count": 2
   },
   {
     "month": "2024-01",
-    "count": 2,
-    "published_count": 1,
-    "preprint_count": 1
+    "count": 5,
+    "published_count": 2,
+    "preprint_count": 3
   },
   {
     "month": "2023-12",
-    "count": 2,
-    "published_count": 0,
+    "count": 3,
+    "published_count": 1,
     "preprint_count": 2
   },
   {
@@ -151,8 +157,8 @@
   },
   {
     "month": "2023-10",
-    "count": 3,
-    "published_count": 2,
+    "count": 4,
+    "published_count": 3,
     "preprint_count": 1
   },
   {
@@ -163,51 +169,51 @@
   },
   {
     "month": "2023-08",
-    "count": 4,
+    "count": 8,
     "published_count": 2,
-    "preprint_count": 2
+    "preprint_count": 6
   },
   {
     "month": "2023-07",
-    "count": 1,
-    "published_count": 1,
-    "preprint_count": 0
+    "count": 3,
+    "published_count": 2,
+    "preprint_count": 1
   },
   {
     "month": "2023-06",
-    "count": 3,
-    "published_count": 2,
-    "preprint_count": 1
+    "count": 9,
+    "published_count": 5,
+    "preprint_count": 4
   },
   {
     "month": "2023-05",
-    "count": 3,
-    "published_count": 2,
-    "preprint_count": 1
+    "count": 8,
+    "published_count": 3,
+    "preprint_count": 5
   },
   {
     "month": "2023-04",
-    "count": 2,
+    "count": 3,
     "published_count": 0,
-    "preprint_count": 2
+    "preprint_count": 3
   },
   {
     "month": "2023-03",
-    "count": 4,
+    "count": 5,
     "published_count": 2,
-    "preprint_count": 2
+    "preprint_count": 3
   },
   {
     "month": "2023-02",
-    "count": 2,
-    "published_count": 2,
+    "count": 3,
+    "published_count": 3,
     "preprint_count": 0
   },
   {
     "month": "2023-01",
-    "count": 1,
-    "published_count": 1,
-    "preprint_count": 0
+    "count": 3,
+    "published_count": 2,
+    "preprint_count": 1
   },
   {
     "month": "2022-12",
@@ -217,9 +223,9 @@
   },
   {
     "month": "2022-11",
-    "count": 1,
+    "count": 3,
     "published_count": 0,
-    "preprint_count": 1
+    "preprint_count": 3
   },
   {
     "month": "2022-10",
@@ -229,9 +235,15 @@
   },
   {
     "month": "2022-08",
-    "count": 2,
+    "count": 3,
     "published_count": 0,
-    "preprint_count": 2
+    "preprint_count": 3
+  },
+  {
+    "month": "2022-07",
+    "count": 2,
+    "published_count": 1,
+    "preprint_count": 1
   },
   {
     "month": "2022-06",
@@ -241,6 +253,12 @@
   },
   {
     "month": "2022-04",
+    "count": 1,
+    "published_count": 0,
+    "preprint_count": 1
+  },
+  {
+    "month": "2022-03",
     "count": 1,
     "published_count": 0,
     "preprint_count": 1
@@ -259,15 +277,15 @@
   },
   {
     "month": "2021-08",
-    "count": 2,
+    "count": 3,
     "published_count": 1,
-    "preprint_count": 1
+    "preprint_count": 2
   },
   {
     "month": "2021-07",
-    "count": 2,
+    "count": 3,
     "published_count": 2,
-    "preprint_count": 0
+    "preprint_count": 1
   },
   {
     "month": "2021-06",
@@ -277,8 +295,8 @@
   },
   {
     "month": "2021-05",
-    "count": 3,
-    "published_count": 2,
+    "count": 4,
+    "published_count": 3,
     "preprint_count": 1
   },
   {

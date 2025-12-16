@@ -1,5 +1,137 @@
 [
   {
+    "id": "2308.12950",
+    "title": "Code Llama: Open Foundation Models for Code",
+    "abstract": "We release Code Llama, a family of large language models for code based on Llama 2 providing state-of-the-art performance among open models, infilling capabilities, support for large input contexts, and zero-shot instruction following ability for programming tasks. We provide multiple flavors to cover a wide range of applications: foundation models (Code Llama), Python specializations (Code Llama - Python), and instruction-following models (Code Llama - Instruct) with 7B, 13B, 34B and 70B parameters each. All models are trained on sequences of 16k tokens and show improvements on inputs with up to 100k tokens. 7B, 13B and 70B Code Llama and Code Llama - Instruct variants support infilling based on surrounding content. Code Llama reaches state-of-the-art performance among open models on several code benchmarks, with scores of up to 67% and 65% on HumanEval and MBPP, respectively. Notably, Code Llama - Python 7B outperforms Llama 2 70B on HumanEval and MBPP, and all our models outperform every other publicly available model on MultiPL-E. We release Code Llama under a permissive license that allows for both research and commercial use.",
+    "arxiv_url": "https://arxiv.org/abs/2308.12950",
+    "authors": [
+      "Baptiste Rozière",
+      "Jonas Gehring",
+      "Fabian Gloeckle",
+      "Sten Sootla",
+      "Itai Gat",
+      "Xiaoqing Ellen Tan",
+      "Yossi Adi",
+      "Jingyu Liu",
+      "Romain Sauvestre",
+      "Tal Remez",
+      "Jérémy Rapin",
+      "Artyom Kozhevnikov",
+      "Ivan Evtimov",
+      "Joanna Bitton",
+      "Manish Bhatt",
+      "Cristian Canton Ferrer",
+      "Aaron Grattafiori",
+      "Wenhan Xiong",
+      "Alexandre Défossez",
+      "Jade Copet",
+      "Faisal Azhar",
+      "Hugo Touvron",
+      "Louis Martin",
+      "Nicolas Usunier",
+      "Thomas Scialom",
+      "Gabriel Synnaeve"
+    ],
+    "first_author": "Baptiste Rozière",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "summary": "本文发布并开源了Code Llama——一系列基于Llama 2 的代码专用大模型（多种规模与变体），支持中间填充、超长上下文与指令微调，并在多项代码基准上达到了开源模型的最先进表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2308.12950v3",
+    "published": "2023-08-24",
+    "update_time": "2024-01-31",
+    "download_time": "2025-12-04 23:09:20"
+  },
+  {
+    "id": "2308.07124",
+    "title": "OctoPack: Instruction Tuning Code Large Language Models",
+    "abstract": "Finetuning large language models (LLMs) on instructions leads to vast performance improvements on natural language tasks. We apply instruction tuning using code, leveraging the natural structure of Git commits, which pair code changes with human instructions. We compile CommitPack: 4 terabytes of Git commits across 350 programming languages. We benchmark CommitPack against other natural and synthetic code instructions (xP3x, Self-Instruct, OASST) on the 16B parameter StarCoder model, and achieve state-of-the-art performance among models not trained on OpenAI outputs, on the HumanEval Python benchmark (46.2% pass@1). We further introduce HumanEvalPack, expanding the HumanEval benchmark to a total of 3 coding tasks (Code Repair, Code Explanation, Code Synthesis) across 6 languages (Python, JavaScript, Java, Go, C++, Rust). Our models, OctoCoder and OctoGeeX, achieve the best performance across HumanEvalPack among all permissive models, demonstrating CommitPack's benefits in generalizing to a wider set of languages and natural coding tasks. Code, models and data are freely available at https://github.com/bigcode-project/octopack.",
+    "arxiv_url": "https://arxiv.org/abs/2308.07124",
+    "authors": [
+      "Niklas Muennighoff",
+      "Qian Liu",
+      "Armel Zebaze",
+      "Qinkai Zheng",
+      "Binyuan Hui",
+      "Terry Yue Zhuo",
+      "Swayam Singh",
+      "Xiangru Tang",
+      "Leandro von Werra",
+      "Shayne Longpre"
+    ],
+    "first_author": "Niklas Muennighoff",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Instruction-Tuning",
+    "summary": "本文发布了用于指令微调的COMMITPACK（4TB Git 提交数据）及其高质量子集COMMITPACKFT，构建了多语言的HUMANEVALPACK基准，并基于这些数据训练出OCTOCODER/OCTOGEEX，在多语言的代码合成、修复与解释任务上在可许可模型中取得最优表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2308.07124v2",
+    "published": "2023-08-14",
+    "update_time": "2024-02-18",
+    "download_time": "2025-12-04 23:17:10"
+  },
+  {
+    "id": "2308.10335",
+    "title": "Can ChatGPT replace StackOverflow? A Study on Robustness and Reliability of Large Language Model Code Generation",
+    "abstract": "Recently, the large language models (LLMs) have shown extraordinary ability in understanding natural language and generating programming code. It has been a common practice of software engineers to consult LLMs when encountering coding questions. Although efforts have been made to avoid syntax errors and align the code with the intended semantics, the reliability and robustness of the code generationfrom LLMs have not yet been thoroughly studied. The executable code is not equivalent to the reliable and robust code, especially in the context of real-world software development. The misuse of APIs in the generated code could lead to severe problem, such as resource leaks, program crashes. To make things worse, the users of LLM code generation services are actually the developers that are most vulnerable to these code that seems right -- They are always novice developers that are not familiar with the APIs that LLMs generate code for them. Therefore, they could hardly tell the misuse in the code generated by LLMs, which further facilitates the incorrect code applied in real-world software. Existing code evaluation benchmark and datasets focus on crafting small tasks such as programming questions in coding interviews, which however deviates from the problem that developers would ask LLM for real-world coding help. To fill the missing piece, in this work, we propose a dataset RobustAPI for evaluating the reliability and robustness of code generated by LLMs. We collect 1208 coding questions from StackOverflow on 24 representative Java APIs. We summarize thecommon misuse patterns of these APIs and evaluate them oncurrent popular LLMs. The evaluation results show that evenfor GPT-4, 62% of the generated code contains API misuses,which would cause unexpected consequences if the code isintroduced into real-world software.",
+    "arxiv_url": "https://arxiv.org/abs/2308.10335",
+    "authors": [
+      "Li Zhong",
+      "Zilong Wang"
+    ],
+    "first_author": "Li Zhong",
+    "category": [
+      "Benchmark",
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "summary": "本文提出了面向Java API误用的基准数据集ROBUSTAPI及基于AST的API使用检测器，收集了1208个Stack Overflow问题并评估多款主流LLM，发现即使GPT-4也存在大量API误用（约62%）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2308.10335v5",
+    "published": "2023-08-20",
+    "update_time": "2024-01-27",
+    "download_time": "2025-12-04 23:28:56"
+  },
+  {
+    "id": "2308.16458",
+    "title": "BioCoder: A Benchmark for Bioinformatics Code Generation with Large Language Models",
+    "abstract": "Pre-trained large language models (LLMs) have significantly improved code generation. As these models scale up, there is an increasing need for the output to handle more intricate tasks and to be appropriately specialized to particular domains. Here, we target bioinformatics due to the amount of domain knowledge, algorithms, and data operations this discipline requires. We present BioCoder, a benchmark developed to evaluate LLMs in generating bioinformatics-specific code. BioCoder spans much of the field, covering cross-file dependencies, class declarations, and global variables. It incorporates 1,026 Python functions and 1,243 Java methods extracted from GitHub, along with 253 examples from the Rosalind Project, all pertaining to bioinformatics. Using topic modeling, we show that the overall coverage of the included code is representative of the full spectrum of bioinformatics calculations. BioCoder incorporates a fuzz-testing framework for evaluation. We have applied it to evaluate various models including InCoder, CodeGen, CodeGen2, SantaCoder, StarCoder, StarCoder+, InstructCodeT5+, GPT-3.5, and GPT- 4. Furthermore, we fine-tuned one model (StarCoder), demonstrating that our training dataset can enhance the performance on our testing benchmark (by >15% in terms of Pass@K under certain prompt configurations and always >3%). The results highlight two key aspects of successful models: (1) Successful models accommodate a long prompt (> 2,600 tokens) with full context, including functional dependencies. (2) They contain domain-specific knowledge of bioinformatics, beyond just general coding capability. This is evident from the performance gain of GPT-3.5/4 compared to the smaller models on our benchmark (50% vs. up to 25%). Availability and implementation: Code is available at: https://github.com/gersteinlab/biocoder and https://biocoder-benchmark. github.io/.",
+    "arxiv_url": "https://arxiv.org/abs/2308.16458",
+    "authors": [
+      "Xiangru Tang",
+      "Bill Qian",
+      "Rick Gao",
+      "Jiakang Chen",
+      "Xinyun Chen",
+      "Mark Gerstein"
+    ],
+    "first_author": "Xiangru Tang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "summary": "BioCoder 提出一个面向生物信息学的大规模代码生成基准（共 2,269 个问题），从 GitHub 与 Rosalind 提取并清洗函数，提供多文件上下文、依赖解析、执行式模糊测试与 Docker 化评测工具，用以评估并分析不同 LLM 在生物信息学代码生成中的性能和领域知识需求。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2308.16458v5",
+    "published": "2023-08-31",
+    "update_time": "2024-05-20",
+    "download_time": "2025-12-04 23:29:24"
+  },
+  {
     "id": "2308.10620",
     "title": "Large Language Models for Software Engineering: A Systematic Literature Review",
     "abstract": "Large Language Models (LLMs) have significantly impacted numerous domains, including Software Engineering (SE). Many recent publications have explored LLMs applied to various SE tasks. Nevertheless, a comprehensive understanding of the application, effects, and possible limitations of LLMs on SE is still in its early stages. To bridge this gap, we conducted a systematic literature review (SLR) on LLM4SE, with a particular focus on understanding how LLMs can be exploited to optimize processes and outcomes. We select and analyze 395 research papers from January 2017 to January 2024 to answer four key research questions (RQs). In RQ1, we categorize different LLMs that have been employed in SE tasks, characterizing their distinctive features and uses. In RQ2, we analyze the methods used in data collection, preprocessing, and application, highlighting the role of well-curated datasets for successful LLM for SE implementation. RQ3 investigates the strategies employed to optimize and evaluate the performance of LLMs in SE. Finally, RQ4 examines the specific SE tasks where LLMs have shown success to date, illustrating their practical contributions to the field. From the answers to these RQs, we discuss the current state-of-the-art and trends, identifying gaps in existing research, and flagging promising areas for future study. Our artifacts are publicly available at https://github.com/xinyi-hou/LLM4SE_SLR.",

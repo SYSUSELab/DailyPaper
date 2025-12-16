@@ -1,5 +1,31 @@
 [
   {
+    "id": "2410.01215",
+    "title": "From Code to Correctness: Closing the Last Mile of Code Generation with Hierarchical Debugging",
+    "abstract": "While large language models have made significant strides in code generation, the pass rate of the generated code is bottlenecked on subtle errors, often requiring human intervention to pass tests, especially for complex problems. Existing LLM-based debugging systems treat generated programs as monolithic units, failing to address bugs at multiple levels of granularity, from low-level syntax errors to high-level algorithmic flaws. In this paper, we introduce Multi-Granularity Debugger (MGDebugger), a hierarchical code debugger by isolating, identifying, and resolving bugs at various levels of granularity. MGDebugger decomposes problematic code into a hierarchical tree structure of subfunctions, with each level representing a particular granularity of error. During debugging, it analyzes each subfunction and iteratively resolves bugs in a bottom-up manner. To effectively test each subfunction, we propose an LLM-simulated Python executor, which traces code execution and tracks important variable states to pinpoint errors accurately. Extensive experiments demonstrate that MGDebugger outperforms existing debugging systems, achieving an 18.9% improvement in accuracy over seed generations in HumanEval and a 97.6% repair success rate in HumanEvalFix. Furthermore, MGDebugger effectively fixes bugs across different categories and difficulty levels, demonstrating its robustness and effectiveness.",
+    "arxiv_url": "https://arxiv.org/abs/2410.01215",
+    "authors": [
+      "Yuling Shi",
+      "Songsong Wang",
+      "Chengcheng Wan",
+      "Min Wang",
+      "Xiaodong Gu"
+    ],
+    "first_author": "Yuling Shi",
+    "category": [
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "summary": "提出MGDebugger，一种将代码分解为子函数层次、为子函数生成测试并利用LLM模拟执行自底向上定位与修复错误的分层调试方法，显著提升对LLM生成代码与真实软件缺陷的修复率。",
+    "quality": "High",
+    "conference": "ICSE 2026",
+    "pdf_url": "https://arxiv.org/pdf/2410.01215v4",
+    "published": "2024-10-02",
+    "update_time": "2025-11-22",
+    "download_time": "2025-12-04 23:20:17"
+  },
+  {
     "id": "2410.01353",
     "title": "Codev-Bench: How Do LLMs Understand Developer-Centric Code Completion?",
     "abstract": "Code completion, a key downstream task in code generation, is one of the most frequent and impactful methods for enhancing developer productivity in software development. As intelligent completion tools evolve, we need a robust evaluation benchmark that enables meaningful comparisons between products and guides future advancements. However, existing benchmarks focus more on coarse-grained tasks without industrial analysis resembling general code generation rather than the real-world scenarios developers encounter. Moreover, these benchmarks often rely on costly and time-consuming human annotation, and the standalone test cases fail to leverage minimal tests for maximum repository-level understanding and code coverage. To address these limitations, we first analyze business data from an industrial code completion tool and redefine the evaluation criteria to better align with the developer's intent and desired completion behavior throughout the coding process. Based on these insights, we introduce Codev-Agent, an agent-based system that automates repository crawling, constructs execution environments, extracts dynamic calling chains from existing unit tests, and generates new test samples to avoid data leakage, ensuring fair and effective comparisons. Using Codev-Agent, we present the Code-Development Benchmark (Codev-Bench), a fine-grained, real-world, repository-level, and developer-centric evaluation framework. Codev-Bench assesses whether a code completion tool can capture a developer's immediate intent and suggest appropriate code across diverse contexts, providing a more realistic benchmark for code completion in modern software development.",
