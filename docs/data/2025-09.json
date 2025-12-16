@@ -367,5 +367,57 @@
     "published": "2025-09-29",
     "update_time": "2025-09-29",
     "download_time": "2025-12-12 22:34:21"
+  },
+  {
+    "id": "2510.12803",
+    "title": "AutoCode: LLMs as Problem Setters for Competitive Programming",
+    "abstract": "Writing competitive programming problems is exacting. Authors must: set constraints, input distributions, and edge cases that rule out shortcuts; target specific algorithms (e.g., max-flow, dynamic programming, data structures); and calibrate complexity beyond the reach of most competitors. We argue that this makes for an ideal test of general large language model capabilities and study whether they can do this reliably. We introduce AutoCode, which uses multiple rounds of validation to yield competition-grade problem statements and test cases. On held-out problems, AutoCode test suites approach 99% consistency with official judgments, a significant improvement over current state-of-the-art methods like HardTests, which achieve less than 81%. Furthermore, starting with a random seed problem, AutoCode can create novel variants with reference and brute-force solutions. By cross-verifying these generated solutions against test cases, we can further filter out malformed problems. Our system ensures high correctness, as verified by human experts. AutoCode successfully produces novel problems judged by Grandmaster-level (top 0.3%) competitive programmers to be of contest quality.",
+    "arxiv_url": "https://arxiv.org/abs/2510.12803",
+    "authors": [
+      "Shang Zhou",
+      "Zihan Zheng",
+      "Kaiyuan Liu",
+      "Zeyu Shen",
+      "Zerui Cheng",
+      "Zexing Chen",
+      "Hansen He",
+      "Jianzhu Yao",
+      "Huanzhi Mao",
+      "Qiuyang Mang",
+      "Tianfu Fu",
+      "Beichen Li",
+      "Dongruixuan Li",
+      "Wenhao Chai",
+      "Zhuang Liu",
+      "Aleksandra Korolova",
+      "Peter Henderson",
+      "Natasha Jaques",
+      "Pramod Viswanath",
+      "Saining Xie",
+      "Jingbo Shang"
+    ],
+    "first_author": "Shang Zhou",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Validator-Generator-Checker framework",
+      "Dual verification (reference & brute-force)",
+      "Adversarial and stress test synthesis",
+      "Seed-driven problem generation",
+      "TLE/time-complexity case generation",
+      "Cross-verification of solutions",
+      "Grandmaster human vetting"
+    ],
+    "summary": "该论文提出AutoCode，一个基于闭环多角色（Validator-Generator-Checker）和双重验证（参考解与暴力解）机制的系统，利用LLM自动生成并验证竞赛级编程题目与高质量测试用例，达到接近官方判定的高一致性并产出经顶级选手评审的可赛用新题目。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.12803v1",
+    "published": "2025-09-29",
+    "update_time": "2025-09-29",
+    "download_time": "2025-12-12 23:48:48"
   }
 ]

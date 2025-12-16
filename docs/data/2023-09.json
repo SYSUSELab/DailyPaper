@@ -38,5 +38,53 @@
     "published": "2023-09-21",
     "update_time": "2023-09-21",
     "download_time": "2025-12-11 16:32:15"
+  },
+  {
+    "id": "2309.01940",
+    "title": "CodeApex: A Bilingual Programming Evaluation Benchmark for Large Language Models",
+    "abstract": "With the emergence of Large Language Models (LLMs), there has been a significant improvement in the programming capabilities of models, attracting growing attention from researchers. Evaluating the programming capabilities of LLMs is crucial as it reflects the multifaceted abilities of LLMs, and it has numerous downstream applications. In this paper, we propose CodeApex, a bilingual benchmark dataset focusing on the programming comprehension, code generation, and code correction abilities of LLMs. Programming comprehension task tests LLMs on multiple-choice exam questions covering conceptual understanding, commonsense reasoning, and multi-hop reasoning. The code generation task evaluates LLMs through completing C++ functions based on provided descriptions and prototypes. The code correction task asks LLMs to fix real-world erroneous code segments with different error messages. We evaluate 12 widely used LLMs, including both general-purpose and specialized models. GPT-4 exhibits the best programming capabilities, achieving approximate accuracy of 69%, 54%, and 66% on the three tasks, respectively. Compared to human performance, there is still significant room for improvement in LLM programming. We hope that CodeApex can serve as a reference for evaluating the coding capabilities of LLMs, further promoting their development and growth.",
+    "arxiv_url": "https://arxiv.org/abs/2309.01940",
+    "authors": [
+      "Lingyue Fu",
+      "Huacan Chai",
+      "Shuang Luo",
+      "Kounianhua Du",
+      "Weiming Zhang",
+      "Longteng Fan",
+      "Jiayi Lei",
+      "Renting Rui",
+      "Jianghao Lin",
+      "Yuchen Fang",
+      "Yifan Liu",
+      "Jingkuan Wang",
+      "Siyuan Qi",
+      "Kangning Zhang",
+      "Weinan Zhang",
+      "Yong Yu"
+    ],
+    "first_author": "Lingyue Fu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Bilingual evaluation (English and Chinese)",
+      "Programming comprehension multiple-choice",
+      "C++ function completion",
+      "Real-world code correction (error-message driven)",
+      "Fine-grained category annotations",
+      "Human-expert validation and human-vs-model comparison",
+      "Prompt strategy and bilingual performance analysis",
+      "Leader-board style large-scale model evaluation"
+    ],
+    "summary": "本文提出了CodeApex——一个面向大模型的双语（中英）编程能力评测基准，包含编程理解、C++代码生成与真实代码修复三项任务并在大规模细粒度标注与人工验证下评估多款主流LLM以比较其与人类的差距。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2309.01940v4",
+    "published": "2023-09-05",
+    "update_time": "2024-03-11",
+    "download_time": "2025-12-12 23:28:17"
   }
 ]

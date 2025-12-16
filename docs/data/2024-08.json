@@ -1,34 +1,5 @@
 [
   {
-    "id": "2408.06450",
-    "title": "Evaluating Language Models for Efficient Code Generation",
-    "abstract": "We introduce Differential Performance Evaluation (DPE), a framework designed to reliably evaluate Large Language Models (LLMs) for efficient code generation. Traditional coding benchmarks often fail to provide reliable insights into code efficiency, due to their reliance on simplistic test inputs and the absence of effective compound metrics. DPE addresses these issues by focusing on efficiency-demanding programming tasks and establishing an insightful compound metric for performance evaluation. DPE operates in two phases: To curate efficiency datasets, it selects efficiency-demanding tasks from existing coding benchmarks and generates computationally expensive inputs to stress the efficiency of LLM solutions. To assess the code efficiency, DPE profiles the new solution and compares it globally against a set of reference solutions that exhibit distinct efficiency levels, where the matched level defines its efficiency score. As a proof of concept, we use DPE to create EvalPerf, a benchmark with 121 performance-challenging coding tasks. Our comprehensive evaluation draws interesting findings on the efficiency impact of model sizes, instruction tuning, and prompting. For example, while the scaling law fails to account for code efficiency, general instruction tuning benefits both code correctness and efficiency. We also evaluate the evaluation by examining the effectiveness of DPE, showing that EvalPerf is reliable and convenient to use even across platforms.",
-    "arxiv_url": "https://arxiv.org/abs/2408.06450",
-    "authors": [
-      "Jiawei Liu",
-      "Songrun Xie",
-      "Junhao Wang",
-      "Yuxiang Wei",
-      "Yifeng Ding",
-      "Lingming Zhang"
-    ],
-    "first_author": "Jiawei Liu",
-    "category": [
-      "Empirical",
-      "Technical",
-      "Benchmark"
-    ],
-    "field": "Coding Assistant",
-    "task": "Code Completion",
-    "summary": "本文提出差异化性能评估（DPE）框架并构建了 EVALPERF 基准，通过自动合成性能测试输入、性能聚类与参考解比较，可靠地评估和量化大语言模型生成代码的运行效率，并基于此对模型规模、指令微调和提示进行了实证分析。",
-    "quality": "High",
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2408.06450v1",
-    "published": "2024-08-12",
-    "update_time": "2024-08-12",
-    "download_time": "2025-12-04 23:26:06"
-  },
-  {
     "id": "2408.14354",
     "title": "SWE-bench-java: A GitHub Issue Resolving Benchmark for Java",
     "abstract": "GitHub issue resolving is a critical task in software engineering, recently gaining significant attention in both industry and academia. Within this task, SWE-bench has been released to evaluate issue resolving capabilities of large language models (LLMs), but has so far only focused on Python version. However, supporting more programming languages is also important, as there is a strong demand in industry. As a first step toward multilingual support, we have developed a Java version of SWE-bench, called SWE-bench-java. We have publicly released the dataset, along with the corresponding Docker-based evaluation environment and leaderboard, which will be continuously maintained and updated in the coming months. To verify the reliability of SWE-bench-java, we implement a classic method SWE-agent and test several powerful LLMs on it. As is well known, developing a high-quality multi-lingual benchmark is time-consuming and labor-intensive, so we welcome contributions through pull requests or collaboration to accelerate its iteration and refinement, paving the way for fully automated programming.",
@@ -153,5 +124,46 @@
     "published": "2024-08-20",
     "update_time": "2024-09-13",
     "download_time": "2025-12-11 17:54:13"
+  },
+  {
+    "id": "2408.13001",
+    "title": "CRUXEval-X: A Benchmark for Multilingual Code Reasoning, Understanding and Execution",
+    "abstract": "Code benchmarks such as HumanEval are widely adopted to evaluate Large Language Models' (LLMs) coding capabilities. However, there is an unignorable programming language bias in existing code benchmarks -- over 95% code generation benchmarks are dominated by Python, leaving the LLMs' capabilities in other programming languages such as Java and C/C++ unknown. Moreover, coding task bias is also crucial. Most benchmarks focus on code generation capability, while benchmarks for code reasoning (given input, reasoning output; and given output, reasoning input), an essential coding capability, are insufficient. Yet, constructing multi-lingual benchmarks can be expensive and labor-intensive, and codes in contest websites such as Leetcode suffer from data contamination during training. To fill this gap, we propose CRUXEVAL-X, a multi-lingual code reasoning benchmark that contains 19 programming languages. It comprises at least 600 subjects for each language, along with 19K content-consistent tests in total. In particular, the construction pipeline of CRUXEVAL-X works in a fully automated and test-guided manner, which iteratively generates and repairs based on execution feedback. Also, to cross language barriers (e.g., dynamic/static type systems in Python/C++), we formulated various transition rules between language pairs to facilitate translation. Our intensive evaluation of 24 representative LLMs reveals the correlation between language pairs. For example, TypeScript and JavaScript show a significant positive correlation, while Racket has less correlation with other languages. More interestingly, even a model trained solely on Python can achieve at most 34.4% Pass@1 in other languages, revealing the cross-language generalization of LLMs.",
+    "arxiv_url": "https://arxiv.org/abs/2408.13001",
+    "authors": [
+      "Ruiyang Xu",
+      "Jialun Cao",
+      "Yaojie Lu",
+      "Ming Wen",
+      "Hongyu Lin",
+      "Xianpei Han",
+      "Ben He",
+      "Shing-Chi Cheung",
+      "Le Sun"
+    ],
+    "first_author": "Ruiyang Xu",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Multilingual code reasoning benchmark",
+      "Test-guided automated code translation",
+      "Iterative generation-and-repair pipeline",
+      "Type and function-signature mapping rules",
+      "Test-suite templating and translation",
+      "Execution-feedback-driven compilation/runtime repair",
+      "Cross-language correlation and generalization analysis",
+      "Contamination-aware benchmark construction"
+    ],
+    "summary": "本文提出了CRUXEVAL-X——一个覆盖19种编程语言、通过测试驱动的自动化生成与迭代修复流水线构建的多语言代码推理基准，并在24个主流LLM上评估以揭示跨语言泛化与语言间相关性。",
+    "quality": "High",
+    "conference": "ACL 2025",
+    "pdf_url": "https://arxiv.org/pdf/2408.13001v2",
+    "published": "2024-08-23",
+    "update_time": "2025-05-17",
+    "download_time": "2025-12-12 23:33:53"
   }
 ]

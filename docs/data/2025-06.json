@@ -35,5 +35,45 @@
     "published": "2025-06-04",
     "update_time": "2025-11-17",
     "download_time": "2025-12-11 17:03:20"
+  },
+  {
+    "id": "2506.02073",
+    "title": "Flow2Code: Evaluating Large Language Models for Flowchart-based Code Generation Capability",
+    "abstract": "While large language models (LLMs) show promise in code generation, existing benchmarks neglect the flowchart-based code generation. To promote further research on flowchart-based code generation, this work presents Flow2Code, a novel benchmark for flowchart-based code generation evaluation. The evaluation dataset spans 15 programming languages and includes 5,622 code segments paired with 16,866 flowcharts of three types: code, UML, and pseudocode. Extensive experiments with 13 multimodal LLMs reveal that current LLMs can not generate code based on flowcharts perfectly. Besides, experiment results show that the supervised fine-tuning technique contributes greatly to the models' performance. We publicly release our code and datasets at https://github.com/hml-github/Flow2Code.",
+    "arxiv_url": "https://arxiv.org/abs/2506.02073",
+    "authors": [
+      "Mengliang He",
+      "Jiayi Zeng",
+      "Yankai Jiang",
+      "Wei Zhang",
+      "Zeming Liu",
+      "Xiaoming Shi",
+      "Aimin Zhou"
+    ],
+    "first_author": "Mengliang He",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Flowchart-to-code benchmark",
+      "Multimodal code generation",
+      "Code/UML/Pseudocode flowcharts",
+      "Multilingual coverage (15 languages)",
+      "DOT flowchart representation",
+      "Human-in-the-loop verification",
+      "Zero-shot vs supervised fine-tuning comparison",
+      "Evaluation of 13 multimodal models",
+      "Flowchart construction and transformation pipeline"
+    ],
+    "summary": "本文提出了 Flow2Code，一个包含代码、UML 与伪代码三类流程图并覆盖15种编程语言的大规模多模态基准，并在13个多模态模型上评测，发现当前模型在流程图驱动的代码生成上仍存在明显不足且有监督微调能显著提升性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2506.02073v1",
+    "published": "2025-06-02",
+    "update_time": "2025-06-02",
+    "download_time": "2025-12-13 00:13:38"
   }
 ]

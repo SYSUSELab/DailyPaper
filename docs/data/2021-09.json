@@ -33,5 +33,38 @@
     "published": "2021-09-11",
     "update_time": "2021-09-11",
     "download_time": "2025-12-12 21:59:48"
+  },
+  {
+    "id": "2109.08365",
+    "title": "CodeQA: A Question Answering Dataset for Source Code Comprehension",
+    "abstract": "We propose CodeQA, a free-form question answering dataset for the purpose of source code comprehension: given a code snippet and a question, a textual answer is required to be generated. CodeQA contains a Java dataset with 119,778 question-answer pairs and a Python dataset with 70,085 question-answer pairs. To obtain natural and faithful questions and answers, we implement syntactic rules and semantic analysis to transform code comments into question-answer pairs. We present the construction process and conduct systematic analysis of our dataset. Experiment results achieved by several neural baselines on our dataset are shown and discussed. While research on question-answering and machine reading comprehension develops rapidly, few prior work has drawn attention to code question answering. This new dataset can serve as a useful research benchmark for source code comprehension.",
+    "arxiv_url": "https://arxiv.org/abs/2109.08365",
+    "authors": [
+      "Chenxiao Liu",
+      "Xiaojun Wan"
+    ],
+    "first_author": "Chenxiao Liu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Free-form code question answering",
+      "Comment-to-QA transformation",
+      "Dependency-parsing of comments",
+      "Semantic role labeling for question generation",
+      "Yes/No question generation and balancing",
+      "Method-level Java and Python QA",
+      "QA taxonomy: functionality/purpose/property/workflow",
+      "Baseline sequence-to-sequence evaluation"
+    ],
+    "summary": "本文提出了CodeQA，一个基于代码注释自动生成的用于源代码理解的大规模自由形式问答基准（包含Java和Python问答对），并描述了构建流程、问题生成规则与基线实验。",
+    "quality": "High",
+    "conference": "EMNLP 2021",
+    "pdf_url": "https://arxiv.org/pdf/2109.08365v1",
+    "published": "2021-09-17",
+    "update_time": "2021-09-17",
+    "download_time": "2025-12-12 23:23:59"
   }
 ]

@@ -1,35 +1,5 @@
 [
   {
-    "id": "2310.06770",
-    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
-    "abstract": "Language models have outpaced our ability to evaluate them effectively, but for their future development it is essential to study the frontier of their capabilities. We find real-world software engineering to be a rich, sustainable, and challenging testbed for evaluating the next generation of language models. To this end, we introduce SWE-bench, an evaluation framework consisting of $2,294$ software engineering problems drawn from real GitHub issues and corresponding pull requests across $12$ popular Python repositories. Given a codebase along with a description of an issue to be resolved, a language model is tasked with editing the codebase to address the issue. Resolving issues in SWE-bench frequently requires understanding and coordinating changes across multiple functions, classes, and even files simultaneously, calling for models to interact with execution environments, process extremely long contexts and perform complex reasoning that goes far beyond traditional code generation tasks. Our evaluations show that both state-of-the-art proprietary models and our fine-tuned model SWE-Llama can resolve only the simplest issues. The best-performing model, Claude 2, is able to solve a mere $1.96$% of the issues. Advances on SWE-bench represent steps towards LMs that are more practical, intelligent, and autonomous.",
-    "arxiv_url": "https://arxiv.org/abs/2310.06770",
-    "authors": [
-      "Carlos E. Jimenez",
-      "John Yang",
-      "Alexander Wettig",
-      "Shunyu Yao",
-      "Kexin Pei",
-      "Ofir Press",
-      "Karthik Narasimhan"
-    ],
-    "first_author": "Carlos E. Jimenez",
-    "category": [
-      "Benchmark",
-      "Empirical",
-      "Technical"
-    ],
-    "field": "Coding Assistant",
-    "task": "Code Editing",
-    "summary": "本文提出SWE-bench——一个由真实GitHub issue及其修复PR构成的库级代码编辑基准（2,294个实例），并评估多种大型语言模型、发布训练集SWE-bench-train及微调模型SWE-Llama，结果显示现有模型仅能解决极少数实际问题。",
-    "quality": "High",
-    "conference": "ICLR 2024",
-    "pdf_url": "https://arxiv.org/pdf/2310.06770v3",
-    "published": "2023-10-10",
-    "update_time": "2024-11-11",
-    "download_time": "2025-12-04 23:27:45"
-  },
-  {
     "id": "2310.17903",
     "title": "Pitfalls in Language Models for Code Intelligence: A Taxonomy and Survey",
     "abstract": "Modern language models (LMs) have been successfully employed in source code generation and understanding, leading to a significant increase in research focused on learning-based code intelligence, such as automated bug repair, and test case generation. Despite their great potential, language models for code intelligence (LM4Code) are susceptible to potential pitfalls, which hinder realistic performance and further impact their reliability and applicability in real-world deployment. Such challenges drive the need for a comprehensive understanding - not just identifying these issues but delving into their possible implications and existing solutions to build more reliable language models tailored to code intelligence. Based on a well-defined systematic research approach, we conducted an extensive literature review to uncover the pitfalls inherent in LM4Code. Finally, 67 primary studies from top-tier venues have been identified. After carefully examining these studies, we designed a taxonomy of pitfalls in LM4Code research and conducted a systematic study to summarize the issues, implications, current solutions, and challenges of different pitfalls for LM4Code systems. We developed a comprehensive classification scheme that dissects pitfalls across four crucial aspects: data collection and labeling, system design and learning, performance evaluation, and deployment and maintenance. Through this study, we aim to provide a roadmap for researchers and practitioners, facilitating their understanding and utilization of LM4Code in reliable and trustworthy ways.",

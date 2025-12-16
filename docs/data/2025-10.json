@@ -131,5 +131,119 @@
     "published": "2025-10-23",
     "update_time": "2025-10-23",
     "download_time": "2025-12-12 22:49:40"
+  },
+  {
+    "id": "2510.09595",
+    "title": "LiveOIBench: Can Large Language Models Outperform Human Contestants in Informatics Olympiads?",
+    "abstract": "Competitive programming problems increasingly serve as valuable benchmarks to evaluate the coding capabilities of large language models (LLMs) due to their complexity and ease of verification. Yet, current coding benchmarks face limitations such as lack of exceptionally challenging problems, insufficient test case coverage, reliance on online platform APIs that limit accessibility. To address these issues, we introduce LiveOIBench, a comprehensive benchmark featuring 403 expert-curated Olympiad-level competitive programming problems, each with an average of 60 expert-designed test cases. The problems are sourced directly from 72 official Informatics Olympiads in different regions conducted between 2023 and 2025. LiveOIBench distinguishes itself through four key features: (1) meticulously curated high-quality tasks with detailed subtask rubrics and extensive private test cases; (2) direct integration of elite contestant performance data to enable informative comparison against top-performing humans; (3) planned continuous, contamination-free updates from newly released Olympiad problems; and (4) a self-contained evaluation system facilitating offline and easy-to-reproduce assessments. Benchmarking 32 popular general-purpose and reasoning LLMs, we find that GPT-5 achieves a notable 81.76th percentile, a strong result that nonetheless falls short of top human contestant performance, who usually place above 90th. In contrast, among open-weight reasoning models, GPT-OSS-120B achieves only a 60th percentile, underscoring significant capability disparities from frontier closed models. Detailed analyses indicate that robust reasoning models prioritize precise problem analysis over excessive exploration, suggesting future models should emphasize structured analysis and minimize unnecessary exploration. All data, code, and leaderboard results will be made publicly available on our website.",
+    "arxiv_url": "https://arxiv.org/abs/2510.09595",
+    "authors": [
+      "Kaijian Zou",
+      "Aaron Xiong",
+      "Yunxiang Zhang",
+      "Frederick Zhang",
+      "Yueqi Ren",
+      "Jirong Yang",
+      "Ayoung Lee",
+      "Shitanshu Bhushan",
+      "Lu Wang"
+    ],
+    "first_author": "Kaijian Zou",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Olympiad-level competitive programming",
+      "Expert-curated private test cases",
+      "Fine-grained subtask rubrics",
+      "Offline reproducible judge",
+      "Human-contestant percentile comparison",
+      "Continuous contamination-free updates",
+      "Reasoning-trace / token-efficiency analysis",
+      "Algorithm-specific failure analysis (e.g., dynamic programming)"
+    ],
+    "summary": "本文提出LiveOIBench——一个包含403道信息学奥赛题、平均60个专家私有测试用例、细粒度子任务评分与离线评测系统的持续更新竞赛编程基准，并用该基准对32个主流模型进行了评测与深入分析，揭示模型在动态规划等算法与推理策略上的不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.09595v1",
+    "published": "2025-10-10",
+    "update_time": "2025-10-10",
+    "download_time": "2025-12-12 23:47:36"
+  },
+  {
+    "id": "2510.17868",
+    "title": "UniCode: A Framework for Generating High Quality Competitive Coding Problems",
+    "abstract": "The reliance of competitive coding benchmarks on static, human-authored problems creates significant challenges, including data contamination and limited scalability. To address these issues, we introduce UniCode, a novel framework that automatically generates high-quality algorithmic problems alongside robust, contamination-resistant test cases. Inspired by biological evolution that creates better and diverse offspring, our framework leverages Large Language Models (LLMs) to systematically diversify problems through three strategies: single problem extension, same-type fusion, and cross-type fusion. A key innovation is our stress-driven test case synthesis pipeline, which generates reliable test suites without requiring a canonical ground-truth solution. This pipeline combines brute-force grounding for small-scale inputs with a consensus-based validation mechanism for large-scale inputs to ensure high correctness and coverage. We demonstrate effectiveness of our framework by curating a benchmark of 492 problems and evaluating 19 state-of-the-art LLMs. The results reveal that UniCode is highly challenging and discriminative, with the top-performing model, o4-mini, achieving a pass rate of only 70.3%. Our framework provides a scalable and reliable solution for generating dynamic evaluation datasets in coding domain.",
+    "arxiv_url": "https://arxiv.org/abs/2510.17868",
+    "authors": [
+      "Xinyue Zheng",
+      "Haowei Lin",
+      "Shaofei Cai",
+      "Zilong Zheng",
+      "Yitao Liang"
+    ],
+    "first_author": "Xinyue Zheng",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Benchmarking & Dataset Generation",
+    "task": "Problem Generation and Stress-driven Testcase Synthesis",
+    "tags": [
+      "Generative evaluation",
+      "Problem evolution strategies",
+      "Single-problem extension",
+      "Same-type fusion",
+      "Cross-type fusion",
+      "Stress-driven test-case synthesis",
+      "Brute-force grounding for small inputs",
+      "Consensus-based validation with LLM adjudication",
+      "Hybrid input sampling (random/adversarial/LLM)",
+      "Contamination-resistant competitive coding benchmark"
+    ],
+    "summary": "本文提出UniCode框架，通过单题扩展、同类/跨类融合等进化策略自动生成竞赛级编程题，并结合穷举验证与多数共识（由LLM仲裁）合成高质量抗污染测试用例，构建了492道题的可扩展评测基准并评估了19个模型。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.17868v1",
+    "published": "2025-10-16",
+    "update_time": "2025-10-16",
+    "download_time": "2025-12-12 23:49:41"
+  },
+  {
+    "id": "2510.26130",
+    "title": "Beyond Synthetic Benchmarks: Evaluating LLM Performance on Real-World Class-Level Code Generation",
+    "abstract": "Large language models (LLMs) have demonstrated strong performance on function-level code generation benchmarks, yet real-world software development increasingly demands class-level implementations that integrate multiple methods, attributes, and dependencies within authentic project contexts. This gap between benchmark performance and practical utility raises critical questions about LLMs' readiness for production code assistance, particularly regarding their ability to generalize across familiar and novel codebases.   We introduce a benchmark derived from real-world open-source repositories, comprising classes divided into seen and unseen partitions to evaluate generalization under practical conditions. We systematically examine how input specification completeness and retrieval-augmented generation affect class-level correctness across multiple state-of-the-art LLMs.   Our evaluation reveals a substantial performance gap: while LLMs achieve 84 to 89% correctness on synthetic benchmarks, they attain only 25 to 34% on real-world class tasks, with minimal distinction between familiar and novel codebases. Comprehensive documentation provides marginal improvements (1 to 3%), whereas retrieval augmentation yields greater gains (4 to 7%) by supplying concrete implementation patterns. Error analysis identifies AttributeError, TypeError, and AssertionError as dominant failure modes, with distinct patterns between synthetic and real-world scenarios.   These findings provide actionable insights for enhancing context modelling, documentation strategies, and retrieval integration in production code assistance tools.",
+    "arxiv_url": "https://arxiv.org/abs/2510.26130",
+    "authors": [
+      "Musfiqur Rahman",
+      "SayedHassan Khatoonabadi",
+      "Emad Shihab"
+    ],
+    "first_author": "Musfiqur Rahman",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Real-world class-level benchmark",
+      "Seen-vs-unseen repository split",
+      "Retrieval-augmented generation evaluation",
+      "Docstring completeness analysis",
+      "Error taxonomy (AttributeError/TypeError/AssertionError)",
+      "Functional correctness measurement",
+      "Repository-level dependency modeling"
+    ],
+    "summary": "本文构建并公开了来自真实开源项目的类级代码基准（包含seen/unseen划分），系统评估LLM在真实类实现上的生成表现，分析文档完整性与检索增强对函数正确性与错误类型的影响，并发现真实场景下的性能显著低于合成基准且RAG能带来小幅提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.26130v2",
+    "published": "2025-10-30",
+    "update_time": "2025-11-04",
+    "download_time": "2025-12-12 23:50:47"
   }
 ]

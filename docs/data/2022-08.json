@@ -1,40 +1,5 @@
 [
   {
-    "id": "2208.08227",
-    "title": "MultiPL-E: A Scalable and Extensible Approach to Benchmarking Neural Code Generation",
-    "abstract": "Large language models have demonstrated the ability to generate both natural language and programming language text. Such models open up the possibility of multi-language code generation: could code generation models generalize knowledge from one language to another? Although contemporary code generation models can generate semantically correct Python code, little is known about their abilities with other languages. We propose MultiPL-E, a system for translating unit test-driven code generation benchmarks to new languages. We create the first massively multilingual code generation benchmark by using MultiPL-E to translate two popular Python code generation benchmarks to 18 additional programming languages.   We use MultiPL-E to extend the HumanEval benchmark and MBPP benchmark to 18 languages that encompass a range of programming paradigms and popularity. Using these new parallel benchmarks, we evaluate the multi-language performance of three state-of-the-art code generation models: Codex, CodeGen, and InCoder. We find that Codex matches or even exceeds its performance on Python for several other languages. The range of programming languages represented in MultiPL-E allow us to explore the impact of language frequency and language features on model performance. Finally, the MultiPL-E approach of compiling code generation benchmarks to new programming languages is both scalable and extensible, making it straightforward to evaluate new models, benchmarks, and languages.",
-    "arxiv_url": "https://arxiv.org/abs/2208.08227",
-    "authors": [
-      "Federico Cassano",
-      "John Gouwar",
-      "Daniel Nguyen",
-      "Sydney Nguyen",
-      "Luna Phipps-Costin",
-      "Donald Pinckney",
-      "Ming-Ho Yee",
-      "Yangtian Zi",
-      "Carolyn Jane Anderson",
-      "Molly Q Feldman",
-      "Arjun Guha",
-      "Michael Greenberg",
-      "Abhinav Jangda"
-    ],
-    "first_author": "Federico Cassano",
-    "category": [
-      "Benchmark",
-      "Empirical"
-    ],
-    "field": "Coding Assistant",
-    "task": "Code Completion",
-    "summary": "本文提出 MultiPL-E，将 HumanEval 和 MBPP 翻译并扩展到 19 种编程语言，构建首个大规模多语言并行代码生成基准并用其评估多款模型以分析语言特性、流行度、类型系统和提示敏感性对生成性能的影响。",
-    "quality": "High",
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2208.08227v4",
-    "published": "2022-08-17",
-    "update_time": "2022-12-19",
-    "download_time": "2025-12-04 23:31:19"
-  },
-  {
     "id": "2208.04415",
     "title": "Deep Learning Driven Natural Languages Text to SQL Query Conversion: A Survey",
     "abstract": "With the future striving toward data-centric decision-making, seamless access to databases is of utmost importance. There is extensive research on creating an efficient text-to-sql (TEXT2SQL) model to access data from the database. Using a Natural language is one of the best interfaces that can bridge the gap between the data and results by accessing the database efficiently, especially for non-technical users. It will open the doors and create tremendous interest among users who are well versed in technical skills or not very skilled in query languages. Even if numerous deep learning-based algorithms are proposed or studied, there still is very challenging to have a generic model to solve the data query issues using natural language in a real-work scenario. The reason is the use of different datasets in different studies, which comes with its limitations and assumptions. At the same time, we do lack a thorough understanding of these proposed models and their limitations with the specific dataset it is trained on. In this paper, we try to present a holistic overview of 24 recent neural network models studied in the last couple of years, including their architectures involving convolutional neural networks, recurrent neural networks, pointer networks, reinforcement learning, generative models, etc. We also give an overview of the 11 datasets that are widely used to train the models for TEXT2SQL technologies. We also discuss the future application possibilities of TEXT2SQL technologies for seamless data queries.",

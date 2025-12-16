@@ -78,5 +78,46 @@
     "published": "2025-02-18",
     "update_time": "2025-09-19",
     "download_time": "2025-12-12 21:32:49"
+  },
+  {
+    "id": "2502.11829",
+    "title": "Code-Vision: Evaluating Multimodal LLMs Logic Understanding and Code Generation Capabilities",
+    "abstract": "This paper introduces Code-Vision, a benchmark designed to evaluate the logical understanding and code generation capabilities of Multimodal Large Language Models (MLLMs). It challenges MLLMs to generate a correct program that fulfills specific functionality requirements based on a given flowchart, which visually represents the desired algorithm or process. Code-Vision comprises three subsets: HumanEval-V, Algorithm, and MATH, which evaluate MLLMs' coding abilities across basic programming, algorithmic, and mathematical problem-solving domains. Our experiments evaluate 12 MLLMs on Code-Vision. Experimental results demonstrate that there is a large performance difference between proprietary and open-source models. On Hard problems, GPT-4o can achieve 79.3% pass@1, but the best open-source model only achieves 15%. Further experiments reveal that Code-Vision can pose unique challenges compared to other multimodal reasoning benchmarks MMCode and MathVista. We also explore the reason for the poor performance of the open-source models. All data and codes are available at https://github.com/wanghanbinpanda/CodeVision.",
+    "arxiv_url": "https://arxiv.org/abs/2502.11829",
+    "authors": [
+      "Hanbin Wang",
+      "Xiaoxuan Zhou",
+      "Zhipeng Xu",
+      "Keyuan Cheng",
+      "Yuxin Zuo",
+      "Kai Tian",
+      "Jingwei Song",
+      "Junting Lu",
+      "Wenhui Hu",
+      "Xueyang Liu"
+    ],
+    "first_author": "Hanbin Wang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Flowchart-to-code translation",
+      "Visual-centric code generation",
+      "Multimodal benchmark construction",
+      "Algorithmic and mathematical problems",
+      "Test-case driven correctness evaluation",
+      "Proprietary vs. open-source performance gap",
+      "Failure-mode analysis (logical vs. syntactic)"
+    ],
+    "summary": "提出 CODE-VISION 基准，通过以流程图为主的视觉输入评估多模态大模型的逻辑理解与代码生成能力，并对 12 款模型进行实证比较与错误分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.11829v1",
+    "published": "2025-02-17",
+    "update_time": "2025-02-17",
+    "download_time": "2025-12-13 00:13:02"
   }
 ]

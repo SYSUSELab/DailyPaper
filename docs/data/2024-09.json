@@ -1,51 +1,5 @@
 [
   {
-    "id": "2409.12186",
-    "title": "Qwen2.5-Coder Technical Report",
-    "abstract": "In this report, we introduce the Qwen2.5-Coder series, a significant upgrade from its predecessor, CodeQwen1.5. This series includes six models: Qwen2.5-Coder-(0.5B/1.5B/3B/7B/14B/32B). As a code-specific model, Qwen2.5-Coder is built upon the Qwen2.5 architecture and continues pretrained on a vast corpus of over 5.5 trillion tokens. Through meticulous data cleaning, scalable synthetic data generation, and balanced data mixing, Qwen2.5-Coder demonstrates impressive code generation capabilities while retaining general and math skills. These models have been evaluated on a wide range of code-related tasks, achieving state-of-the-art (SOTA) performance across more than 10 benchmarks, including code generation, completion, reasoning, and repair, consistently outperforming larger models of the same model size. We believe that the release of the Qwen2.5-Coder series will advance research in code intelligence and, with its permissive licensing, support wider adoption by developers in real-world applications.",
-    "arxiv_url": "https://arxiv.org/abs/2409.12186",
-    "authors": [
-      "Binyuan Hui",
-      "Jian Yang",
-      "Zeyu Cui",
-      "Jiaxi Yang",
-      "Dayiheng Liu",
-      "Lei Zhang",
-      "Tianyu Liu",
-      "Jiajun Zhang",
-      "Bowen Yu",
-      "Keming Lu",
-      "Kai Dang",
-      "Yang Fan",
-      "Yichang Zhang",
-      "An Yang",
-      "Rui Men",
-      "Fei Huang",
-      "Bo Zheng",
-      "Yibo Miao",
-      "Shanghaoran Quan",
-      "Yunlong Feng",
-      "Xingzhang Ren",
-      "Xuancheng Ren",
-      "Jingren Zhou",
-      "Junyang Lin"
-    ],
-    "first_author": "Binyuan Hui",
-    "category": [
-      "Technical",
-      "Benchmark"
-    ],
-    "field": "Coding Assistant",
-    "task": "Code Pre-Training",
-    "summary": "本文介绍了Qwen2.5-Coder系列（0.5B–32B），在继承Qwen2.5架构的基础上用超过5.5万亿token的代码与相关文本进行大规模预训练并通过精心设计的指令微调与数据清洗策略显著提升代码生成、补全与推理任务的性能并开源发布。",
-    "quality": "High",
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2409.12186v3",
-    "published": "2024-09-18",
-    "update_time": "2024-11-12",
-    "download_time": "2025-12-04 23:08:44"
-  },
-  {
     "id": "2409.04183",
     "title": "GALLa: Graph Aligned Large Language Models for Improved Source Code Understanding",
     "abstract": "Programming languages possess rich semantic information - such as data flow - that is represented by graphs and not available from the surface form of source code. Recent code language models have scaled to billions of parameters, but model source code solely as text tokens while ignoring any other structural information. Conversely, models that do encode structural information of code make modifications to the Transformer architecture, limiting their scale and compatibility with pretrained LLMs. In this work, we take the best of both worlds with GALLa - Graph Aligned Large Language Models. GALLa utilizes graph neural networks and cross-modal alignment technologies to inject the structural information of code into LLMs as an auxiliary task during finetuning. This framework is both model-agnostic and task-agnostic, as it can be applied to any code LLM for any code downstream task, and requires the structural graph data only at training time from a corpus unrelated to the finetuning data, while incurring no cost at inference time over the baseline LLM. Experiments on five code tasks with seven different baseline LLMs ranging in size from 350M to 14B validate the effectiveness of GALLa, demonstrating consistent improvement over the baseline, even for powerful models such as LLaMA3 and Qwen2.5-Coder.",
@@ -119,5 +73,45 @@
     "published": "2024-09-03",
     "update_time": "2025-01-20",
     "download_time": "2025-12-12 22:23:35"
+  },
+  {
+    "id": "2409.12866",
+    "title": "SpecEval: Evaluating Code Comprehension in Large Language Models via Program Specifications",
+    "abstract": "Large Language models have achieved impressive performance in automated software engineering. Extensive efforts have been made to evaluate the abilities of code LLMs in various aspects, with an increasing number of benchmarks and evaluation frameworks proposed. Apart from the most sought-after capability of code generation, the capability of code comprehension is being granted growing attention. Nevertheless, existing works assessing the code comprehension capability of LLMs exhibit varied limitations. Evaluation frameworks like CRUXEval and REval usually focus on code reasoning tasks over a certain input case, leading to a limited range of execution traces covered, resulting in a loss in code semantics examined and the inability to assess the comprehensive understanding of LLMs concerning the target program. To tackle these challenges, we propose SpecEval, a novel black-box evaluation framework to evaluate code comprehension in LLMs via program specifications. Inspired by the idea that specifications can act as a comprehensive articulation of program behaviors concerning all possible execution traces, we employ formalized program specifications to represent program semantics and perform comprehensive evaluations. In particular, four specification-related tasks are designed meticulously to assess the capability of LLMs from basic to advanced levels. Counterfactual analysis is further conducted to study the performance variance of LLMs under semantics-preserving perturbations. Systematic experiments are conducted on six state-of-the-art LLMs. Extensive experimental results present a below-satisfactory performance of LLMs on specification-related tasks, revealing the limitations of existing LLMs in terms of articulating program semantics with formal specifications. Counterfactual analysis also reveals the sensitivity of LLMs towards semantic-preserving perturbations.",
+    "arxiv_url": "https://arxiv.org/abs/2409.12866",
+    "authors": [
+      "Lezhi Ma",
+      "Shangqing Liu",
+      "Lei Bu",
+      "Shangru Li",
+      "Yida Wang",
+      "Yang Liu"
+    ],
+    "first_author": "Lezhi Ma",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Formal program specifications",
+      "JML specifications",
+      "Specification correctness judgment",
+      "Specification selection",
+      "Specification infilling",
+      "Specification generation",
+      "Black-box evaluation",
+      "Counterfactual semantic-preserving perturbations",
+      "Mutation operators",
+      "Semantics-equivalent program variants"
+    ],
+    "summary": "本文提出SpecEval，一个基于形式化程序规格（JML）的黑盒评估框架，设计四类规格相关任务并构建含204个带可验证规格的Java程序基准，通过对六种主流LLM的系统性实验及反事实扰动分析，揭示模型在用形式化规格表述程序语义方面的不足及对语义保持扰动的敏感性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2409.12866v2",
+    "published": "2024-09-19",
+    "update_time": "2025-03-22",
+    "download_time": "2025-12-12 23:34:48"
   }
 ]

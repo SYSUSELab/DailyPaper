@@ -164,5 +164,59 @@
     "published": "2025-07-03",
     "update_time": "2025-11-07",
     "download_time": "2025-12-12 21:35:32"
+  },
+  {
+    "id": "2507.04952",
+    "title": "ArtifactsBench: Bridging the Visual-Interactive Gap in LLM Code Generation Evaluation",
+    "abstract": "The generative capabilities of Large Language Models (LLMs) are rapidly expanding from static code to dynamic, interactive visual artifacts. This progress is bottlenecked by a critical evaluation gap: established benchmarks focus on algorithmic correctness and are blind to the visual fidelity and interactive integrity that define modern user experiences. To bridge this gap, we introduce ArtifactsBench, a new benchmark and paradigm for the automated, multimodal evaluation of visual code generation. Our framework programmatically renders each generated artifact and captures its dynamic behavior through temporal screenshots. This visual evidence, alongside the source code, is then assessed by a Multimodal LLM (MLLM)-as-Judge, which is rigorously guided by a fine-grained, per-task checklist to ensure holistic and reproducible scoring. We construct a new benchmark of 1,825 diverse tasks and evaluate over 30 leading LLMs. Our automated evaluation achieves a striking 94.4% ranking consistency with WebDev Arena, the gold-standard for human preference in web development, and over 90% pairwise agreement with human experts. This establishes ArtifactsBench as the first framework to reliably automate the assessment of human-perceived quality at scale. Our analysis provides a high-resolution map of the current SOTA, revealing that generalist models often outperform domain-specific ones. We open-source ArtifactsBench, including the benchmark, evaluation harness, and baseline results at https://artifactsbenchmark.github.io/, to provide the community with a scalable and accurate tool to accelerate the development of user-centric generative models.",
+    "arxiv_url": "https://arxiv.org/abs/2507.04952",
+    "authors": [
+      "Chenchen Zhang",
+      "Yuhang Li",
+      "Can Xu",
+      "Jiaheng Liu",
+      "Ao Liu",
+      "Changzhi Zhou",
+      "Ken Deng",
+      "Dengpeng Wu",
+      "Guanhua Huang",
+      "Kejiao Li",
+      "Qi Yi",
+      "Ruibin Xiong",
+      "Shihui Hu",
+      "Yue Zhang",
+      "Yuhao Jiang",
+      "Zenan Xu",
+      "Yuanxing Zhang",
+      "Wiggin Zhou",
+      "Chayse Zhou",
+      "Fengzong Lian"
+    ],
+    "first_author": "Chenchen Zhang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Interactive Visual Artifacts",
+    "task": "Visual and Interactive Code Generation Evaluation",
+    "tags": [
+      "Multimodal automated evaluation",
+      "MLLM-as-judge with checklist guidance",
+      "Sandboxed execution with staged screenshots",
+      "Interactive visual artifact benchmark",
+      "Per-task 10-dimension checklists",
+      "Perceptual-hash de-duplication",
+      "Difficulty stratification (Easy/Medium/Hard)",
+      "Human-alignment validation and pairwise agreement",
+      "Dual-referee cross-judge calibration",
+      "Diagnostic failure-mode analysis"
+    ],
+    "summary": "ArtifactsBench 提出一个包含1825个交互式可视制品任务的大规模基准和自动化多模态评估流水线：在受控沙箱中执行代码、截取三阶段截图，并由清单引导的多模态LLM裁判打分，从而实现对视觉保真度、交互正确性和代码质量的可扩展、可复现评估并与人工偏好高度对齐。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2507.04952v2",
+    "published": "2025-07-07",
+    "update_time": "2025-09-29",
+    "download_time": "2025-12-12 23:22:36"
   }
 ]

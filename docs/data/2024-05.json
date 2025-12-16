@@ -48,5 +48,120 @@
     "published": "2024-05-30",
     "update_time": "2024-05-30",
     "download_time": "2025-12-11 16:33:53"
+  },
+  {
+    "id": "2405.11966",
+    "title": "Multiple-Choice Questions are Efficient and Robust LLM Evaluators",
+    "abstract": "We present GSM-MC, a multiple-choice (MC) dataset constructed by collecting answers and incorrect predictions on GSM8K from 60 open-source models. Through extensive experiments, we show that LLMs' performance on the MC version of this popular benchmark is strongly correlated with their performance on the original version and is quite robust to distractor choices and option orders, while the evaluation time is reduced by a factor of up to 30. Following similar procedures, we introduce MATH-MC, constructed from MATH, and PythonIO, a new program reasoning MC dataset constructed from HumanEval and MBPP. Experimental results indicate that LLMs' performance on these MC benchmarks leaves much room for improvement. Our data and code are available at https://github.com/Geralt-Targaryen/MC-Evaluation.",
+    "arxiv_url": "https://arxiv.org/abs/2405.11966",
+    "authors": [
+      "Ziyin Zhang",
+      "Zhaokun Jiang",
+      "Lizhen Xu",
+      "Hongkun Hao",
+      "Rui Wang"
+    ],
+    "first_author": "Ziyin Zhang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Evaluation & Benchmarks",
+    "task": "Conversion of generation benchmarks to multiple-choice evaluation",
+    "tags": [
+      "Multiple-choice conversion of generation benchmarks",
+      "Distractor pool from model incorrect outputs",
+      "Program-output-as-MC evaluation",
+      "Robustness to distractor choice and option order",
+      "Logit-based scoring for efficiency",
+      "Correlation analysis with open-ended evaluation",
+      "Analysis of invalid generation formats"
+    ],
+    "summary": "本文通过从大量开源模型收集错误预测作为干扰项，将短答案数学与编程基准转换为多项选择格式并构建MC数据集，实验表明MC评估在计算效率、对干扰项和选项顺序的鲁棒性以及与原始生成式评测的相关性方面表现良好。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2405.11966v4",
+    "published": "2024-05-20",
+    "update_time": "2024-06-26",
+    "download_time": "2025-12-12 23:30:24"
+  },
+  {
+    "id": "2406.00037",
+    "title": "Aligning LLMs through Multi-perspective User Preference Ranking-based Feedback for Programming Question Answering",
+    "abstract": "Code Community Question Answering (CCQA) seeks to tackle programming-related issues, thereby boosting productivity in both software engineering and academic research. Recent advancements in Reinforcement Learning from Human Feedback (RLHF) have transformed the fine-tuning process of Large Language Models (LLMs) to produce responses that closely mimic human behavior. Leveraging LLMs with RLHF for practical CCQA applications has thus emerged as a promising area of study. Unlike standard code question-answering tasks, CCQA involves multiple possible answers, with varying user preferences for each response. Additionally, code communities often show a preference for new APIs. These challenges prevent LLMs from generating responses that cater to the diverse preferences of users in CCQA tasks. To address these issues, we propose a novel framework called Aligning LLMs through Multi-perspective User Preference Ranking-based Feedback for Programming Question Answering (ALMupQA) to create user-focused responses. Our approach starts with Multi-perspective Preference Ranking Alignment (MPRA), which synthesizes varied user preferences based on the characteristics of answers from code communities. We then introduce a Retrieval-augmented In-context Learning (RIL) module to mitigate the problem of outdated answers by retrieving responses to similar questions from a question bank. Due to the limited availability of high-quality, multi-answer CCQA datasets, we also developed a dataset named StaCCQA from real code communities. Extensive experiments demonstrated the effectiveness of the ALMupQA framework in terms of accuracy and user preference. Compared to the base model, ALMupQA showed nearly an 11% improvement in BLEU, with increases of 20% and 17.5% in BERTScore and CodeBERTScore, respectively.",
+    "arxiv_url": "https://arxiv.org/abs/2406.00037",
+    "authors": [
+      "Hongyu Yang",
+      "Liyang He",
+      "Min Hou",
+      "Shuanghong Shen",
+      "Rui Li",
+      "Jiahui Hou",
+      "Jianhui Ma",
+      "Junda Zhao"
+    ],
+    "first_author": "Hongyu Yang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "Multi-perspective preference scoring",
+      "Listwise contrastive ranking loss",
+      "Retrieval-augmented in-context learning",
+      "Questioner vs community vote modeling",
+      "Mitigating outdated API answers",
+      "Preference-aligned fine-tuning for CCQA",
+      "Multi-answer ranking in code communities"
+    ],
+    "summary": "本文提出ALMupQA框架，通过多视角偏好评分（问答者偏差、用户投票与LLM内容评分）结合基于检索的上下文学习，对大型模型进行排序式偏好对齐，并构建了来自真实社区的多答案CCQA数据以提升编程问答质量。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2406.00037v1",
+    "published": "2024-05-27",
+    "update_time": "2024-05-27",
+    "download_time": "2025-12-12 23:31:56"
+  },
+  {
+    "id": "2405.07990",
+    "title": "Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific Plots",
+    "abstract": "The remarkable progress of Multi-modal Large Language Models (MLLMs) has attracted significant attention due to their superior performance in visual contexts. However, their capabilities in turning visual figure to executable code, have not been evaluated thoroughly. To address this, we introduce Plot2Code, a comprehensive visual coding benchmark designed for a fair and in-depth assessment of MLLMs. We carefully collect 132 manually selected high-quality matplotlib plots across six plot types from publicly available matplotlib galleries. For each plot, we carefully offer its source code, and an descriptive instruction summarized by GPT-4. This approach enables Plot2Code to extensively evaluate MLLMs' code capabilities across various input modalities. Furthermore, we propose three automatic evaluation metrics, including code pass rate, text-match ratio, and GPT-4V overall rating, for a fine-grained assessment of the output code and rendered images. Instead of simply judging pass or fail, we employ GPT-4V to make an overall judgement between the generated and reference images, which has been shown to be consistent with human evaluation. The evaluation results, which include analyses of 14 MLLMs such as the proprietary GPT-4V, Gemini-Pro, and the open-sourced Mini-Gemini, highlight the substantial challenges presented by Plot2Code. With Plot2Code, we reveal that most existing MLLMs struggle with visual coding for text-dense plots, heavily relying on textual instruction. We hope that the evaluation results from Plot2Code on visual coding will guide the future development of MLLMs. All data involved with Plot2Code are available at https://huggingface.co/datasets/TencentARC/Plot2Code.",
+    "arxiv_url": "https://arxiv.org/abs/2405.07990",
+    "authors": [
+      "Chengyue Wu",
+      "Yixiao Ge",
+      "Qiushan Guo",
+      "Jiahao Wang",
+      "Zhixuan Liang",
+      "Zeyu Lu",
+      "Ying Shan",
+      "Ping Luo"
+    ],
+    "first_author": "Chengyue Wu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Matplotlib code generation",
+      "Visual-to-code synthesis",
+      "Multi-modal evaluation settings",
+      "LLM-mediated image comparison",
+      "Code pass rate metric",
+      "Text-match ratio metric",
+      "Text-dense plot parsing",
+      "Plot reconstruction fidelity"
+    ],
+    "summary": "该论文提出了Plot2Code，一个包含132个高质量matplotlib图及其源码与描述的多模态可执行代码基准，设计了多种输入/输出评估设置和自动化指标（如代码通过率、文本匹配率与基于视觉LLM的图像评分），并在14个多模态大模型上评测以揭示当前模型在从图像生成绘图代码方面的挑战与不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2405.07990v1",
+    "published": "2024-05-13",
+    "update_time": "2024-05-13",
+    "download_time": "2025-12-12 23:54:03"
   }
 ]

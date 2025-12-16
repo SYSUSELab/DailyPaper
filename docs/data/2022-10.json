@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2210.14494",
+    "title": "CS1QA: A Dataset for Assisting Code-based Question Answering in an Introductory Programming Course",
+    "abstract": "We introduce CS1QA, a dataset for code-based question answering in the programming education domain. CS1QA consists of 9,237 question-answer pairs gathered from chat logs in an introductory programming class using Python, and 17,698 unannotated chat data with code. Each question is accompanied with the student's code, and the portion of the code relevant to answering the question. We carefully design the annotation process to construct CS1QA, and analyze the collected dataset in detail. The tasks for CS1QA are to predict the question type, the relevant code snippet given the question and the code and retrieving an answer from the annotated corpus. Results for the experiments on several baseline models are reported and thoroughly analyzed. The tasks for CS1QA challenge models to understand both the code and natural language. This unique dataset can be used as a benchmark for source code comprehension and question answering in the educational setting.",
+    "arxiv_url": "https://arxiv.org/abs/2210.14494",
+    "authors": [
+      "Changyoon Lee",
+      "Yeon Seonwoo",
+      "Alice Oh"
+    ],
+    "first_author": "Changyoon Lee",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Student-TA chat logs",
+      "Keystroke-level code snapshots",
+      "Question type annotation",
+      "Relevant-code-line labeling",
+      "Educational code QA",
+      "Answer retrieval task"
+    ],
+    "summary": "本文提出CS1QA——一个来自编程入门课的包含9,237个问答对并标注问题类型与相关代码行的数据集，设计了问题类型分类、代码行选择与答案检索三项任务并给出基线实验结果。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2210.14494v1",
+    "published": "2022-10-26",
+    "update_time": "2022-10-26",
+    "download_time": "2025-12-12 23:27:23"
+  }
+]

@@ -119,7 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 生成论文HTML
     function createPaperHTML(paper) {
-        const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
+        # const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
+        const task = paper.tags ? paper.tags.map(tags => `<span class="task">${task}</span>`).join('') : '';
 
         // 提取代码链接
         let codeLink = '';
@@ -140,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstCategory = paper.primary_category;
 
         return `
-            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-task="${paper.task ? paper.task : ''}" data-paper-id="${paper.id}">
+            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-task="${paper.tags ? paper.tags.join(',') : ''}" data-paper-id="${paper.id}">
                 <div class="paper-select">
                     <input type="checkbox" class="paper-checkbox" id="check-${paper.id}" data-paper-id="${paper.id}">
                     <label for="check-${paper.id}"></label>

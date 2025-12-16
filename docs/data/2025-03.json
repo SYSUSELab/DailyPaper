@@ -1,38 +1,5 @@
 [
   {
-    "id": "2503.01449",
-    "title": "Benchmarking Large Language Models for Multi-Language Software Vulnerability Detection",
-    "abstract": "Recent advancements in generative AI have led to the widespread adoption of large language models (LLMs) in software engineering, addressing numerous long-standing challenges. However, a comprehensive study examining the capabilities of LLMs in software vulnerability detection (SVD), a crucial aspect of software security, is currently lacking. Existing research primarily focuses on evaluating LLMs using C/C++ datasets. It typically explores only one or two strategies among prompt engineering, instruction tuning, and sequence classification fine-tuning for open-source LLMs. Consequently, there is a significant knowledge gap regarding the effectiveness of diverse LLMs in detecting vulnerabilities across various programming languages. To address this knowledge gap, we present a comprehensive empirical study evaluating the performance of LLMs on the SVD task. We have compiled a comprehensive dataset comprising 8,260 vulnerable functions in Python, 7,505 in Java, and 28,983 in JavaScript. We assess five open-source LLMs using multiple approaches, including prompt engineering, instruction tuning, and sequence classification fine-tuning. These LLMs are benchmarked against five fine-tuned small language models and two open-source static application security testing tools. Furthermore, we explore two avenues to improve LLM performance on SVD: a) Data perspective: Retraining models using downsampled balanced datasets. b) Model perspective: Investigating ensemble learning methods that combine predictions from multiple LLMs. Our comprehensive experiments demonstrate that SVD remains a challenging task for LLMs. This study provides a thorough understanding of the role of LLMs in SVD and offers practical insights for future advancements in leveraging generative AI to enhance software security practices.",
-    "arxiv_url": "https://arxiv.org/abs/2503.01449",
-    "authors": [
-      "Ting Zhang",
-      "Chengran Yang",
-      "Yindu Su",
-      "Martin Weyssow",
-      "Hung Nguyen",
-      "Tan Bui",
-      "Hong Jin Kang",
-      "Yikun Li",
-      "Eng Lieh Ouh",
-      "Lwin Khin Shar",
-      "David Lo"
-    ],
-    "first_author": "Ting Zhang",
-    "category": [
-      "Empirical",
-      "Benchmark"
-    ],
-    "field": "Quality Management",
-    "task": "Vulnerability Detection",
-    "summary": "本文构建了包含 Python、Java、JavaScript 函数级漏洞的大规模数据集，并对五个开源大模型在提示工程、指令微调和序列分类微调下进行全面基准评测，比较其与小型模型和静态扫描工具的表现，同时探索通过均衡重采样与模型集成提升检测效果。",
-    "quality": "High",
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2503.01449v1",
-    "published": "2025-03-03",
-    "update_time": "2025-03-03",
-    "download_time": "2025-12-05 10:10:55"
-  },
-  {
     "id": "2503.06680",
     "title": "FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation",
     "abstract": "Implementing new features in repository-level codebases is a crucial application of code generation models. However, current benchmarks lack a dedicated evaluation framework for this capability. To fill this gap, we introduce FEA-Bench, a benchmark designed to assess the ability of large language models (LLMs) to perform incremental development within code repositories. We collect pull requests from 83 GitHub repositories and use rule-based and intent-based filtering to construct task instances focused on new feature development. Each task instance containing code changes is paired with relevant unit test files to ensure that the solution can be verified. The feature implementation requires LLMs to simultaneously possess code completion capabilities for new components and code editing abilities for other relevant parts in the code repository, providing a more comprehensive evaluation method of LLMs' automated software engineering capabilities. Experimental results show that LLMs perform significantly worse in the FEA-Bench, highlighting considerable challenges in such repository-level incremental code development.",
