@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1809.08887",
+    "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task",
+    "abstract": "We present Spider, a large-scale, complex and cross-domain semantic parsing and text-to-SQL dataset annotated by 11 college students. It consists of 10,181 questions and 5,693 unique complex SQL queries on 200 databases with multiple tables, covering 138 different domains. We define a new complex and cross-domain semantic parsing and text-to-SQL task where different complex SQL queries and databases appear in train and test sets. In this way, the task requires the model to generalize well to both new SQL queries and new database schemas. Spider is distinct from most of the previous semantic parsing tasks because they all use a single database and the exact same programs in the train set and the test set. We experiment with various state-of-the-art models and the best model achieves only 12.4% exact matching accuracy on a database split setting. This shows that Spider presents a strong challenge for future research. Our dataset and task are publicly available at https://yale-lily.github.io/spider",
+    "arxiv_url": "https://arxiv.org/abs/1809.08887",
+    "authors": [
+      "Tao Yu",
+      "Rui Zhang",
+      "Kai Yang",
+      "Michihiro Yasunaga",
+      "Dongxu Wang",
+      "Zifan Li",
+      "James Ma",
+      "Irene Li",
+      "Qingning Yao",
+      "Shanelle Roman",
+      "Zilin Zhang",
+      "Dragomir Radev"
+    ],
+    "first_author": "Tao Yu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Cross-domain text-to-SQL",
+      "Complex multi-table SQL (JOIN/GROUP BY/NESTED)",
+      "Database-schema-aware semantic parsing",
+      "Database-split generalization evaluation",
+      "Human expert annotation and review pipeline",
+      "Large-scale relational schema collection"
+    ],
+    "summary": "该论文提出并公开了Spider，一个包含200个多表数据库、10,181个自然语言问题和5,693个复杂SQL的大规模人工标注跨领域文本到SQL数据集，并定义了数据库分割的泛化任务与基线评估。",
+    "quality": "High",
+    "conference": "EMNLP 2018",
+    "pdf_url": "https://arxiv.org/pdf/1809.08887v5",
+    "published": "2018-09-24",
+    "update_time": "2019-02-02",
+    "download_time": "2025-12-12 21:50:00"
+  }
+]

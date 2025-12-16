@@ -435,5 +435,140 @@
     "published": "2025-05-31",
     "update_time": "2025-08-27",
     "download_time": "2025-12-11 17:50:17"
+  },
+  {
+    "id": "2506.00750",
+    "title": "CodeSense: a Real-World Benchmark and Dataset for Code Semantic Reasoning",
+    "abstract": "Understanding and reasoning about code semantics is essential for enhancing code LLMs' abilities to solve real-world software engineering (SE) tasks. Although several code reasoning benchmarks exist, most rely on synthetic datasets or educational coding problems and focus on coarse-grained reasoning tasks such as input/output prediction, limiting their effectiveness in evaluating LLMs in practical SE contexts. To bridge this gap, we propose CodeSense, the first benchmark that makes available a spectrum of fine-grained code reasoning tasks concerned with the software engineering of real-world code. We collected Python, C and Java software projects from real-world repositories. We executed tests from these repositories, collected their execution traces, and constructed a ground truth dataset for fine-grained semantic reasoning tasks. We then performed comprehensive evaluations on state-of-the-art LLMs. Our results show a clear performance gap for the models to handle fine-grained reasoning tasks. Although prompting techniques such as chain-of-thought and in-context learning helped, the lack of code semantics in LLMs fundamentally limit models' capabilities of code reasoning. Besides dataset, benchmark and evaluation, our work produced an execution tracing framework and tool set that make it easy to collect ground truth for fine-grained SE reasoning tasks, offering a strong basis for future benchmark construction and model post training. Our code and data are located at https://codesense-bench.github.io/.",
+    "arxiv_url": "https://arxiv.org/abs/2506.00750",
+    "authors": [
+      "Monoshi Kumar Roy",
+      "Simin Chen",
+      "Benjamin Steenhoek",
+      "Jinjun Peng",
+      "Gail Kaiser",
+      "Baishakhi Ray",
+      "Wei Le"
+    ],
+    "first_author": "Monoshi Kumar Roy",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Fine-grained statement-level semantics",
+      "Execution trace instrumentation",
+      "Dynamic value collection",
+      "Branch condition prediction",
+      "Loop iteration inference",
+      "Pointer and aliasing reasoning",
+      "Real-world multi-language projects (Python/C/Java)",
+      "Semantic annotation toolchain",
+      "Benchmark construction and public leaderboard",
+      "Evaluation of prompting strategies (CoT, few-shot, ICL)"
+    ],
+    "summary": "CodeSense 提出并公开了基于真实 Python、C 和 Java 项目的细粒度代码语义推理基准、执行跟踪工具与带标注的数据集，并在 14 个主流大模型上进行系统评估以揭示其语义推理能力的局限性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2506.00750v2",
+    "published": "2025-05-31",
+    "update_time": "2025-10-02",
+    "download_time": "2025-12-12 21:34:37"
+  },
+  {
+    "id": "2505.18744",
+    "title": "LogicCat: A Chain-of-Thought Text-to-SQL Benchmark for Complex Reasoning",
+    "abstract": "Text-to-SQL is a critical task in natural language processing that aims to transform natural language questions into accurate and executable SQL queries. In real-world scenarios, these reasoning tasks are often accompanied by complex mathematical computations, domain knowledge, and hypothetical reasoning scenarios. However, existing large-scale Text-to-SQL datasets typically focus on business logic and task logic, neglecting critical factors such as vertical domain knowledge, complex mathematical reasoning, and hypothetical reasoning, which are essential for realistically reflecting the reasoning demands in practical applications and completing data querying and analysis. To bridge this gap, we introduce LogicCat, the first Text-to-SQL benchmark dataset specifically designed for complex reasoning and chain-of-thought parsing, encompassing physics, arithmetic, commonsense, and hypothetical reasoning scenarios. LogicCat comprises 4,038 English questions paired 12,114 detailed chain-of-thought reasoning steps, spanning 45 databases across diverse domains, significantly surpassing existing datasets in complexity. Experimental results demonstrate that LogicCat substantially increases the task difficulty for current state-of-the-art models to at most 33.20% execution accuracy, indicating that this task remains exceptionally challenging. The advancement of LogicCat represents a crucial step toward developing systems suitable for real-world enterprise data analysis and autonomous query generation. We have released our dataset code at https://github.com/Ffunkytao/LogicCat.",
+    "arxiv_url": "https://arxiv.org/abs/2505.18744",
+    "authors": [
+      "Tao Liu",
+      "Xutao Mao",
+      "Hongying Zan",
+      "Dixuan Zhang",
+      "Yifan Li",
+      "Haixin Liu",
+      "Lulu Kong",
+      "Jiaming Hou",
+      "Rui Li",
+      "YunLong Li",
+      "aoze zheng",
+      "Zhiqiang Zhang",
+      "Luo Zhewei",
+      "Kunli Zhang",
+      "Min Peng"
+    ],
+    "first_author": "Tao Liu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Text-to-SQL benchmark",
+      "Chain-of-Thought annotation",
+      "Complex mathematical reasoning",
+      "Physical domain knowledge",
+      "Hypothetical scenario reasoning",
+      "Cross-domain database schemas",
+      "Execution-based SQL validation",
+      "Multi-step reasoning decomposition",
+      "Formula grounding in queries"
+    ],
+    "summary": "本文提出LogicCat，一个包含4,038个问题、12,114步链式推理注释并覆盖45个领域的Text-to-SQL基准，专注于数学、物理与假设性复杂推理，实验证明现有模型在该基准上的执行准确率显著下降（最高约33%）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.18744v3",
+    "published": "2025-05-24",
+    "update_time": "2025-09-09",
+    "download_time": "2025-12-12 22:30:01"
+  },
+  {
+    "id": "2505.20321",
+    "title": "BiomedSQL: Text-to-SQL for Scientific Reasoning on Biomedical Knowledge Bases",
+    "abstract": "Biomedical researchers increasingly rely on large-scale structured databases for complex analytical tasks. However, current text-to-SQL systems often struggle to map qualitative scientific questions into executable SQL, particularly when implicit domain reasoning is required. We introduce BiomedSQL, the first benchmark explicitly designed to evaluate scientific reasoning in text-to-SQL generation over a real-world biomedical knowledge base. BiomedSQL comprises 68,000 question/SQL query/answer triples generated from templates and grounded in a harmonized BigQuery knowledge base that integrates gene-disease associations, causal inference from omics data, and drug approval records. Each question requires models to infer domain-specific criteria, such as genome-wide significance thresholds, effect directionality, or trial phase filtering, rather than rely on syntactic translation alone. We evaluate a range of open- and closed-source LLMs across prompting strategies and interaction paradigms. Our results reveal a substantial performance gap: GPT-o3-mini achieves 59.0% execution accuracy, while our custom multi-step agent, BMSQL, reaches 62.6%, both well below the expert baseline of 90.0%. BiomedSQL provides a new foundation for advancing text-to-SQL systems capable of supporting scientific discovery through robust reasoning over structured biomedical knowledge bases. Our dataset is publicly available at https://huggingface.co/datasets/NIH-CARD/BiomedSQL, and our code is open-source at https://github.com/NIH-CARD/biomedsql.",
+    "arxiv_url": "https://arxiv.org/abs/2505.20321",
+    "authors": [
+      "Mathew J. Koretsky",
+      "Maya Willey",
+      "Adi Asija",
+      "Owen Bianchi",
+      "Chelsea X. Alvarado",
+      "Tanay Nayak",
+      "Nicole Kuznetsov",
+      "Sungwon Kim",
+      "Mike A. Nalls",
+      "Daniel Khashabi",
+      "Faraz Faghri"
+    ],
+    "first_author": "Mathew J. Koretsky",
+    "category": [
+      "Benchmark",
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Text-to-SQL Benchmark",
+      "Scientific Reasoning Evaluation",
+      "Harmonized BigQuery Biomedical Schema",
+      "Genome-wide significance thresholds",
+      "Multi-omic causal inference queries",
+      "Drug approval and trial-phase filtering",
+      "Template-based question augmentation",
+      "Expert-authored gold SQL annotations",
+      "Multi-step agent orchestration",
+      "Execution-based accuracy evaluation"
+    ],
+    "summary": "本文提出了面向生物医学科学推理的BiomedSQL基准（68,000条问/SQL/答案三元组）并发布了对应的BigQuery知识库与评测工具，评估多种LLM与自定义多步代理在生成可执行SQL并据此回答科研问题时的表现，揭示了显著的性能差距。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2505.20321v3",
+    "published": "2025-05-23",
+    "update_time": "2025-10-09",
+    "download_time": "2025-12-12 22:31:39"
   }
 ]

@@ -253,5 +253,119 @@
     "published": "2025-09-26",
     "update_time": "2025-09-26",
     "download_time": "2025-12-11 17:42:48"
+  },
+  {
+    "id": "2509.14635",
+    "title": "SWE-QA: Can Language Models Answer Repository-level Code Questions?",
+    "abstract": "Understanding and reasoning about entire software repositories is an essential capability for intelligent software engineering tools. While existing benchmarks such as CoSQA and CodeQA have advanced the field, they predominantly focus on small, self-contained code snippets. These setups fail to capture the complexity of real-world repositories, where effective understanding and reasoning often require navigating multiple files, understanding software architecture, and grounding answers in long-range code dependencies. In this paper, we present SWE-QA, a repository-level code question answering (QA) benchmark designed to facilitate research on automated QA systems in realistic code environments. SWE-QA involves 576 high-quality question-answer pairs spanning diverse categories, including intention understanding, cross-file reasoning, and multi-hop dependency analysis. To construct SWE-QA, we first crawled 77,100 GitHub issues from 11 popular repositories. Based on an analysis of naturally occurring developer questions extracted from these issues, we developed a two-level taxonomy of repository-level questions and constructed a set of seed questions for each category. For each category, we manually curated and validated questions and collected their corresponding answers. As a prototype application, we further develop SWE-QA-Agent, an agentic framework in which LLM agents reason and act to find answers automatically. We evaluate six advanced LLMs on SWE-QA under various context augmentation strategies. Experimental results highlight the promise of LLMs, particularly our SWE-QA-Agent framework, in addressing repository-level QA, while also revealing open challenges and pointing to future research directions.",
+    "arxiv_url": "https://arxiv.org/abs/2509.14635",
+    "authors": [
+      "Weihan Peng",
+      "Yuling Shi",
+      "Yuhang Wang",
+      "Xinyun Zhang",
+      "Beijun Shen",
+      "Xiaodong Gu"
+    ],
+    "first_author": "Weihan Peng",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Repository-level QA benchmark",
+      "Cross-file reasoning",
+      "Multi-hop dependency analysis",
+      "Issue-derived question taxonomy",
+      "Seed-based question instantiation pipeline",
+      "ReAct-style agent with tool usage",
+      "Context augmentation (RAG) evaluation",
+      "Rubric-guided human evaluation"
+    ],
+    "summary": "本文提出SWE-QA——一个包含12个开源仓库共576个高质量仓库级问答对的基准，并构建SWE-QA-Agent代理与多种上下文增强策略对LLM在跨文件和多跳代码推理任务上的性能进行评估与分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.14635v1",
+    "published": "2025-09-18",
+    "update_time": "2025-09-18",
+    "download_time": "2025-12-12 21:36:22"
+  },
+  {
+    "id": "2509.23338",
+    "title": "PARROT: A Benchmark for Evaluating LLMs in Cross-System SQL Translation",
+    "abstract": "Large language models (LLMS) have shown increasing effectiveness in Text-to-SQL tasks. However, another closely related problem, Cross-System SQL Translation (a.k.a., SQL-to-SQL), which adapts a query written for one database system (e.g., MySQL) into its equivalent one for another system (e.g., ClickHouse), is of great practical importance but remains underexplored. Existing SQL benchmarks are not well-suited for SQL-to-SQL evaluation, which (1) focus on a limited set of database systems (often just SQLite) and (2) cannot capture many system-specific SQL dialects (e.g., customized functions, data types, and syntax rules). Thus, in this paper, we introduce PARROT, a Practical And Realistic BenchmaRk for CrOss-System SQL Translation. PARROT comprises 598 translation pairs from 38 open-source benchmarks and real-world business services, specifically prepared to challenge system-specific SQL understanding (e.g., LLMS achieve lower than 38.53% accuracy on average). We also provide multiple benchmark variants, including PARROT-Diverse with 28,003 translations (for extensive syntax testing) and PARROT-Simple with 5,306 representative samples (for focused stress testing), covering 22 production-grade database systems. To promote future research, we release a public leaderboard and source code at: https://code4db.github.io/parrot-bench/.",
+    "arxiv_url": "https://arxiv.org/abs/2509.23338",
+    "authors": [
+      "Wei Zhou",
+      "Guoliang Li",
+      "Haoyu Wang",
+      "Yuxing Han",
+      "Xufei Wu",
+      "Fan Wu",
+      "Xuanhe Zhou"
+    ],
+    "first_author": "Wei Zhou",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Cross-system SQL translation",
+      "SQL dialect diversity",
+      "Execution-first evaluation",
+      "Reference executors",
+      "Schema normalization",
+      "Unit-style challenge cases",
+      "Manual curation from production workloads",
+      "System-specific functions and types"
+    ],
+    "summary": "该论文提出并公开了面向跨系统 SQL 翻译的实用基准与评测套件（含人工验证的翻译对、多种变体、执行优先度量、参照执行器和挑战集），并用其揭示现有大模型在方言适应性上的显著不足。",
+    "quality": "High",
+    "conference": "NeurIPS 2025",
+    "pdf_url": "https://arxiv.org/pdf/2509.23338v1",
+    "published": "2025-09-27",
+    "update_time": "2025-09-27",
+    "download_time": "2025-12-12 22:32:49"
+  },
+  {
+    "id": "2509.24405",
+    "title": "Multilingual Text-to-SQL: Benchmarking the Limits of Language Models with Collaborative Language Agents",
+    "abstract": "Text-to-SQL enables natural access to databases, yet most benchmarks are English-only, limiting multilingual progress. We introduce MultiSpider 2.0, extending Spider 2.0 to eight languages (English, German, French, Spanish, Portuguese, Japanese, Chinese, Vietnamese). It preserves Spider 2.0's structural difficulty while adding linguistic and dialectal variability, demanding deeper reasoning for complex SQL. On this benchmark, state-of-the-art LLMs (such as DeepSeek-R1 and OpenAI o1) reach only 4\\% execution accuracy when relying on intrinsic reasoning, versus 60\\% on MultiSpider 1.0. Therefore, we provide a collaboration-driven language agents baseline that iteratively refines queries, improving accuracy to 15\\%. These results reveal a substantial multilingual gap and motivate methods that are robust across languages and ready for real-world enterprise deployment. Our benchmark is available at https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL.",
+    "arxiv_url": "https://arxiv.org/abs/2509.24405",
+    "authors": [
+      "Khanh Trinh Pham",
+      "Thu Huong Nguyen",
+      "Jun Jo",
+      "Quoc Viet Hung Nguyen",
+      "Thanh Tam Nguyen"
+    ],
+    "first_author": "Khanh Trinh Pham",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Multilingual Text-to-SQL",
+      "Enterprise-scale schemas",
+      "SQL dialect diversity",
+      "Schema localization and bilingual alignment",
+      "Compositional and nested SQL",
+      "Collaborative language agents",
+      "Iterative query decomposition and refinement",
+      "Schema linking and lexical ambiguity"
+    ],
+    "summary": "本文提出了MultiSpider 2.0——一个覆盖八种语言、面向企业级复杂模式与多SQL方言的多语言Text-to-SQL基准，并引入基于协作语言智能体（COLA）的迭代分解与校正基线以提升多语言查询的执行准确率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2509.24405v1",
+    "published": "2025-09-29",
+    "update_time": "2025-09-29",
+    "download_time": "2025-12-12 22:34:21"
   }
 ]

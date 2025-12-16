@@ -35,5 +35,43 @@
     "published": "2020-10-04",
     "update_time": "2020-10-06",
     "download_time": "2025-12-11 16:59:33"
+  },
+  {
+    "id": "2010.12773",
+    "title": "Structure-Grounded Pretraining for Text-to-SQL",
+    "abstract": "Learning to capture text-table alignment is essential for tasks like text-to-SQL. A model needs to correctly recognize natural language references to columns and values and to ground them in the given database schema. In this paper, we present a novel weakly supervised Structure-Grounded pretraining framework (StruG) for text-to-SQL that can effectively learn to capture text-table alignment based on a parallel text-table corpus. We identify a set of novel prediction tasks: column grounding, value grounding and column-value mapping, and leverage them to pretrain a text-table encoder. Additionally, to evaluate different methods under more realistic text-table alignment settings, we create a new evaluation set Spider-Realistic based on Spider dev set with explicit mentions of column names removed, and adopt eight existing text-to-SQL datasets for cross-database evaluation. STRUG brings significant improvement over BERT-LARGE in all settings. Compared with existing pretraining methods such as GRAPPA, STRUG achieves similar performance on Spider, and outperforms all baselines on more realistic sets. The Spider-Realistic dataset is available at https://doi.org/10.5281/zenodo.5205322.",
+    "arxiv_url": "https://arxiv.org/abs/2010.12773",
+    "authors": [
+      "Xiang Deng",
+      "Ahmed Hassan Awadallah",
+      "Christopher Meek",
+      "Oleksandr Polozov",
+      "Huan Sun",
+      "Matthew Richardson"
+    ],
+    "first_author": "Xiang Deng",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Structure-grounded pretraining",
+      "Text-table alignment",
+      "Column grounding",
+      "Value grounding",
+      "Column-value mapping",
+      "Weakly-supervised alignment labeling",
+      "Schema linking for SQL generation",
+      "Cross-database generalization"
+    ],
+    "summary": "本文提出STRUG，一种基于并行文本-表格语料通过列对齐、值对齐和列-值映射等弱监督预训练任务来增强文本到SQL的结构对齐能力，并构建更现实的评估设置以验证其跨库泛化效果。",
+    "quality": "High",
+    "conference": "NAACL 2021",
+    "pdf_url": "https://arxiv.org/pdf/2010.12773v3",
+    "published": "2020-10-24",
+    "update_time": "2022-08-31",
+    "download_time": "2025-12-12 21:52:10"
   }
 ]

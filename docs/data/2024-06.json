@@ -345,5 +345,42 @@
     "published": "2024-06-17",
     "update_time": "2025-11-10",
     "download_time": "2025-12-11 17:48:25"
+  },
+  {
+    "id": "2406.07860",
+    "title": "BookSQL: A Large Scale Text-to-SQL Dataset for Accounting Domain",
+    "abstract": "Several large-scale datasets (e.g., WikiSQL, Spider) for developing natural language interfaces to databases have recently been proposed. These datasets cover a wide breadth of domains but fall short on some essential domains, such as finance and accounting. Given that accounting databases are used worldwide, particularly by non-technical people, there is an imminent need to develop models that could help extract information from accounting databases via natural language queries. In this resource paper, we aim to fill this gap by proposing a new large-scale Text-to-SQL dataset for the accounting and financial domain: BookSQL. The dataset consists of 100k natural language queries-SQL pairs, and accounting databases of 1 million records. We experiment with and analyze existing state-of-the-art models (including GPT-4) for the Text-to-SQL task on BookSQL. We find significant performance gaps, thus pointing towards developing more focused models for this domain.",
+    "arxiv_url": "https://arxiv.org/abs/2406.07860",
+    "authors": [
+      "Rahul Kumar",
+      "Amar Raja Dibbu",
+      "Shrutendra Harsola",
+      "Vignesh Subrahmaniam",
+      "Ashutosh Modi"
+    ],
+    "first_author": "Rahul Kumar",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Accounting-domain Text-to-SQL",
+      "Expert-curated accounting queries",
+      "Seven-table double-entry transaction schema",
+      "Large-scale NL→SQL pairs (100k) over 1M records",
+      "Complex SQL constructs: nested queries, aggregations, GROUP BY, ORDER BY, DISTINCT",
+      "Cross-business schema variability (27 businesses)",
+      "Evaluation of domain generalization gaps for SOTA models",
+      "Benchmark statistics and dataset release"
+    ],
+    "summary": "本文构建并公开了面向会计与财务领域的大规模Text-to-SQL基准数据集（100k问-SQL对、1M记录、七表会计模式），并验证现有SOTA模型在该领域存在显著泛化性能缺陷。",
+    "quality": "High",
+    "conference": "NAACL 2024",
+    "pdf_url": "https://arxiv.org/pdf/2406.07860v1",
+    "published": "2024-06-12",
+    "update_time": "2024-06-12",
+    "download_time": "2025-12-12 22:22:52"
   }
 ]

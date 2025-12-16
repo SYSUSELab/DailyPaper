@@ -1,0 +1,37 @@
+[
+  {
+    "id": "2109.05157",
+    "title": "Exploring Underexplored Limitations of Cross-Domain Text-to-SQL Generalization",
+    "abstract": "Recently, there has been significant progress in studying neural networks for translating text descriptions into SQL queries under the zero-shot cross-domain setting. Despite achieving good performance on some public benchmarks, we observe that existing text-to-SQL models do not generalize when facing domain knowledge that does not frequently appear in the training data, which may render the worse prediction performance for unseen domains. In this work, we investigate the robustness of text-to-SQL models when the questions require rarely observed domain knowledge. In particular, we define five types of domain knowledge and introduce Spider-DK (DK is the abbreviation of domain knowledge), a human-curated dataset based on the Spider benchmark for text-to-SQL translation. NL questions in Spider-DK are selected from Spider, and we modify some samples by adding domain knowledge that reflects real-world question paraphrases. We demonstrate that the prediction accuracy dramatically drops on samples that require such domain knowledge, even if the domain knowledge appears in the training set, and the model provides the correct predictions for related training samples.",
+    "arxiv_url": "https://arxiv.org/abs/2109.05157",
+    "authors": [
+      "Yujian Gan",
+      "Xinyun Chen",
+      "Matthew Purver"
+    ],
+    "first_author": "Yujian Gan",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Cross-domain text-to-SQL",
+      "Domain knowledge categories",
+      "Human-curated challenge set",
+      "Robustness and generalization evaluation",
+      "Omitted-column and multi-column mention handling",
+      "Cell-value synonym substitution",
+      "Boolean-like condition inference",
+      "Schema-item vs SQL-structure conflict"
+    ],
+    "summary": "本文提出了面向跨域 Text-to-SQL 的挑战性数据集，通过将领域知识归为五类（如省略列、多列推理、同义词替换、布尔类条件等）并对535条示例进行人工构造与评估，展示了现有模型在需要特定领域知识的样本上准确率显著下降，表明模型未能有效泛化训练集中出现的领域知识。",
+    "quality": "High",
+    "conference": "EMNLP 2021",
+    "pdf_url": "https://arxiv.org/pdf/2109.05157v1",
+    "published": "2021-09-11",
+    "update_time": "2021-09-11",
+    "download_time": "2025-12-12 21:59:48"
+  }
+]

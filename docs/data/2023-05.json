@@ -264,5 +264,58 @@
     "published": "2023-05-25",
     "update_time": "2023-05-25",
     "download_time": "2025-12-11 17:53:38"
+  },
+  {
+    "id": "2305.03111",
+    "title": "Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs",
+    "abstract": "Text-to-SQL parsing, which aims at converting natural language instructions into executable SQLs, has gained increasing attention in recent years. In particular, Codex and ChatGPT have shown impressive results in this task. However, most of the prevalent benchmarks, i.e., Spider, and WikiSQL, focus on database schema with few rows of database contents leaving the gap between academic study and real-world applications. To mitigate this gap, we present Bird, a big benchmark for large-scale database grounded in text-to-SQL tasks, containing 12,751 pairs of text-to-SQL data and 95 databases with a total size of 33.4 GB, spanning 37 professional domains. Our emphasis on database values highlights the new challenges of dirty database contents, external knowledge between NL questions and database contents, and SQL efficiency, particularly in the context of massive databases. To solve these problems, text-to-SQL models must feature database value comprehension in addition to semantic parsing. The experimental results demonstrate the significance of database values in generating accurate text-to-SQLs for big databases. Furthermore, even the most effective text-to-SQL models, i.e. ChatGPT, only achieves 40.08% in execution accuracy, which is still far from the human result of 92.96%, proving that challenges still stand. Besides, we also provide an efficiency analysis to offer insights into generating text-to-efficient-SQLs that are beneficial to industries. We believe that BIRD will contribute to advancing real-world applications of text-to-SQL research. The leaderboard and source code are available: https://bird-bench.github.io/.",
+    "arxiv_url": "https://arxiv.org/abs/2305.03111",
+    "authors": [
+      "Jinyang Li",
+      "Binyuan Hui",
+      "Ge Qu",
+      "Jiaxi Yang",
+      "Binhua Li",
+      "Bowen Li",
+      "Bailin Wang",
+      "Bowen Qin",
+      "Rongyu Cao",
+      "Ruiying Geng",
+      "Nan Huo",
+      "Xuanhe Zhou",
+      "Chenhao Ma",
+      "Guoliang Li",
+      "Kevin C. C. Chang",
+      "Fei Huang",
+      "Reynold Cheng",
+      "Yongbin Li"
+    ],
+    "first_author": "Jinyang Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Text-to-SQL & Databases",
+    "task": "Text-to-SQL Benchmark (Large-scale, value-grounded, efficiency-aware)",
+    "tags": [
+      "Large-scale database values",
+      "Noisy / dirty value handling",
+      "External knowledge grounding",
+      "SQL execution efficiency",
+      "Valid Efficiency Score (VES)",
+      "Crowdsourced NL–SQL annotation",
+      "Double-blind annotation workflow",
+      "Domain-diverse databases",
+      "Hidden test set for leakage avoidance",
+      "FT vs ICL evaluation (T5 vs LLMs)",
+      "Execution-based accuracy evaluation"
+    ],
+    "summary": "该论文提出了BIRD基准，包含95个真实大规模数据库（33.4GB）与12,751对文本到SQL样本，强调数据库值的噪声处理、外部知识推理与查询效率并提出VES指标及多模型基线评测。",
+    "quality": "High",
+    "conference": "NeurIPS 2023",
+    "pdf_url": "https://arxiv.org/pdf/2305.03111v3",
+    "published": "2023-05-04",
+    "update_time": "2023-11-15",
+    "download_time": "2025-12-12 22:21:49"
   }
 ]

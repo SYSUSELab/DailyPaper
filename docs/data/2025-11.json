@@ -1130,5 +1130,45 @@
     "published": "2025-11-08",
     "update_time": "2025-11-11",
     "download_time": "2025-12-11 15:56:27"
+  },
+  {
+    "id": "2511.02778",
+    "title": "VCode: a Multimodal Coding Benchmark with SVG as Symbolic Visual Representation",
+    "abstract": "Code has emerged as a precise and executable medium for reasoning and action in the agent era. Yet, progress has largely focused on language-centric tasks such as program synthesis and debugging, leaving visual-centric coding underexplored. Inspired by how humans reason over sketches, we advocate SVG code as a compact, interpretable, and executable visual representation. We introduce VCode, a benchmark that reframes multimodal understanding as code generation: given an image, a model must produce SVG that preserves symbolic meaning for downstream reasoning. VCode covers three domains - general commonsense (MM-Vet), professional disciplines (MMMU), and visual-centric perception (CV-Bench). To assess symbolic fidelity, we propose CodeVQA, a novel evaluation protocol in which a policy model answers questions over rendered SVGs; correct answers indicate faithful symbolic preservation. Empirically, frontier VLMs struggle to generate faithful SVGs, revealing a persistent gap between language-centric and visual-centric coding. To close this gap, we introduce VCoder, an agentic framework that augments VLMs along two axes: (i) Thinking with Revision, which iteratively analyzes discrepancies and refines SVG code; and (ii) Acting with Visual Tools, where detectors and parsers supply structured cues such as objects, shapes, and text beyond the model's intrinsic capacity. Across benchmarks, frontier VLMs with strong reasoning capabilities score well overall yet remain limited in professional knowledge and 3D reasoning. VCoder delivers a 12.3-point overall gain over the top-performing Claude-4-Opus. Human studies show that both humans and VLMs perform worse on rendered SVGs, their consistency reveals the promise of symbolic visual representation. The benchmark and code are available at https://github.com/CSU-JPG/VCode.",
+    "arxiv_url": "https://arxiv.org/abs/2511.02778",
+    "authors": [
+      "Kevin Qinghong Lin",
+      "Yuhao Zheng",
+      "Hangyu Ran",
+      "Dantong Zhu",
+      "Dongxing Mao",
+      "Linjie Li",
+      "Philip Torr",
+      "Alex Jinpeng Wang"
+    ],
+    "first_author": "Kevin Qinghong Lin",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "SVG as symbolic visual representation",
+      "Image→SVG code generation",
+      "Render→VQA evaluation (CodeVQA)",
+      "Iterative discrepancy-driven refinement",
+      "Integration of perception tools (detectors/segmenters)",
+      "Symbolic abstraction for visual reasoning",
+      "3D/spatial relation preservation",
+      "Human vs. model consistency study"
+    ],
+    "summary": "本文提出VCode，一个将自然图像转换为可执行且可解释的SVG符号化视觉表示的多模态编码基准，并通过CodeVQA评估协议验证符号保真性，同时引入VCoder（迭代修订+视觉工具）以显著提升图像到SVG的生成质量。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.02778v1",
+    "published": "2025-11-04",
+    "update_time": "2025-11-04",
+    "download_time": "2025-12-12 21:43:43"
   }
 ]

@@ -259,5 +259,47 @@
     "published": "2025-03-28",
     "update_time": "2025-09-16",
     "download_time": "2025-12-11 17:20:27"
+  },
+  {
+    "id": "2503.04359",
+    "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+    "abstract": "Current advanced long-context language models offer great potential for real-world software engineering applications. However, progress in this critical domain remains hampered by a fundamental limitation: the absence of a rigorous evaluation framework for long code understanding. To gap this obstacle, we propose a long code understanding benchmark LONGCODEU from four aspects (8 tasks) to evaluate LCLMs' long code understanding ability required for practical applications, including code unit perception, intra-code unit understanding, inter-code unit relation understanding, and long code documentation understanding. We evaluate 9 popular LCLMs on LONGCODEU (i.e., 6 general models and 3 code models). Our experimental results reveal key limitations in current LCLMs' capabilities for long code understanding. Particularly, the performance of LCLMs drops dramatically when the long code length is greater than 32K, falling far short of their claimed 128K-1M context windows. In the four aspects, inter-code unit relation understanding is the most challenging for LCLMs. Our study provides valuable insights for optimizing LCLMs and driving advancements in software engineering.",
+    "arxiv_url": "https://arxiv.org/abs/2503.04359",
+    "authors": [
+      "Jia Li",
+      "Xuyuan Guo",
+      "Lei Li",
+      "Kechi Zhang",
+      "Ge Li",
+      "Jia Li",
+      "Zhengwei Tao",
+      "Fang Liu",
+      "Chongyang Tao",
+      "Yuqi Zhu",
+      "Zhi Jin"
+    ],
+    "first_author": "Jia Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Long-context evaluation",
+      "Repository-level code understanding",
+      "Inter-code-unit relation reasoning",
+      "Function (code unit) identification",
+      "Long documentation comprehension",
+      "Temporal filtering to reduce data contamination",
+      "Context-length stress testing (up to 128K tokens)"
+    ],
+    "summary": "该论文提出了LONGCODEU基准，收集真实仓库中的超长代码并从代码单元感知、单位内理解、单位间关系理解和长文档理解四个方面设计8项任务，对多款长上下文模型进行评测以揭示其在超32K上下文长度下的性能瓶颈。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.04359v1",
+    "published": "2025-03-06",
+    "update_time": "2025-03-06",
+    "download_time": "2025-12-12 21:33:30"
   }
 ]

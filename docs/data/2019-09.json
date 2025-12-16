@@ -34,5 +34,61 @@
     "published": "2019-09-20",
     "update_time": "2020-06-08",
     "download_time": "2025-12-11 17:06:35"
+  },
+  {
+    "id": "1909.05378",
+    "title": "CoSQL: A Conversational Text-to-SQL Challenge Towards Cross-Domain Natural Language Interfaces to Databases",
+    "abstract": "We present CoSQL, a corpus for building cross-domain, general-purpose database (DB) querying dialogue systems. It consists of 30k+ turns plus 10k+ annotated SQL queries, obtained from a Wizard-of-Oz (WOZ) collection of 3k dialogues querying 200 complex DBs spanning 138 domains. Each dialogue simulates a real-world DB query scenario with a crowd worker as a user exploring the DB and a SQL expert retrieving answers with SQL, clarifying ambiguous questions, or otherwise informing of unanswerable questions. When user questions are answerable by SQL, the expert describes the SQL and execution results to the user, hence maintaining a natural interaction flow. CoSQL introduces new challenges compared to existing task-oriented dialogue datasets:(1) the dialogue states are grounded in SQL, a domain-independent executable representation, instead of domain-specific slot-value pairs, and (2) because testing is done on unseen databases, success requires generalizing to new domains. CoSQL includes three tasks: SQL-grounded dialogue state tracking, response generation from query results, and user dialogue act prediction. We evaluate a set of strong baselines for each task and show that CoSQL presents significant challenges for future research. The dataset, baselines, and leaderboard will be released at https://yale-lily.github.io/cosql.",
+    "arxiv_url": "https://arxiv.org/abs/1909.05378",
+    "authors": [
+      "Tao Yu",
+      "Rui Zhang",
+      "He Yang Er",
+      "Suyi Li",
+      "Eric Xue",
+      "Bo Pang",
+      "Xi Victoria Lin",
+      "Yi Chern Tan",
+      "Tianze Shi",
+      "Zihan Li",
+      "Youxuan Jiang",
+      "Michihiro Yasunaga",
+      "Sungrok Shim",
+      "Tao Chen",
+      "Alexander Fabbri",
+      "Zifan Li",
+      "Luyao Chen",
+      "Yuwen Zhang",
+      "Shreya Dixit",
+      "Vincent Zhang",
+      "Caiming Xiong",
+      "Richard Socher",
+      "Walter S Lasecki",
+      "Dragomir Radev"
+    ],
+    "first_author": "Tao Yu",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Natural Language Interfaces to Databases",
+    "task": "Conversational Text-to-SQL (SQL-grounded dialogue state tracking, response generation from executed SQL/results, user dialogue act prediction)",
+    "tags": [
+      "Wizard-of-Oz data collection",
+      "Cross-domain complex databases",
+      "SQL-grounded dialogue state tracking",
+      "Natural language response generation from SQL and results",
+      "User dialogue act prediction (clarify/unanswerable)",
+      "Execution-grounded annotations",
+      "Unseen-database split for generalization",
+      "Multi-turn conversational query interactions",
+      "Baselines and public leaderboard"
+    ],
+    "summary": "CoSQL 提出并发布了一个大规模跨域会话式文本到 SQL 语料库（含对话、SQL 标注、系统回应与对话行为标签），并为 SQL-驱动的对话状态跟踪、基于查询结果的自然语言回复生成和用户对话行为预测等任务提供基线与挑战性评估。",
+    "quality": "High",
+    "conference": "EMNLP 2019",
+    "pdf_url": "https://arxiv.org/pdf/1909.05378v1",
+    "published": "2019-09-11",
+    "update_time": "2019-09-11",
+    "download_time": "2025-12-12 21:58:40"
   }
 ]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2006.03511",
+    "title": "Unsupervised Translation of Programming Languages",
+    "abstract": "A transcompiler, also known as source-to-source translator, is a system that converts source code from a high-level programming language (such as C++ or Python) to another. Transcompilers are primarily used for interoperability, and to port codebases written in an obsolete or deprecated language (e.g. COBOL, Python 2) to a modern one. They typically rely on handcrafted rewrite rules, applied to the source code abstract syntax tree. Unfortunately, the resulting translations often lack readability, fail to respect the target language conventions, and require manual modifications in order to work properly. The overall translation process is timeconsuming and requires expertise in both the source and target languages, making code-translation projects expensive. Although neural models significantly outperform their rule-based counterparts in the context of natural language translation, their applications to transcompilation have been limited due to the scarcity of parallel data in this domain. In this paper, we propose to leverage recent approaches in unsupervised machine translation to train a fully unsupervised neural transcompiler. We train our model on source code from open source GitHub projects, and show that it can translate functions between C++, Java, and Python with high accuracy. Our method relies exclusively on monolingual source code, requires no expertise in the source or target languages, and can easily be generalized to other programming languages. We also build and release a test set composed of 852 parallel functions, along with unit tests to check the correctness of translations. We show that our model outperforms rule-based commercial baselines by a significant margin.",
+    "arxiv_url": "https://arxiv.org/abs/2006.03511",
+    "authors": [
+      "Marie-Anne Lachaux",
+      "Baptiste Roziere",
+      "Lowik Chanussot",
+      "Guillaume Lample"
+    ],
+    "first_author": "Marie-Anne Lachaux",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Unsupervised code-to-code translation",
+      "Back-translation for code",
+      "Cross-language masked pretraining",
+      "Shared multilingual seq2seq transformer",
+      "Monolingual GitHub mining",
+      "API/standard-library alignment",
+      "Unit-test-based functional evaluation",
+      "Type inference challenges"
+    ],
+    "summary": "本文提出一种基于无监督机器翻译技术的神经源代码转译方法，仅使用单语代码（跨语言预训练+回译）在 C++/Java/Python 之间高精度翻译，并发布包含852个并行函数及单元测试的评测集，显著优于规则化基线。",
+    "quality": "High",
+    "conference": "NeurIPS 2020",
+    "pdf_url": "https://arxiv.org/pdf/2006.03511v3",
+    "published": "2020-06-05",
+    "update_time": "2020-09-22",
+    "download_time": "2025-12-12 22:50:22"
+  }
+]

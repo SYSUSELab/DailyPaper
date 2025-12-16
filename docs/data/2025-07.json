@@ -123,5 +123,46 @@
     "published": "2025-07-16",
     "update_time": "2025-07-16",
     "download_time": "2025-12-11 15:52:42"
+  },
+  {
+    "id": "2507.05269",
+    "title": "CoRe: Benchmarking LLMs Code Reasoning Capabilities through Static Analysis Tasks",
+    "abstract": "Large language models (LLMs) have been widely adopted across diverse domains of software engineering, such as code generation, program repair, and vulnerability detection. These applications require understanding beyond surface-level code patterns: value propagation, control flow, and interdependence between program elements. However, existing benchmarks primarily evaluate end-to-end outcomes, such as whether code is correctly repaired or generated, leaving the models' ability for program semantic reasoning underexplored. This work presents CORE, a high-quality, human-verified benchmark designed to evaluate LLMs on fundamental static analysis tasks. CORE includes 12,553 task instances spanning data dependency, control dependency, and information flow across programs written in C/C++, Java, and Python. To ensure semantic diversity and reasoning complexity, we propose a semantics-aware diverse sampling strategy that selects targets and task instances based on structural coverage and dependency depth. We evaluate 10 mainstream LLMs and show that, while they perform well at identifying dependencies, models still struggle with tasks that require deeper semantic understanding and multi-step reasoning. We further conduct qualitative analyses to uncover key challenges, such as complex control structures and backward dependency patterns, offering insights into improving LLMs' code reasoning capabilities.",
+    "arxiv_url": "https://arxiv.org/abs/2507.05269",
+    "authors": [
+      "Danning Xie",
+      "Mingwei Zheng",
+      "Xuwei Liu",
+      "Jiannan Wang",
+      "Chengpeng Wang",
+      "Lin Tan",
+      "Xiangyu Zhang"
+    ],
+    "first_author": "Danning Xie",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Static analysis benchmarking",
+      "Data-dependency tasks",
+      "Control-dependency tasks",
+      "Information-flow tasks",
+      "Semantics-aware diverse sampling",
+      "Human-verified semi-automated annotation",
+      "Multilingual (C/C++, Java, Python)",
+      "Trace generation and source enumeration",
+      "Dependency depth and structural coverage",
+      "Failure modes: complex control and backward dependencies"
+    ],
+    "summary": "本文提出CORE基准——包含12,553条经人工验证的多语言静态分析任务（数据依赖、控制依赖、信息流），并通过语义感知抽样与半自动注释管线评测10个主流LLM，发现模型在深度多步语义推理上仍存在明显不足。",
+    "quality": "High",
+    "conference": "NeurIPS",
+    "pdf_url": "https://arxiv.org/pdf/2507.05269v2",
+    "published": "2025-07-03",
+    "update_time": "2025-11-07",
+    "download_time": "2025-12-12 21:35:32"
   }
 ]

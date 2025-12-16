@@ -35,5 +35,101 @@
     "published": "2025-10-16",
     "update_time": "2025-10-24",
     "download_time": "2025-12-11 15:54:37"
+  },
+  {
+    "id": "2510.05318",
+    "title": "BIRD-INTERACT: Re-imagining Text-to-SQL Evaluation for Large Language Models via Lens of Dynamic Interactions",
+    "abstract": "Large language models (LLMs) have demonstrated remarkable performance on single-turn text-to-SQL tasks, but real-world database applications predominantly require multi-turn interactions to handle ambiguous queries, execution errors, and evolving user requirements. Existing multi-turn benchmarks fall short by treating conversation histories as static context or limiting evaluation to read-only operations, failing to reflect production-grade database assistant challenges. We introduce BIRD-INTERACT, a benchmark that restores this realism through: (1) a comprehensive interaction environment coupling each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from errors without human supervision; (2) two evaluation settings consisting of a pre-defined conversational protocol (c-Interact) and an open-ended agentic setting (a-Interact) where models autonomously decide when to query the user simulator or explore the environment; (3) a challenging task suite covering the full CRUD spectrum for business-intelligence and operational use cases, guarded by executable test cases. Each task features ambiguous and follow-up sub-tasks requiring dynamic interaction. The suite comprises BIRD-INTERACT-FULL (600 tasks, up to 11,796 interactions) for comprehensive performance assessment, and BIRD-INTERACT-LITE (300 tasks with simplified databases) for detailed behavioral analysis and rapid method development. Our empirical results highlight BIRD-INTERACT's difficulty: GPT-5 completes only 8.67% of tasks in c-Interact and 17.00% in a-Interact. Analysis via memory grafting and Interaction Test-time Scaling validates the importance of effective interaction for complex, dynamic text-to-SQL tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2510.05318",
+    "authors": [
+      "Nan Huo",
+      "Xiaohan Xu",
+      "Jinyang Li",
+      "Per Jacobsson",
+      "Shipei Lin",
+      "Bowen Qin",
+      "Binyuan Hui",
+      "Xiaolong Li",
+      "Ge Qu",
+      "Shuzheng Si",
+      "Linheng Han",
+      "Edward Alexander",
+      "Xintong Zhu",
+      "Rui Qin",
+      "Ruihan Yu",
+      "Yiyao Jin",
+      "Feige Zhou",
+      "Weihao Zhong",
+      "Yun Chen",
+      "Hongyu Liu",
+      "Chenhao Ma",
+      "Fatma Ozcan",
+      "Yannis Papakonstantinou",
+      "Reynold Cheng"
+    ],
+    "first_author": "Nan Huo",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Natural Language Interfaces to Databases (NLIDB)",
+    "task": "Interactive Text-to-SQL Evaluation",
+    "tags": [
+      "Function-driven user simulator",
+      "Hierarchical knowledge base and metadata",
+      "Protocol-guided (c-Interact) vs agentic (a-Interact) settings",
+      "Executable test-case based correctness",
+      "Full CRUD and schema/modification operations",
+      "Controlled simulator to prevent ground-truth leakage",
+      "Interaction Test-time Scaling (ITS)",
+      "Memory grafting behavioral analysis"
+    ],
+    "summary": "BIRD-INTERACT 提出一个面向动态多轮交互的文本到 SQL 基准，包含函数驱动的用户模拟器、层级知识库与可执行测试，并通过协议式与自治式两种评估设置衡量 LLM 在覆盖 CRUD 的交互式数据库任务中的表现与挑战。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.05318v2",
+    "published": "2025-10-06",
+    "update_time": "2025-10-08",
+    "download_time": "2025-12-12 22:49:08"
+  },
+  {
+    "id": "2510.24762",
+    "title": "Falcon: A Comprehensive Chinese Text-to-SQL Benchmark for Enterprise-Grade Evaluation",
+    "abstract": "We introduce Falcon, a cross-domain Chinese text-to-SQL benchmark grounded in an enterprise-compatible dialect (MaxCompute/Hive). It contains 600 Chinese questions over 28 databases; 77% require multi-table reasoning and over half touch more than four tables. Each example is annotated along SQL-computation features and Chinese semantics. For evaluation, we release a robust execution comparator and an automated evaluation pipeline, under which all current state-of-the-art large-scale models (including Deepseek) achieve accuracies of at most 50%. Major errors originate from two sources: (1) schema linking in large enterprise landscapes - hundreds of tables, denormalized fields, ambiguous column names, implicit foreign-key relations and domain-specific synonyms that make correct join/column selection difficult; and (2) mapping concise, colloquial Chinese into the exact operators and predicates required for analytics - e.g., choosing the correct aggregation and group-by keys, expressing time windows and granularities, applying unit conversions, handling NULLs and data-quality rules, and formulating nested or windowed subqueries. Falcon therefore targets Chinese-specific semantics and enterprise dialects (abbreviations, business jargon, fuzzy entity references) and provides a reproducible middle ground before full production deployment by using realistic enterprise schemas, query templates, an execution comparator, and an automated evaluation pipeline for end-to-end validation.",
+    "arxiv_url": "https://arxiv.org/abs/2510.24762",
+    "authors": [
+      "Wenzhen Luo",
+      "Wei Guan",
+      "Yifan Yao",
+      "Yimin Pan",
+      "Feng Wang",
+      "Zhipeng Yu",
+      "Zhe Wen",
+      "Liang Chen",
+      "Yihong Zhuang"
+    ],
+    "first_author": "Wenzhen Luo",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Natural Language Interfaces to Databases",
+    "task": "Text-to-SQL (Chinese, enterprise dialects)",
+    "tags": [
+      "MaxCompute/Hive dialect support",
+      "Enterprise-scale wide/denormalized schemas",
+      "Multi-table join reasoning",
+      "Schema linking and ambiguous column resolution",
+      "Chinese ellipsis and business-jargon mapping",
+      "Execution-based schema-aware SQL comparator",
+      "Automated dialect-aware evaluation pipeline",
+      "Synthetic enterprise case generation and annotation"
+    ],
+    "summary": "该论文构建并公开了 Falcon——一个针对企业级中文文本到 SQL 的基准与评测工具，覆盖 MaxCompute/Hive 方言、复杂多表推理与中文商业术语并提供精细注释与可执行性比较器以衡量模型在真实企业场景下的性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2510.24762v1",
+    "published": "2025-10-23",
+    "update_time": "2025-10-23",
+    "download_time": "2025-12-12 22:49:40"
   }
 ]

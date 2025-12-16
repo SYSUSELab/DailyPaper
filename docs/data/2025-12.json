@@ -1048,5 +1048,640 @@
     "published": "2025-12-09",
     "update_time": "2025-12-09",
     "download_time": "2025-12-12 02:05:43"
+  },
+  {
+    "id": "2512.04355",
+    "title": "Counting Without Running: Evaluating LLMs' Reasoning About Code Complexity",
+    "abstract": "Modern GPU software stacks demand developers who can anticipate performance bottlenecks before ever launching a kernel; misjudging floating-point workloads upstream can derail tuning, scheduling, and even hardware procurement. Yet despite rapid progress in code generation, today's Large Language Models (LLMs) are rarely tested on this kind of forward-looking reasoning. We close that gap with gpuFLOPBench, a benchmark that asks models to \"count without running\" by predicting single and double-precision FLOP counts for 577 CUDA kernels drawn from HeCBench, annotated with ground-truth profiles and eight execution attributes that distinguish trivially analyzable code from kernels whose FLOPs depend on hidden compiler or runtime behavior. Evaluating current closed-source reasoning models shows clear but uneven progress: the newest LLMs achieve perfect classification on straightforward kernels but still incur multiple order-of-magnitude errors whenever implicit FLOPs arise from division, intrinsic math functions, or common subexpressions. These results surface a core limitation of existing code assistants -- the inability to internalize hardware-specific microcode effects -- and position gpuFLOPBench as a focused testbed for developing LLM tooling that can reason about performance with the same rigor as experienced GPU developers. Sources are available at our repository: https://github.com/Scientific-Computing-Lab/gpuFLOPBench",
+    "arxiv_url": "https://arxiv.org/abs/2512.04355",
+    "authors": [
+      "Gregory Bolet",
+      "Giorgis Georgakoudis",
+      "Konstantinos Parasyris",
+      "Harshitha Menon",
+      "Niranjan Hasabnis",
+      "Kirk W. Cameron",
+      "Gal Oren"
+    ],
+    "first_author": "Gregory Bolet",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Static FLOP counting",
+      "CUDA kernel FLOP estimation",
+      "Execution-attribute annotations",
+      "Implicit/hidden FLOPs (division, intrinsics, templates)",
+      "Single vs double-precision FLOP labels",
+      "Prompting for structured performance predictions",
+      "Hardware/microcode execution effects",
+      "Benchmark for static performance reasoning"
+    ],
+    "summary": "本文提出GPUFLOPBENCH数据集与评测框架，包含577个CUDA内核的单/双精度FLOP计数与执行属性标注，并评估现有封闭式推理模型在静态预测代码FLOP时的表现，揭示其在处理隐式FLOP来源（如除法、内建函数、编译器/运行时行为）时的显著失败模式。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04355v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-12 21:46:22"
+  },
+  {
+    "id": "2512.10713",
+    "title": "PACIFIC: a framework for generating benchmarks to check Precise Automatically Checked Instruction Following In Code",
+    "abstract": "Large Language Model (LLM)-based code assistants have emerged as a powerful application of generative AI, demonstrating impressive capabilities in code generation and comprehension. A key requirement for these systems is their ability to accurately follow user instructions. We present Precise Automatically Checked Instruction Following In Code (PACIFIC), a novel framework designed to automatically generate benchmarks that rigorously assess sequential instruction-following and code dry-running capabilities in LLMs, while allowing control over benchmark difficulty. PACIFIC produces benchmark variants with clearly defined expected outputs, enabling straightforward and reliable evaluation through simple output comparisons. In contrast to existing approaches that often rely on tool usage or agentic behavior, our work isolates and evaluates the LLM's intrinsic ability to reason through code behavior step-by-step without execution (dry running) and to follow instructions. Furthermore, our framework mitigates training data contamination by facilitating effortless generation of novel benchmark variations. We validate our framework by generating a suite of benchmarks spanning a range of difficulty levels and evaluating multiple state-of-the-art LLMs. Our results demonstrate that PACIFIC can produce increasingly challenging benchmarks that effectively differentiate instruction-following and dry running capabilities, even among advanced models. Overall, our framework offers a scalable, contamination-resilient methodology for assessing core competencies of LLMs in code-related tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10713",
+    "authors": [
+      "Itay Dreyfuss",
+      "Antonio Abu Nassar",
+      "Samuel Ackerman",
+      "Axel Ben David",
+      "Rami Katan",
+      "Orna Raz",
+      "Marcel Zalmanovici"
+    ],
+    "first_author": "Itay Dreyfuss",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Automated benchmark generation",
+      "Deterministic expected-result checking",
+      "Code dry-running simulation",
+      "Instruction concatenation pipelines",
+      "Contamination-resistant variant generation",
+      "Difficulty control via instruction count and output length",
+      "Prompt vs chat mode evaluation"
+    ],
+    "summary": "本文提出了PACIFIC框架，用可控的指令拼接与引用实现自动生成可确定性评估样本，以检测大型模型的代码逐步推理（干运行）与指令遵循能力，并通过可变难度和去污染的基准区分模型表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10713v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:45:41"
+  },
+  {
+    "id": "2512.10493",
+    "title": "Decoding Human-LLM Collaboration in Coding: An Empirical Study of Multi-Turn Conversations in the Wild",
+    "abstract": "Large language models (LLMs) are increasingly acting as dynamic conversational interfaces, supporting multi-turn interactions that mimic human-like conversation and facilitate complex tasks like coding. While datasets such as LMSYS-Chat-1M and WildChat capture real-world user-LLM conversations, few studies systematically explore the mechanisms of human-LLM collaboration in coding scenarios. What tortuous paths do users experience during the interaction process? How well do the LLMs follow instructions? Are users satisfied? In this paper, we conduct an empirical analysis on human-LLM coding collaboration using LMSYS-Chat-1M and WildChat datasets to explore the human-LLM collaboration mechanism, LLMs' instruction following ability, and human satisfaction. This study yields interesting findings: 1) Task types shape interaction patterns(linear, star and tree), with code quality optimization favoring linear patterns, design-driven tasks leaning toward tree structures, and queries preferring star patterns; 2) Bug fixing and code refactoring pose greater challenges to LLMs' instruction following, with non-compliance rates notably higher than in information querying; 3) Code quality optimization and requirements-driven development tasks show lower user satisfaction, whereas structured knowledge queries and algorithm designs yield higher levels. These insights offer recommendations for improving LLM interfaces and user satisfaction in coding collaborations, while highlighting avenues for future research on adaptive dialogue systems. We believe this work broadens understanding of human-LLM synergies and supports more effective AI-assisted development.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10493",
+    "authors": [
+      "Binquan Zhang",
+      "Li Zhang",
+      "Haoyuan Zhang",
+      "Fang Liu",
+      "Song Wang",
+      "Bo Shen",
+      "An Fu",
+      "Lin Shi"
+    ],
+    "first_author": "Binquan Zhang",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Multi-turn dialogue patterns",
+      "Interaction topology (linear/star/tree)",
+      "Instruction-following compliance",
+      "User satisfaction trajectory",
+      "Task taxonomy for coding interactions",
+      "LLM-assisted data disentanglement",
+      "Open card sorting annotation",
+      "Statistical significance testing of interaction effects"
+    ],
+    "summary": "本文基于真实多轮对话数据实证分析了编码场景下的人-LLM协作，归纳出五类任务与线性/星状/树状三种交互模式，评估模型指令遵循能力与用户满意度并提出改进建议。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10493v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:46:15"
+  },
+  {
+    "id": "2512.10789",
+    "title": "Natural Language Interface for Firewall Configuration",
+    "abstract": "This paper presents the design and prototype implementation of a natural language interface for configuring enterprise firewalls. The framework allows administrators to express access control policies in plain language, which are then translated into vendor specific configurations. A compact schema bound intermediate representation separates human intent from device syntax and in the current prototype compiles to Palo Alto PAN OS command line configuration while remaining extensible to other platforms. Large language models are used only as assistive parsers that generate typed intermediate representation objects, while compilation and enforcement remain deterministic. The prototype integrates three validation layers, namely a static linter that checks structural and vendor specific constraints, a safety gate that blocks overly permissive rules such as any to any allows, and a Batfish based simulator that validates configuration syntax and referential integrity against a synthetic device model. The paper describes the architecture, implementation, and test methodology on synthetic network context datasets and discusses how this approach can evolve into a scalable auditable and human centered workflow for firewall policy management.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10789",
+    "authors": [
+      "F. Taghiyev",
+      "A. Aslanbayli"
+    ],
+    "first_author": "F. Taghiyev",
+    "category": [
+      "Technical"
+    ],
+    "field": "Network Security & Configuration",
+    "task": "Natural Language to Firewall Configuration",
+    "tags": [
+      "Schema-bound intermediate representation",
+      "Schema-constrained LLM parsing",
+      "Resolver agent for entity grounding",
+      "Vendor-agnostic compiler (Palo Alto backend prototype)",
+      "IR linter (general and vendor-specific)",
+      "Safety Gate preventing any-to-any and missing-fields",
+      "Batfish-based configuration simulation",
+      "Role-conditioned prompting and constrained decoding",
+      "Least-privilege policy synthesis",
+      "Audit logging and stage-only (side-effect free) compilation"
+    ],
+    "summary": "本文提出并实现了一个原型系统，利用受约束的LLM将管理员的自然语言访问策略解析为类型化中间表示，并通过静态lint、安全门控和Batfish仿真将其无副作用地编译为供应商特定的防火墙配置以确保安全与可审计性。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10789v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:50:04"
+  },
+  {
+    "id": "2512.10563",
+    "title": "NormCode: A Semi-Formal Language for Context-Isolated AI Planning",
+    "abstract": "Multistep workflows that chain large language model (LLM) calls suffer from context pollution: as information accumulates across steps, models hallucinate, confuse intermediate outputs, and lose track of task constraints. We present NormCode, a semiformal language for constructing plans of inferences, structured decompositions where each step operates in data isolation and receives only explicitly passed inputs, which eliminates crossstep contamination by design. NormCode enforces a strict separation between semantic operations (LLMdriven reasoning, nondeterministic) and syntactic operations (deterministic data restructuring), enabling precise cost and reliability tracing. The language exists in three isomorphic formats: .ncds for human authoring, .ncd for machine execution, and .ncn for human verification, supporting progressive formalization from sketch to production. We validate NormCode through two demonstrations: (1) a base X addition algorithm achieving 100 percent accuracy on arbitrary length inputs, and (2) self hosted execution of NormCode's own five phase compiler pipeline. The working orchestrator provides dependency driven scheduling, SQLite backed checkpointing, and loop management, making AI workflows auditable by design and addressing a critical need for transparency in high stakes domains such as legal reasoning, medical decision making, and financial analysis.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10563",
+    "authors": [
+      "Xin Guan"
+    ],
+    "first_author": "Xin Guan",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Context Isolation",
+      "Inference Decomposition",
+      "Semi-Formal Intermediate Representation",
+      "Semantic vs Syntactic Separation",
+      "Progressive Formalization (.ncds/.ncd/.ncn)",
+      "Auditable AI Workflows",
+      "Dependency-Driven Orchestration",
+      "Checkpointed Execution and Loop Management"
+    ],
+    "summary": "NormCode提出一种半形式化语言与执行框架，通过在多步LLM推理中强制显式数据隔离、将语义（非确定性LLM推理）与句法（确定性数据重构）分离，并提供三种同构格式与可检查的编译/运行时支持，从而实现可审计、可靠的AI工作流编排与执行。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10563v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:53:27"
+  },
+  {
+    "id": "2512.10485",
+    "title": "From Lab to Reality: A Practical Evaluation of Deep Learning Models and LLMs for Vulnerability Detection",
+    "abstract": "Vulnerability detection methods based on deep learning (DL) have shown strong performance on benchmark datasets, yet their real-world effectiveness remains underexplored. Recent work suggests that both graph neural network (GNN)-based and transformer-based models, including large language models (LLMs), yield promising results when evaluated on curated benchmark datasets. These datasets are typically characterized by consistent data distributions and heuristic or partially noisy labels. In this study, we systematically evaluate two representative DL models-ReVeal and LineVul-across four representative datasets: Juliet, Devign, BigVul, and ICVul. Each model is trained independently on each respective dataset, and their code representations are analyzed using t-SNE to uncover vulnerability related patterns. To assess realistic applicability, we deploy these models along with four pretrained LLMs, Claude 3.5 Sonnet, GPT-o3-mini, GPT-4o, and GPT-5 on a curated dataset, VentiVul, comprising 20 recently (May 2025) fixed vulnerabilities from the Linux kernel. Our experiments reveal that current models struggle to distinguish vulnerable from non-vulnerable code in representation space and generalize poorly across datasets with differing distributions. When evaluated on VentiVul, our newly constructed time-wise out-of-distribution dataset, performance drops sharply, with most models failing to detect vulnerabilities reliably. These results expose a persistent gap between academic benchmarks and real-world deployment, emphasizing the value of our deployment-oriented evaluation framework and the need for more robust code representations and higher-quality datasets.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10485",
+    "authors": [
+      "Chaomeng Lu",
+      "Bert Lagaisse"
+    ],
+    "first_author": "Chaomeng Lu",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Time-wise out-of-distribution evaluation",
+      "Whole-file evaluation mode",
+      "Function-pair evaluation mode",
+      "Cross-dataset generalization",
+      "Code representation clustering (t-SNE & centroid distance)",
+      "Graph-based vs token-based code representations",
+      "Zero-shot LLM vulnerability probing",
+      "Linux CVE fix-based testbed",
+      "Label quality and dataset bias analysis"
+    ],
+    "summary": "本文构建了一个时间分离的真实漏洞测试集并提出部署导向的评估框架，系统性比较图/序列深度模型与LLM在漏洞检测上的表示能力与跨数据集泛化性，结果表明现有模型在真实场景中表现显著下降。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10485v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 01:58:04"
+  },
+  {
+    "id": "2512.10452",
+    "title": "UniCoR: Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+    "abstract": "Effective code retrieval is indispensable and it has become an important paradigm to search code in hybrid mode using both natural language and code snippets. Nevertheless, it remains unclear whether existing approaches can effectively leverage such hybrid queries, particularly in cross-language contexts. We conduct a comprehensive empirical study of representative code models and reveal three challenges: (1) insufficient semantic understanding; (2) inefficient fusion in hybrid code retrieval; and (3) weak generalization in cross-language scenarios. To address these challenges, we propose UniCoR, a novel self-supervised framework that learns Unified Code Representations framework designed to learn unified and robust code representations. Firstly, we design a multi-perspective supervised contrastive learning module to enhance semantic understanding and modality fusion. It aligns representations from multiple perspectives, including code-to-code, natural language-to-code, and natural language-to-natural language, enforcing the model to capture a semantic essence among modalities. Secondly, we introduce a representation distribution consistency learning module to improve cross-language generalization, which explicitly aligns the feature distributions of different programming languages, enabling language-agnostic representation learning. Extensive experiments on both empirical benchmark and large-scale benchmark show that UniCoR outperforms all baseline models, achieving an average improvement of 8.64% in MRR and 11.54% in MAP over the best-performing baseline. Furthermore, UniCoR exhibits stability in hybrid code retrieval and generalization capability in cross-language scenarios.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10452",
+    "authors": [
+      "Yang Yang",
+      "Li Kuang",
+      "Jiakun Liu",
+      "Zhongxin Liu",
+      "Yingjie Xia",
+      "David Lo"
+    ],
+    "first_author": "Yang Yang",
+    "category": [
+      "Technical",
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Hybrid query fusion (code + natural language)",
+      "Cross-language alignment",
+      "Multi-perspective supervised contrastive learning",
+      "Representation distribution consistency",
+      "Maximum Mean Discrepancy (MMD) for language-agnostic alignment",
+      "Modality collaboration and fusion",
+      "Functionally equivalent code pairing",
+      "Automated natural-language query generation",
+      "Self-supervised code representation learning",
+      "Fusion strategies: input remix / vector concat / score weighting"
+    ],
+    "summary": "本文提出UniCoR，一种结合多视角监督对比学习与表示分布一致性约束的自监督框架，通过强化模态协同与跨语言对齐，显著提升混合（代码+自然语言）跨语言代码检索的语义理解、融合效果与泛化能力。",
+    "quality": "High",
+    "conference": "IEEE/ACM International Conference on Software Engineering (ICSE 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2512.10452v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 01:58:31"
+  },
+  {
+    "id": "2512.10415",
+    "title": "How to Trick Your AI TA: A Systematic Study of Academic Jailbreaking in LLM Code Evaluation",
+    "abstract": "The use of Large Language Models (LLMs) as automatic judges for code evaluation is becoming increasingly prevalent in academic environments. But their reliability can be compromised by students who may employ adversarial prompting strategies in order to induce misgrading and secure undeserved academic advantages. In this paper, we present the first large-scale study of jailbreaking LLM-based automated code evaluators in academic context. Our contributions are: (i) We systematically adapt 20+ jailbreaking strategies for jailbreaking AI code evaluators in the academic context, defining a new class of attacks termed academic jailbreaking. (ii) We release a poisoned dataset of 25K adversarial student submissions, specifically designed for the academic code-evaluation setting, sourced from diverse real-world coursework and paired with rubrics and human-graded references, and (iii) In order to capture the multidimensional impact of academic jailbreaking, we systematically adapt and define three jailbreaking metrics (Jailbreak Success Rate, Score Inflation, and Harmfulness). (iv) We comprehensively evalulate the academic jailbreaking attacks using six LLMs. We find that these models exhibit significant vulnerability, particularly to persuasive and role-play-based attacks (up to 97% JSR). Our adversarial dataset and benchmark suite lay the groundwork for next-generation robust LLM-based evaluators in academic code assessment.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10415",
+    "authors": [
+      "Devanshu Sahoo",
+      "Vasudev Majhi",
+      "Arjun Neekhra",
+      "Yash Sinha",
+      "Murari Mandal",
+      "Dhruv Kumar"
+    ],
+    "first_author": "Devanshu Sahoo",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Academic Jailbreaking",
+      "Adversarial Prompt Injection",
+      "Poisoned Student Submissions",
+      "Rubric-aware Attack Design",
+      "Jailbreak Metrics (JSR/SIR/Harmfulness)",
+      "Persona/Role-play Attacks",
+      "Token/Emoji-level Manipulation",
+      "Cross-model Robustness Benchmark"
+    ],
+    "summary": "本文首次系统研究了针对LLM自动代码评分器的“学术越狱”攻击，构建了约25K条对抗性学生提交数据集、提出专门的评价指标并在六种模型上进行基准评估，揭示了角色扮演与说服类攻击下的严重脆弱性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10415v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 02:06:36"
+  },
+  {
+    "id": "2512.10398",
+    "title": "Confucius Code Agent: An Open-sourced AI Software Engineer at Industrial Scale",
+    "abstract": "Real-world AI software engineering demands coding agents that can reason over massive repositories, maintain durable memory across and within long sessions, and robustly coordinate complex toolchains at test time. Existing open-source coding agents provide transparency but frequently fall short when pushed to these industrial-scale workloads, while proprietary coding agents offer strong practical performance but limited extensibility, interpretability, and controllability. We present the Confucius Code Agent (CCA), an open-sourced AI software engineer that can operate at an industrial scale. CCA is built atop the Confucius SDK, an open-sourced agent development platform designed around three complementary perspectives: Agent Experience (AX), User Experience (UX), and Developer Experience (DX). The SDK introduces a unified orchestrator with hierarchical working memory for long-context reasoning, a persistent note-taking system for cross-session continual learning, and a modular extension module for robust tool use. Moreover, a meta-agent automates the synthesis, evaluation, and refinement of agent configurations through a build-test-improve loop, enabling rapid agent development on new tasks, environments, and tool stacks. Instantiated on Confucius SDK with these mechanisms, CCA delivers strong performance on real-world software engineering tasks. On SWE-Bench-Pro, CCA achieves a state-of-the-art Resolve@1 performance of 54.3%, substantially improving over prior coding agents. Together, the Confucius SDK and CCA provide a transparent, extensible, and reproducible foundation for AI agents, bridge gaps between research prototypes and production-grade systems, and support agent development and deployment at industrial scale.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10398",
+    "authors": [
+      "Zhaodong Wang",
+      "Zhenting Qi",
+      "Sherman Wong",
+      "Nathan Hu",
+      "Samuel Lin",
+      "Jun Ge",
+      "Erwin Gao",
+      "Yining Yang",
+      "Ben Maurer",
+      "Wenlin Chen",
+      "David Recordon",
+      "Yilun Du",
+      "Minlan Yu",
+      "Ying Zhang"
+    ],
+    "first_author": "Zhaodong Wang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Hierarchical working memory",
+      "Adaptive context compression",
+      "Persistent note-taking",
+      "Cross-session continual learning",
+      "Meta-agent build–test–improve loop",
+      "Modular tool extensions with typed callbacks",
+      "Agent orchestration for long-horizon tasks",
+      "Developer observability and DX-focused tooling",
+      "Industrial-scale repository navigation",
+      "Ablation-driven agent evaluation"
+    ],
+    "summary": "本文提出并开源了Confucius SDK及其实例化的Confucius Code Agent，通过层次化工作内存、自适应上下文压缩、持久化笔记和模块化扩展，并借助元代理的构建-测试-改进循环，实现面向工业规模代码库的长期推理与跨会话记忆，在多种软件工程任务上表现优异。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10398v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-14 02:07:20"
+  },
+  {
+    "id": "2512.10393",
+    "title": "Cross-modal Retrieval Models for Stripped Binary Analysis",
+    "abstract": "LLM-agent based binary code analysis has demonstrated significant potential across a wide range of software security scenarios, including vulnerability detection, malware analysis, etc. In agent workflow, however, retrieving the positive from thousands of stripped binary functions based on user query remains under-studied and challenging, as the absence of symbolic information distinguishes it from source code retrieval. In this paper, we introduce, BinSeek, the first two-stage cross-modal retrieval framework for stripped binary code analysis. It consists of two models: BinSeekEmbedding is trained on large-scale dataset to learn the semantic relevance of the binary code and the natural language description, furthermore, BinSeek-Reranker learns to carefully judge the relevance of the candidate code to the description with context augmentation. To this end, we built an LLM-based data synthesis pipeline to automate training construction, also deriving a domain benchmark for future research. Our evaluation results show that BinSeek achieved the state-of-the-art performance, surpassing the the same scale models by 31.42% in Rec@3 and 27.17% in MRR@3, as well as leading the advanced general-purpose models that have 16 times larger parameters.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10393",
+    "authors": [
+      "Guoqiang Chen",
+      "Lingyun Ying",
+      "Ziyang Song",
+      "Daguang Liu",
+      "Qiang Wang",
+      "Zhiqi Wang",
+      "Li Hu",
+      "Shaoyin Cheng",
+      "Weiming Zhang",
+      "Nenghai Yu"
+    ],
+    "first_author": "Guoqiang Chen",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "stripped-binary retrieval",
+      "decompiled pseudocode embeddings",
+      "two-stage retrieval (embedding + reranker)",
+      "context-augmented reranking with calling-context",
+      "LLM-driven synthetic label generation",
+      "contrastive embedding training (InfoNCE)",
+      "domain-specific binary retrieval benchmark",
+      "retrieval-augmented binary analysis for security"
+    ],
+    "summary": "本文提出了BinSeek，一种针对无符号（stripped）二进制函数的两阶段跨模态检索框架（嵌入召回 + 上下文增强重排序），并通过LLM驱动的数据合成构建训练集与首个领域基准，显著提升二进制代码检索性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10393v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-15 01:56:55"
+  },
+  {
+    "id": "2512.10238",
+    "title": "Studying and Automating Issue Resolution for Software Quality",
+    "abstract": "Effective issue resolution is crucial for maintaining software quality. Yet developers frequently encounter challenges such as low-quality issue reports, limited understanding of real-world workflows, and a lack of automated support. This research aims to address these challenges through three complementary directions. First, we enhance issue report quality by proposing techniques that leverage LLM reasoning and application-specific information. Second, we empirically characterize developer workflows in both traditional and AI-augmented systems. Third, we automate cognitively demanding resolution tasks, including buggy UI localization and solution identification, through ML, DL, and LLM-based approaches. Together, our work delivers empirical insights, practical tools, and automated methods to advance AI-driven issue resolution, supporting more maintainable and high-quality software systems.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10238",
+    "authors": [
+      "Antu Saha"
+    ],
+    "first_author": "Antu Saha",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "tags": [
+      "Issue report quality assessment",
+      "Steps-to-Reproduce (S2R) enhancement",
+      "LLM reasoning aligned with dynamic app execution",
+      "Execution model of screens and interactions",
+      "Context-aware issue report generation",
+      "Buggy UI localization",
+      "Multi-modal text+vision retrieval for UI mapping",
+      "Solution identification in issue discussions",
+      "Empirical analysis of issue resolution workflows",
+      "Cross-project generalizability of classifiers"
+    ],
+    "summary": "本文结合基于应用执行模型的多模态信息与LLM推理，提升缺陷报告（OB/EB/S2R）质量，实证分析传统与AI/ML集成系统的问题解决流程，并自动化实现Buggy UI定位与解决方案识别以加速问题定位与修复。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10238v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-15 01:57:20"
+  },
+  {
+    "id": "2512.10501",
+    "title": "Zero-shot 3D Map Generation with LLM Agents: A Dual-Agent Architecture for Procedural Content Generation",
+    "abstract": "Procedural Content Generation (PCG) offers scalable methods for algorithmically creating complex, customizable worlds. However, controlling these pipelines requires the precise configuration of opaque technical parameters. We propose a training-free architecture that utilizes LLM agents for zero-shot PCG parameter configuration. While Large Language Models (LLMs) promise a natural language interface for PCG tools, off-the-shelf models often fail to bridge the semantic gap between abstract user instructions and strict parameter specifications. Our system pairs an Actor agent with a Critic agent, enabling an iterative workflow where the system autonomously reasons over tool parameters and refines configurations to progressively align with human design preferences. We validate this approach on the generation of various 3D maps, establishing a new benchmark for instruction-following in PCG. Experiments demonstrate that our approach outperforms single-agent baselines, producing diverse and structurally valid environments from natural language descriptions. These results demonstrate that off-the-shelf LLMs can be effectively repurposed as generalized agents for arbitrary PCG tools. By shifting the burden from model training to architectural reasoning, our method offers a scalable framework for mastering complex software without task-specific fine-tuning.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10501",
+    "authors": [
+      "Lim Chien Her",
+      "Ming Yan",
+      "Yunshu Bai",
+      "Ruihao Li",
+      "Hao Zhang"
+    ],
+    "first_author": "Lim Chien Her",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Procedural Content Generation",
+    "task": "Zero-shot PCG parameter configuration for 3D map generation (dual-agent Actor–Critic)",
+    "tags": [
+      "Dual-agent Actor–Critic architecture",
+      "Zero-shot parameter synthesis",
+      "Documentation-grounded verification",
+      "Iterative agent dialogic refinement",
+      "Training-free LLM tool control",
+      "3D map / terrain synthesis",
+      "PCG parameter hallucination correction",
+      "Instruction-following benchmark for PCG"
+    ],
+    "summary": "本文提出一种训练免费、双代理（Actor–Critic）的架构，利用离线大模型在零样本情形下通过迭代对话将自然语言提示映射为可执行的 PCG 参数，从而生成多样且结构有效的 3D 地图，并在新建的指令跟随基准上显著优于单代理基线。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10501v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-15 02:05:01"
+  },
+  {
+    "id": "2512.10317",
+    "title": "Translating Informal Proofs into Formal Proofs Using a Chain of States",
+    "abstract": "We address the problem of translating informal mathematical proofs expressed in natural language into formal proofs in Lean4 under a constrained computational budget. Our approach is grounded in two key insights. First, informal proofs tend to proceed via a sequence of logical transitions - often implications or equivalences - without explicitly specifying intermediate results or auxiliary lemmas. In contrast, formal systems like Lean require an explicit representation of each proof state and the tactics that connect them. Second, each informal reasoning step can be viewed as an abstract transformation between proof states, but identifying the corresponding formal tactics often requires nontrivial domain knowledge and precise control over proof context. To bridge this gap, we propose a two stage framework. Rather than generating formal tactics directly, we first extract a Chain of States (CoS), a sequence of intermediate formal proof states aligned with the logical structure of the informal argument. We then generate tactics to transition between adjacent states in the CoS, thereby constructing the full formal proof. This intermediate representation significantly reduces the complexity of tactic generation and improves alignment with informal reasoning patterns. We build dedicated datasets and benchmarks for training and evaluation, and introduce an interactive framework to support tactic generation from formal states. Empirical results show that our method substantially outperforms existing baselines, achieving higher proof success rates.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10317",
+    "authors": [
+      "Ziyu Wang",
+      "Bowen Yang",
+      "Shihao Zhou",
+      "Chenyi Li",
+      "Yuan Zhang",
+      "Bin Dong",
+      "Zaiwen Wen"
+    ],
+    "first_author": "Ziyu Wang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Formal Methods & Theorem Proving",
+    "task": "Informal-to-Formal Proof Translation",
+    "tags": [
+      "Chain of States (CoS) intermediate representation",
+      "proof-state extraction from informal text",
+      "state-aligned tactic synthesis",
+      "error-aware tactic regeneration",
+      "Lean4-specific proof rewriting heuristics",
+      "metaprogramming-based dataset construction",
+      "interactive tactic generation framework",
+      "reduction of prover invocations / compute-efficient proving"
+    ],
+    "summary": "本文提出了CoS两阶段框架：先从非正式数学证明抽取对齐的形式化证明状态链，再在相邻状态之间生成tactic以在Lean4中还原完整形式化证明，并通过元编程构建数据集与基准，显著提高了证明成功率与效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10317v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-15 02:09:36"
+  },
+  {
+    "id": "2512.11589",
+    "title": "A Study of Library Usage in Agent-Authored Pull Requests",
+    "abstract": "Coding agents are becoming increasingly capable of completing end-to-end software engineering workflows that previously required a human developer, including raising pull requests (PRs) to propose their changes. However, we still know little about how these agents use libraries when generating code, a core part of real-world software development. To fill this gap, we study 26,760 agent-authored PRs from the AIDev dataset to examine three questions: how often do agents import libraries, how often do they introduce new dependencies (and with what versioning), and which specific libraries do they choose? We find that agents often import libraries (29.5% of PRs) but rarely add new dependencies (1.3% of PRs); and when they do, they follow strong versioning practices (75.0% specify a version), an improvement on direct LLM usage where versions are rarely mentioned. Generally, agents draw from a surprisingly diverse set of external libraries, contrasting with the limited \"library preferences\" seen in prior non-agentic LLM studies. Our results offer an early empirical view into how AI coding agents interact with today's software ecosystems.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11589",
+    "authors": [
+      "Lukas Twist"
+    ],
+    "first_author": "Lukas Twist",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Version Control & Collaboration",
+    "task": "Git VCS",
+    "tags": [
+      "Agent-authored pull requests",
+      "Library import frequency",
+      "New dependency introduction",
+      "Dependency version specification (version hygiene)",
+      "Library diversity across ecosystems",
+      "Multi-language empirical analysis (TypeScript, Python, Go, C#)",
+      "Import and manifest regex extraction",
+      "Agentic workflow behavior"
+    ],
+    "summary": "本文通过分析26,760个由代码代理提交的拉取请求，实证研究代理在导入库、引入新依赖及选择库上的行为，发现代理常导入外部库但很少新增依赖且通常会指定版本，同时展现出较高的库多样性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11589v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:52:27"
+  },
+  {
+    "id": "2512.11482",
+    "title": "Towards Privacy-Preserving Code Generation: Differentially Private Code Language Models",
+    "abstract": "Large language models specialized for code (CodeLLMs) have demonstrated remarkable capabilities in generating code snippets, documentation, and test cases. However, despite their promising capabilities, CodeLLMs can inadvertently memorize and reproduce snippets from their training data, which poses risks of privacy breaches and intellectual property violations. These risks restrict the deployment of CodeLLMs in sensitive domains and limit their training datasets to publicly available sources. To mitigate the memorization risk without compromising their task performance, we apply Differential Privacy (DP) to CodeLLMs. To the best of our knowledge, this is the first comprehensive study that systematically evaluates the effectiveness of DP in CodeLLMs. DP adds calibrated noise to the training process to protect individual data points while still allowing the model to learn useful patterns. To this end, we first identify and understand the driving reasons of the memorization behaviour of the CodeLLMs during their fine-tuning. Then, to address this issue, we empirically evaluate the effect of DP on mitigating memorization while preserving code generation capabilities. Our findings show that DP substantially reduces memorization in CodeLLMs across all the tested snippet types. The snippet types most prone to memorization are also the most effectively mitigated by DP. Furthermore, we observe that DP slightly increases perplexity but preserves, and can even enhance, the code generation capabilities of CodeLLMs, which makes it feasible to apply DP in practice without significantly compromising model utility. Finally, we analyze the impact of DP on training efficiency and energy consumption, finding that DP does not significantly affect training time or energy usage, making it a practical choice for privacy-preserving CodeLLMs training.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11482",
+    "authors": [
+      "Melih Catal",
+      "Pooja Rani",
+      "Harald C. Gall"
+    ],
+    "first_author": "Melih Catal",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "tags": [
+      "DP-SGD training",
+      "Memorization taxonomy",
+      "Data‑extraction and membership‑inference attacks",
+      "Privacy‑utility trade-off",
+      "Snippet entropy and frequency analysis",
+      "Functional correctness evaluation",
+      "Training efficiency & energy analysis",
+      "Privacy evaluation benchmarks"
+    ],
+    "summary": "本文系统评估在代码生成模型中应用差分隐私（DP）的可行性，发现DP显著降低对训练片段的记忆风险且在大多数情况下不会显著损害甚至可提升代码生成功能性，并发布了两个用于隐私与效用评估的新基准数据集。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11482v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:53:12"
+  },
+  {
+    "id": "2512.11783",
+    "title": "Super Suffixes: Bypassing Text Generation Alignment and Guard Models Simultaneously",
+    "abstract": "The rapid deployment of Large Language Models (LLMs) has created an urgent need for enhanced security and privacy measures in Machine Learning (ML). LLMs are increasingly being used to process untrusted text inputs and even generate executable code, often while having access to sensitive system controls. To address these security concerns, several companies have introduced guard models, which are smaller, specialized models designed to protect text generation models from adversarial or malicious inputs. In this work, we advance the study of adversarial inputs by introducing Super Suffixes, suffixes capable of overriding multiple alignment objectives across various models with different tokenization schemes. We demonstrate their effectiveness, along with our joint optimization technique, by successfully bypassing the protection mechanisms of Llama Prompt Guard 2 on five different text generation models for malicious text and code generation. To the best of our knowledge, this is the first work to reveal that Llama Prompt Guard 2 can be compromised through joint optimization.   Additionally, by analyzing the changing similarity of a model's internal state to specific concept directions during token sequence processing, we propose an effective and lightweight method to detect Super Suffix attacks. We show that the cosine similarity between the residual stream and certain concept directions serves as a distinctive fingerprint of model intent. Our proposed countermeasure, DeltaGuard, significantly improves the detection of malicious prompts generated through Super Suffixes. It increases the non-benign classification rate to nearly 100%, making DeltaGuard a valuable addition to the guard model stack and enhancing robustness against adversarial prompt attacks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11783",
+    "authors": [
+      "Andrew Adiletta",
+      "Kathryn Adiletta",
+      "Kemal Derya",
+      "Berk Sunar"
+    ],
+    "first_author": "Andrew Adiletta",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Super Suffixes",
+      "Joint optimization across tokenization schemes",
+      "Adversarial suffix attacks",
+      "Guard model bypass",
+      "Refusal concept direction",
+      "Dynamic residual-similarity detection",
+      "DeltaGuard",
+      "Malicious code-generation dataset"
+    ],
+    "summary": "本文提出 Super Suffixes —— 通过在不同分词方案下联合优化以同时绕过文本生成模型的对齐与守卫模型，并基于残差流与拒绝概念方向的动态余弦相似度提出 DeltaGuard 检测方法，同时构建恶意代码生成数据集进行评估。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11783v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:53:54"
+  },
+  {
+    "id": "2512.11402",
+    "title": "REMODEL-LLM: Transforming C code to Java using LLMs",
+    "abstract": "The automated translation of C code to Java code is a notoriously difficult task, fraught with challenges stemming from fundamental paradigm shifts (procedural vs. Object Oriented), memory models (manual pointers vs. Garbage Collection), and incompatible data types. This paper investigates the efficacy of 19 small, quantized LLMs (under 20 billion parameters) for the C to Java translation task. We use a novel, hybrid pipeline that leverages Abstract Syntax Trees (ASTs) for semantic decomposition and employs a highly constrained, rule based prompting strategy. The results are stark: a clear multi tiered performance divide emerged. The vast majority of models (Tier 3, e.g., llama3.1, gemma3, starcoder2) failed 100\\% of the tests, proving incapable of generating even basic, runnable Java boilerplate. A small middle tier (Tier 2, e.g., mistral-nemo and mistral) produced runnable code but was plagued by dangerous semantic failures and wrong translations. Only three models (Tier 1: phi4, deepseek-coder-v2, codeqwen) proved viable, passing over 50\\% of the test suite. Even these top models failed on the most complex C concepts, such as function pointers, sizeof, and enum logic, revealing a hard ceiling for the reasoning capabilities of current quantized models.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11402",
+    "authors": [
+      "Aryan Gupta",
+      "Y. Raghu Reddy"
+    ],
+    "first_author": "Aryan Gupta",
+    "category": [
+      "Empirical",
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "C-to-Java migration",
+      "AST-guided decomposition",
+      "Constrained rule-based prompting",
+      "Quantized edge LLM evaluation",
+      "Semantic vs. syntactic failure analysis",
+      "Translation edge cases (function pointers, sizeof, enums)",
+      "20-case C→Java benchmark"
+    ],
+    "summary": "本文提出基于AST的混合翻译流水线和受限提示策略，评估了19个量化小型LLM在C到Java迁移任务上的表现并构建了20个边界用例基准，结果显示大多数模型在关键语义转换（如函数指针、sizeof、枚举逻辑）上失败，仅三款模型在测试中通过率超过50%。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11402v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:59:31"
   }
 ]

@@ -270,5 +270,88 @@
     "published": "2024-10-28",
     "update_time": "2024-10-28",
     "download_time": "2025-12-11 16:40:18"
+  },
+  {
+    "id": "2410.11076",
+    "title": "PRACTIQ: A Practical Conversational Text-to-SQL dataset with Ambiguous and Unanswerable Queries",
+    "abstract": "Previous text-to-SQL datasets and systems have primarily focused on user questions with clear intentions that can be answered. However, real user questions can often be ambiguous with multiple interpretations or unanswerable due to a lack of relevant data. In this work, we construct a practical conversational text-to-SQL dataset called PRACTIQ, consisting of ambiguous and unanswerable questions inspired by real-world user questions. We first identified four categories of ambiguous questions and four categories of unanswerable questions by studying existing text-to-SQL datasets. Then, we generate conversations with four turns: the initial user question, an assistant response seeking clarification, the user's clarification, and the assistant's clarified SQL response with the natural language explanation of the execution results. For some ambiguous queries, we also directly generate helpful SQL responses, that consider multiple aspects of ambiguity, instead of requesting user clarification. To benchmark the performance on ambiguous, unanswerable, and answerable questions, we implemented large language model (LLM)-based baselines using various LLMs. Our approach involves two steps: question category classification and clarification SQL prediction. Our experiments reveal that state-of-the-art systems struggle to handle ambiguous and unanswerable questions effectively. We will release our code for data generation and experiments on GitHub.",
+    "arxiv_url": "https://arxiv.org/abs/2410.11076",
+    "authors": [
+      "Mingwen Dong",
+      "Nischal Ashok Kumar",
+      "Yiqun Hu",
+      "Anuj Chauhan",
+      "Chung-Wei Hang",
+      "Shuaichen Chang",
+      "Lin Pan",
+      "Wuwei Lan",
+      "Henghui Zhu",
+      "Jiarong Jiang",
+      "Patrick Ng",
+      "Zhiguo Wang"
+    ],
+    "first_author": "Mingwen Dong",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Natural Language Interfaces to Databases (Text-to-SQL)",
+    "task": "Conversational Text-to-SQL with Ambiguity and Unanswerability",
+    "tags": [
+      "Conversational text-to-SQL",
+      "Ambiguity taxonomy for NL queries",
+      "Unanswerable query categorization",
+      "Clarification question generation",
+      "Helpful multi-SQL responses",
+      "Database/schema modification for data generation",
+      "Human annotation for conversation quality",
+      "Prompt-based LLM baselines",
+      "Question category classification",
+      "Clarification SQL prediction"
+    ],
+    "summary": "本文提出 PRACTIQ，一个面向对话式 text-to-SQL 的数据集，包含细化的歧义与不可回答查询类别、基于模式的生成与人工注释流程，并用提示式 LLM 基线评测显示现有模型在处理实务性歧义/不可回答问题上仍有显著不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.11076v1",
+    "published": "2024-10-14",
+    "update_time": "2024-10-14",
+    "download_time": "2025-12-12 22:24:35"
+  },
+  {
+    "id": "2410.22925",
+    "title": "BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios",
+    "abstract": "NL2SQL (Natural Language to Structured Query Language) transformation has seen wide adoption in Business Intelligence (BI) applications in recent years. However, existing NL2SQL benchmarks are not suitable for production BI scenarios, as they are not designed for common business intelligence questions. To address this gap, we have developed a new benchmark focused on typical NL questions in industrial BI scenarios. We discuss the challenges of constructing a BI-focused benchmark and the shortcomings of existing benchmarks. Additionally, we introduce question categories in our benchmark that reflect common BI inquiries. Lastly, we propose two novel semantic similarity evaluation metrics for assessing NL2SQL capabilities in BI applications and services.",
+    "arxiv_url": "https://arxiv.org/abs/2410.22925",
+    "authors": [
+      "Bora Caglayan",
+      "Mingxue Wang",
+      "John D. Kelleher",
+      "Shen Fei",
+      "Gui Tong",
+      "Jiandong Ding",
+      "Puchao Zhang"
+    ],
+    "first_author": "Bora Caglayan",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Natural Language Interfaces to Databases",
+    "task": "BI-focused NL2SQL Benchmarking and Evaluation",
+    "tags": [
+      "Business Intelligence query patterns",
+      "Temporal / time-series queries",
+      "Schema irregularities and synonym mapping",
+      "Multi-table joins and join resolution",
+      "SQL semantic similarity metric",
+      "Partial SQL result similarity metric",
+      "No-code BI query interfaces"
+    ],
+    "summary": "该论文提出了面向商业智能场景的NL2SQL基准并引入了两种用于评估查询语义相似性和结果部分相似性的评估指标，以更真实地衡量NL2SQL在BI服务中的表现。",
+    "quality": "High",
+    "conference": "ICSOC (International Conference on Service-Oriented Computing) 2024",
+    "pdf_url": "https://arxiv.org/pdf/2410.22925v1",
+    "published": "2024-10-30",
+    "update_time": "2024-10-30",
+    "download_time": "2025-12-12 22:25:38"
   }
 ]

@@ -33,5 +33,81 @@
     "published": "2022-08-17",
     "update_time": "2022-12-19",
     "download_time": "2025-12-04 23:31:19"
+  },
+  {
+    "id": "2208.04415",
+    "title": "Deep Learning Driven Natural Languages Text to SQL Query Conversion: A Survey",
+    "abstract": "With the future striving toward data-centric decision-making, seamless access to databases is of utmost importance. There is extensive research on creating an efficient text-to-sql (TEXT2SQL) model to access data from the database. Using a Natural language is one of the best interfaces that can bridge the gap between the data and results by accessing the database efficiently, especially for non-technical users. It will open the doors and create tremendous interest among users who are well versed in technical skills or not very skilled in query languages. Even if numerous deep learning-based algorithms are proposed or studied, there still is very challenging to have a generic model to solve the data query issues using natural language in a real-work scenario. The reason is the use of different datasets in different studies, which comes with its limitations and assumptions. At the same time, we do lack a thorough understanding of these proposed models and their limitations with the specific dataset it is trained on. In this paper, we try to present a holistic overview of 24 recent neural network models studied in the last couple of years, including their architectures involving convolutional neural networks, recurrent neural networks, pointer networks, reinforcement learning, generative models, etc. We also give an overview of the 11 datasets that are widely used to train the models for TEXT2SQL technologies. We also discuss the future application possibilities of TEXT2SQL technologies for seamless data queries.",
+    "arxiv_url": "https://arxiv.org/abs/2208.04415",
+    "authors": [
+      "Ayush Kumar",
+      "Parth Nagarkar",
+      "Prabhav Nalhe",
+      "Sanjeev Vijayakumar"
+    ],
+    "first_author": "Ayush Kumar",
+    "category": [
+      "Survey"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Text-to-SQL",
+      "Cross-domain semantic parsing",
+      "Schema linking and grounding",
+      "Complex SQL composition (joins, nested/nested queries)",
+      "Conversational/contextual Text-to-SQL",
+      "Evaluation metrics (exact match, component F1)"
+    ],
+    "summary": "本文系统综述了近年基于深度学习的文本到SQL转换研究，比较了24种模型架构与11个常用数据集，并分析了数据集特性、评估指标及未来挑战。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2208.04415v1",
+    "published": "2022-08-08",
+    "update_time": "2022-08-08",
+    "download_time": "2025-12-12 21:47:09"
+  },
+  {
+    "id": "2208.13629",
+    "title": "A Survey on Text-to-SQL Parsing: Concepts, Methods, and Future Directions",
+    "abstract": "Text-to-SQL parsing is an essential and challenging task. The goal of text-to-SQL parsing is to convert a natural language (NL) question to its corresponding structured query language (SQL) based on the evidences provided by relational databases. Early text-to-SQL parsing systems from the database community achieved a noticeable progress with the cost of heavy human engineering and user interactions with the systems. In recent years, deep neural networks have significantly advanced this task by neural generation models, which automatically learn a mapping function from an input NL question to an output SQL query. Subsequently, the large pre-trained language models have taken the state-of-the-art of the text-to-SQL parsing task to a new level. In this survey, we present a comprehensive review on deep learning approaches for text-to-SQL parsing. First, we introduce the text-to-SQL parsing corpora which can be categorized as single-turn and multi-turn. Second, we provide a systematical overview of pre-trained language models and existing methods for text-to-SQL parsing. Third, we present readers with the challenges faced by text-to-SQL parsing and explore some potential future directions in this field.",
+    "arxiv_url": "https://arxiv.org/abs/2208.13629",
+    "authors": [
+      "Bowen Qin",
+      "Binyuan Hui",
+      "Lihan Wang",
+      "Min Yang",
+      "Jinyang Li",
+      "Binhua Li",
+      "Ruiying Geng",
+      "Rongyu Cao",
+      "Jian Sun",
+      "Luo Si",
+      "Fei Huang",
+      "Yongbin Li"
+    ],
+    "first_author": "Bowen Qin",
+    "category": [
+      "Survey"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Single-turn vs Multi-turn Parsing",
+      "Schema Linking and Table-grounding",
+      "Table-aware Pretraining Objectives",
+      "Graph-based Schema Encoding",
+      "Sketch-based and Grammar-guided Decoding",
+      "AST/Tree-based SQL Generation",
+      "Execution- and Exact-match Evaluation Metrics",
+      "Cross-domain and Contextual Generalization"
+    ],
+    "summary": "本文为文本到SQL解析的综合性综述，系统介绍了相关数据集、表格预训练模型、编码与解码方法，并讨论了评估指标、挑战与未来研究方向。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2208.13629v1",
+    "published": "2022-08-29",
+    "update_time": "2022-08-29",
+    "download_time": "2025-12-12 21:48:20"
   }
 ]

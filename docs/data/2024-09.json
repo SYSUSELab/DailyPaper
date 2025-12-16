@@ -78,5 +78,46 @@
     "published": "2024-09-06",
     "update_time": "2025-09-23",
     "download_time": "2025-12-10 15:35:38"
+  },
+  {
+    "id": "2409.02038",
+    "title": "BEAVER: An Enterprise Benchmark for Text-to-SQL",
+    "abstract": "Existing text-to-SQL benchmarks have largely been constructed from web tables with human-generated question-SQL pairs. LLMs typically show strong results on these benchmarks, leading to a belief that LLMs are effective at text-to-SQL tasks. However, how these results transfer to enterprise settings is unclear because tables in enterprise databases might differ substantially from web tables in structure and content. To contend with this problem, we introduce a new dataset BEAVER, the first enterprise text-to-SQL benchmark sourced from real private enterprise data warehouses. This dataset includes natural language queries and their correct SQL statements, which we collected from actual query logs. We then benchmark off-the-shelf LLMs on this dataset. LLMs perform poorly, even when augmented with standard prompt engineering and RAG techniques. We identify three main reasons for the poor performance: (1) schemas of enterprise tables are more complex than the schemas in public data, resulting in SQL-generation tasks intrinsically harder; (2) business-oriented questions are often more complex, requiring joins over multiple tables, aggregations, and nested queries; (3) public LLMs cannot train on private enterprise data warehouses that are not publicly accessible, and therefore it is difficult for the model to learn to solve (1) and (2). We believe BEAVER will facilitate future research in building text-to-SQL systems that perform better in enterprise settings.",
+    "arxiv_url": "https://arxiv.org/abs/2409.02038",
+    "authors": [
+      "Peter Baile Chen",
+      "Fabian Wenz",
+      "Yi Zhang",
+      "Devin Yang",
+      "Justin Choi",
+      "Nesime Tatbul",
+      "Michael Cafarella",
+      "Çağatay Demiralp",
+      "Michael Stonebraker"
+    ],
+    "first_author": "Peter Baile Chen",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Enterprise data warehouse schemas",
+      "Anonymized real-user SQL query logs",
+      "Column-to-question mapping annotation",
+      "Table retrieval / selection for SQL generation",
+      "Query complexity analysis (joins, aggregations, nesting)",
+      "Retrieval-augmented generation (RAG) evaluation",
+      "Error analysis of SQL generation (incorrect columns/values)",
+      "Challenges from private-data domain shift"
+    ],
+    "summary": "本文提出BEAVER——来自真实私有企业数据仓库的首个企业级Text-to-SQL基准数据集，并通过对现成模型的大规模评测与误差分析揭示了企业场景中架构复杂性、复杂业务查询与私有数据不可访问性导致的性能崩溃问题。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2409.02038v2",
+    "published": "2024-09-03",
+    "update_time": "2025-01-20",
+    "download_time": "2025-12-12 22:23:35"
   }
 ]
