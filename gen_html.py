@@ -296,7 +296,7 @@ class HTMLGenerator:
         html_parts = []
         for paper in self.papers:
             # 兼容 task 为 string 或 list。若是 string，支持单个标签或逗号分隔多个标签。
-            raw_task = paper.get('task', '')
+            raw_task = paper.get('tags', '')
             if isinstance(raw_task, list):
                 task_list = [t for t in raw_task if isinstance(t, str) and t.strip()]
             elif isinstance(raw_task, str):
