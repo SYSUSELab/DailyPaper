@@ -1546,5 +1546,142 @@
     "published": "2025-12-11",
     "update_time": "2025-12-11",
     "download_time": "2025-12-15 02:09:36"
+  },
+  {
+    "id": "2512.11589",
+    "title": "A Study of Library Usage in Agent-Authored Pull Requests",
+    "abstract": "Coding agents are becoming increasingly capable of completing end-to-end software engineering workflows that previously required a human developer, including raising pull requests (PRs) to propose their changes. However, we still know little about how these agents use libraries when generating code, a core part of real-world software development. To fill this gap, we study 26,760 agent-authored PRs from the AIDev dataset to examine three questions: how often do agents import libraries, how often do they introduce new dependencies (and with what versioning), and which specific libraries do they choose? We find that agents often import libraries (29.5% of PRs) but rarely add new dependencies (1.3% of PRs); and when they do, they follow strong versioning practices (75.0% specify a version), an improvement on direct LLM usage where versions are rarely mentioned. Generally, agents draw from a surprisingly diverse set of external libraries, contrasting with the limited \"library preferences\" seen in prior non-agentic LLM studies. Our results offer an early empirical view into how AI coding agents interact with today's software ecosystems.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11589",
+    "authors": [
+      "Lukas Twist"
+    ],
+    "first_author": "Lukas Twist",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Version Control & Collaboration",
+    "task": "Git VCS",
+    "tags": [
+      "Agent-authored pull requests",
+      "Library import frequency",
+      "New dependency introduction",
+      "Dependency version specification (version hygiene)",
+      "Library diversity across ecosystems",
+      "Multi-language empirical analysis (TypeScript, Python, Go, C#)",
+      "Import and manifest regex extraction",
+      "Agentic workflow behavior"
+    ],
+    "summary": "本文通过分析26,760个由代码代理提交的拉取请求，实证研究代理在导入库、引入新依赖及选择库上的行为，发现代理常导入外部库但很少新增依赖且通常会指定版本，同时展现出较高的库多样性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11589v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:52:27"
+  },
+  {
+    "id": "2512.11482",
+    "title": "Towards Privacy-Preserving Code Generation: Differentially Private Code Language Models",
+    "abstract": "Large language models specialized for code (CodeLLMs) have demonstrated remarkable capabilities in generating code snippets, documentation, and test cases. However, despite their promising capabilities, CodeLLMs can inadvertently memorize and reproduce snippets from their training data, which poses risks of privacy breaches and intellectual property violations. These risks restrict the deployment of CodeLLMs in sensitive domains and limit their training datasets to publicly available sources. To mitigate the memorization risk without compromising their task performance, we apply Differential Privacy (DP) to CodeLLMs. To the best of our knowledge, this is the first comprehensive study that systematically evaluates the effectiveness of DP in CodeLLMs. DP adds calibrated noise to the training process to protect individual data points while still allowing the model to learn useful patterns. To this end, we first identify and understand the driving reasons of the memorization behaviour of the CodeLLMs during their fine-tuning. Then, to address this issue, we empirically evaluate the effect of DP on mitigating memorization while preserving code generation capabilities. Our findings show that DP substantially reduces memorization in CodeLLMs across all the tested snippet types. The snippet types most prone to memorization are also the most effectively mitigated by DP. Furthermore, we observe that DP slightly increases perplexity but preserves, and can even enhance, the code generation capabilities of CodeLLMs, which makes it feasible to apply DP in practice without significantly compromising model utility. Finally, we analyze the impact of DP on training efficiency and energy consumption, finding that DP does not significantly affect training time or energy usage, making it a practical choice for privacy-preserving CodeLLMs training.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11482",
+    "authors": [
+      "Melih Catal",
+      "Pooja Rani",
+      "Harald C. Gall"
+    ],
+    "first_author": "Melih Catal",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "tags": [
+      "DP-SGD training",
+      "Memorization taxonomy",
+      "Data‑extraction and membership‑inference attacks",
+      "Privacy‑utility trade-off",
+      "Snippet entropy and frequency analysis",
+      "Functional correctness evaluation",
+      "Training efficiency & energy analysis",
+      "Privacy evaluation benchmarks"
+    ],
+    "summary": "本文系统评估在代码生成模型中应用差分隐私（DP）的可行性，发现DP显著降低对训练片段的记忆风险且在大多数情况下不会显著损害甚至可提升代码生成功能性，并发布了两个用于隐私与效用评估的新基准数据集。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11482v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:53:12"
+  },
+  {
+    "id": "2512.11783",
+    "title": "Super Suffixes: Bypassing Text Generation Alignment and Guard Models Simultaneously",
+    "abstract": "The rapid deployment of Large Language Models (LLMs) has created an urgent need for enhanced security and privacy measures in Machine Learning (ML). LLMs are increasingly being used to process untrusted text inputs and even generate executable code, often while having access to sensitive system controls. To address these security concerns, several companies have introduced guard models, which are smaller, specialized models designed to protect text generation models from adversarial or malicious inputs. In this work, we advance the study of adversarial inputs by introducing Super Suffixes, suffixes capable of overriding multiple alignment objectives across various models with different tokenization schemes. We demonstrate their effectiveness, along with our joint optimization technique, by successfully bypassing the protection mechanisms of Llama Prompt Guard 2 on five different text generation models for malicious text and code generation. To the best of our knowledge, this is the first work to reveal that Llama Prompt Guard 2 can be compromised through joint optimization.   Additionally, by analyzing the changing similarity of a model's internal state to specific concept directions during token sequence processing, we propose an effective and lightweight method to detect Super Suffix attacks. We show that the cosine similarity between the residual stream and certain concept directions serves as a distinctive fingerprint of model intent. Our proposed countermeasure, DeltaGuard, significantly improves the detection of malicious prompts generated through Super Suffixes. It increases the non-benign classification rate to nearly 100%, making DeltaGuard a valuable addition to the guard model stack and enhancing robustness against adversarial prompt attacks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11783",
+    "authors": [
+      "Andrew Adiletta",
+      "Kathryn Adiletta",
+      "Kemal Derya",
+      "Berk Sunar"
+    ],
+    "first_author": "Andrew Adiletta",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Super Suffixes",
+      "Joint optimization across tokenization schemes",
+      "Adversarial suffix attacks",
+      "Guard model bypass",
+      "Refusal concept direction",
+      "Dynamic residual-similarity detection",
+      "DeltaGuard",
+      "Malicious code-generation dataset"
+    ],
+    "summary": "本文提出 Super Suffixes —— 通过在不同分词方案下联合优化以同时绕过文本生成模型的对齐与守卫模型，并基于残差流与拒绝概念方向的动态余弦相似度提出 DeltaGuard 检测方法，同时构建恶意代码生成数据集进行评估。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11783v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:53:54"
+  },
+  {
+    "id": "2512.11402",
+    "title": "REMODEL-LLM: Transforming C code to Java using LLMs",
+    "abstract": "The automated translation of C code to Java code is a notoriously difficult task, fraught with challenges stemming from fundamental paradigm shifts (procedural vs. Object Oriented), memory models (manual pointers vs. Garbage Collection), and incompatible data types. This paper investigates the efficacy of 19 small, quantized LLMs (under 20 billion parameters) for the C to Java translation task. We use a novel, hybrid pipeline that leverages Abstract Syntax Trees (ASTs) for semantic decomposition and employs a highly constrained, rule based prompting strategy. The results are stark: a clear multi tiered performance divide emerged. The vast majority of models (Tier 3, e.g., llama3.1, gemma3, starcoder2) failed 100\\% of the tests, proving incapable of generating even basic, runnable Java boilerplate. A small middle tier (Tier 2, e.g., mistral-nemo and mistral) produced runnable code but was plagued by dangerous semantic failures and wrong translations. Only three models (Tier 1: phi4, deepseek-coder-v2, codeqwen) proved viable, passing over 50\\% of the test suite. Even these top models failed on the most complex C concepts, such as function pointers, sizeof, and enum logic, revealing a hard ceiling for the reasoning capabilities of current quantized models.",
+    "arxiv_url": "https://arxiv.org/abs/2512.11402",
+    "authors": [
+      "Aryan Gupta",
+      "Y. Raghu Reddy"
+    ],
+    "first_author": "Aryan Gupta",
+    "category": [
+      "Empirical",
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "C-to-Java migration",
+      "AST-guided decomposition",
+      "Constrained rule-based prompting",
+      "Quantized edge LLM evaluation",
+      "Semantic vs. syntactic failure analysis",
+      "Translation edge cases (function pointers, sizeof, enums)",
+      "20-case C→Java benchmark"
+    ],
+    "summary": "本文提出基于AST的混合翻译流水线和受限提示策略，评估了19个量化小型LLM在C到Java迁移任务上的表现并构建了20个边界用例基准，结果显示大多数模型在关键语义转换（如函数指针、sizeof、枚举逻辑）上失败，仅三款模型在测试中通过率超过50%。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.11402v1",
+    "published": "2025-12-12",
+    "update_time": "2025-12-12",
+    "download_time": "2025-12-16 01:59:31"
   }
 ]
