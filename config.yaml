@@ -65,5 +65,42 @@ topic:
     Version Control & Collaboration:
         - Git VCS
 
+tags:
+    - Code Simulation
+    - Code Agents
+    - Interactive Coding
+    - Frontend Navigation
+    - Low-Resource Language
+    - Low-Level Language
+    - Domain-Specific Language
+    - Code RAG
+    - Code Ranking
+    - Program Repair
+    - Type Prediction
+    - Repository-Level Coding
+    - Issue Resolution
+    - Automated Machine Learning
+    - Text-To-SQL
+    - Program Proof
+    - Mutation Testing
+    - Fuzz Testing
+    - Malicious Code Detection
+    - Compiler Optimization
+    - Binary Analysis and Decompilation
+    - Commit Message Generation
+    - Software Configuration
+    - Software Modeling
+    - Security and Vulnerabilities
+    - Correctness
+    - Hallucination
+    - Efficiency
+    - Robustness
+    - Interpretability
+    - API Usage
+    - Privacy
+    - Bias
+    - Contamination
+    - AI-Generated Code Detection
+    - Human-LLM Interaction
 
 

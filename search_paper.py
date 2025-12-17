@@ -360,9 +360,11 @@ class PaperSearch:
                 - Avoid overly general tags such as “Large Language Models”, “Datasets and Benchmarks”, “Fine‑tuning”, etc.
                 - Avoid dataset or model names (e.g., “HumanEval”, “Qwen2.5‑72B”).
                 - Do not invent tags that are unrelated to the content.
-                - Tags may be single words or short phrases (e.g., “Model Editing”, “Deprecated API”).
-            Return the list ["tag1", "tag2", ...].
-            For example, input text: "Title: Lightweight Model Editing for LLMs to Correct Deprecated API Recommendations", output tags: ["Model Editing", "Deprecated API", "API Recommendations"]
+            Here are some high-quality tags:
+            `{self.config['tags']}`
+            You can choose from them and generate your own supplements.
+            Generate up to 10 tags and Return the list ["tag1", "tag2", ...].
+            
             
         4. One-Sentence Summary
         
