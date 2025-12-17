@@ -355,15 +355,19 @@ class PaperSearch:
         
         3. Tags Summary
         
-            Your goal is to summarize more detailed tags for the paper. The tags need to be more detailed than task.
-                - Identify the most salient concepts, techniques, or application areas described in the paper.
-                - Avoid overly general tags such as “Large Language Models”, “Datasets and Benchmarks”, “Fine‑tuning”, etc.
-                - Avoid dataset or model names (e.g., “HumanEval”, “Qwen2.5‑72B”).
-                - Do not invent tags that are unrelated to the content.
-            Here are some high-quality tags:
+            Generate a concise list of fine-grained tags that summarize the paper’s core contributions. These tags should be more specific than high-level tasks and capture the paper’s key ideas.
+
+            Guidelines:
+            - Identify the most salient concepts, techniques, or application areas discussed in the paper.
+            - Avoid overly generic tags such as “Large Language Models”, “Datasets and Benchmarks”, or “Fine-tuning”.
+            - Do not include dataset names or model names (e.g., “HumanEval”, “Qwen2.5-72B”).
+            - Do not invent tags that are not clearly supported by the paper content.
+            - Each tag must be a single word or a short phrase (e.g., “Model Editing”, “Deprecated API”).
+            
+            Prefer selecting tags from the following list of high-quality examples:
             `{self.config['tags']}`
-            You can choose from them and generate your own supplements.
-            Generate up to 10 tags and Return the list ["tag1", "tag2", ...].
+            If the existing tags are insufficient, you may supplement them with newly created tags that accurately reflect the paper.
+            Return the list ["tag1", "tag2", ...].
             
             
         4. One-Sentence Summary
