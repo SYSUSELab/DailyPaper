@@ -2894,5 +2894,155 @@
     "published": "2025-12-18",
     "update_time": "2025-12-18",
     "download_time": "2025-12-22 02:11:57"
+  },
+  {
+    "id": "2512.17814",
+    "title": "LLM-based Behaviour Driven Development for Hardware Design",
+    "abstract": "Test and verification are essential activities in hardware and system design, but their complexity grows significantly with increasing system sizes. While Behavior Driven Development (BDD) has proven effective in software engineering, it is not yet well established in hardware design, and its practical use remains limited. One contributing factor is the manual effort required to derive precise behavioral scenarios from textual specifications.   Recent advances in Large Language Models (LLMs) offer new opportunities to automate this step. In this paper, we investigate the use of LLM-based techniques to support BDD in the context of hardware design.",
+    "arxiv_url": "https://arxiv.org/abs/2512.17814",
+    "authors": [
+      "Rolf Drechsler",
+      "Qian Liu"
+    ],
+    "first_author": "Rolf Drechsler",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Behavior-Driven Development",
+      "Gherkin Scenario Generation",
+      "NL-to-Verilog",
+      "Hardware Verification",
+      "BDD Automation",
+      "Prompt Engineering",
+      "Executable Test Scenarios",
+      "Simulation"
+    ],
+    "summary": "本文提出将大型语言模型应用于硬件设计的行为驱动开发（BDD），自动从自然语言规格生成可执行的Gherkin场景并生成对应的Verilog实现，以在ALU案例上进行仿真验证。",
+    "quality": "Middle",
+    "conference": "2nd International Symposium on Artificial Intelligence and Internet of Things (AIIoT-25) 2025",
+    "pdf_url": "https://arxiv.org/pdf/2512.17814v1",
+    "published": "2025-12-19",
+    "update_time": "2025-12-19",
+    "download_time": "2025-12-23 01:52:18"
+  },
+  {
+    "id": "2512.17540",
+    "title": "SGCR: A Specification-Grounded Framework for Trustworthy LLM Code Review",
+    "abstract": "Automating code review with Large Language Models (LLMs) shows immense promise, yet practical adoption is hampered by their lack of reliability, context-awareness, and control. To address this, we propose Specification-Grounded Code Review (SGCR), a framework that grounds LLMs in human-authored specifications to produce trustworthy and relevant feedback. SGCR features a novel dual-pathway architecture: an explicit path ensures deterministic compliance with predefined rules derived from these specifications, while an implicit path heuristically discovers and verifies issues beyond those rules. Deployed in a live industrial environment at HiThink Research, SGCR's suggestions achieved a 42% developer adoption rate-a 90.9% relative improvement over a baseline LLM (22%). Our work demonstrates that specification-grounding is a powerful paradigm for bridging the gap between the generative power of LLMs and the rigorous reliability demands of software engineering.",
+    "arxiv_url": "https://arxiv.org/abs/2512.17540",
+    "authors": [
+      "Kai Wang",
+      "Bingcheng Mao",
+      "Shuai Jia",
+      "Yujie Ding",
+      "Dongming Han",
+      "Tianyi Ma",
+      "Bin Cao"
+    ],
+    "first_author": "Kai Wang",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Maintenance",
+    "task": "Code Review",
+    "tags": [
+      "Specification Grounding",
+      "Dual-Pathway",
+      "Explicit Specification Injection",
+      "Implicit Specification Discovery",
+      "Code RAG",
+      "Ensemble Aggregation",
+      "Specification Segmentation",
+      "Explainability",
+      "Reliability",
+      "Production Deployment"
+    ],
+    "summary": "本文提出SGCR，一种将人工编写规范与双路径（显式规范注入与隐式规范发现）相结合的LLM驱动代码审查框架，结合RAG检索、模型集成与聚合以提高可控性与可信度，并在生产环境中验证了显著的开发者采纳率提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.17540v1",
+    "published": "2025-12-19",
+    "update_time": "2025-12-19",
+    "download_time": "2025-12-23 01:52:38"
+  },
+  {
+    "id": "2512.17419",
+    "title": "SWE-Bench++: A Framework for the Scalable Generation of Software Engineering Benchmarks from Open-Source Repositories",
+    "abstract": "Benchmarks like SWE-bench have standardized the evaluation of Large Language Models (LLMs) on repository-level software engineering tasks. However, these efforts remain limited by manual curation, static datasets, and a focus on Python-based bug fixes. We introduce SWE-Bench++, an automated framework that generates repository-level coding tasks from open-source GitHub projects. Unlike synthetic approaches, our pipeline harvests live pull requests to cover both bug fixes and feature requests across 11 languages. SWE-Bench++ turns GitHub pull requests (PRs) into reproducible, execution-based tasks via four stages: programmatic sourcing, environment synthesis, test oracle extraction, and quality assurance. A final hint-guided trajectory synthesis step converts instances that strong models fail on into training trajectories. Our initial benchmark consists of 11,133 instances from 3,971 repositories across 11 languages. On a subset of 1,782 instances of this benchmark, today's strongest models perform as follows: claude-sonnet-4.5 achieves 36.20% pass@10, gpt-5-2025-08-07 34.57%, gemini/gemini-2.5-pro 24.92%, and gpt-4o 16.89%. We further demonstrate the utility of our dataset by showing that fine-tuning on SWE-Bench++ instances yields measurable improvements on the SWE-bench Multilingual benchmark. SWE-Bench++ provides a scalable, multilingual benchmark for evaluating and improving repository-level code generation.",
+    "arxiv_url": "https://arxiv.org/abs/2512.17419",
+    "authors": [
+      "Lilin Wang",
+      "Lucas Ramalho",
+      "Alan Celestino",
+      "Phuc Anthony Pham",
+      "Yu Liu",
+      "Umang Kumar Sinha",
+      "Andres Portillo",
+      "Onassis Osunwa",
+      "Gabriel Maduekwe"
+    ],
+    "first_author": "Lilin Wang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Repository-Level Coding",
+    "tags": [
+      "Repository-Level Coding",
+      "Environment Synthesis",
+      "Adaptive Log Parsing",
+      "State-Differential Oracle",
+      "Hint-Guided Trajectories",
+      "Multilingual Benchmark",
+      "Contamination-Aware Evaluation",
+      "Automated Benchmark Generation"
+    ],
+    "summary": "SWE-Bench++ 提出一个自动化、多语言且可扩展的框架，能够从真实 GitHub pull request 自动合成可复现的容器环境和自适应日志解析器、以三态差分判定区分缺陷与功能请求，并通过提示引导生成可用于训练的轨迹来构建大规模仓库级评测集。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.17419v1",
+    "published": "2025-12-19",
+    "update_time": "2025-12-19",
+    "download_time": "2025-12-23 01:56:12"
+  },
+  {
+    "id": "2512.17259",
+    "title": "Verifiability-First Agents: Provable Observability and Lightweight Audit Agents for Controlling Autonomous LLM Systems",
+    "abstract": "As LLM-based agents grow more autonomous and multi-modal, ensuring they remain controllable, auditable, and faithful to deployer intent becomes critical. Prior benchmarks measured the propensity for misaligned behavior and showed that agent personalities and tool access significantly influence misalignment. Building on these insights, we propose a Verifiability-First architecture that (1) integrates run-time attestations of agent actions using cryptographic and symbolic methods, (2) embeds lightweight Audit Agents that continuously verify intent versus behavior using constrained reasoning, and (3) enforces challenge-response attestation protocols for high-risk operations. We introduce OPERA (Observability, Provable Execution, Red-team, Attestation), a benchmark suite and evaluation protocol designed to measure (i) detectability of misalignment, (ii) time to detection under stealthy strategies, and (iii) resilience of verifiability mechanisms to adversarial prompt and persona injection. Our approach shifts the evaluation focus from how likely misalignment is to how quickly and reliably misalignment can be detected and remediated.",
+    "arxiv_url": "https://arxiv.org/abs/2512.17259",
+    "authors": [
+      "Abhivansh Gupta"
+    ],
+    "first_author": "Abhivansh Gupta",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Autonomous Agents & Safety",
+    "task": "Agent Verifiability and Audit",
+    "tags": [
+      "Action Attestation",
+      "Intent Specification",
+      "Audit Agents",
+      "Provenance Log",
+      "Challenge–Response Attestation",
+      "Signed Receipts",
+      "Runtime Verification",
+      "Verifiability Benchmark",
+      "Adversarial Prompt Robustness",
+      "Remediation Controls"
+    ],
+    "summary": "本文提出可验证性优先的智能体架构，通过意图规范、加密动作证明与轻量级审计代理以及挑战-响应协议实现运行时可观测性与可审计性，并引入评估检测速度与鲁棒性的OPERA基准。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.17259v1",
+    "published": "2025-12-19",
+    "update_time": "2025-12-19",
+    "download_time": "2025-12-23 01:57:34"
   }
 ]
