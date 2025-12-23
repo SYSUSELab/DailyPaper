@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化加载
     async function init() {
         try {
-            // 首先加载月份索引
+            // 加载月份索引
             const response = await fetch('data/index.json');
-            monthsIndex = await response.json(); // 格式: [{month: "2025-10", count: 10}, ...]
+            monthsIndex = await response.json(); 
             
             if (monthsIndex.length > 0) {
                 // 设置日期选择器的可选范围
@@ -78,10 +78,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 startDateInput.min = `${minMonth}-01`;
                 endDateInput.max = `${maxMonth}-31`;
 
-                // 默认策略：只加载最新一个月的数据
-                const latestMonth = monthsIndex[0].month;
-                console.log("初始化：加载最新月数据 " + latestMonth);
-                await loadMonthData(latestMonth);
+                // 获取“今天”的日期
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const todayStr = `${year}-${month}-${day}`;
+
+                console.log("初始化：设置为当天", todayStr);
+
+                // 填入输入框
+                startDateInput.value = todayStr;
+                endDateInput.value = todayStr;
+
+                // 触发数据加载和筛选
+                // ensureDataRange 会检查今天所在的月份是否在 index.json 中
+                // 如果在，它会去加载对应的 json 文件；如果不在（比如数据没更新），它什么都不做，列表显示为空
+                await ensureDataRange(todayStr, todayStr);
+                
+                // 如果加载后没有任何数据,设置下面列表为空
+                // 静默预加载一下最新那个月的数据，但是这里只加载数据进内存，不重置输入框
+                if (allPapersData.length === 0) {
+                    console.log("当天无数据或数据未更新");
+                    const latestMonth = monthsIndex[0].month;
+                    await loadMonthData(latestMonth);
+                }
             }
         } catch (e) {
             console.error('初始化失败:', e);
