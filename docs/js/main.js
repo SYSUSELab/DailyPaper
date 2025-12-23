@@ -242,10 +242,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // 更新task按钮的数量
-    function updateTaskButtonCounts() {
+    function updateTaskButtonCounts(DatePapers) {
         try {
             // 筛选符合当前状态和分类的论文（但不按 task 筛选）
-            const statusFilteredPapers = allPapersData.filter(paper => {
+            const statusFilteredPapers = DatePapers.filter(paper => {
                 const status = paper.conference ? 'published' : 'preprint';
                 const category = paper.category || [];
                 const field = paper.field;
@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 计算各个领域的数量
         const statusCounts = {
-            'all': allPapersData.length,
+            'all': DatePapers.length,
             'published': 0,
             'preprint': 0
         };
