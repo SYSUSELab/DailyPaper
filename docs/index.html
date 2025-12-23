@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 设置内容安全策略 (CSP) 以解决 unsafe-eval 报错 -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
+    ">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VP8RP72FC"></script>
     <script>
@@ -20,7 +29,7 @@
         <div class="container">
             <h1>📚 LLM4SEPaper</h1>
             <p class="subtitle">每日自动更新 LLM4SE 领域最新论文</p>
-            <p class="update-time">最后更新: 2025-12-23 21:34:23 UTC</p>
+            <p class="update-time">最后更新: 2025-12-23 21:45:22 UTC</p>
         </div>
     </header>
 

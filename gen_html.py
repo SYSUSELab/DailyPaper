@@ -106,6 +106,15 @@ class HTMLGenerator:
         html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 设置内容安全策略 (CSP) 以解决 unsafe-eval 报错 -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
+    ">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VP8RP72FC"></script>
     <script>
