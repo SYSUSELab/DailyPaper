@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const papersContainer = document.getElementById('papers-container');
 
     console.log('DOM elements:', {
-        monthBtns: monthBtns.length,
         statusBtns: statusBtns.length,
         categoryBtns: categoryBtns.length,
         fieldBtns: fieldBtns.length,
@@ -616,26 +615,6 @@ document.addEventListener('DOMContentLoaded', function() {
         endDateInput.value = '';
         filterAndSortPapers();
     };
-    
-    monthBtns.forEach(btn => {
-        btn.addEventListener('click', async function() {
-            console.log('Month button clicked:', this.dataset.month);
-            monthBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            currentMonth = this.dataset.month;
-
-            // 显示加载提示
-            if (resultsCount) {
-                resultsCount.textContent = '加载中...';
-            }
-            if (papersContainer) {
-                papersContainer.innerHTML = '<div style="text-align: center; padding: 40px; color: #666;">加载中...</div>';
-            }
-
-            // 加载月份数据
-            await loadMonthData(currentMonth);
-        });
-    });
 
     // 发表状态筛选
     statusBtns.forEach(btn => {
